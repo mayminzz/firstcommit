@@ -1,0 +1,13 @@
+/* h1 선택자 태그, color : 속성, red : 속성값 */
+/* * {
+  color: red;
+} */
+
+h1,
+h2 {
+  color: red;
+}
+
+p {
+  color: blue;
+}

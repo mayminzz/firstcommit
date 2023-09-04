@@ -1,0 +1,16 @@
+#box {
+  width: 200px;
+  height: 200px;
+  background-color: #f00;
+}
+
+#box2 {
+  width: 50vw;
+  height: 30vh;
+  background-color: #f00;
+}
+/*HEX(hexadecimal : 16진법) 코드 
+0 ~ 9 + a ~ f(15)
+#를 누르고 코트를 입력하는것
+컴퓨터가 만들어내는 최고의 색 225
+컴퓨터에서 나타나는 색깔 256개 0부터 시작하니까 255*/

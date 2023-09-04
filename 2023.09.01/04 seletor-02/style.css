@@ -1,0 +1,24 @@
+#header {
+  width: 800px;
+  background: red;
+  margin: auto;
+  color: #fff;
+}
+
+#wrap {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#aside {
+  width: 200px;
+  background: blue;
+  float: left;
+}
+
+#content {
+  width: 600px;
+  background: green;
+  float: left;
+}
