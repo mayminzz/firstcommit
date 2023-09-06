@@ -1,0 +1,102 @@
+/*reset(공통요소)*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*반응형이기 때무에*/
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 1px 1px #283744;
+}
+/* nav*/
+body {
+  background: url("/02onpage-02/img/windmill.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; /*여기까지는 가운데로 안옴, 그림 하나 맞춰줌*/
+  background-position: center;
+  background-position: right bottom; /*밑으로 붙인상태에서 고정해라*/
+  background-attachment: fixed;
+}
+
+nav {
+  width: 100%;
+  height: auto;
+  background-color: #34495e;
+  font-size: 1.2em;
+  font-weight: 400;
+  position: relative;
+}
+nav > ul {
+  display: none;
+  height: auto;
+}
+
+nav > ul > li {
+  width: 100%;
+  text-align: center;
+  display: block;
+  border-bottom: 1px solid #576979;
+}
+nav > ul > li > a {
+  line-height: 50px;
+}
+nav a#trigger {
+  display: block;
+  background-color: #283744;
+  width: 100%;
+  padding-left: 15px;
+  line-height: 40px;
+  position: relative;
+}
+nav a#trigger::after {
+  content: "";
+  display: inline-block;
+  background: url("/02onpage-02/img/nav.png") no-repeat;
+  width: 30px;/* 사진 불러와서 너비 높이 다주고 위치 설정*/
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/*nav:상단영역
+break point 중단점*/
+@media screen and (min-width: 920px) {
+  nav {
+    height: 40px;
+    border-bottom: 1px solid #34495e;
+    background-color: #34495e;
+  }
+  nav > ul {
+    display: block; /*모바일에서는 none을 줄라 함*/
+    width: 900px;
+    height: 40px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav > ul > li {
+    display: inline-block;
+    width: 150px;
+    border-bottom: 0;
+    border-right: 1px solid#576979;
+    margin-right: -6px; /* ul에 (home부터 contact까지의 width값을 900을 줌  6개로 나눠 150씩 사이좋게 나눠줬는데 border 1px씩 줬으니까 6px이 밀려나게 되면서 마지막 contact가 자리가 없어 아래칸으로 내려가게 됨 그래서 오른쪽 벽부터 contact까지의 오른쪽 margin값을 6px줄여준 것*/
+
+  }
+  nav > ul > li:first-child {
+    border-left: 1px solid#576979;
+  }
+  nav > ul > li {
+    font-size: 1em;
+    line-height: 40px;
+  }
+  nav a#trigger {
+    display: none;
+  }
+}
+/*반응형을 할때는 메인을 정해야함 모바일을 메인으로 할지 웹을 메인으로 할지
+중단점을 pc로 잡겠다는 의미 
