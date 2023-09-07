@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+}
+/*common*/
+body {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  color: #ddd;
+  background-color: #000;
+}
+
+/* Background */
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /* 안줄경우에 화면창이 줄어드는 만큼 여백이 생김 */
+}
+
+.wrap > video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  object-fit: cover;
+  /* 전체 여백을 다 채워라. 남는 공간없이 모두 다쓰겠다. 부모요소를 기준으로 자식요소는 100%로로 다줬는데 남는 공백이 있을때 여백없이 사용하기 위해
+  액자구성을 줄 수 있음 이미지가 세로로 긴 이미지일 경우 3분의 1지점에서 보여지게 하고싶어 그럼 액자
+  부모요소의 높이 너비과 자식요소의 종횡비가 맞지 않을경우  */
+}

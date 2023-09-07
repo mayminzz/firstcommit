@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.flip-scale-up-hor {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 40px;
+  -webkit-animation: flip-scale-up-hor 0.5s linear both;
+  animation: flip-scale-up-hor 0.5s linear both;
+}
+div.flip-scale-up-hor > span {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  transform: scaleY(-1);
+  /* 코드 자체가 접혀져 있는 상태y축을 중심으로 -1한다는거는 다시 플립을 연다는 뜻 
+  그로인해 원래 제자리로 돌려 놓는 요손 */
+  font-size: 20px;
+  color: #fff;
+}
+/* 벤더 프리픽스: 3녀전, web2가지 진영으로 나뉨: ms(*explore) vs 반ms 
+지금은 webkit잘 안씀 옛날문법*/
+@-webkit-keyframes flip-scale-up-hor {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(2.5) rotateX(-90deg);
+    transform: scale(2.5) rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+    transform: scale(1) rotateX(-180deg);
+  }
+}
+@keyframes flip-scale-up-hor {
+  0% {
+    -webkit-transform: scale(1) rotateX(0);
+    transform: scale(1) rotateX(0);
+  }
+  50% {
+    -webkit-transform: scale(2.5) rotateX(-90deg);
+    transform: scale(2.5) rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotateX(-180deg);
+    transform: scale(1) rotateX(-180deg);
+  }
+}

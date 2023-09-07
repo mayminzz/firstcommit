@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+}
+#box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  border-radius: 50%; /*200px의 50%=100px*/
+  text-align: center;
+  background: linear-gradient(#cb60b3 0%, #db36a4 100%);
+  animation-name: rint;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /* 새로고침을 누르지 않아도 무제한으로 */
+  animation-direction: alternate;
+  /* 왔다갔다 할수 있는 요소 */
+}
+#box:hover {
+  animation-play-state: paused;
+}
+@keyframes rint {
+  /*에니메이션을 설정할떄 무조건 설정 */
+  from/*시작점*/ {
+    left: 0;
+    trandform: rotate(0deg);
+  }
+  50% {
+    left: 500px;
+  }
+  to /*도착점*/ {
+    left: 500px;
+    transform: rotate(360deg);
+  }
+}
