@@ -14,7 +14,7 @@ a {
 }
 /* nav*/
 body {
-  background: url("/02onpage-02/img/windmill.jpg");
+  background: url("./img/windmill.jpg");
   background-repeat: no-repeat;
   background-size: cover; /*여기까지는 가운데로 안옴, 그림 하나 맞춰줌*/
   background-position: center;
@@ -55,7 +55,7 @@ nav a#trigger {
 nav a#trigger::after {
   content: "";
   display: inline-block;
-  background: url("/02onpage-02/img/nav.png") no-repeat;
+  background: url("./img/nav.png") no-repeat;
   width: 30px;/* 사진 불러와서 너비 높이 다주고 위치 설정*/
   height: 30px;
   position: absolute;

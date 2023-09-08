@@ -34,7 +34,7 @@
 /* 시차를 둔다 */
 #graph:hover > .bar:nth-child(1) {
   transition-delay: 0s;
-  transition-timing-function: linear; /*가감속을 주는 기능 */
+  transition-timing-function: linear; 
   background-color: red;
   width: 100px;
 }

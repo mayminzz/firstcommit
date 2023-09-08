@@ -49,25 +49,25 @@ section > h2 {
   text-transform: uppercase;
 }
 .page1 {
-  background: url("/01onpage-01/img/eu.jpg");
+  background: url("./img/eu.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .page2 {
-  background: url("/01onpage-01/img/us.jpg");
+  background: url("./img/us.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .page3 {
-  background: url("/01onpage-01/img/ch.jpg");
+  background: url("./img/ch.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 .page4 {
-  background: url("/01onpage-01/img/jp.jpg");
+  background: url("./img/jp.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
