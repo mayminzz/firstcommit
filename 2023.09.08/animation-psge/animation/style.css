@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+}
+/*common*/
+body {
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  color: #ddd;
+  background-color: #000;
+}
+
+/* Background */
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /* 안줄경우에 화면창이 줄어드는 만큼 여백이 생김 */
+  /* 구문법: perspective: 1300;
+  -webkit-perspective: 1300;
+  신문법: 뒤에 px을 붙이면 됨 */
+  perspective: 1300px;
+}
+
+.wrap > video {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.5;
+  object-fit: cover;
+  /* 전체 여백을 다 채워라. 남는 공간없이 모두 다쓰겠다. 부모요소를 기준으로 자식요소는 100%로로 다줬는데 남는 공백이 있을때 여백없이 사용하기 위해
+  액자구성을 줄 수 있음 이미지가 세로로 긴 이미지일 경우 3분의 1지점에서 보여지게 하고싶어 그럼 액자
+  부모요소의 높이 너비과 자식요소의 종횡비가 맞지 않을경우  */
+}
+
+/* contents box */
+.wrap #circle {
+  width: 600px;
+  height: 800px;
+  /* 가운데 정렬하는 3번쨰 방법 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -400px;
+  margin-left: -300px;
+  animation: ani linear 30s infinite;
+  transform-style: preserve-3d;
+}
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.wrap #circle article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+.wrap #circle article h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  opacity: 0;
+  /* 갑자기 튀어나와야하는 아이 일단 감추기 */
+  transition: all 0.5s;
+  /* h1태그가 가지고 있는 모든 속성에 0.5초의 시간으로 적용해라 */
+}
+.wrap #circle article:hover h1 {
+  opacity: 1;
+  top: -60px;
+}
+
+.wrap #circle article .inner {
+  width: 100%;
+  height: 100%;
+}
+.wrap #circle article .inner > div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  position: relative;
+  opacity: 0.7;
+  cursor: pointer;
+  /* 커서를 올리면 손가락 모양으로 바뀜 */
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.wrap #circle article .inner > div:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+  /* 조금 커지게 생동감있게 */
+  transform: scale(1.03);
+}
+/* contents box item-1 */
+.wrap #circle .face1 {
+  display: block;
+}
+.wrap #circle .face1 .inner > div {
+  width: 290px;
+  height: 254px;
+  float: left;
+  /* 하나의 div박스 margin-bottom */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.wrap #circle .face1 .inner > div p i {
+  font-size: 100px;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+.wrap #circle .face1 .inner > div:hover p i {
+  color: lightcyan;
+  text-shadow: 0 0 10px aqua;
+  transform: scale(1.2);
+  opacity: 1;
+}
+.wrap #circle .face1 .inner > div h2 {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+.wrap #circle .face1 .inner > div:hover h2 {
+  color: lightcyan;
+  text-shadow: 0 0 10px aqua;
+}
+.wrap #circle .face1 .inner > div:nth-of-type(odd) {
+  margin-right: 17px;
+}
+
+/* content box item-2 */
+.wrap #circle .face2 {
+  display: block;
+}
+.wrap #circle .face2 .inner > div {
+  width: 100%;
+  height: 100%;
+}
+.wrap #circle .face2 .inner > div img {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.wrap #circle .face2 .inner > div h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+.wrap #circle .face2 .inner > div p {
+  font-size: 18px;
+  color: #ccc;
+}
+
+/* content box item-3 */
+.wrap #circle .face3 {
+  display: block;
+}
+.wrap #circle .face3 .inner > div {
+  width: 100%;
+  height: 253px;
+  margin-bottom: 20px;
+}
+.wrap #circle .face3 .inner > div .pic {
+  width: 120px;
+  height: 120px;
+  border: 1px solid#fff;
+  border-radius: 50%; /*혹은 60px*/
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  top: 15px;
+}
+
+.wrap #circle .face3 .inner > div:nth-of-type(1) .pic {
+  background-image: url("./1/member1.jpg");
+}
+.wrap #circle .face3 .inner > div:nth-of-type(2) .pic {
+  background-image: url("./1/member2.jpg");
+}
+.wrap #circle .face3 .inner > div:nth-of-type(3) .pic {
+  background-image: url("./1/member3.jpg");
+}
+
+.wrap #circle .face3 .inner > div .con {
+  width: 340px;
+  float: right;
+}
+.wrap #circle .face3 .inner > div .con h2 {
+  color: #fff;
+}
+.wrap #circle .face3 .inner > div .con p {
+  color: #ddd;
+  font-size: 18px;
+  margin-top: 20px;
+}
+.wrap #circle .face3 .inner > div .con span {
+  position: absolute;
+  bottom: 35px;
+  right: 50px;
+  font-size: 12px;
+  color: aqua;
+  opacity: 0.7;
+}
+
+/* contents box item-4 */
+.wrap #circle .face4 {
+  display: block;
+}
+.wrap #circle .face4 .inner div:nth-of-type(1) {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 20px;
+}
+.wrap #circle .face4 .inner div:nth-of-type(1) video {
+  width: 100%;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+}
+.wrap #circle .face4 .inner div p {
+  font-size: 16px;
+  color: #bbb;
+  margin-top: 20px;
+}
+.wrap #circle .face4 .inner div:nth-of-type(2) {
+  width: 100%;
+  height: 180px;
+}
+.wrap #circle .face4 .inner div:nth-of-type(2) p {
+  float: left;
+}
+.wrap #circle .face4 .inner div:nth-of-type(2) em {
+  float: right;
+  font-size: 12px;
+  color: #ccc;
+  margin-top: 23px;
+}
+
+/* contents box item-5 */
+.wrap #circle .face5 {
+  display: block;
+}
+.wrap #circle .face5 .inner div {
+  width: 100%;
+  height: 100%;
+}
+.wrap #circle .face5 .inner > div img {
+  margin-bottom: 40px;
+}
+.wrap #circle .face5 .inner > div .pic {
+  width: 100%;
+  height: 250px;
+  border: 1px solid#bbb;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.3) url("./1/robot.png") center no-repeat;
+}
+.wrap #circle .face5 .inner > div .reflection {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transition: all 0.5s;
+}
+.wrap #circle .face5:hover .inner > div .reflection {
+  top: -40%;
+}
+
+/* contents box item-6 */
+.wrap #circle .face6 {
+  display: block;
+}
+.wrap #circle .face6 .inner > div {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+.wrap #circle .face6 .inner > div i {
+  width: 22%;
+  height: 100%;
+  font-size: 50px;
+  border-right: 1px solid#bbb;
+  float: left;
+  color: #fff;
+  text-align: center;
+  line-height: 80px;
+  box-sizing: border-box;
+}
+.wrap #circle .face6 .inner > div .con {
+  float: right;
+  padding-left: 20px;
+  width: 75%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.wrap #circle .face6 .inner > div .con p {
+  font-size: 18px;
+  color: #999;
+}
+
+/* contents box item-7 */
+
+.wrap #circle .face7 {
+  display: block;
+}
+.wrap #circle .face7 .inner > div {
+  width: 100%;
+  height: 100%;
+}
+.wrap #circle .face7 .inner > div > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.wrap #circle .face7 .inner > div > div > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.wrap #circle .face7 .inner > div > div > h2 {
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  font-size: 40px;
+  color: #fff;
+  text-align: left;
+  line-height: 1.1;
+  text-shadow: 2px 2px 5px #555;
+  z-index: 2;
+}
+.wrap #circle .face7 .inner > div > div > img:nth-of-type(1) {
+  position: absolute;
+  /* 영상을 깔고 올릴때는 무조건 */
+  bottom: 0;
+  right: 0;
+}
+.wrap #circle .face7 .inner > div > div > img:nth-of-type(2) {
+  position: absolute;
+  bottom: 85px;
+  right: 40px;
+  width: 90%;
+}
+/*
+contents box item-8 */
+.wrap #circle .face8 {
+  display: block;
+}
+.wrap #circle .face8 .inner div:nth-of-type(1) {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+.wrap #circle .face8 .inner div:nth-of-type(1) i {
+  color: #fff;
+  font-size: 200px;
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+  opacity: 0.9;
+}
+.wrap #circle .face8 .inner div:nth-of-type(1) span {
+  font-size: 120px;
+  font-weight: bold;
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+}
+.wrap #circle .face8 .inner div:nth-of-type(1) span em {
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) {
+  float: left;
+  width: 290px;
+  height: 380px;
+  margin-right: 20px;
+  text-align: center;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) i {
+  color: #fff;
+  font-size: 120px;
+  opacity: 0.9;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) h3 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) p {
+  font-size: 16px;
+  color: #ccc;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) h4 {
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.wrap #circle .face8 .inner div:nth-of-type(2) h4 b {
+  position: absolute;
+  top: -10px;
+  color: #ddd;
+  font-weight: bold;
+  font-size: 24px;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) {
+  float: left;
+  width: 287px;
+  height: 380px;
+  text-align: center;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) i {
+  color: #fff;
+  font-size: 120px;
+  opacity: 0.9;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) h3 {
+  margin-top: 30px;
+  margin-bottom: 14px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) p {
+  font-size: 16px;
+  color: #ccc;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) h4 {
+  font-size: 40px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.wrap #circle .face8 .inner div:nth-of-type(3) h4 b {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+}
+
+/* 3D */
+.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
+}
+.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
+.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
+}
+.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
+.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
+.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
+}
+.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
+.face8 {
+  transform: rotateY(315deg) translateZ(-764px);
+}
