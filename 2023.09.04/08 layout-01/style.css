@@ -127,11 +127,10 @@ input:nth-of-type(2) {
 
 input:nth-of-type(2) ~ div:nth-last-of-type(2) {
   display: none;
-}
+} 
 input:nth-of-type(2):checked ~ div:nth-of-type(2) {
   display: block;
 }
-
 section.buttons {
   overflow: hidden;
 }
@@ -183,7 +182,7 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
   overflow: hidden;
   /*버려진 컨텐츠 요소를 말줄임표 형식으로 표기해주는 역할*/
   text-overflow: ellipsis;
-}
+} */
 
 /*Footer*/
 
