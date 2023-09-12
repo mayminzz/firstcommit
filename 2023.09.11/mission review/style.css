@@ -448,7 +448,6 @@ main input:focus {
   width: 530px;
   display: flex;
   flex-direction: column;
-  border: 1px solid#f00;
 }
 .shopcontents {
   display: flex;
