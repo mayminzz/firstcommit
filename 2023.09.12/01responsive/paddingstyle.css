@@ -1,0 +1,17 @@
+/* 가변패딩 */
+#wrap {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+  border:  4px solid#000;
+}
+/* #wrap p {
+  padding: 4.16%;
+  40px/960px)*100 
+} */
+#wrap div {
+  width: calc(100% - 100px);
+  height: 200px;
+  margin: 50px;
+  background: #f72041;
+}

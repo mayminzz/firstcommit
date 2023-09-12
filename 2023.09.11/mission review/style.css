@@ -448,7 +448,6 @@ main input:focus {
   width: 530px;
   display: flex;
   flex-direction: column;
-  border: 1px solid#f00;
 }
 .shopcontents {
   display: flex;
@@ -581,9 +580,10 @@ main input:focus {
   height: 100px;
   border: 1px solid #e3e5e8;
   border-radius: 8px;
-
-  
+  display: flex;
+  flex-direction: row;
 }
+
 
 
 
