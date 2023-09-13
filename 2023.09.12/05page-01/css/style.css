@@ -1,17 +1,12 @@
 @import url("./reset.css");
 
-/* basecss를 모바일css로 가져갈거야
-mobile이 메인이고 pc가 서브 */
+/* Base CSS = Mobile CSS */
 #wrap {
   width: 80%;
   max-width: 1200px;
-  /* 1200이 넘어도 이 속성을 가져갈거야 */
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
-  /* flex-direction: column;
-  flex-wrap: nowrap;  */
-  /* 잡아주지 않음 랩은 잡아줌 다음줄까지 내려감 */
 }
 .info_section {
   order: 1;
@@ -29,9 +24,8 @@ mobile이 메인이고 pc가 서브 */
 .info_list li a {
   display: block;
   padding: 0.938rem 0;
-  /* 15px/16px=0.938 세팅을 안했으니 기본값 16px*/
+  /* 15px / 16px */
 }
-/* header */
 .header {
   order: 2;
   display: flex;
@@ -42,10 +36,8 @@ mobile이 메인이고 pc가 서브 */
 .logo {
   order: 1;
   width: 100%;
-  padding: 1.875rem;
-  /* 30px */
+  padding: 1.875rem 0;
   font-size: 1.188rem;
-  /* 19px */
   line-height: 1.313rem;
   text-align: center;
   text-transform: uppercase;
@@ -65,7 +57,7 @@ mobile이 메인이고 pc가 서브 */
 }
 .gnb li a {
   width: 80%;
-  padding: 1.25rem;
+  padding: 1.25rem 0;
   font-size: 0.938rem;
   text-indent: 1.25rem;
   font-weight: bold;
@@ -85,14 +77,12 @@ mobile이 메인이고 pc가 서브 */
   width: 1.875rem;
   height: 1.875rem;
   position: absolute;
-  /* header relative */
   top: 0.625rem;
   right: 0.625rem;
   background: url("/2023.09.12/05page-01/contents\ \(2\)/images/s_images/menu_toggle_btn.png")
     no-repeat;
   cursor: pointer;
 }
-/* slider */
 .slider_section {
   order: 3;
   display: flex;
@@ -108,22 +98,22 @@ mobile이 메인이고 pc가 서브 */
   width: 2.125rem;
   height: 2.438rem;
   text-indent: -9999px;
-  background: url("/2023.09.12/05page-01/contents (2)/images/s_images/slider_arrow.png")
+  background: url("/2023.09.12/05page-01/contents\ \(2\)/images/s_images/slider_arrow.png")
     no-repeat;
   cursor: pointer;
 }
-span > .prev_btn {
+span.prev_btn {
   margin-left: -0.625rem;
   background-position: 0 0;
 }
-span .next_btn {
+span.next_btn {
   margin-right: -0.625rem;
   background-position: -34px 0;
 }
 .latest_post_section {
   order: 4;
   background: #ffc40f;
-  text-shadow: 0 1px 1px #b9820b;
+  text-shadow: 0 1px 1px #b98e0b;
 }
 .popular_post_section {
   order: 5;
@@ -147,19 +137,19 @@ span .next_btn {
   padding-left: 0.875rem;
   font-weight: bold;
   text-transform: uppercase;
-  background: url("/2023.09.12/05page-01/contents (2)/images/s_images/post_circle_icon.png")
-    no-repeat left center;
+  background: url("/2023.09.12/05page-01/contents\ \(2\)/images/s_images/post_circle_icon.png")
+    left center no-repeat;
 }
 .latest_post_section li:first-child,
 .popular_post_section li:first-child {
   margin-top: 0;
 }
 .gallery_section {
-  order: 5;
+  order: 6;
   padding: 3.125rem 12.5%;
   text-align: center;
-  background: #e65d5d;
   text-shadow: 0 1px 1px #c43434;
+  background: #e65d5d;
 }
 .gallery_section img {
   width: 100%;
@@ -235,7 +225,6 @@ span .next_btn {
 }
 .social_list {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .footer {
@@ -252,10 +241,266 @@ span .next_btn {
   color: #fff;
   text-shadow: 0 1px 1px #191919;
 }
+
 /* Tablet CSS */
 @media all and (min-width: 768px) {
+  #wrap {
+    flex-flow: row wrap;
+  }
+  .header {
+    flex-direction: row;
+  }
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15.625%;
+    padding: 0;
+    z-index: 10;
+  }
+  .logo a {
+    display: block;
+    padding: 3.125rem 0;
+  }
+  .nav {
+    position: relative;
+    height: 5rem;
+    background: #2ecc71;
+  }
+  .gnb {
+    position: absolute;
+    width: 40.1041%;
+    top: 100%;
+    right: 0;
+    z-index: 20;
+  }
+  .menu_toggle_btn {
+    top: 50%;
+    right: 1.875rem;
+    z-index: 20;
+    margin-top: -0.938rem;
+  }
+  .slider_section {
+    width: 59%;
+    height: auto;
+  }
+  .slider_section span {
+    position: relative;
+    z-index: 10;
+  }
+  .latest_post_section {
+    order: 5;
+  }
+  .popular_post_section {
+    order: 6;
+  }
+  .rankup_section {
+    order: 4;
+    width: 41%;
+    padding: 2.5% 5.2%;
+  }
+  .latest_post_section,
+  .popular_post_section {
+    width: 41%;
+    padding: 2% 5%;
+  }
+  .gallery_section {
+    order: 8;
+    width: 71%;
+    padding: 5%;
+  }
+  .gallery_list {
+    display: flex;
+    flex-direction: row;
+  }
+  .gallery_list li {
+    width: 47%;
+  }
+  .gallery_list li:nth-child(2) {
+    margin: 0;
+    margin-left: 5.9%;
+  }
+  .banner_section {
+    display: flex;
+    flex-direction: column;
+    order: 9;
+    width: 29%;
+  }
+  .banner_section div {
+    flex: 1 1 0;
+  }
+  .banner_box_01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner_box_01 a {
+    display: inline;
+    padding: 0;
+  }
+  .banner_box_02 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner_list {
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .banner_list li:nth-child(2) {
+    margin: 0 0.875rem;
+  }
+  .social_section {
+    order: 7;
+    display: flex;
+    width: 18%;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .social_list {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .social_list li:nth-child(2) {
+    margin: 1.5rem 0;
+  }
+  .footer p {
+    padding: 2.5rem 0;
+  }
 }
 
 /* PC CSS */
 @media all and (min-width: 960px) {
+  #wrap {
+    position: relative;
+    width: 90%;
+  }
+  .info_section {
+    order: 0;
+    position: absolute;
+    top: 1.875rem;
+    right: 1.875rem;
+    z-index: 30;
+    width: auto;
+    border-bottom: 0;
+  }
+  .info_list li {
+    width: auto;
+    margin-left: 0.625rem;
+  }
+  .info_list li a {
+    padding: 0;
+  }
+  .header {
+    order: 1;
+    justify-content: flex-end;
+    position: static;
+    /* 입력한 순서대로 화면에 나타나게 해주는것? */
+  }
+  .logo {
+    width: 12.5%;
+  }
+  .logo a {
+    color: #fff;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    position: static;
+    width: 87.5%;
+  }
+  .gnb {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: 100%;text-shadow: 0 1px 1px #25ab5e;
+  }
+  .gnb li {
+    display: block;
+    margin-left: 5.2%;
+    background: none;
+  }
+  .gnb li span {
+    display: none;
+  }
+  .gnb li {
+    width: auto;
+    padding: 0;
+    text-indent: 0;
+  }
+  .menu_toggle_btn {
+    display: none;
+  }
+  .latest_post_section, .popular_post_section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: auto 0;
+  }
+  .slider_section {
+    order: 2;
+    width: 50%;
+  }
+  .gallery_section {
+    order: 3;
+    width: 27%;
+  }
+  .gallery_list {
+    display: block;
+  }
+  .gallery_list li {
+    width: auto;
+  }
+  .gallery_list li:nth-child(2) {
+    margin-top: 1.875rem;
+    margin-left: 0;
+  }
+  .rankup_section {
+    width: 22.9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .rankup_list {
+    display: block;
+  }
+  .rankup_list li {
+    width: auto;
+    text-align: left;
+    counter-increment: rankup-counter;
+  }
+  .rankup_list li::before {
+    content: counter(rankup-counter);
+    color: #fff;
+    padding-right: 0.375rem;
+    font-weight: bold;
+    text-shadow:  0 1px 1px #428e9e;
+  }
+  .rankup_list li a {
+    display: inline;
+    padding: 0;
+    border: 0;
+  }
+  .rankup_list li:nth-child(2) {
+    margin-top: 0.938rem;
+  }
+  .banner_section {
+    order: 7;
+    width: 23%;
+  }
+  .social_section {
+    order: 8;
+    width: 17%;
+  }
+  .footer {
+    order: 9;
+  }
+  .footer p{
+    text-align: left;
+    padding-left: 3.125%;
+  }
 }

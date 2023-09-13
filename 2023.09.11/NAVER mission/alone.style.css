@@ -16,9 +16,9 @@ a {
 #shopsection {
   width: 833px;
   height: 570px;
-  border: 1px solid#e3e5e8;
+  border: 7px solid#e3e5e8;
   border-radius: 8px;
-  padding: 20px;
+  padding: 17px;
   margin-bottom: 16px;
 }
 #shopmenu {
@@ -30,10 +30,10 @@ a {
   font-weight: bold;
 }
 
-#shopboxgroup {
+#shopbanner {
   display: flex;
-  flex-direction: row;
-  gap:16px;
+  justify-content: space-around;
+  
 
 }
 #shopbox {
@@ -47,15 +47,14 @@ a {
 }
 #shopbox > span {
   font-size: 16px;
-  
 }  
 #shopbox > span > span {
   color: #c62eed;
 }
-#nextbtn {
+#shopbox_btn {
   margin-top: 25px;
 }
-#nextbtn > span {
+#shopbox_btn > span {
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -64,28 +63,45 @@ a {
   text-align: center;
   color: #6d6d6d;
 }
-#nextbtn > span > i:first-child {
-  width: 30px;
-  height: 30px;
+#shopbox_btn > span > .icon {
+  font-size: 7px;
+  margin-left: 5px;
+}
+#shopbox_btn > span > span { 
+  color: #000;
+  font-weight: bold;
+} 
+
+#shopbox_btn > span > .icon > i.fa-chevron-left {
+  width: 26px;
+  height: 26px;
   border: 1px solid #6d6d6d;
   text-align: center;
-  padding: 6px;
+  padding: 8px;
   border-radius: 5px 0 0 5px;
 }
-#nextbtn > span > i:last-child {
-  width: 30px;
-  height: 30px;
+
+#shopbox_btn > span > .icon > i.fa-chevron-right {
+  width: 26px;
+  height: 26px;
   border: 1px solid #6d6d6d;
   text-align: center;
-  padding: 6px;
+  padding: 8px;
   border-radius: 0 5px 5px 0;
 }
 
 /* shopcontents */
+article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
 #shopimgs {
   width: 530px;
   display: flex;
   flex-direction: column;
+
 }
 .shopcontents {
   display: flex;
@@ -206,20 +222,61 @@ a {
   font-size: 13.5px;
   letter-spacing: -1px;
 }
+
 /* shop aside */
-#shop {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  gap: 22px;
-}
-#shopaside {
-  width: 300px;
-  height: 100px;
+#shopaside1 {
+  width: 248px;
+  height: 88px;
   border: 1px solid #e3e5e8;
-  border-radius: 8px;
+  background: #f7f8f9;
+  color: #404040;
+  border-radius: 6px;
+  padding: 2px;
+  margin: 0 0 10px 14px;
+}
+#shopaside1 > ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#shopaside1 li a {
+  display: inline-block;
   flex-direction: row;
+  padding: 4px 7px;
+}
+#shopaside1 > ul > li a {
+  font-size: 13px;
+}
+#shopaside1 > ul > li:first-child a,  
+#shopaside1 > ul > li:nth-child(7) a, #shopaside1 > ul > li:last-child a {
+  font-weight: bold;
+  color: #000;
 }
 
-
+.shopaside2 {
+  width: 248px;
+  height: 74px;
+  border: 1px solid #e3e5e8;
+  background: #f7f8f9;
+  color: #404040;
+  border-radius: 6px;
+  padding: 12px 0;
+  margin: 0 0 10px 14px; 
+}
+#shop_icon {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+#shop_icon .aside_items .aside_item span a i {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #e3e5e8;
+  border-radius: 50%;
+  background: #fff;
+}
+#shop_icon .aside_items span {
+  font-size: 13px;
+  letter-spacing: -1px;
+}
