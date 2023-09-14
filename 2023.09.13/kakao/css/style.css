@@ -1,0 +1,144 @@
+@import url("./reset.css");
+@import url("./var.css");
+/* #wrap {
+  width: 360px;
+  height: 590px;
+  background: #ffeb3b;
+  margin: 0 auto;
+}
+header {
+  color: #807575;
+  opacity: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 5px;
+}
+header > i { 
+  padding: 5px;
+  
+}
+header > span {
+  display: block;
+}
+header > span:last-child i {
+  width: 20px;
+} */
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#wrap {
+  width: 360px;
+  height: 100%;
+  background: var(--color-yellow);
+
+}
+#header {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+#header_box {
+  position: absolute;
+  top: 9px;
+  right: 4px;
+  text-align: center;
+}
+#header span {
+  display: inline-block;
+  width: 24px;
+}
+#header span i {
+  color: transparent;
+  -webkit-text-stroke: 0.6px var(--color-middlegray);
+}
+
+#header .icon_group {
+  width: 55px;
+}
+#header .icon_group i {
+  width: 20px;
+}
+.logo {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+.logo_img {
+  background: url("/2023.09.13/kakao/kakao-talk.png") center center no-repeat;
+  width: 160px;
+  height: 110px;
+  background-size: cover;
+  background-position: center;
+}
+.loginbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 65px;
+}
+.input_field {
+  display: flex;
+  flex-direction: column;
+}
+.input_field input {
+  border: none; 
+  border-radius: 3px;
+  width: 237px;
+  height: 37px;
+  padding-left: 14px;
+  box-shadow: 1px 1px 3px var(--color-middlegray);
+}
+.input_field input:focus {
+  outline: none;
+}
+.input_field input:focus::placeholder {
+  color: transparent;
+}
+.input_field input:nth-child(2) {
+  border-top: 1px solid var(--color-middlegray); 
+}
+.loginstyle, .autologin {
+  width: 237px;
+  height: 37px;
+}
+.loginstyle input {
+  width: 237px;
+  height: 37px;
+  border: 1px solid var(--color-middlegray);
+  border-radius: 3px;
+}
+.input_text {
+  text-align: center;
+}
+.autologin {
+  position: relative;
+  margin-bottom: 105px;
+}
+.autologin input {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2.5px;
+}
+.autologin label {
+  padding-left: 25px;
+
+}
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:14px;
+  width: 100%;
+  height: 37px;
+}

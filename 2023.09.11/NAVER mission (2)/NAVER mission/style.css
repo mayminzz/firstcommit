@@ -372,11 +372,7 @@ main input:focus {
   border: 1px solid#e3e5e8;
   border-radius: 8px;
   padding: 17px;
-<<<<<<< HEAD
-  margin-bottom: 16px;
-=======
   margin-bottom: 20px;
->>>>>>> d340c69b24d2b3cd4854f51d8073bfea6916be4f
 }
 #shopmenu {
   color: #b3b3be;
@@ -404,50 +400,61 @@ main input:focus {
   
 }  
 #shopbox > span > span {
-  color: #c62eed;
+  color: #9858f5;
 }
 #shopbox_btn {
   margin-top: 25px;
 }
 #shopbox_btn > span {
-  font-size: 16px;
+  font-size: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  color: #6d6d6d;
+  color: #71717199;
+  font-weight: bold;
 }
+
 #shopbox_btn > span > .icon {
   font-size: 7px;
-<<<<<<< HEAD
-  margin-left: 5px;
-=======
   margin-left: 15px;
 }
-#shopbox_btn > span > .icon i {
+#shopbox_btn > span > .icon a i {
   margin-left: -5px;
->>>>>>> d340c69b24d2b3cd4854f51d8073bfea6916be4f
 }
 #shopbox_btn > span > span { 
-  color: #000;
-  font-weight: bold;
+  color: #606060;
 } 
-#shopbox_btn > span > .icon > i.fa-chevron-left {
-  width: 26px;
-  height: 26px;
-  border: 1px solid #6d6d6d;
+#shopbox_btn > span > .icon > a i.fa-chevron-left {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #71717199;
   text-align: center;
-  padding: 8px;
-  border-radius: 5px 0 0 5px;
+  padding: 10px;
+  border-radius: 3px 0 0 3px;
+  color: #606060;
 }
-#shopbox_btn > span > .icon > i.fa-chevron-right {
-  width: 26px;
-  height: 26px;
-  border: 1px solid #6d6d6d;
+#shopbox_btn > span > .icon > a i.fa-chevron-left:hover {
+  background-color: #f4f4f8;
+  box-shadow: 0 1px 10px #f4f4f8;
+  transition-duration: 0.3s;
+  color: #000;
+}
+#shopbox_btn > span > .icon > a i.fa-chevron-right {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #71717199;
   text-align: center;
-  padding: 8px;
-  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  border-radius: 0 3px 3px 0;
+  color: #606060;
+}
+#shopbox_btn > span > .icon > a i.fa-chevron-right:hover {
+  background-color: #f4f4f8;
+  box-shadow: 0 1px 10px #f4f4f8;
+  transition-duration: 0.3s;
+  color: #000;
 }
 
 /* shopcontents */
@@ -455,11 +462,8 @@ main input:focus {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-<<<<<<< HEAD
-=======
   margin-bottom: 20px;
 
->>>>>>> d340c69b24d2b3cd4854f51d8073bfea6916be4f
 }
 #shopimgs {
   width: 530px;
@@ -595,60 +599,29 @@ main input:focus {
   color: #404040;
   border-radius: 6px;
   padding: 2px;
-<<<<<<< HEAD
-  margin: 0 0 10px 14px;
-=======
   margin: 0 0 7px 14px;
->>>>>>> d340c69b24d2b3cd4854f51d8073bfea6916be4f
 }
 #shopaside1 > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
 }
 #shopaside1 li a {
   display: inline-block;
   flex-direction: row;
   padding: 4px 7px;
 }
+#shopaside1 > ul > li {
+  position: relative;
+}
 #shopaside1 > ul > li a {
   font-size: 13px;
 }
-#shopaside1 > ul > li:first-child a,  
+
 #shopaside1 > ul > li:nth-child(7) a, #shopaside1 > ul > li:last-child a {
   font-weight: bold;
   color: #000;
-<<<<<<< HEAD
-}
-
-.shopaside2 {
-  width: 248px;
-  height: 74px;
-  border: 1px solid #e3e5e8;
-  background: #f7f8f9;
-  color: #404040;
-  border-radius: 6px;
-  padding: 12px 0;
-  margin: 0 0 10px 14px; 
-}
-#shop_icon {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-}
-#shop_icon .aside_items .aside_item span a i {
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  border: 1px solid #e3e5e8;
-  border-radius: 50%;
-  background: #fff;
-}
-#shop_icon .aside_items span {
-  font-size: 13px;
-  letter-spacing: -1px;
-}
-=======
 }
 
 .shopaside2 {
@@ -714,7 +687,6 @@ main input:focus {
   border-radius: 50%;
   text-align: center;
   line-height: 36px;
->>>>>>> d340c69b24d2b3cd4854f51d8073bfea6916be4f
 
 }
 
@@ -765,10 +737,125 @@ main input:focus {
   width: 420px;
   height: 240px;
   border-radius: 8px;
+  margin-bottom: 18px;
+}
+.short_box {
+  width: 420px;
+  height: 56px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  padding: 14px 10px;
+  margin-bottom: 18px;
+}
+.box_letter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.short_box > span {
+  font-size: 14px;
+  color: #000;
+  font-weight: bold;
+}
+.short_box > span > span:first-child {
+  width: 54px;
+  height: 24px;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 2px #ebebeb;
+  border-radius: 20px;
+  margin-right: 8px;
+  color: #606060;
+  padding: 1.5px 8px;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: -1px;
 }
 
 #wheather_aside {
   width: 420px;
   height: 236px;
-  padding:0 18px;
+  border: 1px solid #e3e5e8;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+.wheather {
+  display: flex;
+  gap: 5px;
+}
+nav {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e5e8;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .wheather span:first-child {
+  font-weight: bold;
+}
+nav .wheather span:nth-child(2) {
+  width: 80px;
+  height: 28px;
+  border: 1px solid #e3e5e8;
+  color: #606060;
+  letter-spacing: -1;
+  font-size: 12px;
+  border-radius: 20px;
+  padding: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+nav .wheather span:nth-child(2) i {
+  font-size: 1px;
+  /* color: transparent;
+  -webkit-text-stroke-color: 3px #fff;*/
+  width: 13px;
+  height: 13px;
+  border: 1px solid #606060;
+  border-radius: 50%;
+  background: #fff;
+  margin-right: 5px;
+  text-align: center;
+  padding:1.5px;
+}
+nav .address {
+  font-size: 14px;
+  color: #606060;
+}
+
+/* chhart */
+#chart_aside {
+  width: 420px;
+  height: 236px;
+  border: 1px solid #e3e5e8;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+#chart_top .chart_left span:first-child  {
+  font-size: 17px;
+  font-weight: bold;
+}
+#chart_top .chart_left span:nth-child(2) {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #d1d3d4;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 13px;
+}
+#chart_top .chart_left span:nth-child(2) {
+  color: #d1d3d4;
+  font-size: 11px;
+}
+#chart_top .chart_right span:first-child {
+  font-size: 14px;
+  color: #606060;
+} 
+#chart_top .chart_right span {
+  color: #606060;
 }
