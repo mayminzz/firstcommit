@@ -1,4 +1,4 @@
-a* {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -83,7 +83,7 @@ a {
     display: none;
   }
   .gnb_left {
-    display: inline-block;
+    display: none;
     display: flex;
     flex-direction: column;
     width: 100%;
