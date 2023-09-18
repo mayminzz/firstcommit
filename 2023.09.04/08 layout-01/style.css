@@ -178,11 +178,11 @@ input:nth-of-type(2):checked ~ section.buttons > label:nth-of-type(2) {
   width: 120px;
   /*정해놓은 너비값을 넘긴경우 버리는 역할을 하는 요소*/
   white-space: nowrap;
-  /*버려진 컨텐프를 보이지 ㅇ낳게 하는 역할*/
+  /*버려진 컨텐프를 보이지 않게 하는 역할*/
   overflow: hidden;
   /*버려진 컨텐츠 요소를 말줄임표 형식으로 표기해주는 역할*/
   text-overflow: ellipsis;
-} */
+} 
 
 /*Footer*/
 
