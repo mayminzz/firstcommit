@@ -292,7 +292,6 @@ fieldset {
     width: 100%;
   }
   .header .gnb {
-    border: 1px solid #f00;
     display: block;
     float: right;
     position: static;
@@ -372,6 +371,9 @@ fieldset {
   }
   .contact_section .form_box .textarea textarea {
     height: 177.4px;
+  }
+  fieldset .textarea {
+    border: 1px solid #f00;
   }
   .footer iframe {
     height: 432px;

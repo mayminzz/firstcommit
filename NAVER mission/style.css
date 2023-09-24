@@ -205,7 +205,7 @@ main input:focus {
   background-position: center;
   width: 155px;
   height: 105px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, .06);
 }
 
@@ -216,7 +216,7 @@ main input:focus {
   background-position: top;
   width: 155px;
   height: 105px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, .06);
 }
 #newsimg2 > .newscontents .newscontent:nth-child(1) > .newscontent-img {
@@ -226,7 +226,7 @@ main input:focus {
   background-position: center;
   width: 155px;
   height: 105px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, .06);
 }
 #newsimg2 > .newscontents .newscontent:nth-child(2) > .newscontent-img {
@@ -236,7 +236,7 @@ main input:focus {
   background-position: top;
   width: 155px;
   height: 105px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, .06);
 }
 .newscontent-items {
@@ -658,6 +658,17 @@ main input:focus {
   justify-content: space-around;
   text-align: center;
 }
+/* #shop_icon .aside_items .aside_item span a span {
+  background: url("./contents\ \(1\)/naver_miniicon.png") no-repeat;
+  background-size: 134px 121px;
+  background-position: -35px 0;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e3e5e8;
+  border-radius: 50%;
+
+} */
 #shop_icon .aside_items .aside_item span a i {
   width: 32px;
   height: 32px;
@@ -896,10 +907,7 @@ main input:focus {
   width: 13px;
   height: 17px;
   margin-left: 3px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
-  border: 1px solid rgba(0, 0, 0, .06);
 }
-
 .knowledge_list .content .seven::before {
   content: "";
   background: url("./contents (1)/5-4-1jpg.jpg") no-repeat;
@@ -992,8 +1000,8 @@ footer h5{
   border-radius: 20px;
   margin-right: 8px;
   color: #606060;
-  padding: 1.5px 8px;
-  font-size: 13px;
+  padding: 2px 8px;
+  font-size: 12.5px;
   font-weight: bold;
   letter-spacing: -1px;
 }
@@ -1002,25 +1010,25 @@ footer h5{
   width: 420px;
   height: 236px;
   border: 1px solid #e3e5e8;
-  padding: 10px 15px;
+  padding: 15px;
   border-radius: 8px;
   margin-bottom: 18px;
 }
 .wheather {
   display: flex;
 }
-nav {
-  padding-bottom: 13px;
+#wheather_top {
+  padding-bottom: 8px;
   border-bottom: 1px solid #e3e5e8;
   font-size: 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-nav .wheather span:first-child {
+#wheather_top .wheather span:first-child {
   font-weight: 550;
 }
-nav .wheather span:nth-child(2) {
+#wheather_top .wheather span:nth-child(2) {
   width: 80px;
   height: 28px;
   border: 1px solid #e3e5e8;
@@ -1035,7 +1043,7 @@ nav .wheather span:nth-child(2) {
   font-weight: normal;
   margin-left: 5px;
 }
-nav .wheather .temp_icon::before {
+#wheather_top .wheather .temp_icon::before {
   content: "";
   display: inline-block;
   background: url("./contents (1)/naver_main.png")no-repeat;
@@ -1044,8 +1052,7 @@ nav .wheather .temp_icon::before {
   width: 12px;
   height: 12px;
 }
-
-nav .wheather span:nth-child(2) i {
+#wheather_top .wheather span:nth-child(2) i {
   font-size: 1px;
   /* color: transparent;
   -webkit-text-stroke-color: 3px #fff;*/
@@ -1058,7 +1065,7 @@ nav .wheather span:nth-child(2) i {
   text-align: center;
   padding:1.5px;
 }
-nav .address {
+#wheather_top .address {
   font-size: 14px;
   color: #606060;
 }
@@ -1217,12 +1224,12 @@ nav .address {
   font-weight: 500;
 }
 
-/* chhart */
+/* chart */
 #chart_aside {
   width: 420px;
   height: 236px;
   border: 1px solid #e3e5e8;
-  padding: 14px;
+  padding: 1px 15px;
   border-radius: 8px;
   margin-bottom: 18px;
 }
@@ -1230,7 +1237,8 @@ nav .address {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e3e5e8;
 }
 #chart_top .chart_left span:first-child  {
   font-size: 17px;
@@ -1247,12 +1255,12 @@ nav .address {
 .chart_right {
   display: flex;
   align-items: center;
-  gap: 3px
-  ;
+  gap: 3px;
 }
 #chart_top .chart_right span:first-child {
-  font-size: 14px;
+  font-size: 15px;
   color: #606060;
+  margin-top: 10px;
 } 
 #chart_top .chart_right span:nth-child(2) {
   background: url("./contents (1)/naver_main.png") no-repeat;
@@ -1262,10 +1270,12 @@ nav .address {
   height: 17px;
   display: inline-block;
   color: #606060;
+  margin-top: 10px;
 }
 .chart_main_left  {
   width: 180px;
   height: 155px;
+
 }
 .chart_main_left h5 {
   font-weight: normal;
@@ -1298,10 +1308,13 @@ nav .address {
   width: 179px;
   height: 44px;
   display: block;
-  margin-top: 8px;
+  margin-top: 5px;
 }
 .chart_main_left span {
-  font-size: 10px;
+  border: 1px solid #df00;
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
 }
 .chart_main_right {
   width: 205px;
@@ -1311,7 +1324,7 @@ nav .address {
 .chart_main_right li {
   margin-bottom: 10px;
   border-bottom: 1px solid #e3e5e8;
-  padding: 4px;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1324,9 +1337,10 @@ nav .address {
   width: 14px;
   height: 15px;
 }
+
 .chart_contents li a,
 .chart_contents li span {
-  font-size: 14px;
+  font-size: 15px;
   color: #101010;
 }
 .chart_contents li:hover a,
