@@ -1,0 +1,14 @@
+@media screen and (orientation: portrait) { /*가로형식*/
+  html {
+    background: #f00;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+@media screen and (orientation: landscape) {/*세로형식*/
+  html {
+    background: #0f0;
+    color: #fff;
+    font-weight: bold;
+  }
+}

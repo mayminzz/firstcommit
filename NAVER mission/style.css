@@ -1388,7 +1388,6 @@ footer h5{
   justify-content: space-between;
   align-items: center;
 }
-
 .square section {
   width: 186px;
   height: 192px;
@@ -1488,6 +1487,7 @@ section.memo {
   border-bottom: 1px dashed #03c75a;
 }
 .square_right .memo_top h5 {
+  font-size: 16px;
   padding: 13px;
   border-bottom: 1px dashed hsl(136, 100%, 77%);
 }
@@ -1503,6 +1503,12 @@ section.memo {
   height: 46px;
   border-bottom: 1px solid rgba(0, 0, 0, .06);
 }
+section.dictionary {
+  padding: 0;
+}
+
+
+
 
 
 
