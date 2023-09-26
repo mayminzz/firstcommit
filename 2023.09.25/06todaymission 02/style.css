@@ -17,7 +17,6 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* 얼라인 쓰르면 하이트값이 100vh여야함 */
 }
 .card {
   margin: 10px;
