@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.item {
+  display: grid;
+  grid-template: 1fr 30px / 200px 200px;
+}
+[class*="cell"] {
+  box-sizing: border-box;
+}
+.cell-aa {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+

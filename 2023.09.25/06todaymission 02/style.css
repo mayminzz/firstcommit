@@ -3,73 +3,87 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 
-body {
-  width: 1200px;
-  margin: 100px auto;
-}
-.profiles {
+.container {
   display: flex;
-  gap: 30px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* 얼라인 쓰르면 하이트값이 100vh여야함 */
 }
-.profile {
-  position: relative;
-  transition: all 0.3s;
-  overflow: hidden;
-}
-.profile .info::before {
-  content: "";
-  display: block;
-  width: 400px;
-  height: 550px;
-  position: absolute;
-  background: rgb(235, 46, 46);
-  opacity: 0;
-  top: -291px;
-  left: -10px;
-}
-.profile .info:hover::before {
-  background: rgb(235, 46, 46);
-  opacity: 0.5;
-}
-.profile:hover {
-  transform: translateY(-30px) scale(1.02);
-}
-.profile img {
-  width: 400px;
-  height: 550px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ddd;
-}
-.profile .info {
-  position: absolute;
-  bottom: 0px;
+.card {
   margin: 10px;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 20px;
+  box-sizing: border-box;
   text-align: center;
-  opacity: 0;
-}
-.profile .info:hover {
-  opacity: 1;
-}
-.profile h1 {
   color: #fff;
-  margin-bottom: 10px;
+  transition: 0.5s;
 }
-.profile span {
-  color: gold;
-  margin-bottom: 30px;
+.card:nth-child(1) .content {
+  background: linear-gradient(to top, crimson, transparent);
+}
+.card:nth-child(2) .content {
+  background: linear-gradient(to top, rgb(0, 68, 255), transparent);
+}
+.card:nth-child(3) .content {
+  background: linear-gradient(to top, rgb(43, 255, 0), transparent);
+}
+.content h2 {
+  font-size: 30px;
+}
+.content h2 span {
   display: block;
+  font-size: 14px;
+  color: gold;
+  margin-top: 10px;
 }
-.profile p {
+.sns a {
   color: #fff;
-  margin-bottom: 20px;
-}
-.profile .sns i {
-  color: #fff;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  line-height: 25px;
-  text-align: center;
   border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 13px;
+  text-align: center;
+  line-height: 18px;
+}
+.card:hover .content {
+  top:0;
+}
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 100%;
+  }
 }
