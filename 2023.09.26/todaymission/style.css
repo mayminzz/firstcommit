@@ -1,8 +1,11 @@
-    * {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: #222;
+  font-family: 'Montserrat', sans-serif;
 }
 ul,
 li {
@@ -23,7 +26,7 @@ a {
 
 .container h1 {
   font-size: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .item {
   display: grid;
@@ -38,13 +41,14 @@ a {
 }
 .item h5 {
   font-size: 17px;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.6em;
   padding: 5px 0;
+  letter-spacing: 0.4px;
 }
 .item span {
   color: rgb(3, 70, 170);
-  font-weight: 400;
+  font-weight: 300;
   display: block;
 }
 .item img {
@@ -71,7 +75,7 @@ a {
 
 .viewmore a {
   color: crimson;
-  font-weight: 400;
+  font-weight: 300;
   text-align: end;
   display: block;
 }
@@ -101,9 +105,9 @@ a {
     grid-row-end: 8;
   }
 
-.item:nth-child(10) {
-  border-bottom: 1px solid #ddd;
-}
+  .item:nth-child(10) {
+    border-bottom: 1px solid #ddd;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -120,6 +124,9 @@ a {
     grid-column-end: 2;
     grid-row-start: 13;
     grid-row-end: 14;
+  }
+  .item:nth-child(11) {
+    border-bottom: 1px solid #ddd;
   }
 
 }
