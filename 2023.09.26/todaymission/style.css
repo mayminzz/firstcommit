@@ -17,7 +17,7 @@ a {
 .container {
   width: 1150px;
   height: 460px;
-  margin: 120px auto;
+  margin: 250px auto;
   box-shadow: 0 0 20px #e1e1e1;
   border-radius: 20px;
   padding: 20px 30px;
@@ -62,7 +62,6 @@ a {
   display: grid;
   grid-template: auto auto auto auto 30px /  1fr 1fr 1fr;
   grid-gap: 15px;
-
 }
 
 .viewmore {

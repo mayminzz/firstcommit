@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+#wrap {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-areas: 
+  "logo gnb info"
+  "logo heading heading"
+  "heading heading heading";
+
+}
+.header > div {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo {
+  grid-column: 1, 2;
+  grid-row: 1, 3;
+  background: #2ecc71;
+}
+.gnb {
+  width: 100%;
+  grid-column: 2, 3;
+  grid-row: 1, 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  background: #2ecc71;
+  border: 1px solid #f00;
+}
+.gnb ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  background: #2ecc71;
+}
+/* .info_icon {
+  grid-column: 3, 4;
+  grid-row: 1, 2;
+
+}
+.header_heading {
+  grid-column: 2, 4;
+  grid-row: 1, 4;
+
+
+} */
+
+.logo {
+  grid-area: logo;
+}
+.gnb {
+  grid-area: gnb;
+}
+.info_icon{
+  grid-area: info;
+}
+.header-heading {
+  grid-area: heading;
+}
+
