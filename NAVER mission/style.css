@@ -1807,14 +1807,19 @@ footer hr {
   margin: 0 auto;
   padding: 20px 0;
   display: grid;
+  align-items: center;
   grid-template-columns: 850px 385px;
-  grid-template-rows: 121px;
-  grid-gap: 50px;
+  grid-template-rows: 120px;
+  grid-gap: 43px;
 }
 .creators {
   display: grid;
   grid-template-columns: 110px 650px;
+  align-items: center;
   margin-top: 10px;
+}
+.creators:first-child {
+  margin-top: 0;
 }
 .creators ul {
   display: flex;
@@ -1854,7 +1859,6 @@ footer hr {
   margin-top: 3px;
   color: #404040;
   font-weight: normal;
-
 }
 .footer_whale_flower h4 {
   font-size: 14px;
