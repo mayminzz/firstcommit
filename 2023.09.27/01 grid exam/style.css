@@ -1,4 +1,4 @@
-.container {
+/* .container {
   display: grid;
   grid-template-rows: 100px 1fr 100px;
   grid-template-columns: 300px 1fr 300px;
@@ -18,4 +18,28 @@
 }
 .footer {
   grid-column: 1 /4;
+} */
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 100px 1fr 100px;
+  height: 100vh;
+  grid-gap: 10px;
+}
+.container > div {
+  background: rgb(255, 255, 139);
+  border: 1px solid #000;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.header {
+  grid-column: 1 / 4;
+}
+.footer {
+  grid-column: 1 / 4;
 }

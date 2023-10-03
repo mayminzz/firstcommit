@@ -5,29 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="./script.js"></script>
+  <script src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div id="wrap">
-    <header class="header">
-      <div class="logo">Flat Design</div>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <h3>Flat<br>Design</h3>
+        </div>
       <div class="gnb">
-        <!-- <ul>
+        <ul class="gnb-list">
           <li><a href="#">홈</a></li>
-          <li><a href="#">플랫 디자인이란?</a></li>
+          <li><a href="#">플랫디자인이란?</a></li>
           <li><a href="#">갤러리</a></li>
           <li><a href="#">문의사항</a></li>
-        </ul> -->
+        </ul>
       </div>
-      <div class="info_icon">3
-        <!-- <img src="./img_0927/s_images/info_icon_01.png" alt="info01">
+      <div class="menu_toggle_btn">
+      </div>
+      <div class="info">
+        <img src="./img_0927/s_images/info_icon_01.png" alt="info01">
         <img src="./img_0927/s_images/info_icon_02.png" alt="info02">
         <img src="./img_0927/s_images/info_icon_03.png" alt="info03">
-        <img src="./img_0927/s_images/info_icon_04.png" alt="info04"> -->
+        <img src="./img_0927/s_images/info_icon_04.png" alt="info04">
       </div>
-      <div class="header_heading">
-        <h5>갤러리 <span>홈/갤러리</span></h5>
+    </div>
+      <div class="gallery">
+        <span>갤러리</span>
+        <span>홈/ 갤러리</span>
       </div>
-    </header>
+    <div class="gallery-img">
+      <img src="./img_0927/p_images/sub_gallery_01.jpg" alt="01">
+      <img src="./img_0927/p_images/sub_gallery_02.jpg" alt="02">
+      <img src="./img_0927/p_images/sub_gallery_03.jpg" alt="03">
+      <img src="./img_0927/p_images/sub_gallery_04.jpg" alt="04">
+      <img src="./img_0927/p_images/sub_gallery_05.jpg" alt="05">
+      <img src="./img_0927/p_images/sub_gallery_06.jpg" alt="06">
+      <img src="./img_0927/p_images/sub_gallery_07.jpg" alt="07">
+      <img src="./img_0927/p_images/sub_gallery_08.jpg" alt="08">
+      <img src="./img_0927/p_images/sub_gallery_09.jpg" alt="09">
+      <img src="./img_0927/p_images/sub_gallery_10.jpg" alt="10">
+      <img src="./img_0927/p_images/sub_gallery_11.jpg" alt="11">
+      <img src="./img_0927/p_images/sub_gallery_12.jpg" alt="12">
+    </div>
+    <div class="finder">
+      <div class="target">
+        <input type="text" placeholder="검색어">
+        <div class="sort">
+          검색 대상
+          <div class="target-list">
+            <ul>
+              <li><a href="#">제목</a></li>
+              <li><a href="#">내용</a></li>
+              <li><a href="#">제목+내용</a></li>
+              <li><a href="#">댓글</a></li>
+              <li><a href="#">이름</a></li>
+              <li><a href="#">닉네임</a></li>
+              <li><a href="#">아이디</a></li>
+              <li><a href="#">태그</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="writting">
+        <span>글쓰기</span>
+      </div>
+    </div>
+    <div class="page">
+      <div class="arrow">
+        <i class="fas fa-angle-left"></i>
+      </div>
+      <div class="page-number only">1</div>
+      <div class="page-number">2</div>
+      <div class="page-number">3</div>
+      <div class="arrow">
+        <i class="fas fa-angle-right"></i>
+      </div>
+    </div>
+    <footer class="footer">
+      COPYRIGHT@ 2014,1LAT DESIGN BLOG ALL RIGHT RESERVED.
+    </footer>
   </div>
 </body>
 </html>

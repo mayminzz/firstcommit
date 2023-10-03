@@ -734,6 +734,8 @@ main input:focus {
   border: 1px solid #e3e5e8;
   border-radius: 8px;
   padding: 0 5px;
+  margin-bottom: 50px;
+  position: relative;
 }
 .knowledge_menu {
   width: 100%;
@@ -921,13 +923,16 @@ main input:focus {
   padding-right: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .06);
 }
-footer {
-  width: 830px;
+.view_more{
+  width: 831px;
   height: 56px;
   border-top: 1px solid #e3e5e8;
+
+  position: absolute;
+  left: 0;
   font-size: 15px;
 }
-footer h5{
+.view_more h5{
   font-size: 16px;
   text-align: center;
   line-height: 56px;
@@ -1370,6 +1375,7 @@ footer h5{
   display: inline-block;
   margin-right: 3px;
 }
+
 /* widget */
 .widget_aside {
   width: 420px;
@@ -1378,6 +1384,7 @@ footer h5{
   border-radius: 8px;
   border: 1px solid #e3e5e8;
   padding: 15px 18px 20px;
+  margin-bottom: 18px;
 }
 .widget_aside h3 {
   font-size: 16px;
@@ -1396,14 +1403,6 @@ footer h5{
   background: #fff;
   margin-bottom: 10px;
   padding: 15px;
-}
-.widget_clip {
-  width: 384px;
-  height: 287px;
-  border: 1px solid #e3e5e8;
-  border-radius: 8px;
-  background: #fff;
-  margin-bottom: 15px;
 }
 .square_left .calender h6 {
   font-size: 15px;
@@ -1443,7 +1442,6 @@ section.papago {
 .square_left .papago_icon {
   background: url("./contents (1)/naver_main.png") no-repeat;
   background-size: 435px 414px;
-  background-size:1;
   width: 78px;
   height: 68px;
   display: block;
@@ -1484,11 +1482,11 @@ section.memo {
   background: #00c772;
   border-radius: 8px 8px 0 0;
   color: #ffff;
-  border-bottom: 1px dashed #03c75a;
 }
 .square_right .memo_top h5 {
   font-size: 16px;
   padding: 13px;
+  height: 46px;
   border-bottom: 1px dashed hsl(136, 100%, 77%);
 }
 .square_right span:last-child a {
@@ -1505,15 +1503,159 @@ section.memo {
 }
 section.dictionary {
   padding: 0;
+  position: relative;
+}
+.dictionary_box {
+  width: 178px;
+  height: 192px;
+  border-right: 1px solid #e3e5e8;
+  border-radius: 8px;
+}
+.dictionary_box::before {
+  content: "";
+  position: absolute;
+  width: 181px;
+  height: 192px;
+  border-right: 1px solid #e3e5e8;
+  border-radius: 8px;
+}
+.dictionary_box .line span {
+  display: block;
+  width: 178px;
+  height: 23px;
+  border-top: 1px solid #e3e5e8;
+  transform: translateY(-9px);
 }
 
+.dictionary h5 {
+  padding: 14px 18px 19px;
+  font-weight: bold;
+  font-size: 17.6px;
+}
+.dictionary_text {
+  width: 178px;
+  height: 90px;
+  padding: 0 16px;
+  position: absolute;
+  top: 50px;
+}
+.dictionary p {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 23px;
+  cursor: pointer;
+  color: #101010;
+}
+.dictionary_text p:nth-child(2) {
+  display: none;
+  color: #4e4e4e;
+  font-size: 13px;
+}
+.dictionary_text:hover p:nth-child(1) {
+  display: none;
+}
+.dictionary_text:hover p:nth-child(2) {
+  display: block;
+}
 
+.dictionary_box .dictionary_icon {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #e3e5e8;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  padding: 6px;
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  z-index: 10;
+}
+.dictionary_box .dictionary_icon:hover {
+  width: 130px;
+  border-radius: 30px;
+  background: #031f5f;
+}
+.dictionary_box .dictionary_icon:hover::before {
+  content: "단어 검색하기";
+  font-size: 13px;
+  font-weight: bold;
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  color: #fff;
+}
+.dictionary_box .dictionary_icon:hover::after {
+  content: "";
+  background: url("./contents (1)/naver_main.png"); 
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-size: 435px 414px;
+  background-position: -391px -327px;
+  position: absolute;
+  right: 8px;
+}
 
+.dictionary_box .dictionary_icon::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: block;
+  background: url("./contents (1)/naver_main.png"); 
+  background-size: 435px 414px;
+  background-position: -50px -349px;
+}
 
-
-
-
-
+/* clip section */
+.widget_clip {
+  width: 384px;
+  height: 287px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 15px;
+  padding: 15px;
+  overflow: hidden;
+}
+.widget_clip h3 {
+  display: flex;
+  align-items: center;
+}
+.widget_clip h3::before {
+  content: "";
+  background: url("./contents (1)/naver_main.png"); 
+  display: inline-block;
+  width: 54px;
+  height: 22px;
+  background-size: 435px 414px;
+  background-position: -55px -248px;
+  margin-right: 5px;
+}
+.clip_contents {
+  display: grid;
+  grid-template-columns: repeat(4, 108px);
+  grid-gap: 10px;
+}
+.clip_content img {
+  width: 108px;
+  height: 162px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+}
+.clip_desc {
+  width: 108px;
+  height: 50px;
+    /* 정해놓은 너비값을 넘긴경우 버리는 역할을 하는 요소 */
+  white-space: nowrap;
+  /*버려진 컨텐프를 보이지 않게 하는 역할*/
+  overflow: hidden;
+  /*버려진 컨텐츠 요소를 말줄임표 형식으로 표기해주는 역할*/
+  text-overflow: ellipsis; 
+}
+.clip_desc span {
+  font-size: 14px;
+}
 .mobile {
   display: flex;
   justify-content: space-between;
@@ -1547,4 +1689,201 @@ section.dictionary {
 .mobile em {
   font-style: normal;
   font-weight: normal;
+}
+
+/* whale_section */
+.whale {
+  width: 420px;
+  height: 80px;
+  border: 1px solid #e3e5e8;
+  border-radius: 8px;
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: 42px 298px;
+
+  grid-gap: 7px;
+}
+.whale_img {
+  background: url("./contents (1)/naver_main.png") no-repeat;
+  display: block;
+  background-size: 435px 414px;
+  background-position: -201px -140px;
+}
+.whale h5 {
+
+  color: #101010;
+  font-size: 14px;
+}
+.whale span {
+  display: block;
+  font-size: 14px;
+  color: #606060;
+  font-weight: normal;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 460px;
+  border-top: 1px solid #ddd;
+  background: #f5f6f7;
+}
+.footer_main {
+  width: 1280px;
+  height: 160px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer_content {
+  display: grid;
+  grid-template-columns: 160px 250px;
+  grid-gap: 20px;
+}
+.footer_content img {
+  width: 160px;
+  height: 100px;
+}
+.footer_main_decs .badge {
+  width: 118px;
+  height: 24px;
+  background: #a0adb2;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #fff;
+}
+.footer_main_decs h4 {
+  font-size: 14px;
+  margin-top: 14px;
+  color: #222122;
+  cursor: pointer;
+}
+.footer_main_decs h4:hover {
+  text-decoration: underline;
+}
+.footer_main_decs p {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #545454;
+}
+.footer_notice {
+  width: 1280px;
+  height: 60px;
+  margin: 0 auto;  
+  padding: 21px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_notice h4 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #101010;
+  cursor: pointer;
+}
+.footer_notice h4:hover {
+  text-decoration: underline;
+}
+.footer_notice span {
+  background: url("./contents (1)/naver_main.png") no-repeat;
+  display: inline-block;
+  width: 8px;
+  height: 12px;
+  background-size: 435px 414px;
+  background-position: -426px -36px;
+  margin-left: 7px;
+}
+footer hr {
+  border: none;
+  width: 1280px;
+  margin: 0 auto;
+  height: 1px;
+  background: #ddd;
+}
+.footer_cooperation {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 850px 385px;
+  grid-template-rows: 121px;
+  grid-gap: 50px;
+}
+.creators {
+  display: grid;
+  grid-template-columns: 110px 650px;
+  margin-top: 10px;
+}
+.creators ul {
+  display: flex;
+  gap: 10px;
+}
+.creators li.bar::after {
+  content: "|";
+  font-size: 13px;
+  color: #b4b4b4;
+  margin-left: 10px;
+}
+.creators li a:hover {
+  text-decoration: underline;
+}
+.creators h4 {
+  font-size: 14px;
+  color: #101010;
+  letter-spacing: 0.6px;
+}
+.creators li {
+  color: #404040;
+  font-size: 14px;
+}
+.footer_whale {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  justify-content: flex-end;
+  align-items: center;
+  grid-gap: 40px;
+}
+.footer_whale_flower {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_whale_flower span {
+  display: block;
+  margin-top: 3px;
+  color: #404040;
+  font-weight: normal;
+
+}
+.footer_whale_flower h4 {
+  font-size: 14px;
+  color: #101010;
+  cursor: pointer;
+}
+.footer_whale_flower span:hover {
+  text-decoration: underline;
+}
+.footer_whale_flower img {
+  width: 48px;
+  height: 48px;
+}
+.footer_nav {
+  width: 1280px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.footer_nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.footer_nav li a {
+  font-size: 13px;
+}
+.footer_nav .bar::after {
+  content: "|";
+  font-size: 13px;
+  color: #b4b4b4;
+  margin-left: 10px;
 }

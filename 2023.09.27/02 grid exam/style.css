@@ -16,7 +16,7 @@
 .header {
   grid-column: 1 /4;
 }
-.menu {
+.main {
   grid-row: 2 / 4;
 }
 .footer {

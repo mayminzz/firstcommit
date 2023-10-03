@@ -414,20 +414,19 @@ span.next_btn {
     display: flex !important;
     flex-direction: row;
     position: static;
-    width: 100%;text-shadow: 0 1px 1px #25ab5e;
+    width: 100%;
+    text-shadow: 0 1px 1px #25ab5e;
   }
   .gnb li {
     display: block;
     margin-left: 5.2%;
     background: none;
-  }
-  .gnb li span {
-    display: none;
-  }
-  .gnb li {
     width: auto;
     padding: 0;
     text-indent: 0;
+  }
+  .gnb li span {
+    display: none;
   }
   .menu_toggle_btn {
     display: none;
