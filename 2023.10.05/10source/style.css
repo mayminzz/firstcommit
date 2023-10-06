@@ -24,7 +24,7 @@ a {
   position: relative;
   margin: 10px;;
 }
-.front {
+.front, .back {
   position: absolute;
   top:0;
   transition: 0.5s;
@@ -42,11 +42,6 @@ a {
   animation: ani 1s linear infinite;
 }
 
-.front, .back {
-  position: absolute;
-  top: 0;
-  transition: 0.5s;
-}
 .back {
   background: #fff;
   color: #000;

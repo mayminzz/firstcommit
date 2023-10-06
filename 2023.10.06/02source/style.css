@@ -1,0 +1,46 @@
+body {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+ul, li {
+  list-style: none;
+}
+
+.gnb {
+  width: 600px;
+  display: flex;
+  padding: 50px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.gnb li {
+  flex: 1;
+  text-align: center;
+}
+.gnb li a {
+  position: relative;
+  font-size: 14px;
+}
+.gnb li a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  background: dodgerblue;
+  width: 0px;
+  height: 2px;
+  /* 가운데서부터 나오기 위해서 */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.gnb li a:hover::before {
+  width: 100%;
+
+}
