@@ -1,4 +1,4 @@
-body {
+  body {
   background: #222;
   color: #fff;
   font-size: 15px;
@@ -16,7 +16,6 @@ a {
   align-items: center;
   height: 100vh;
 }
-
 .item {
   width: 300px;
   height: 260px;
@@ -80,4 +79,4 @@ a {
   100% {
     transform: scale(0.9);
   }
-}
+} 

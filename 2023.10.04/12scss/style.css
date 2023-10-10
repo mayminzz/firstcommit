@@ -15,7 +15,7 @@ body {
   box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757, 0 -10px 200px #ff4757;
   animation: heart-beat 0.5s linear infinite;
 }
-.heart-beat::before, .heart-beat::after {
+.heart-beat::after, .heart-beat::before {
   content: "";
   position: absolute;
   width: inherit;
@@ -23,11 +23,11 @@ body {
   border-radius: 50%;
   background: inherit;
 }
-.heart-beat::before {
+.heart-beat::after {
   content: "";
   top: -50%;
 }
-git .heart-beat::after {
+.heart-beat::before {
   content: "";
   left: -50%;
 }

@@ -12,6 +12,10 @@ body {
   background: #fff;
   padding: 20px;
   width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .signin h1 {
   text-align: center;
@@ -24,26 +28,30 @@ body {
 .signin input[type=submit] {
   display: block;
   width: 100%;
-  padding: 10px 0;
-  border: 1px solid #ddd;
+  padding: 10px;
   margin: 10px 0;
+  border: 1px solid #ddd;
   border-radius: 5px;
   outline: none;
 }
-.signin input[type=button] {
+
+input[type=button] {
   margin-bottom: 10px;
   cursor: pointer;
   background: #fff;
 }
-.signin input[type=button]:hover {
-  background: #dadc58;
+input[type=button]:hover {
+  background: #badc58;
   color: #fff;
 }
-.signin input[type=submit] {
+
+input[type=submit] {
   background: #27ae60;
   color: #fff;
   cursor: pointer;
 }
-.signin input[type=email]:focus {
+
+input[type=email]:focus,
+input[type=password]:focus {
   background: #f8edb5;
 }/*# sourceMappingURL=style.css.map */

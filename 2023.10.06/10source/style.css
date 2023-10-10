@@ -3,6 +3,88 @@
   padding: 0;
   box-sizing: border-box;
 }
+input[name=tabmenu] {
+  display: none;
+}
+.tabs {
+  position: relative;
+  /* overflow: hidden; */
+  height: 100vh;
+}
+.items {
+  width: 400%;
+  height: 100vh;
+  position: absolute;
+  top:0;
+  left: 0;
+  transition: 0.5s;
+}
+.items div {
+  /* 100%를 4개로 나누어야 함 
+  부모요소 400%를 100% 다쓸건데 4등분해서 써야하기 때문에 */
+  width: 25%;
+  height: 100vh;
+  float: left;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items div:nth-child(1) {
+  background: teal;
+}
+.items div:nth-child(2) {
+  background: dodgerblue;
+}
+.items div:nth-child(3) {
+  background: yellowgreen;
+}
+.items div:nth-child(4) {
+  background: crimson;
+}
+.items h2 {
+  color: #fff;
+  font-size: 80px;
+  font-weight: normal;
+}
+.btn {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.btn label {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+input[id=tab1]:checked ~ .tabs .items {
+  left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+  left: -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+  left: -200%;
+}
+input[id=tab4]:checked ~ .tabs .items {
+  left: -300%;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1], 
+input[id=tab2]:checked ~ .btn label[for=tab2], 
+input[id=tab3]:checked ~ .btn label[for=tab3], 
+input[id=tab4]:checked ~ .btn label[for=tab4] {
+  background: #000;
+}
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 input[name="tabmenu"] {
   display: none;
 }
@@ -12,9 +94,9 @@ input[name="tabmenu"] {
   height: 100vh;
 }
 .items {
-  height: 100vh;
+  height: 100vh; */
   /* 넘길화면이 3개라서  */
-  width: 300%;
+  /* width: 300%;
   position: absolute;
   top: 0;
   left: 0;
@@ -69,4 +151,4 @@ input[id="tab1"]:checked ~ .btn label[for="tab1"],
 input[id="tab2"]:checked ~ .btn label[for="tab2"],
 input[id="tab3"]:checked ~ .btn label[for="tab3"] {
   background: #000;
-}
+} */

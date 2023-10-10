@@ -1,3 +1,10 @@
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background: #222;
+// }
 body {
   display: flex;
   justify-content: center;
@@ -11,10 +18,10 @@ body {
   position: relative;
   background: crimson;
   transform: rotate(45deg);
-  box-shadow: 0 -10px 100px #ff4757,  0 -10px 150px #ff4757,  0 -10px 200px #ff4757;
-animation: heart-beat 0.5s linear infinite;
-  &::before,
-  &::after {
+  box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757,0 -10px 200px #ff4757;
+  animation: heart-beat 0.5s linear infinite;
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     width: inherit;
@@ -22,16 +29,42 @@ animation: heart-beat 0.5s linear infinite;
     border-radius: 50%;
     background: inherit;
   }
-  &::before {
+  &::after {
     content: "";
     top:-50%
-
-  }git 
-  &::after {
+  }
+  &::before {
     content: "";
     left: -50%;
   }
 }
+// .heart-beat {
+//   width: 200px;
+//   height: 200px;
+//   position: relative;
+//   background: crimson;
+//   transform: rotate(45deg);
+//   box-shadow: 0 -10px 100px #ff4757,  0 -10px 150px #ff4757,  0 -10px 200px #ff4757;
+// animation: heart-beat 0.5s linear infinite;
+
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     width: inherit;
+//     height: inherit;
+//     border-radius: 50%;
+//     background: inherit;
+//   }
+//   &::before {
+//     content: "";
+//     top:-50%
+//   } 
+//   &::after {
+//     content: "";
+//     left: -50%;
+//   }
+// }
 @keyframes heart-beat {
   0% {
     transform: rotate(45deg) scale(1);
@@ -43,3 +76,14 @@ animation: heart-beat 0.5s linear infinite;
     transform: rotate(45deg) scale(0.95);
   }
 }
+// @keyframes heart-beat {
+//   0% {
+//     transform: rotate(45deg) scale(1);
+//   }
+//   50% {
+//     transform: rotate(45deg) scale(1.05);
+//   }
+//   100% {
+//     transform: rotate(45deg) scale(0.95);
+//   }
+// }
