@@ -7,12 +7,20 @@
 //   }
 // }
 
-// 조건값을 체크하기 전에 무관하게 일단 실행시켜 그리고 조건문을 따져보고 실행시킬건지 말지 해
-let stars = parseInt(prompt("별의 개수 : "));
-
-if (stars !== null && stars !== "") {
+let stars = parseInt(prompt("별의 개수: "));
+if(stars !==null && stars !== "") {
   do {
-  document.write("*");
-  stars--;
-  } while(stars > 0)
+    document.write("*");
+    stars--;
+  } while(stars>0)
 }
+
+// 조건값을 체크하기 전에 무관하게 일단 실행시켜 그리고 조건문을 따져보고 실행시킬건지 말지 해
+// let stars = parseInt(prompt("별의 개수 : "));
+
+// if (stars !== null && stars !== "") {
+//   do {
+//   document.write("*");
+//   stars--;
+//   } while(stars > 0)
+// }
