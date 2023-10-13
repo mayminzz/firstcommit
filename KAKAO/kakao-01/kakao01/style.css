@@ -164,6 +164,7 @@ header {
 footer {
   width: 489px;
   height: 120px;
+  border-top: 1px solid #ddd;
 }
 .advertisement {
   width: 80%;
