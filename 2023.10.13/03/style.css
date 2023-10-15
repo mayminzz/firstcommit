@@ -1,4 +1,4 @@
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,5 +26,34 @@ body {
 }
 .print img {
   vertical-align: middle;
+  margin-right: 5px;
+} */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.star-rating {
+  width: 300px;
+  background: #333;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.stars .fas {
+  font-size: 18px;
+  cursor: pointer;
+}
+.stars .fas.active {
+  color: yellow;
+  text-shadow: 0 0 5px yellow;
+}
+.print {
+  color: color#fff;
+}
+.print img {
+  vertical-align:middle;
   margin-right: 5px;
 }

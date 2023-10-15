@@ -5,7 +5,7 @@
 // let normal_m = 10000;
 // let over_m = (traf + eat + drink) - normal_m;
 // let saved_m = normal_m - (traf + eat + drink);
-// let result = traf + eat + drink >= normal_m && traf + eat + drink <= normal_m;
+//  let result = traf + eat + drink >= normal_m && traf + eat + drink <= normal_m;
 // result = result ? `초과금액, ${over_m}원 돈을 조금 아껴써주세요!🙄` : `잔여금액, ${saved_m}원 돈관리 잘하셨어요!!😍`;
 // document.write(`${name}님은 ${result} `);
 

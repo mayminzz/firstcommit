@@ -1,7 +1,14 @@
-$(".testimonial-pic img").click(function () {
+// $(".testimonial-pic img").click(function () {
+//   $(this).addClass("active");
+//   $(this).siblings().removeClass("active");
+//   $(".testimonial .content").removeClass("active");
+//   $("#" + $(this).attr("data-alt")).addClass("active");
+// });
+// siblings:형제
+$(".testimonial-pic img").click(function() {
   $(this).addClass("active");
   $(this).siblings().removeClass("active");
+
   $(".testimonial .content").removeClass("active");
-  $("#" + $(this).attr("data-alt")).addClass("active");
-});
-// siblings:형제
+  $("#" + $(this).attr("data-alt")).addClass("active")
+})
