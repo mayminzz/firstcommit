@@ -5,12 +5,18 @@
 // }
 // console.log(result);
 
+// function sum(a,b) {
+//   let result = a+b;
+//   console.log(result);
+// }
+// sum(5,5);
 // 전역 hello는 글로벌 변수는 지역변수에서 쓸 수 있다.
 // let hi = "hello";
 // function greeting() {
 //   console.log(hi);
 // }
 // greeting();
+
 
 let hi = "hello";
 function change() {

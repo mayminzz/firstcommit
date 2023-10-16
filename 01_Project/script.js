@@ -1,9 +1,9 @@
 $(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() > 50) {
-      $("header").addClass("active");
+    if ($(window).scrollTop() > 40) {
+      $(".trigger").addClass("active");
     } else {
-      $("header").removeClass("active")
+      $(".gnb").removeClass("active")
     }
   });
 });

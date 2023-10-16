@@ -11,4 +11,4 @@ function gallery(direct) {
   imgTag.setAttribute("src", "./2/pic_" + num + ".jpg");
 }
 
-// 
+

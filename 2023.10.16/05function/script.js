@@ -15,7 +15,7 @@
 // 썸에는 숫자들의 합산된 값이 들어가 있다. 
 // addNum이 호출될때 sum의 값으로 반환하게 리턴문을 써줬다. 
 function addNum(...numbers) {
-  let = sum = 0;
+  let sum = 0;
   for (let number of numbers) {
     sum += number;
   }
