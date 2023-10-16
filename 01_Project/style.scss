@@ -56,17 +56,19 @@ a {
 
 .container {
   width: 100%;
-  height: 1000vh;
+  height: 100vh;
   background: url("./img_project/AdobeStock_248310678.jpeg") repeat center center;
   background-size: contain;
   font-family: 'Judson' serif;
 }
 .page_inner {
   width: 90%;
+  height: 100vh;
   margin: 0 auto;
 }
 
 .loading_page {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -203,6 +205,8 @@ a {
 
 // home 
 #home {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -453,6 +457,7 @@ a {
       padding: 10px 20px;
       background: #4a4a4a;
       color: #fff;
+      margin: 20px;
     } 
     > em {
       width: 30%;
