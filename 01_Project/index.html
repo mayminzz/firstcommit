@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Document</title> 
+  <!-- jquery -->
+  <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <link rel="stylesheet" href="./K.style.css">
   <!-- fontawesome -->
-  <script src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
@@ -55,7 +57,7 @@
               <span class="heart"></span>
               <span class="scanner"></span>
             </div>
-            <span class="num">01082612610</span>
+            <span class="num">19990824</span>
           </div>
           <div class="main-home">
             <h1>PORTFOLIO</h1>
@@ -69,7 +71,7 @@
         </div>
       </main>
       <section id="about">
-        <div class="page_inner">
+        <div class="about_inner">
           <h1>"꿈을 그리는 사람은 마침내 그 꿈을 닮아간다."</h1>
           <div class="about_contents">
               <img src="./img_project/KakaoTalk_20231003_112559935.jpg" alt="">
@@ -111,7 +113,37 @@
       </section>
       <section id="timeline">
           <div class="timeline_pages">
-            <div class="timeline_page">
+            <div class="timeline_page first active">
+              <div class="timeline_aside">
+                <input type="checkbox" name="tabmenu" id="tab1" checked >
+                <a href="#timeline">TIMELINE</a>
+              </div>
+              <div class="slide_contents">
+                <div class="timeline_line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="text">
+                  <div class="contents_img">
+                    <img src="./img_project/timeline (2).jpg" alt="timeline1">
+                  </div>
+                  <div class="contents_desc">
+                    <h2>OAKVALLEY <br> RESORT</h2>     
+                    <span>21.11 ~ 22.03</span>
+                    <p>
+                      스키장 안전요원 <br>
+                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
+                      응급조치 및 후송 등 구조 활동
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <label for="tab1"> 
+                <span></span>
+              </label>
+            </div>
+            <div class="timeline_page second">
               <div class="timeline_aside">
                 <a href="#timeline">TIMELINE</a>
               </div>
@@ -137,11 +169,11 @@
                   </div>
                 </div>
               </div>
-              <label for="tab1"> 
+              <label for="tab2"> 
                 <span></span>
               </label>
           </div>
-            <div class="timeline_page">
+            <div class="timeline_page third">
               <div class="timeline_aside">
                 <a href="#timeline">TIMELINE</a>
               </div>
@@ -152,80 +184,91 @@
                   <span></span>
                   <span></span>
                 </div>
-                <div class="contents_img">
-                  <img src="./img_project/timeline (2).jpg" alt="timeline1">
-                </div>
-                <div class="contents_desc">
-                  <h2>OAKVALLEY<br>RESORT</h2>     
-                  <span>21.11 ~ 22.03</span>
-                  <p>
-                    스키장 안전요원 <br>
-                    발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
-                    응급조치 및 후송 등 구조 활동
-                  </p>
+                <div class="text">
+                  <div class="contents_img">
+                    <img src="./img_project/timeline (1).jpg" alt="timeline1">
+                  </div>
+                  <div class="contents_desc">
+                    <h2>OAKVALLEY <br> RESORT</h2>     
+                    <span>21.11 ~ 22.03</span>
+                    <p>
+                      스키장 안전요원 <br>
+                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
+                      응급조치 및 후송 등 구조 활동
+                    </p>
+                  </div>
                 </div>
               </div>
-              <label for="tab1"> 
+              <label for="tab3"> 
                 <span></span>
               </label>
           </div>
-            <div class="timeline_page">
-              <div class="timeline_aside">
-                <a href="#timeline">TIMELINE</a>
-              </div>
-              <input type="checkbox" name="tabmenu" id="tab1" checked >
-              <div class="slide_contents">
-                <div class="timeline_line">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="contents_img">
-                  <img src="./img_project/timeline (2).jpg" alt="timeline1">
-                </div>
-                <div class="contents_desc">
-                  <h2>OAKVALLEY <br> RESORT</h2>     
-                  <span>21.11 ~ 22.03</span>
-                  <p>
-                    스키장 안전요원 <br>
-                    발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
-                    응급조치 및 후송 등 구조 활동
-                  </p>
-                </div>
-              </div>
-              <label for="tab1"> 
-                <span></span>
-              </label>
-          </div>
+
+
       </section>
       <section id="project">
-        <div class="page_inner">
+        <div class="project_inner">
           <div class="project_header">
             <span>minzu</span>
             <h1>project</h1>
-            <em>12, November 2023</em>
+            <em>2023.10.10</em>
           </div>
           <div class="naver">
-            <img src="./img_project/naver1.png" alt="naver">
-            <h1>NAVER</h1>
-            <span>Skills : HTML, CSS</span>
-            <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            <img src="./img_project/NAVER Project_section.JPG" alt="naver">
+            <div class="naver_desc">
+              <h1>NAVER</h1>
+              <span>Skills : HTML, CSS</span>
+              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            </div>
           </div>
           <div class="kakao">
-            <img src="./img_project/naver1.png" alt="kakao">
-            <h1>KAKAO</h1>
-            <span>Skills : HTML, CSS</span>
-            <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            <img src="./img_project/magazine-page-1.png" alt="kakao">
+            <div class="kakao_desc">
+              <h1>KAKAO</h1>
+              <span>Skills : HTML, CSS</span>
+              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            </div>
           </div>
           <div class="apple">
-            <img src="./img_project/naver1.png" alt="apple">
-            <h1>APPLE</h1>
-            <span>Skills : HTML, CSS</span>
-            <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            <div class="apple_desc">
+              <h1>APPLE</h1>
+              <span>Skills : HTML, CSS</span>
+              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+            </div>
+            <img src="./img_project/apple.JPG" alt="apple">
           </div>
         </div>
       </section>
-      <section id="contact"></section>
+      <section id="contact">
+        <div class="contact_inner">
+          <span><em>CONTACT ME</em> CONTACT ME<em> CONTACT ME</em></span>
+          <div class="contact_content">
+            <div class="contact_info">
+              <img src="./img_project/home_img.jpg" alt="">
+              <h3>권민주</h3>
+              <a></a>
+              <a><i class="fas fa-phone"></i></a>
+              <a href="https://mayminzz.tistory.com"></a><i class="fab fa-blogger"></i>010-8261-2610</a>
+              <a href="https://github.com/mayminzz">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div class="contact_form">
+              <form action="">
+                <label for="name">Name : </label>
+                <input type="name" id="name">
+                <label for="email">Email : </label>
+                <input type="email" id="email">
+                <label for="phone">Phone : </label>
+                <input type="phone" id="phone">
+                <label for="detail">Detail : </label>
+                <textarea name="detail" id="detail" cols="30" rows="10"></textarea>
+                <button>SEND MESSAGE</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
       </div>
   </div>
 </body>
