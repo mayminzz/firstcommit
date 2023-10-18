@@ -7,12 +7,14 @@
   <!-- jquery -->
   <script defer src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <link rel="stylesheet" href="./K.style.css">
+  <!-- Feather Light Effect -->
+  <script defer src="./featherlight/featherlight.js"></script>
+  <link rel="stylesheet" href="./featherlight/featherlight.css" />
   <!-- fontawesome -->
   <script defer src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="container">
-    <div class="wrap">
       <header>
         <div class="logo">
           <a href="#home">MINJU</a></div>
@@ -112,79 +114,45 @@
         </div>
       </section>
       <section id="timeline">
-          <div class="timeline_pages">
-            <div class="timeline_page first active">
-              <div class="timeline_aside">
-                <input type="checkbox" name="tabmenu" id="tab1" checked >
-                <a href="#timeline">TIMELINE</a>
-              </div>
-              <div class="slide_contents">
-                <div class="timeline_line">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="text">
-                  <div class="contents_img">
-                    <img src="./img_project/timeline (2).jpg" alt="timeline1">
-                  </div>
-                  <div class="contents_desc">
-                    <h2>OAKVALLEY <br> RESORT</h2>     
-                    <span>21.11 ~ 22.03</span>
-                    <p>
-                      스키장 안전요원 <br>
-                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
-                      응급조치 및 후송 등 구조 활동
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <label for="tab1"> 
-                <span></span>
-              </label>
-            </div>
-            <div class="timeline_page second">
-              <div class="timeline_aside">
-                <a href="#timeline">TIMELINE</a>
-              </div>
-              <input type="checkbox" name="tabmenu" id="tab1" checked >
-              <div class="slide_contents">
-                <div class="timeline_line">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-                <div class="text">
-                  <div class="contents_img">
-                    <img src="./img_project/timeline (2).jpg" alt="timeline1">
-                  </div>
-                  <div class="contents_desc">
-                    <h2>OAKVALLEY <br> RESORT</h2>     
-                    <span>21.11 ~ 22.03</span>
-                    <p>
-                      스키장 안전요원 <br>
-                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
-                      응급조치 및 후송 등 구조 활동
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <label for="tab2"> 
-                <span></span>
-              </label>
+        <div class="timeline_inner">
+          <div class="timeline_aside">
+            <a href="#timeline">TIMELINE</a>
           </div>
-            <div class="timeline_page third">
-              <div class="timeline_aside">
-                <a href="#timeline">TIMELINE</a>
-              </div>
-              <input type="checkbox" name="tabmenu" id="tab1" checked >
-              <div class="slide_contents">
+          <input type="radio" name="tabmenu" id="tab1" checked >
+          <input type="radio" name="tabmenu" id="tab2">
+          <input type="radio" name="tabmenu" id="tab3">
+          <div class="tabs">
+            <div class="tab">
+              <div class="timeline-content">
                 <div class="timeline_line">
                   <span></span>
                   <span></span>
                   <span></span>
                 </div>
-                <div class="text">
+                <div class="text_img">
+                  <div class="contents_img">
+                    <img src="./img_project/timeline (2).jpg" alt="timeline1">
+                  </div>
+                  <div class="contents_desc">
+                    <h2>OAKVALLEY <br> RESORT</h2>     
+                    <span>21.11 ~ 22.03</span>
+                    <p>
+                      스키장 안전요원 <br>
+                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
+                      응급조치 및 후송 등 구조 활동
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab">
+              <div class="timeline-content">
+                <div class="timeline_line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="text_img">
                   <div class="contents_img">
                     <img src="./img_project/timeline (1).jpg" alt="timeline1">
                   </div>
@@ -199,12 +167,38 @@
                   </div>
                 </div>
               </div>
-              <label for="tab3"> 
-                <span></span>
-              </label>
+            </div>
+            <div class="tab">
+              <div class="timeline-content">
+                <div class="timeline_line">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+                <div class="text_img">
+                  <div class="contents_img">
+                    <img src="./img_project/timeline (3).jpg" alt="timeline1">
+                  </div>
+                  <div class="contents_desc">
+                    <h2>OAKVALLEY <br> RESORT</h2>     
+                    <span>21.11 ~ 22.03</span>
+                    <p>
+                      스키장 안전요원 <br>
+                      발생할 사고에 대비해 시설 안전 점검 및 보수 <br>
+                      응급조치 및 후송 등 구조 활동
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-
+          <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+          </div>
+        </div>
+      
       </section>
       <section id="project">
         <div class="project_inner">
@@ -219,6 +213,7 @@
               <h1>NAVER</h1>
               <span>Skills : HTML, CSS</span>
               <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+              <a href="./NAVER mission/index.html" data-featherlight="iframe" >View Project</a>
             </div>
           </div>
           <div class="kakao">
@@ -226,14 +221,14 @@
             <div class="kakao_desc">
               <h1>KAKAO</h1>
               <span>Skills : HTML, CSS</span>
-              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다. <a href=""></a></p>
             </div>
           </div>
           <div class="apple">
             <div class="apple_desc">
               <h1>APPLE</h1>
               <span>Skills : HTML, CSS</span>
-              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다.</p>
+              <p>html과 css를 사용하여 만들었으며, flex와 grid를 주로 사용하였습니다. <a href="./Apple/index.html"></a></p>
             </div>
             <img src="./img_project/apple.JPG" alt="apple">
           </div>
@@ -241,20 +236,8 @@
       </section>
       <section id="contact">
         <div class="contact_inner">
-          <span><em>CONTACT ME</em> CONTACT ME<em> CONTACT ME</em></span>
+          <span><em><b>C</b>ONTACT ME</em>CONTACT ME<em>CONTACT ME</em></span>
           <div class="contact_content">
-            <div class="contact_info">
-              <img src="./img_project/home_img.jpg" alt="">
-              <h3>권민주</h3>
-              <div class="sns_icon">
-                <a class="fab fa-instagram-square"></a>
-                <a><i class="fas fa-phone"></i></a>
-                <a href="https://mayminzz.tistory.com"></a><i class="fab fa-blogger"></i></a>
-                <a href="https://github.com/mayminzz">
-                  <i class="fab fa-github"></i>
-                </a>
-              </div>
-            </div>
             <div class="contact_form">
               <form class="send-box" action="#" method="get">
                 <label for="name">Name : </label>
@@ -268,10 +251,22 @@
                 <input type="submit" value="send message">
               </form>
             </div>
+            <div class="contact_info">
+              <img src="./img_project/home_img.jpg" alt="">
+              <h3>권민주</h3>
+              <div class="sns_icon">
+                <a class="fab fa-instagram-square"></a>
+                <a><i class="fas fa-phone"></i></a>
+                <a href="https://mayminzz.tistory.com"></a><i class="fab fa-blogger"></i></a>
+                <a href="https://github.com/mayminzz">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
           </div>
         </div>            
       </section>
-    </div>
+
   </div>         
 </body>
 </html>
