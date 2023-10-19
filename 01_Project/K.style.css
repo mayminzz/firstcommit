@@ -123,7 +123,6 @@ header {
 .barcode > span.name {
   width: 230px;
   text-align: center;
-  border: 1px solid #f00;
   font-size: 18px;
   letter-spacing: 0.7em;
 }
@@ -470,7 +469,7 @@ header {
 
 /* timeliine */
 #timeline {
-  width: 100%;
+  /* width: 100%; */
   position: relative;
   /* overflow: hidden; */
 }
@@ -501,6 +500,7 @@ header {
 .tab > div {
   width: 100%;
   height: 100%;
+  float: left ;
 }
 .timeline-content {
   display: flex;
@@ -525,6 +525,7 @@ header {
   background-size: cover;
   box-shadow: 3px 0 20px rgba(0, 0, 0, 0.2);
   position: absolute;
+  left: 0;
   z-index: 1;
 }
 .timeline_aside a {
@@ -806,9 +807,12 @@ input[id=tab3]:checked ~ .tabs {
   height: 100vh;
   margin: 0 auto;
   border: 1px solid transparent;
+  background: url("./img_project/AdobeStock_248310678.jpeg")center center;
+  background-size: contain;
+
 }
 .contact_inner span {
-  font-size: 80px;
+  font-size: 100px;
   font-weight: bold;
   display: flex;
   overflow: hidden;
@@ -823,15 +827,19 @@ input[id=tab3]:checked ~ .tabs {
   color: crimson;
 } */
 .contact_content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  gap: 100px;
+
 }
 .contact_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
 .contact_info img {
   width: 150px;
@@ -851,7 +859,7 @@ input[id=tab3]:checked ~ .tabs {
   margin-left: 10px;
 }
 .contact_form form {
-  width: 100%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   padding: 30px;
