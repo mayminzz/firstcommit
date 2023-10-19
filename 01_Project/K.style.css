@@ -807,7 +807,7 @@ input[id=tab3]:checked ~ .tabs {
   height: 100vh;
   margin: 0 auto;
   border: 1px solid transparent;
-  background: url("./img_project/AdobeStock_248310678.jpeg")center center;
+  background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center;
   background-size: contain;
 
 }
@@ -832,14 +832,12 @@ input[id=tab3]:checked ~ .tabs {
   align-items: center;
   height: 80vh;
   gap: 100px;
-
 }
 .contact_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .contact_info img {
   width: 150px;

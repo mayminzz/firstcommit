@@ -3,9 +3,11 @@
 // }
 // setInterval(greeting, 2000);
 
+
 // setInterval(function greeting() {
 //   console.log("안녕하세요!");
 // },2000);
+
 
 // setInterval(()=> {
 //   console.log("안녕하세요!");
@@ -35,6 +37,7 @@
 //   console.log("기다려주세요!");
 // }, 3000);
 
+
 // MISSION
 const number = parseInt(prompt("숫자를 입력해주세요!"));
 const isPositive = (n) => {
@@ -49,13 +52,6 @@ const isPositive = (n) => {
 if (!isNaN(number)) {
   isPositive(number);
 }
+// isNaN : 숫자가 아닌게 아니라면 = 숫자라면!
+//  isPosive 양수인지 점검하는 함수
 
-// if (!isNaN(number)) {
-//   if (number > 0) {
-//     alert(`${number}는 양수입니다.`);
-//   } else if (number < 0) {
-//     alert(`${number}는 음수입니다.`);
-//   } else {
-//     alert(`${number}는 0입니다.`);
-//   }
-// }
