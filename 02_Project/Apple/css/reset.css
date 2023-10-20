@@ -1,0 +1,15 @@
+@font-face {
+  font-family: kakao;
+  src: url("/Apple/font/aosicons_regular.woff"), local("/Apple/font/SFProKRDisplay_regular.woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

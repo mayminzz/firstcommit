@@ -1,0 +1,138 @@
+@font-face {
+  font-family: kakao;
+  src: url("/kakao0/font/KakaoBigRegular.ttf"), local("/kakao0/font/KakaoBigBold.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#wrap {
+  width: 616px;
+  height: 802px;
+  margin: 100px auto;
+  box-shadow: 0 0 10px #a2a2a2;
+}
+header {
+  width: 615px;
+  height: 85px;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #e8e7e7;
+  position: relative;
+}
+header h2 {
+  margin: 32px 0 17px 27px;
+  font-weight: medium;
+}
+header .fa-xmark {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 20px;
+  color: #adadad;
+}
+#container {
+  width: 100%;
+  height: 716px;
+  display: flex;
+}
+aside {
+  width: 157px;
+  height: 716px;
+  background: #ececed;
+  border-right: 1px solid #e8e7e7;
+}
+aside ul {
+  text-align: left;
+  margin-top: 18px;
+}
+aside ul li {
+  padding: 19px 0px 19px 24px;
+}
+aside ul li a {
+  color: #000;
+}
+aside ul .style {
+  width: 157px;
+  height: 60px;
+  background: #d9d9d9;
+}
+main .main_ad {
+  width: 458px;
+  height: 150px;
+}
+main .main_ad {
+  width: 401px;
+  height: 126px;
+  background: url("./img03/img_ad.JPG")center center no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 11px 28px;
+  border-radius: 10px;
+}
+.main_contents {
+  width: 458px;
+  height: 569px;
+  padding-right: 26px;
+  overflow: hidden;
+
+}
+.main_content {
+  width: 432px;
+  height: 98px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding-left: 26px;
+}
+.main_content:hover {
+  background: #ebebec;
+}
+
+.main_content img {
+  width: 76px;
+  height: 76px;
+  margin:10px 0;
+}
+.main_content .number {
+  font-size: 26px;
+  font-weight: normal;
+  position: relative;
+  top: -15px;
+
+}
+.main_content .name {
+  position: relative;
+  font-size: 18px;
+  font-weight: medium;
+  letter-spacing: 1px;
+  top: 5px;
+}
+
+.main_content h2 em {
+  font-style: normal;
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  font-size: 15px;
+  color: #fff;
+  background: #ff5b49;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: -3px;
+  left: 3px;
+  
+}
+.main_content h2 span {
+  font-weight: normal;
+  font-size: 15px;
+  color: #a2a2a2;
+}
