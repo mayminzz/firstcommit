@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Judson:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Judson', serif;
+  font-family: "Judson", serif;
 }
 
 ul,
@@ -23,14 +23,14 @@ body {
 .cd-section {
   width: 100%;
   height: 100vh;
-
 }
 .cd-section > div {
   height: 100%;
   position: relative;
 }
 .content {
-  background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+  background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+    center;
   background-size: cover;
   overflow: hidden;
   width: 100%;
@@ -64,7 +64,7 @@ header {
 
 .gnb li a {
   color: #222;
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .trigger {
@@ -210,8 +210,8 @@ header {
   left: 50%;
   transform: translateX(-50%);
   background: #f00;
-  /* animation: scanning 3s 1s linear both;
-  animation-direction: alternate; */
+  animation: scanning 3s 1s linear both;
+  animation-direction: alternate;
 }
 
 @keyframes scanning {
@@ -232,7 +232,7 @@ header {
   align-items: center;
   width: 100%;
   height: 100vh;
-  /* animation: opacity-image 1s 4s ease-in both; */
+  animation: opacity-image 1s 4s ease-in both;
 }
 @keyframes opacity-image {
   0% {
@@ -257,7 +257,7 @@ header {
 .main_home h1::before,
 .main_home h1::after {
   content: "";
-  width: 580px;
+  width: 700px;
   height: 0.5px;
   background: #222;
   position: absolute;
@@ -271,8 +271,8 @@ header {
   right: 0;
 }
 .main_home img {
-  width: 340px;
-  height: 480px;
+  width: 400px;
+  height: 540px;
   border-radius: 200px;
   margin: 5px 0;
   filter: grayscale(0.3);
@@ -295,18 +295,20 @@ header {
   width: 94%;
   height: 100vh;
   margin: 0 auto;
+  text-align: center;
 }
 .about_inner h1 {
   margin-top: 60px;
-  font-size: 65px;
+  font-size: 75px;
   padding: 25px 40px;
   border-bottom: 1px solid #222;
-  margin-bottom: 10px;
 }
 .about_contents {
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 30px;
 }
 .about_contents .photo {
   flex: 3;
@@ -314,11 +316,12 @@ header {
 }
 .about_contents img {
   width: 80%;
-  height: 550px;
+  height: 700px;
   filter: grayscale(1);
 }
 .about_contents .about_desc {
   text-align: left;
+  padding-top: 100px;
   position: relative;
   flex: 4;
 }
@@ -328,7 +331,7 @@ header {
   margin-bottom: 30px;
 }
 .about_contents .about_desc span::before {
-  content: url("./img_project/D.png");
+  content: url("./img_project/");
   background-repeat: no-repeat;
   width: 90px;
   height: 100px;
@@ -366,7 +369,7 @@ header {
 .about_desc i.fas::after {
   content: "스크롤을 내려주세요 !";
   font-size: 12px;
-  width: 120px;
+  width: 130px;
   position: absolute;
   bottom: -20px;
   left: -45px;
@@ -381,6 +384,93 @@ header {
   100% {
     transform: translateY(10px);
   }
+}
+/*favorite*/
+.favorite_inner {
+  width: 95%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid #f00;
+  position: relative;
+}
+.favorite_contents {
+  border: 1px solid #f00;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50px;
+}
+.favorite_contents h1 {
+  font-size: 120px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.favorite_contents h2 {
+  font-size: 100px;
+}
+.slide_img {
+  width: 30%;
+  height: 93.8%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.top_img,
+.bottom_img {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 250px;
+  animation: 20s linear forwards infinite;
+  animation-direction: alternate;
+}
+.top_img {
+  right: 220px;
+  margin-right: 30px;
+  animation-name: slidedown;
+}
+.bottom_img {
+  right: 0;
+  animation-name: slideup;
+}
+.top_img img,
+.bottom_img img {
+  width: 90%;
+  height: 220px;
+  filter: grayscale(1);
+  transition: all 0.4s;
+}
+.top_img img:hover,
+.bottom_img img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slidedown {
+  0% {
+    transform: translateY(-47%);
+  }
+  100% {
+    transform: translateY(-4%);
+  }
+}
+
+@keyframes slideup {
+  0% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(-38%);
+  }
+}
+.favorite h2 {
+  font-size: 50px;
+  padding: 50px 0;
 }
 
 /* timeline */
@@ -458,31 +548,31 @@ input[name="tabmenu"] {
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.4);
   transition: 0.5s;
 }
-.btn label[for=tab1] {
+.btn label[for="tab1"] {
   background: #cb4c3b;
 }
-.btn label[for=tab2] {
+.btn label[for="tab2"] {
   background: #d97b7b;
 }
-.btn label[for=tab3] {
+.btn label[for="tab3"] {
   background: #edbfbf;
 }
-input[id=tab1]:checked ~ .btn label[for=tab1] {
+input[id="tab1"]:checked ~ .btn label[for="tab1"] {
   margin-left: 50px;
 }
-input[id=tab2]:checked ~ .btn label[for=tab2] {
+input[id="tab2"]:checked ~ .btn label[for="tab2"] {
   margin-left: 50px;
 }
-input[id=tab3]:checked ~ .btn label[for=tab3] {
+input[id="tab3"]:checked ~ .btn label[for="tab3"] {
   margin-left: 50px;
 }
-input[id=tab1]:checked ~ .tabs {
+input[id="tab1"]:checked ~ .tabs {
   margin-left: 0;
 }
-input[id=tab2]:checked ~ .tabs {
+input[id="tab2"]:checked ~ .tabs {
   margin-left: -100%;
 }
-input[id=tab3]:checked ~ .tabs {
+input[id="tab3"]:checked ~ .tabs {
   margin-left: -200%;
 }
 
@@ -558,6 +648,7 @@ input[id=tab3]:checked ~ .tabs {
   font-size: 18px;
   line-height: 2em;
 }
+
 
 /* project */
 .project_inner {
@@ -698,6 +789,8 @@ input[id=tab3]:checked ~ .tabs {
 .apple_desc {
   flex: 1;
 }
+
+
 /* contact */
 .contact_inner {
   width: 100%;
@@ -721,7 +814,6 @@ input[id=tab3]:checked ~ .tabs {
   align-items: center;
   height: 80 vh;
   gap: 50px;
-
 }
 .contact_info {
   display: flex;
@@ -756,9 +848,9 @@ input[id=tab3]:checked ~ .tabs {
   flex-direction: column;
   padding: 30px;
 }
-.contact_form input[id=name],
-.contact_form input[id=email],
-.contact_form input[id=phone],
+.contact_form input[id="name"],
+.contact_form input[id="email"],
+.contact_form input[id="phone"],
 textarea {
   margin-bottom: 10px;
   padding: 10px;
@@ -767,9 +859,9 @@ textarea {
   border: 1px solid #d7d7d7;
   transition: 0.3s;
 }
-.contact_form input[id=name]:hover,
-.contact_form input[id=email]:hover,
-.contact_form input[id=phone]:hover,
+.contact_form input[id="name"]:hover,
+.contact_form input[id="email"]:hover,
+.contact_form input[id="phone"]:hover,
 textarea:hover {
   box-shadow: 0 0 5px #7f7d7c;
 }
@@ -809,7 +901,7 @@ input[type="submit"]:hover {
   position: absolute;
   top: 30px !important;
   right: 50px !important;
-  width: 25px ;
+  width: 25px;
   font-size: 40px;
 }
 
@@ -822,11 +914,12 @@ input[type="submit"]:hover {
     font-size: 30px;
   }
   .gnb .menu {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     width: 100%;
     height: 100vh;
-    border:  1px solid #f00;
+    border: 1px solid #f00;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -834,7 +927,7 @@ input[type="submit"]:hover {
     z-index: 5;
     display: none;
   }
-  .gnb_inner  {
+  .gnb_inner {
     position: relative;
   }
   .trigger {
@@ -845,14 +938,14 @@ input[type="submit"]:hover {
     transition: 0.3s;
   }
   .trigger.active span:nth-child(1) {
-    transform:rotate(45deg);
+    transform: rotate(45deg);
   }
   .trigger.active span:nth-child(2) {
     opacity: 0;
   }
   .trigger.active span:nth-child(3) {
-    transform:rotate(-45deg);
-    top:-50%;
+    transform: rotate(-45deg);
+    top: -50%;
   }
   .home_inner {
     width: 80%;
@@ -863,12 +956,11 @@ input[type="submit"]:hover {
     margin-left: 0;
   }
   .main_home h1::before,
-.main_home h1::after {
-  width: 100px;
-}
+  .main_home h1::after {
+    width: 100px;
+  }
   .main_home img {
     width: 200px;
     height: 350px;
-
   }
 }
