@@ -202,7 +202,7 @@ Main Components
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  display: none;
+  /* display: none; */
 }
 .cd-vertical-nav a {
   display: block;
@@ -210,7 +210,7 @@ Main Components
   width: 40px;
   /* image replace */
   overflow: hidden;
-  text-indent: 100%;
+  text-indent: 0%;
   white-space: nowrap;
   background: url(../img/cd-icon-arrow.svg) no-repeat center center;
 }
