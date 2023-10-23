@@ -6,3 +6,5 @@ let displaySelect = () => {
 };
 selectMenu.onchange = displaySelect;
 // oncjange  앞에 on이 붙으면 이벤트핸들러가 된다. "변경되거든"
+
+

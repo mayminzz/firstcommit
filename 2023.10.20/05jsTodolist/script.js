@@ -8,7 +8,7 @@
 const form = document.querySelector("form");
 const input = document.querySelectorAll("input")[0];
 const ul = document.querySelector("ul");
-console.log(input);
+// console.log(input);
 
 let todos = [];
 

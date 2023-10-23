@@ -31,6 +31,7 @@ arrows.forEach((arrow) => {
     container.style.background = `url(2/${pics[i]})`;
   });
 });
+
 // 우클릭을 했을때 나오는 창을 contextmenu 라고 한다. 기본적으로 가지고 있는 속성을 무력화 시키면서 alert창을 띄운다.
 window.addEventListener("contextmenu", (e) => {
   e.preventDefault();

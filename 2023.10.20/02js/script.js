@@ -6,17 +6,7 @@
 
 html document 는 곧 body
 */
-const btn = document.querySelector("button");
 
-// console.log(btn);
-btn.onclick = () => {
-  document.body.classList.toggle("dark");
-  if(btn.innerText == "다크모드") {
-    btn.innerText = "라이트모드"
-  } else if(btn.innerText =="라이트모드") {
-    btn.innerText = "다크모드"
-  }
-};
 
 // const btn = document.querySelector("button");
 // const contents = document.querySelector("#contents");

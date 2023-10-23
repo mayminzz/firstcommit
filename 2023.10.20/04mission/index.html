@@ -6,44 +6,57 @@
     <title>Document</title>
     <!-- <script defer src="./script.js"></script> -->
     <link rel="stylesheet" href="./style.css" />
-    <script src="./script.js"></script>
+    <script defer src="./script.js"></script>
   </head>
   <body>
     <div id="contain">
-      <h1>나이케 에어맥스 엑시스 화이트</h1>
       <div id="contents">
+      <h1>나이키 에어맥스 엑시스 화이트</h1>
         <fieldset>
-          <!-- <div class="photo">
-            <img src="./img/nike-sh.webp" alt="" />
+          <div class="photo">
+            <img src="./img/nk.webp" alt="" />
           </div>
           <form action="">
-            <label class="field" for="prod-name">상품명 </label>
-            <input
-              id="prod-name"
-              class="input-box"
-              type="text"
-              name="prod-name"
-            />
-            <label class="field" for="model-name">모델명 </label>
-            <input
-              id="model-name"
-              class="input-box"
-              type="text"
-              name="model-name"
-            />
-            <label class="field" for="date">출시일 </label>
-            <input id="date" class="input-box" type="text" name="date" />
-            <label class="field" for="prod_color">컬러 </label>
-            <input
-              id="prod_color"
-              class="input-box"
-              type="text"
-              name="prod-color"
-            />
-          </form> -->
-          <button type="submit">상세 설명보기</button>
+            <ul>
+              <li>
+                <label class="field" for="prod-name">상품명 </label>
+                <input
+                  id="prod-name"
+                  class="input-box"
+                  type="text"
+                  name="prod-name"
+                  value="나이키 V2K 런"/>
+              </li>
+              <li>
+                <label class="field" for="model-name">모델명 </label>
+                <input
+                  id="model-name"
+                  class="input-box"
+                  type="text"
+                  name="model-name"
+                  value="FD0736-100"
+                />
+              </li>
+              <li>
+                <label class="field" for="date">출시일 </label>
+                <input id="date" class="input-box" type="text" name="date" 
+                value="2023.09.23"/>
+              </li>
+              <li>
+                <label class="field" for="prod_color">컬러 </label>
+                <input
+                  id="prod_color"
+                  class="input-box"
+                  type="text"
+                  name="prod-color"
+                  value="서밋 화이트/퓨어 플래티넘/라이트"
+                />
+              </li>
+            </ul>
+            <button id="btn">상세 설명 보기</button>
+          </form>
         </fieldset>
-        <div class="showList">
+        <div id="show">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum cum
             natus velit, repellat ex, eaque voluptates saepe facere voluptatem
