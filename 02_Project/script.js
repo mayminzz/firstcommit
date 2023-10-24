@@ -1,4 +1,4 @@
-
+// header toggle 버튼
 const gnb = document.querySelector(".gnb");
 const menu = document.querySelector(".menu");
 const trigger = document.querySelector(".trigger");
@@ -7,8 +7,15 @@ trigger.onclick = () => {
     trigger.classList.toggle("active");
     menu.classList.toggle("show");
   }
+// timeline 
+const img2 = document.querySelector(".img_2");
+const btn = document.querySelector(".text");
+btn.addEventListener("click", ()=> {
+  img2.classList.toggle("overImg")
+})
 
-  
+
+
 const myName = document.querySelector("#name");
 
 myName.onclick = () => {

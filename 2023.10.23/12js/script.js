@@ -22,3 +22,8 @@ function removeItem () {
   let list = this.parentNode;
   list.parentNode.removeChild(list);
 }
+/*1. 각자 필요한 요소 불러와 정의
+2. 저장하기를 눌렀을 때 제목과 저자에 들어간 값이 하단에 보여지게 한다. 
+3. 삭제버튼을 누르면 삭제되도록 한다.
+4. */
+
