@@ -1,32 +1,3 @@
-/*1. li태그 안에 span p태그로 리스트와 삭제버튼 만들기 밑에 bookList에 넣기
-2. 엑스버튼을 누르면 글씨가 사라짐
-3. 
- */
-// const title = document.querySelector("#title");
-// const author = document.querySelector("#author");
-// const ul =document.querySelectorAll("#bookList");
-// const btn =document.querySelector("#save");
-
-// btn.addEventListener("click", (e) => {
-//   e.preventDefault;
-//   let li = document.createElement("li");
-//   let titleNode = document.createTextNode(title.innerText);
-//   console.log(titleNode)
-//   let authorText = document.createTextNode(author.innerText);
-//   const span = document.createElement("span");
-//   span.innerText = "삭제";
-//   span.onclick = ()=> {
-//     span.addEventListener("click", function() {
-//       this.parentNode.remove(this);
-//     })
-//   }
-//   li.appendChild(titleNode);
-//   li.appendChild(authorText);
-//   li.appendChild(span);
-
-  
-  
-// })
 const form = document.querySelector('form');
 const titleInput = document.querySelector('#title');
 const authorInput = document.querySelector('#author');

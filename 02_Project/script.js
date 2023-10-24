@@ -7,23 +7,6 @@ trigger.onclick = () => {
     trigger.classList.toggle("active");
     menu.classList.toggle("show");
   }
-  const gImg1 = document.querySelector("#gradu1");
-  const gImg2 = document.querySelector("#gradu2");
-  const gImg3 = document.querySelector("#gradu3");
-  const gradu = document.querySelector("#gradu");
-
-  gImg1.onclick = () => {
-    gradu2.classList.toggle("transform");
-  }
-
-
-
-
-
-
-
-
-
 
 const myName = document.querySelector("#name");
 
