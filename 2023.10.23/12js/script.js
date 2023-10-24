@@ -1,30 +1,24 @@
-const form = document.querySelector('form');
-const titleInput = document.querySelector('#title');
-const authorInput = document.querySelector('#author');
+const title = document.querySelector("#title");
+const author = document.querySelector("#author");
+const save = document.querySelector("#save");
+const bookList = document.querySelector("#bookList");
 
-const ul = document.querySelector('#bookList');
-
-form.addEventListener('submit', function(e) {
+save.addEventListener("click", (e) => {
   e.preventDefault();
 
-  const title = titleInput.value;
-  const author = authorInput.value;
+  const item = document.createElement("li");
+  item.innerHTML = `${title.value} - ${author.value} <span class="delButton">삭제</span>`;
+  bookList.appendChild(item);
+  title.value = "";
+  author.value = "";
 
-  titleInput.value = '';
-  authorInput.value = '';
-
-  const newBook = document.createElement('li');
-  newBook.innerText = `제목: ${title}, 저자: ${author}`;
-
-  ul.appendChild(newBook);
-  
-  const delBtn = document.createElement("button");
-  delBtn.innerText = "삭제";
-  ul.appendChild(delBtn)
-  delBtn.onclick = () => {
-    delBtn.parentNode.remove();
+  const delButtons = document.querySelectorAll(".delButton");
+  for (let delButton of delButtons) {
+    delButton.addEventListener("click", removeItem);
   }
 });
 
-
-
+function removeItem () {
+  let list = this.parentNode;
+  list.parentNode.removeChild(list);
+}

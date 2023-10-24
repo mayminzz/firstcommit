@@ -57,7 +57,7 @@ header {
 .logo a {
   font-size: 35px;
   font-weight: bold;
-  color: #222;
+  color: #222;  z-index: 99999;
 }
 .gnb .menu {
   display: flex;
@@ -123,14 +123,19 @@ header {
   }
   100% {
     opacity: 0;
+    display: none;
   }
 }
-.barcode > span {
+.barcode span {
   width: 230px;
   text-align: center;
   font-size: 30px;
   letter-spacing: 0.5em;
   color: #222;
+}
+.barcode span:nth-child(1) {
+  letter-spacing: 1.18em;
+  padding-left: 2px;
 }
 .barcode_block {
   position: relative;
@@ -214,7 +219,6 @@ header {
   transform: translateX(-50%);
   background: #f00;
   animation: scanning 3s 1s linear both;
-  animation-direction: alternate;
 }
 
 @keyframes scanning {
@@ -254,7 +258,7 @@ header {
   letter-spacing: 0.5em;
   text-align: center;
   margin-top: 42px;
-  padding-left: 50px;
+  padding-left: 45px;
   position: relative;
 }
 .main_home h1::before,
@@ -400,6 +404,7 @@ header {
   transform: translateY(-50%);
   left: 50px;
   position: relative;
+
 }
 .favorite_contents h1 {
   font-size: 120px;
@@ -420,20 +425,14 @@ header {
   top: 1px;
   left: 0;
 }
-/* .favorite_contents h1::after {
-  content: "";
-  background: url("./img_project/heart_2.png") no-repeat center center;
-  background-size: cover;
-  width: 260px;
-  height: 265px;
-  position: absolute;
-  top: -60px;
-  left: -30px;
-  transform: rotate(-23deg);
-  opacity: 0.6;
-} */
+
 .favorite_contents h2 {
   font-size: 100px;
+  transition: 0.5s;
+}
+.favorite_contents h2:hover {
+  text-shadow: 0 0 5px rgb(7, 255, 238);
+  transform: translateX(20px);
 }
 .slide_img {
   width: 35%;
@@ -471,7 +470,6 @@ header {
   filter: grayscale(1);
   border-radius: 3px;
   transition: all 0.4s;
-  z-index: -10;
 }
 .top_img img:hover,
 .bottom_img img:hover {
@@ -512,7 +510,7 @@ header {
 .timeline_inner {
   width: 100%;
   height: 92vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   margin-top: 60px;
 }
@@ -645,21 +643,7 @@ input[id="tab3"]:checked ~ .tabs {
   left: 3px;
   background: #222;
 }
-/* .slide_contents {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 11px;
-  gap: 10px;
-  border: 1px solid #00f;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-}
-.slide_contents .text {
-  display: flex;
-} */
+
 .contents_img {
   width: 430px;
   height: 550px;
@@ -1064,11 +1048,6 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
   }
   .gnb .menu {
-    width: 100%;
-    display: none;
-    transition: 0.5s;
-  }
-  .gnb .menu.show {
     background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
     background-size: cover;
     width: 100%;
@@ -1079,11 +1058,20 @@ nav li:nth-child(2):hover a::before {
     align-items: center;
     line-height: 1;
     position: absolute;
-    left: 0;
+    right: -100%;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .gnb .menu.show {
+    width: 100%;
+    right: 0;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
   }
   .gnb .menu a {
     font-size: 30px;
-  }
+    cursor: pointer;
+  } 
   .gnb .menu li:hover a {
     text-decoration: underline;
   }
@@ -1097,6 +1085,9 @@ nav li:nth-child(2):hover a::before {
     position: absolute;
     top: 22px;
     right: 0px;
+    transition: 0.5s;
+  }
+  .trigger span {
     transition: 0.5s;
   }
   .trigger.active span:nth-child(1) {
@@ -1209,15 +1200,14 @@ nav li:nth-child(2):hover a::before {
   .favorite_inner {
     width: 100%;
     margin: 0px auto;
-    border: 1px solid #f00;
+    position: static;
   }
   .favorite_contents {
     width: 100%;
     height: 30%;
-    border: 1px solid #f00;
   }
   .favorite_contents h1 {
-    font-size: 40px;
+    font-size: 45px;
     margin-top: -50px;
     margin-bottom: 50px;
     font-weight: bold;
@@ -1226,24 +1216,17 @@ nav li:nth-child(2):hover a::before {
   .favorite_contents h1::before {
     width: 70px;
     height: 70px;
-    top: -20px;
-  }
-  .favorite_contents h1::after {
-    width: 120px;
-    height: 120px;
-    top: -30px;
-    left: -10px;
+    top: -15px;
   }
   .favorite_contents h2 {
     font-size: 51px;
   }
   .slide_img {
     width: 100%;
-    height: 50%;
-    bottom: 0;
+    height: 60%;
+    padding-top: 40px;
     display: grid;
     overflow: hidden;
-    border: 1px solid #f00;
   }  
   .top_img, 
   .bottom_img  {
@@ -1263,19 +1246,19 @@ nav li:nth-child(2):hover a::before {
 
   @keyframes slideright {
     0% {
-      transform: translateX(-31%);
+      transform: translateX(-50%);
     }
     100% {
-      transform: translateX(1%);
+      transform: translateX(0%);
     }
   }
   
   @keyframes slideleft{
     0% {
-      transform: translateX(1%);
+      transform: translateX(0%);
     }
     100% {
-      transform: translateX(-31%);
+      transform: translateX(-50%);
     }
   }
   .top_img img,
@@ -1283,6 +1266,8 @@ nav li:nth-child(2):hover a::before {
     width: 180px;
     height: 150px;
     margin-bottom: 15px;
+    object-fit: cover;
+    object-position: center;
   }
   /* timeline */
   .timeline_inner {
@@ -1359,7 +1344,7 @@ nav li:nth-child(2):hover a::before {
   .project_header > h1 {
     font-size: 60px;
     width: 90%;
-    padding-left: 68px;
+    text-align: center;
   }
   #project .naver {
     width: 98.3%;
@@ -1372,7 +1357,7 @@ nav li:nth-child(2):hover a::before {
     height: 300px;
   }
   #project .kakao {
-    width: 98.3%;
+    width: 100%;
     grid-column: 1/2;
     grid-row: 3/4;
     display: flex;
@@ -1410,11 +1395,10 @@ nav li:nth-child(2):hover a::before {
     font-size: 19px;
   }
   #project .apple {
-    width: 98.3%;
+    width: 100%;
     flex-direction: column;
     grid-column: 1/2;
     grid-row: 4/5;
-    border: 1px solid #f00;
   }
   #project .apple img {
     width: 80%;
@@ -1430,6 +1414,10 @@ nav li:nth-child(2):hover a::before {
     height: 100vh;
     margin: 0 auto;
     height: 120vh;
+  }
+  .contact_inner span {
+    font-size: 70px;
+    cursor: pointer;
   }
   .contact_inner em {
     display: none;
@@ -1457,6 +1445,5 @@ nav li:nth-child(2):hover a::before {
   nav {
     display: none;
   }
-  
 }
 

@@ -8,6 +8,7 @@ trigger.onclick = () => {
     menu.classList.toggle("show");
   }
 
+  
 const myName = document.querySelector("#name");
 
 myName.onclick = () => {
