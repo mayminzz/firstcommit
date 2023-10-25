@@ -8,7 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url("/2023.10.25/imgs/bg-1.jpg")no-repeat center center / cover; 
+  background: url("../imgs/bg-1.jpg")no-repeat center center / cover; 
 }
 h1 {
   background: #fff;

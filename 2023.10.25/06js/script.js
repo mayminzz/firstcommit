@@ -5,6 +5,17 @@
 // 3개의 매개변수를 받을 건데 각각의 키에 매개변수를 할당
 
 // 객체 생성자 함수(붕어빵 틀)=프로토타입이라 한다
+// function book(title, pages, done) {
+//   this.title = title;
+//   this.pages = pages;
+//   this.done = done;
+
+//   this.finish = function () {
+//     let str = "";
+//     this.done === false ? (str = "읽는 중") : (str = "완독");
+//     return str;
+//   };
+// }
 function book(title, pages, done) {
   this.title = title;
   this.pages = pages;
@@ -12,9 +23,9 @@ function book(title, pages, done) {
 
   this.finish = function () {
     let str = "";
-    this.done === false ? (str = "읽는 중") : (str = "완독");
+    this.done === false ? str = "읽는중" : str = "완독"  
     return str;
-  };
+  }
 }
 
 // 자바스크립트에 내장되어 있는 함수를 쓸때는 new ex) new Date() / new Object()
@@ -29,20 +40,20 @@ console.log(`${book3.title} - ${book3.pages}쪽 - ${book3.finish()}`);
 
 // 클래스를 사용해서 객체를 만들기!!
 
-class Book5 {
-  constructor(title, pages, done) {
+
+class book5 {
+  constructor(title,pages,done) {
     this.title = title;
     this.pages = pages;
     this.done = done;
   }
 
   finish() {
-    let str = "";
+    let str ="";
     this.done === false ? (str = "읽는 중") : (str = "완독");
     return str;
   }
 }
-let book6 = new Book5("자바스크립트01", 648, false);
-let book7 = new Book5("자바스크립트02", 550, true);
-console.log(`${book6.title} - ${book6.pages} - ${book6.done}`);
-console.log(`${book7.title} - ${book7.pages} -${book7.done}`);
+
+let book8 = new book5("잠을", 8282, true)
+console.log(`${book8.title} - ${book8.pages} - ${book8.finish()}`)

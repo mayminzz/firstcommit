@@ -2,7 +2,7 @@
 //   title: "자바스크립트",
 //   pages: 648,
 // };
-// console.log(book1);
+// console.log(book1);-
 
 // // 1. 온점표기법 2. 대괄호표기법
 
@@ -23,6 +23,7 @@
 //   },
 // }
 
+
 // let book3 = {
 //   title: "노드 JS",
 //   pages: 360,
@@ -40,3 +41,8 @@
 //   width: 30,
 //   hright: 50,
 // };
+let bag1 = {
+  color: "blue",
+  width:30, 
+  height:50,
+}
