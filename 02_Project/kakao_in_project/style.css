@@ -104,7 +104,7 @@ a{
   height: 85px;
   position: relative;
 }
-#wrap1 .header_top a {
+#wrap1 .header_top {
 border: 1px solid #f00;
 }
 #wrap1 .header_top i {
@@ -128,7 +128,7 @@ main .chat h2 {
 main .chat h2 i {
   color: #343740;
   font-size: 16px;
-}
+} 
 #wrap1 main .header_bottom {
   position: absolute;
   right: 10px;
@@ -136,6 +136,7 @@ main .chat h2 i {
   border:  1px solid #f00;
 }
 #wrap1 main .header_bottom i {
+  width: 100%;
   font-size: 25px;
   margin-right: 15px;
   color: #606060;

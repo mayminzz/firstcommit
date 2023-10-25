@@ -36,3 +36,8 @@ chT.onclick = () => {
     chT.style.color = "#222"
   }
 }
+
+// $(".container").scroll({
+//   anchors: ["home1", "about1", "timeline1", "project1", "contact1"],
+//   menu: "#topMenu",
+// });

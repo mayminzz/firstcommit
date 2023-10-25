@@ -24,8 +24,8 @@
   <script defer src="./script.js"></script>
 </head>
 <body data-hijacking="on" data-animation="scaleDown">
-  <div class="container">
-    <section id="home" class="cd-section visible">
+  <div id="pagescroll" class="container">
+    <section id="home" class="cd-section visible" data-anchor="home1">
       <div>
         <div class="content">
           <div class="home_inner">
@@ -69,7 +69,7 @@
       </div>
     </section>
   
-    <section id="about" class="cd-section">
+    <section id="about" class="cd-section" data-anchor="about1">
       <div>
         <div class="content">
           <div class="about_inner">
@@ -127,7 +127,7 @@
         </div>
       </div>
   </section>
-    <section id="timeline" class="cd-section">
+    <section id="timeline" class="cd-section" data-anchor="timeline1">
       <div>
         <div class="content">
           <div class="timeline_inner">
@@ -220,7 +220,7 @@
         </div>
       </div>
     </section>
-    <section id="project" class="cd-section">
+    <section id="project" class="cd-section" data-anchor="project1">
       <div>
         <div class="content">
           <div class="project_inner">
@@ -270,7 +270,7 @@
         </div>
       </div>
     </section>
-    <section id="contact" class="cd-section">
+    <section id="contact" class="cd-section" data-anchor="contact1">
       <div>
         <div class="content">
           <div class="contact_inner">
@@ -318,7 +318,7 @@
           <a href="#home">MINJU</a>
         </div>
         <div class="gnb">
-          <ul class="menu">
+          <ul class="menu"  id="topMenu">
             <li><a href="#home">HOME</a></li>
             <li><a href="#about">ABOUT ME</a></li>
             <li><a href="#timeline">TIMELINE</a></li>
