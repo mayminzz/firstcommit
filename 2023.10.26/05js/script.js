@@ -8,7 +8,7 @@ class BookC {
     this.price = price;
   }
   buy() {
-    console.log(`${this.title}을 ${this.price}원에 구매하였습니다. `);
+    console.log(`${this.title}을 ${this.price}원에 구매하였습니다.`);
   }
 }
 
