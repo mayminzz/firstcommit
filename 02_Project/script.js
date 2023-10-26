@@ -7,12 +7,6 @@ trigger.onclick = () => {
     trigger.classList.toggle("active");
     menu.classList.toggle("show");
   }
-// timeline 
-const img2 = document.querySelector(".img_2");
-const btn = document.querySelector(".text");
-btn.addEventListener("click", ()=> {
-  img2.classList.toggle("overImg")
-})
 
 $("header a ").click(function (e) {
   $.scrollTo(this.hash || 0, 1500);
