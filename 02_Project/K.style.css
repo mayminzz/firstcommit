@@ -546,7 +546,7 @@ header {
   z-index: 1;
 }
 .timeline_aside a {
-  font-size: 4rem;
+  font-size: 6rem;
   display: inline-block;
   position: absolute;
   top: 100px;
@@ -633,7 +633,6 @@ input[id="tab3"]:checked ~ .tabs {
   left: 3px;
   background: #222;
 }
-
 .contents_img {
   width: 430px;
   height: 550px;
@@ -649,7 +648,6 @@ input[id="tab3"]:checked ~ .tabs {
   transition: 0.4s;
   position: absolute;
 }
-
 .contents_img img:hover {
   filter: grayscale(0);
 }
@@ -712,6 +710,7 @@ input[id="tab3"]:checked ~ .tabs {
   margin-bottom: 10px;
 }
 .project_header > h1 {
+  width: 35%;
   height: 85%;
   font-size: 8rem;
   color: #fff;
@@ -1026,9 +1025,8 @@ nav li:nth-child(2):hover a::before {
   color: crimson !important;
 }
 
-
 /* tablet */
-@media all and (min-width: 480px) and (max-width: 960px) {
+@media all and (min-width: 440px) and (max-width: 960px) {
   .content {   
     width: 100%;
     height: 210vh;
@@ -1201,13 +1199,13 @@ nav li:nth-child(2):hover a::before {
   .favorite_contents {
     width: 100%;
     height: 30%;
-    transform: translate(20%, 115%);
+    transform: translate(20%, 125%);
   }
 
   .favorite_contents h1 {
     font-size: 45px;
     margin-top: -50px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     font-weight: bold;
     margin-left: 75px;
   }
@@ -1324,31 +1322,37 @@ nav li:nth-child(2):hover a::before {
     height: 210vh;
   }
   .project_inner {
-    width: 90%;
+    width: 95%;
     height: 200vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 140px 1fr 1fr 1fr;
-    border: 1px solid #222;
+    border: none;
   }
   .project_header {
     grid-column: 1 /2;
     justify-content: center;
+    margin-left: 0;
+    padding-left: 0;
   }
   .project_header > span, 
   .project_header > em {
     display: none;
   }
   .project_header > h1 {
-    font-size: 60px;
-    width: 90%;
-    text-align: center;
+    font-size: 50px;
+    width: 400px;
+    height: 90px;
+    line-height: 90px;
+    padding: 0;
+    padding-left: 15px;
   }
   #project .naver {
-    width: 98.3%;
+    width: 100%;
     grid-column: 1/2;
     grid-row: 2/3;
     margin-top: 0;
+    padding-top: 10px;
     border-right: none;
   }
   #project .naver img {
@@ -1370,6 +1374,7 @@ nav li:nth-child(2):hover a::before {
   .kakao_desc {
     padding-left: 0;
   }
+  .naver_desc,
   .kakao_desc,
   .apple_desc {
     height: 25%;
@@ -1378,7 +1383,7 @@ nav li:nth-child(2):hover a::before {
   }
   .kakao_desc h1, 
   .apple_desc h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin-bottom: 0;
   }
   .kakao_desc span, 
@@ -1414,7 +1419,7 @@ nav li:nth-child(2):hover a::before {
     height: 120vh;
   }
   .contact_inner span {
-    font-size: 70px;
+    font-size: 65px;
     cursor: pointer;
   }
   .contact_inner em {
@@ -1438,6 +1443,9 @@ nav li:nth-child(2):hover a::before {
   .contact_form input[id="email"],
   .contact_form input[id="phone"],
   textarea {
+    width: 80%;
+  }
+  input[type="submit"] {
     width: 80%;
   }
   nav {
@@ -1526,9 +1534,9 @@ nav li:nth-child(2):hover a::before {
   }
   .main_home h1 {
     width: 100%;
-    font-size: 40px;
+    font-size: 3.5rem;
     margin-top: 40px;
-    padding: 20px 0 20px 28px;
+    padding: 20px 0 20px 24px;
   }
   .main_home h1::before {
     display: none;
@@ -1538,8 +1546,8 @@ nav li:nth-child(2):hover a::before {
     left: 0;
   }
   .main_home img {
-    width: 280px;
-    height: 500px;
+    width: 260px;
+    height: 450px;
   }
   .home_bottom {
     flex-direction: column;
@@ -1584,6 +1592,7 @@ nav li:nth-child(2):hover a::before {
     text-align: center;
   }
   .about_desc span {
+    font-size: 30px;
     margin-top: -90px;
     margin-bottom: 30px;
   }
@@ -1593,7 +1602,7 @@ nav li:nth-child(2):hover a::before {
     margin-right: 10px;
   }
   .about_desc h2 {
-    font-size: 30px;
+    font-size: 29px;
     font-weight: bold;
   }
   .about_desc h2::before  {
@@ -1620,18 +1629,18 @@ nav li:nth-child(2):hover a::before {
   .favorite_contents {
     width: 100%;
     height: 30%;
-    transform: translate(25%, 130%);
+    transform: translate(15%, 110%);
   }
-
   .favorite_contents h1 {
-    font-size: 45px;
+    font-size: 46px;
     font-weight: bold;
     margin-left: 75px;
+    margin-bottom: 10px;
   }
   .favorite_contents h1::before {
     width: 70px;
     height: 70px;
-    top: -30px;
+    top: -20px;
   }
   .favorite_contents h2 {
     font-size: 51px;
@@ -1661,7 +1670,7 @@ nav li:nth-child(2):hover a::before {
 
   @keyframes slideright {
     0% {
-      transform: translateX(-50%);
+      transform: translateX(-60%);
     }
     100% {
       transform: translateX(0%);
@@ -1673,7 +1682,7 @@ nav li:nth-child(2):hover a::before {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-60%);
     }
   }
   .top_img img,
@@ -1746,7 +1755,7 @@ nav li:nth-child(2):hover a::before {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 140px 1fr 1fr 1fr;
-    border: 1px solid #222;
+    border: none;
   }
   .project_header {
     grid-column: 1 /2;
@@ -1757,10 +1766,13 @@ nav li:nth-child(2):hover a::before {
     display: none;
   }
   .project_header > h1 {
-    width: 90%;
+    width: 370px;
+    height: 100px;
     font-size: 55px;
-    padding-bottom: 20px;
-    padding-left: 70px;
+    margin-left: 0;
+    padding: 0;
+    padding-left: 12px;
+    line-height: 100px;
     text-align: center;
   }
   #project .naver {
@@ -1861,6 +1873,9 @@ nav li:nth-child(2):hover a::before {
   .contact_form input[id="email"],
   .contact_form input[id="phone"],
   textarea {
+    width: 80%;
+  }
+  input[type="submit"] {
     width: 80%;
   }
   nav {

@@ -14,7 +14,10 @@ btn.addEventListener("click", ()=> {
   img2.classList.toggle("overImg")
 })
 
-
+$("header a ").click(function (e) {
+  $.scrollTo(this.hash || 0, 1500);
+  e.preventDefault();
+});
 
 const myName = document.querySelector("#name");
 
@@ -36,8 +39,3 @@ chT.onclick = () => {
     chT.style.color = "#222"
   }
 }
-
-// $(".container").scroll({
-//   anchors: ["home1", "about1", "timeline1", "project1", "contact1"],
-//   menu: "#topMenu",
-// });
