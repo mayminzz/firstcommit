@@ -39,8 +39,9 @@ body {
   color: #222;
 }
 header {
-  background: url("./img_project/AdobeStock_248310678.jpeg")no-repeat center center;
-  background-size:cover;
+  background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+    center;
+  background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -50,7 +51,7 @@ header {
 .gnb_inner {
   width: 100%;
   height: 6rem;
-  line-height: 3.750em;
+  line-height: 3.75em;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #222;
@@ -286,11 +287,11 @@ header {
   filter: grayscale(0.3);
 }
 .home_bottom {
+  width: 90%;
   display: flex;
   margin-bottom: 5px;
   justify-content: space-between;
   font-size: 30px;
-  width: 90%;
 }
 .home_bottom em {
   font-style: normal;
@@ -301,7 +302,7 @@ header {
 /* about */
 .about_inner {
   width: 96%;
-  height:100vh;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
 }
@@ -406,11 +407,11 @@ header {
   font-size: 12rem;
   margin-bottom: 3rem;
   font-weight: bold;
-  margin-left: 130px
+  margin-left: 130px;
 }
 .favorite_contents h1::before {
   content: "";
-  background: url("./img_project/M.png")no-repeat center center;
+  background: url("./img_project/M.png") no-repeat center center;
   background-size: cover;
   width: 130px;
   height: 100px;
@@ -444,7 +445,7 @@ header {
   right: 0;
   gap: 15px;
 }
-.top_img, 
+.top_img,
 .bottom_img {
   animation: 20s linear infinite;
   animation-direction: alternate;
@@ -475,7 +476,7 @@ header {
   filter: grayscale(0);
   transform: scale(1.07);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} 
+}
 
 @keyframes slidedown {
   0% {
@@ -494,7 +495,6 @@ header {
     transform: translateY(-31%);
   }
 }
-
 
 /* timeline */
 .timeline_inner {
@@ -840,12 +840,11 @@ input[id="tab3"]:checked ~ .tabs {
   border: none;
   background: #ddd;
   border-radius: 3px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 .viewmore:hover {
-
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
 }
 .viewmore a {
@@ -863,7 +862,6 @@ input[id="tab3"]:checked ~ .tabs {
 .viewmore:hover a::after {
   margin-left: 20px;
 }
-
 
 /* contact */
 .contact_inner {
@@ -1023,7 +1021,7 @@ nav li:nth-child(2):hover a::before {
 
 /* tablet */
 @media all and (min-width: 440px) and (max-width: 800px) {
-  .content {   
+  .content {
     width: 100%;
     height: 210vh;
     background-repeat: repeat;
@@ -1038,7 +1036,8 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
   }
   .gnb .menu {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -1056,17 +1055,18 @@ nav li:nth-child(2):hover a::before {
     width: 100%;
     right: 0;
     opacity: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .gnb .menu a {
     font-size: 30px;
     cursor: pointer;
-  } 
+  }
   .gnb .menu li:hover a {
     text-decoration: underline;
   }
   .gnb_inner {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     position: relative;
   }
@@ -1138,7 +1138,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
     font-weight: bold;
     padding-top: 0;
-    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .about_contents {
     flex-direction: column;
@@ -1147,7 +1147,7 @@ nav li:nth-child(2):hover a::before {
     margin-top: 35px;
     gap: 0;
   }
-  .about_contents .photo  {
+  .about_contents .photo {
     width: 80%;
     height: 60%;
   }
@@ -1171,7 +1171,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
     font-weight: bold;
   }
-  .about_desc h2::before  {
+  .about_desc h2::before {
     width: 250px;
     left: 48px;
   }
@@ -1219,9 +1219,9 @@ nav li:nth-child(2):hover a::before {
     padding-top: 40px;
     display: grid;
     overflow: hidden;
-  }  
-  .top_img, 
-  .bottom_img  {
+  }
+  .top_img,
+  .bottom_img {
     width: 100%;
     height: 160px;
     display: grid;
@@ -1244,8 +1244,8 @@ nav li:nth-child(2):hover a::before {
       transform: translateX(0%);
     }
   }
-  
-  @keyframes slideleft{
+
+  @keyframes slideleft {
     0% {
       transform: translateX(0%);
     }
@@ -1335,7 +1335,7 @@ nav li:nth-child(2):hover a::before {
     margin-left: 0;
     padding-left: 0;
   }
-  .project_header > span, 
+  .project_header > span,
   .project_header > em {
     display: none;
   }
@@ -1381,19 +1381,19 @@ nav li:nth-child(2):hover a::before {
     margin-top: 20px;
     text-align: center;
   }
-  .kakao_desc h1, 
+  .kakao_desc h1,
   .apple_desc h1 {
     font-size: 60px;
     margin-bottom: 0;
   }
-  .kakao_desc span, 
+  .kakao_desc span,
   .apple_desc span {
     font-size: 25px;
     line-height: 1.5em;
     margin-bottom: 0;
     color: #787878;
   }
-  .kakao_desc p, 
+  .kakao_desc p,
   .apple_desc p {
     font-size: 19px;
   }
@@ -1408,7 +1408,7 @@ nav li:nth-child(2):hover a::before {
     height: 300px;
   }
 
-   /* contact */
+  /* contact */
   #contact .content {
     height: 130vh;
   }
@@ -1432,10 +1432,10 @@ nav li:nth-child(2):hover a::before {
     order: 2;
   }
   .contact_form {
-    margin-top:250px;
+    margin-top: 250px;
     width: 90%;
     order: 1;
-  }  
+  }
   .contact_form form {
     width: 120%;
   }
@@ -1454,7 +1454,7 @@ nav li:nth-child(2):hover a::before {
 }
 /* tablet */
 @media all and (min-width: 801px) and (max-width: 1049px) {
-  .content {   
+  .content {
     width: 100%;
     height: 210vh;
     background-repeat: repeat;
@@ -1469,7 +1469,8 @@ nav li:nth-child(2):hover a::before {
     font-size: 40px;
   }
   .gnb .menu {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -1487,17 +1488,18 @@ nav li:nth-child(2):hover a::before {
     width: 100%;
     right: 0;
     opacity: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .gnb .menu a {
     font-size: 50px;
     cursor: pointer;
-  } 
+  }
   .gnb .menu li:hover a {
     text-decoration: underline;
   }
   .gnb_inner {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     position: relative;
   }
@@ -1569,7 +1571,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 40px;
     font-weight: bold;
     padding-top: 0;
-    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .about_contents {
     flex-direction: column;
@@ -1578,7 +1580,7 @@ nav li:nth-child(2):hover a::before {
     margin-top: 35px;
     gap: 10px;
   }
-  .about_contents .photo  {
+  .about_contents .photo {
     width: 80%;
     height: 60%;
   }
@@ -1604,7 +1606,7 @@ nav li:nth-child(2):hover a::before {
     font-weight: bold;
     line-height: 1.5em;
   }
-  .about_desc h2::before  {
+  .about_desc h2::before {
     width: 250px;
     left: 48px;
   }
@@ -1652,9 +1654,9 @@ nav li:nth-child(2):hover a::before {
     padding-top: 40px;
     display: grid;
     overflow: hidden;
-  }  
-  .top_img, 
-  .bottom_img  {
+  }
+  .top_img,
+  .bottom_img {
     width: 100%;
     height: 160px;
     display: grid;
@@ -1677,8 +1679,8 @@ nav li:nth-child(2):hover a::before {
       transform: translateX(0%);
     }
   }
-  
-  @keyframes slideleft{
+
+  @keyframes slideleft {
     0% {
       transform: translateX(0%);
     }
@@ -1764,7 +1766,7 @@ nav li:nth-child(2):hover a::before {
     margin-left: 0;
     padding-left: 0;
   }
-  .project_header > span, 
+  .project_header > span,
   .project_header > em {
     display: none;
   }
@@ -1812,13 +1814,13 @@ nav li:nth-child(2):hover a::before {
     text-align: center;
   }
   .naver_descn h1,
-  .kakao_desc h1, 
+  .kakao_desc h1,
   .apple_desc h1 {
     font-size: 65px;
     margin-bottom: 0;
   }
-  .naver_desc span, 
-  .kakao_desc span, 
+  .naver_desc span,
+  .kakao_desc span,
   .apple_desc span {
     font-size: 35px;
     line-height: 1.5em;
@@ -1826,7 +1828,7 @@ nav li:nth-child(2):hover a::before {
     color: #787878;
   }
   .naver_desc p,
-  .kakao_desc p, 
+  .kakao_desc p,
   .apple_desc p {
     font-size: 25px;
   }
@@ -1844,7 +1846,7 @@ nav li:nth-child(2):hover a::before {
   .viewmore a {
     font-size: 28px;
   }
-   /* contact */
+  /* contact */
   #contact .content {
     height: 130vh;
   }
@@ -1878,10 +1880,10 @@ nav li:nth-child(2):hover a::before {
     font-size: 50px;
   }
   .contact_form {
-    margin-top:250px;
+    margin-top: 250px;
     width: 90%;
     order: 1;
-  }  
+  }
   .contact_form form {
     width: 120%;
   }
@@ -1902,8 +1904,8 @@ nav li:nth-child(2):hover a::before {
 }
 
 /* MObile(iPhone XR) */
-@media all and ( max-width: 420px) {
-  .content {   
+@media all and (max-width: 420px) {
+  .content {
     width: 100%;
     height: 210vh;
     background-repeat: repeat;
@@ -1918,7 +1920,8 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
   }
   .gnb .menu {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     width: 100%;
     height: 100vh;
@@ -1936,17 +1939,18 @@ nav li:nth-child(2):hover a::before {
     width: 100%;
     right: 0;
     opacity: 1;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .gnb .menu a {
     font-size: 30px;
     cursor: pointer;
-  } 
+  }
   .gnb .menu li:hover a {
     text-decoration: underline;
   }
   .gnb_inner {
-    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center center;
+    background: url("./img_project/AdobeStock_248310678.jpeg") no-repeat center
+      center;
     background-size: cover;
     position: relative;
   }
@@ -2018,7 +2022,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 30px;
     font-weight: bold;
     padding-top: 0;
-    text-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .about_contents {
     flex-direction: column;
@@ -2027,7 +2031,7 @@ nav li:nth-child(2):hover a::before {
     margin-top: 35px;
     gap: 0;
   }
-  .about_contents .photo  {
+  .about_contents .photo {
     width: 80%;
     height: 60%;
   }
@@ -2052,7 +2056,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 29px;
     font-weight: bold;
   }
-  .about_desc h2::before  {
+  .about_desc h2::before {
     width: 250px;
     left: 48px;
   }
@@ -2098,9 +2102,9 @@ nav li:nth-child(2):hover a::before {
     padding-top: 40px;
     display: grid;
     overflow: hidden;
-  }  
-  .top_img, 
-  .bottom_img  {
+  }
+  .top_img,
+  .bottom_img {
     width: 100%;
     height: 160px;
     display: grid;
@@ -2123,8 +2127,8 @@ nav li:nth-child(2):hover a::before {
       transform: translateX(0%);
     }
   }
-  
-  @keyframes slideleft{
+
+  @keyframes slideleft {
     0% {
       transform: translateX(0%);
     }
@@ -2212,7 +2216,7 @@ nav li:nth-child(2):hover a::before {
     grid-column: 1 /2;
     justify-content: center;
   }
-  .project_header > span, 
+  .project_header > span,
   .project_header > em {
     display: none;
   }
@@ -2258,19 +2262,19 @@ nav li:nth-child(2):hover a::before {
     margin-top: 20px;
     text-align: center;
   }
-  .kakao_desc h1, 
+  .kakao_desc h1,
   .apple_desc h1 {
     font-size: 70px;
     margin-bottom: 0;
   }
-  .kakao_desc span, 
+  .kakao_desc span,
   .apple_desc span {
     font-size: 25px;
     line-height: 1.5em;
     margin-bottom: 0;
     color: #787878;
   }
-  .kakao_desc p, 
+  .kakao_desc p,
   .apple_desc p {
     font-size: 19px;
   }
@@ -2285,7 +2289,7 @@ nav li:nth-child(2):hover a::before {
     height: 300px;
   }
 
-   /* contact */
+  /* contact */
   #contact .content {
     height: 130vh;
   }
@@ -2313,10 +2317,10 @@ nav li:nth-child(2):hover a::before {
     font-size: 25px;
   }
   .contact_form {
-    margin-top:250px;
+    margin-top: 250px;
     width: 90%;
     order: 1;
-  }  
+  }
   .contact_form form {
     width: 120%;
     padding: 10px;
@@ -2355,7 +2359,7 @@ nav li:nth-child(2):hover a::before {
     width: 230px;
     height: 400px;
   }
-  .home_bottom  {
+  .home_bottom {
     font-size: 23px;
   }
 
@@ -2364,7 +2368,7 @@ nav li:nth-child(2):hover a::before {
     font-size: 2.7rem;
     padding: 20px 0;
   }
-  .photo img  {
+  .photo img {
     margin-top: 30px;
     height: 70%;
   }
@@ -2385,7 +2389,7 @@ nav li:nth-child(2):hover a::before {
   }
 
   /* favorite */
-  .favorite_contents  {
+  .favorite_contents {
     margin-top: 60px;
   }
   .favorite_contents h1 {
@@ -2395,53 +2399,53 @@ nav li:nth-child(2):hover a::before {
     font-size: 3.5rem;
   }
   .top_img img,
-.bottom_img img  {
-  width: 180px;
-  height: 130px;
-}
+  .bottom_img img {
+    width: 180px;
+    height: 130px;
+  }
 
-/* timeline */
-.btn {
-  top: -30px;
-  left: -110px;
-}
-.btn label {
-  height: 45px;
-  margin-top: 10px;
-}
-.contents_img {
-  width: 230px;
-  height: 330px;
-}
-.contents_desc h2 {
-  font-size: 35px;
-  margin-bottom: 15px;
-}
-.contents_desc p {
-  font-size: 14px;
-}
-/* project */
-.project_header > h1 {
-  width: 335px;
-}
-#project .naver {
-  padding-top: 10px;
-}
-#project .naver img {
-  height: 200px;
-}
+  /* timeline */
+  .btn {
+    top: -30px;
+    left: -110px;
+  }
+  .btn label {
+    height: 45px;
+    margin-top: 10px;
+  }
+  .contents_img {
+    width: 230px;
+    height: 330px;
+  }
+  .contents_desc h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .contents_desc p {
+    font-size: 14px;
+  }
+  /* project */
+  .project_header > h1 {
+    width: 335px;
+  }
+  #project .naver {
+    padding-top: 10px;
+  }
+  #project .naver img {
+    height: 200px;
+  }
   .naver_desc h1,
-  .kakao_desc h1, 
+  .kakao_desc h1,
   .apple_desc h1 {
     font-size: 40px;
   }
-  .naver_desc span, 
-  .kakao_desc span, 
+  .naver_desc span,
+  .kakao_desc span,
   .apple_desc span {
     font-size: 25px;
   }
   .naver_desc p,
-  .kakao_desc p, 
+  .kakao_desc p,
   .apple_desc p {
     font-size: 16px;
   }
