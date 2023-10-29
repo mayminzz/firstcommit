@@ -12,22 +12,37 @@ class BookC {
   }
 }
 
+
 const book1 = new BookC("자바스트립트", 15000);
 book1.buy();
 
 // 추가로 call을 안쓰고 extends 확장해서 써라
 // Book
+// class TextBookC extends BookC {
+//   constructor(title, price, major) {
+//     super(title, price);
+//     this.major = major;
+//   }
+//   buyTextBook() {
+//     console.log(`${this.major} 전공 서적 ${this.title}을 구매했습니다.`);
+//   }
+// }
+
+// const book2 = new TextBookC("HTML", 5000, "컴퓨터공학");
+// book2.buyTextBook();
+
+// book2.buy();
+
 class TextBookC extends BookC {
   constructor(title, price, major) {
     super(title, price);
     this.major = major;
   }
   buyTextBook() {
-    console.log(`${this.major} 전공 서적 ${this.title}을 구매했습니다.`);
+    console.log(`${this.major}전공 서적 ${this.title}을 구매했습니다.`);
   }
 }
 
-const book2 = new TextBookC("HTML", 5000, "컴퓨터공학");
-book2.buyTextBook();
-
-book2.buy();
+const Book2 = new TextBookC("HTML", 15000, "컴퓨터공학")
+Book2.buyTextBook();
+Book2.buy();

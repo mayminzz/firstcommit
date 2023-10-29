@@ -1,14 +1,4 @@
-class Book {
-  constructor(title, price) {
-    this.title = title;
-    this.price = price;
-  }
-}
-Book.prototype.buy = function () {
-  console.log(`${this.title}을 ${this.price}원에 구매하였습니다.`);
-};
-const book1 = new Book("뽀로로", 10000);
-book1.buy();
+
 
 // class TextBook {
 //   constructor(title, price, major) {
