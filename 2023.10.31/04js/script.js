@@ -12,24 +12,41 @@
 // console.log(name);
 // console.log(age);
 
+
+// const student = {
+//   name: "권민주",
+//   score: {
+//     history: 85,
+//     science: 94,
+//   },
+//   friends: ["Yoon", "lee", "park"],
+// };
+
+// let {
+//   name,
+//   score: { history, science },
+//   friends: [f1, f2, f3],
+// } = student;
+
+// console.log(name);
+// console.log(history);
+// console.log(science);
+// console.log(f1);
+// console.log(f2);
+// console.log(f3);
 const student = {
-  name: "권민주",
+  name:"권민주",
   score: {
-    history: 85,
-    science: 94,
+    history: 97,
+    science: 85,
   },
-  friends: ["Yoon", "lee", "park"],
+  friends:["영은", "하경", "혜린"],
 };
 
-let {
-  name,
-  score: { history, science },
-  friends: [f1, f2, f3],
-} = student;
-
-console.log(name);
-console.log(history);
-console.log(science);
-console.log(f1);
-console.log(f2);
-console.log(f3);
+let {name, score: {history, science}, friends:[f1,f2,f3]} = student;
+console.log(name)
+console.log(history)
+console.log(science)
+console.log(f1)
+console.log(f2)
+console.log(f3)

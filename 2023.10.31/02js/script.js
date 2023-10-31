@@ -14,6 +14,9 @@ const member = {
 console.log(member);
 console.log(member[id]);
 
+
+
+
 member.id = 6789;
 console.log(member);
 
@@ -25,18 +28,18 @@ console.log(member);
 const id01 = Symbol("id");
 const tel01 = Symbol("telephone number");
 
-// const member03 = {
-//   name: "Kwon",
-//   age: 24,
-//   [id01]: 1234,
-//   [tel01]: function () {
-//     alert(prompt("전화번호: "));
-//   },
-// };
+const member03 = {
+  name: "Kwon",
+  age: 24,
+  [id01]: 1234,
+  [tel01]: function () {
+    alert(prompt("전화번호 "));
+  },
+};
 
-// console.log(member03);
-// console.log(member03[id01]);
-// console.log(member03[tel01]());
+console.log(member03);
+console.log(member03[id01]);
+console.log(member03[tel01]());
 
 // 전역심벌 Symbol.for();
 let tel = Symbol.for("tel");

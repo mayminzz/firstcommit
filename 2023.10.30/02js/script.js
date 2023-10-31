@@ -2,7 +2,7 @@
 let vegitable = ["양상추", "토마토", "피클"];
 let meat = ["불고기"];
 
-// 합치고 싶다 concat()
+// 합치고 싶다 concat() 
 let meatBurger = vegitable.concat(meat, "빵");
 console.log(meatBurger);
 */

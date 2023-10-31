@@ -60,6 +60,9 @@ mine[1] = "orange";
 console.log(mine);
 console.log(fruits);
 
+
+
+
 // 객체는 기본적으로 property & key * value
 const book = {
   title: "javascript",
@@ -85,8 +88,8 @@ console.log(user);
 //     age: age,
 //   };
 // };
-let user1 = makeUser("슛돌이", 20);
-console.log(user1);
+// let user1 = makeUser("슛돌이", 20);
+// console.log(user1);
 
 // 객체의 키와 value값이 동일한 경우
 let makeUser = (name, age) => {
@@ -95,3 +98,13 @@ let makeUser = (name, age) => {
     age,
   };
 };
+
+// let May = (name, age, sex ) => {
+//   return {
+//     name,
+//     age, 
+//     sex,
+//   }
+// }
+
+// console.log("권민주", 25, "여성")

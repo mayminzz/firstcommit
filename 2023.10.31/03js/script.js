@@ -11,7 +11,7 @@ let [apple, peach] = ["사과", "복숭아"];
 console.log(apple);
 console.log(peach);
 
-let [spring, , fall] = ["봄", "여름", "가을", "겨울"];
+let [spring, , fall, ] = ["봄", "여름", "가을", "겨울"];
 console.log(spring);
 console.log(fall);
 // 변수명을 정의하지 않았기 때문에 없다.

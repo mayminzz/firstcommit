@@ -31,8 +31,11 @@ console.log(/es/i.test(str));
 console.log(str.match(/ES\d\d\d\d/));
 
 let hello = "hello Everyone";
+// 대문자 H로 시작하는지
 console.log(/^H/.test(hello));
+// 소문자 h로 시작하는지
 console.log(/^h/.test(hello));
+//  i 대소문자 상관 없이 소문자 h 로 시작하는지
 console.log(/^h/i.test(hello));
 
 // 원에 .로 끝나는지 찾아달라
@@ -41,7 +44,7 @@ console.log(/e.$/.test(hello));
 console.log(/one$/.test(hello));
 
 // g 모든 요소를 찾아라
-console.log("ES2015".match(/[^0-9]/g));
+console.log("ES2015".match(/[^0-9]/g)); 
 // 숫자와 반대되는 애를 찾아줘
 // ^(캐롯): 특정 문자열 앞에 붙으면, 해당 문자로 시작하는지 여부를 확인 대괄호 안에 쓰이면 반대의 의미를 갖게된다.
 

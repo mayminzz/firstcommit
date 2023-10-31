@@ -47,3 +47,4 @@ animals.forEach((animal, index) => {
 animals.forEach((animal, index, array) => {
   console.log(`[${array}] [${index}] : ${animal}`);
 });
+

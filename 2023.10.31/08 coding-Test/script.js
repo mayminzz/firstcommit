@@ -9,3 +9,4 @@ let result = (n) => {
 };
 
 console.log(result(num));
+

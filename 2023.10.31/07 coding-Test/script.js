@@ -9,20 +9,38 @@
 //   minNum = Math.floor(Math.min(num1, num2, num3));
 // }
 
-let a = parseInt(prompt("첫번 째 숫자를 입력하세요."));
-let b = parseInt(prompt("두번 째 숫자를 입력하세요."));
-let c = parseInt(prompt("세번 째 숫자를 입력하세요."));
+// let a = parseInt(prompt("첫번 째 숫자를 입력하세요."));
+// let b = parseInt(prompt("두번 째 숫자를 입력하세요."));
+// let c = parseInt(prompt("세번 째 숫자를 입력하세요."));
 
-let numberTotal = (a, b, c) => {
-  let result;
-  if (a < b) {
-    result = a;
+// let numberTotal = (a, b, c) => {
+//   let result;
+//   if (a < b) {
+//     result = a;
+//   } else {
+//     result = b;
+//   }
+//   if (c < result) {
+//     result = c;
+//   }
+//   return result;
+// };
+// console.log(numberTotal(a, b, c));
+
+let a = parseInt(prompt("첫 번째 숫자"));
+let b = parseInt(prompt("두 번째 숫자"));
+let c = parseInt(prompt("세 번째 숫자"));
+
+let result = (a, b, c) => {
+  let min;
+  if( a < b) {
+    min = a;
   } else {
-    result = b;
+    min = b;
   }
-  if (c < result) {
-    result = c;
+  if(c < min) {
+    min = c;
   }
-  return result;
-};
-console.log(numberTotal(a, b, c));
+  return min;
+}
+console.log(result(a,b,c));
