@@ -2,7 +2,7 @@
 // 2. 로또는 중복되지 않는다.
 // 3. 1~45까지 추첨
 // 4. 언제 숫자가 생성되야 하는가?=> 버튼 클릭시
-// 5. 생성된 숫자는 어디에 출력되어야 하는가?=> result 노드 안에 출력
+// 5. 생성된 숫자는 어디에 출력되어야 하는가? => result 노드 안에 출력
 
 const btn = document.querySelector("button");
 const result = document.querySelector("#result");
@@ -27,20 +27,5 @@ btn.addEventListener("click", (e) => {
   e.preventDefault();
 });
 
-// const btn = document.querySelector("button");
-// const result = document.querySelector("#result");
-// console.log(result);
 
-// for (let i = 1; i <= 6; i++) {
-//   let number = new Set();
-//   number = Math.floor(Math.random() * 50);
-//   console.log(number);
-// }
 
-// btn.addEventListener("click", () => {
-//   result.innerHTML = `
-//   <ul>
-
-//   </ul>
-//   `
-// })
