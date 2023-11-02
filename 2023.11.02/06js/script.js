@@ -26,15 +26,28 @@ try {
 // throw문 사용
 // finally 생략 가능
 
-let json = '{"grade":3, "age": 25}';
+// let json = '{"grade":3, "age": 25}';
+
+// try {
+//   let user = JSON.parse(json);
+//   if (!user.name) {
+//     throw "사용자 이름이 없습니다.";
+//   }
+// } catch (err) {
+//   console.log(err);
+// } finally {
+//   console.log("일단 종료");
+// }
+
+let json = `{"grade": 3, "age" : 25 }`;
 
 try {
-  let user = JSON.parse(json);
-  if (!user.name) {
-    throw "사용자 이름이 없습니다.";
+  let user = JSON.parse(json)
+  if(!user.name) {
+    throw "사용자의 이름이 없습니다."
   }
-} catch (err) {
+} catch(err) {
   console.log(err);
 } finally {
-  console.log("일단 종료");
+  console.log("일단 종료")
 }

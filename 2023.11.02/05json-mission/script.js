@@ -23,8 +23,8 @@ let renderHTML = (contents) => {
 
 xhr.onreadystatechange = function () {
   if (xhr.readyState == 4 && xhr.status == 200) {
-    let iu = JSON.parse(xhr.responseText);
-    renderHTML(iu);
+    let musician = JSON.parse(xhr.responseText);
+    renderHTML(musician);
   }
 };
 
