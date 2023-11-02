@@ -3,26 +3,29 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: #222;
 }
 
 a {
   text-decoration: none;
 }
 
-.btn-outer .btn {
-  color: #fff;
-  text-transform: uppercase;
-  width: 300px;
-  height: 50px;
-  display: block;
-  text-align: center;
-  line-height: 50px;
-  background: #555;
-  position: relative;
-  transition: 0.5s;
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 600px;
+  display: flex;
 }
-.btn-outer .btn:hover {
+.social li {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+  flex: 1;
+}
+.social li a {
+  color: #000;
+  text-transform: uppercase;
+}-outer .btn:hover {
   background: transparent;
 }
 .btn-outer .btn::before, .btn-outer .btn::after {
