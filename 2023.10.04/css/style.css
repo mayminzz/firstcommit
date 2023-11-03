@@ -1,23 +1,19 @@
 body {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #222;
 }
 
-.buttons button {
-  background: #fff;
-  outline: none;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 20px 150px;
-}
-.buttons button.approval {
-  border: 2px solid blue;
-}
-.buttons button.refuse {
-  border: 2px dashed red;
-}animation: heart-beat 0.5s linear infinite;
+.heart-beat {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background: crimson;
+  transform: rotate(45deg);
+  box-shadow: 0 -10px 100px #ff4757, 0 -10px 150px #ff4757, 0 -10px 200px #ff4757;
+  animation: heart-beat 0.5s linear infinite;
 }
 .heart-beat::after, .heart-beat::before {
   content: "";
@@ -46,19 +42,16 @@ body {
   100% {
     transform: rotate(45deg) scale(0.95);
   }
-}f;
+}color: #fff;
+  border-color: transparent;
 }
-
-input[type=submit] {
-  background: #27ae60;
+.loading.loading:hover {
+  background: green;
   color: #fff;
-  cursor: pointer;
+  border-color: transparent;
 }
-
-input[type=email]:focus,
-input[type=password]:focus {
-  background: #f8edb5;
-}ground: crimson;
+.loading.error:hover {
+  background: crimson;
   color: #fff;
   border-color: transparent;
 }
