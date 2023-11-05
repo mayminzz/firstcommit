@@ -29,6 +29,7 @@ $font-color: (
   /*footer 폰트 컬러*/ dark: #383838,
   /*light 버전 폰트 컬러*/ naklight: #b9ae91,
   /*이거는 낙영언니 페이지 If the path 폰트  컬러*/
+  ask: #271100,
 );
 
 // reset
@@ -47,7 +48,7 @@ a {
 
 // common CSS
 #container {
-  background: url("../img/bg/background_light.png") center center;
+  background: url("../img/common/lightback.png") center center;
   width: 100%;
   height: 230vh;
   section {
@@ -123,93 +124,194 @@ header {
     }
   }
 }
-// main CSS
-main {
+
+
+// qa page_1
+.qa_page1_heading {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/Q&A/QA_banner.png")center center no-repeat;
+  background-size: cover;
+  position: relative;
+  .qa_box {
+    width: 35%;
+    height: 45%;
+    background: #fff;
+    opacity: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 70px;
+    .qa_text {
+      text-align: center;
+      height: 330px;
+      padding: 30px;
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .qa_text_detail {
+        padding: 20px 30px;
+        text-align: left;
+        span {
+          display: block;
+        }
+      }
+      button {
+        width: 156px;
+        border: 1px solid #000;
+        margin-top: 20px;
+        background: #fff;
+        padding: 8px 30px;
+        margin: 10px;
+        a {
+          color: #000;
+        }
+      }
+    }
+    }
+  }
+
+  // page2
+.qa_page2 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  // background: url("../img/bg/background_light.png")center center;
-  // width: 100%;
-}
-.home_page1 {
-  width: 100%;
-  height: 80vh;
-  .page1_inner {
-    > span {
-      display: inline-block;
-      width: 100%;
-      height: 60px;
-      line-height: 60px;
-      text-align: center;
-      font-size: map-get($font-size, medium);
-      &::before {
-        content: "<";
-        margin-right: 10px;
+  position: relative;
+  .qa_form {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: map-get($font-size, large);
+    padding: 30px 50px;
+    select[name=ask] {
+      width: 50%;
+      padding: 1.5%;
+      font-size:  map-get($font-size, base);
+      margin: 1% 0 3% 0;
+      outline: none;
+    }
+    input {
+      width: 90%;
+      padding: 1.5%;
+      outline: none;
+      margin-top: 1%;
+      margin-bottom: 3%;
+    }
+    .nameCountry {
+      width: 90%;
+      margin-bottom: 3%;
+      > label {
+        display: block;
       }
-      &::after {
-        content: ">";
-        margin-left: 10px;
+      input[type="name"] {
+        width: 48%;
+        padding: 1.5%;
+        font-size: map-get($font-size, base);
+        margin-right: 2.8%;
+      }
+      > select {
+        width: 48%;
+        padding: 1.5%;
+        font-size: map-get($font-size, base);
       }
     }
-    .banner {
-      width: 100%;
-      height: 467px;
-      position: relative;
-      img {
-        width: inherit;
-        height: inherit;
-        object-fit: cover;
-        object-position: center;
-        position: relative;
-        &::before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: linear-gradient(to right, #000, transparent);
-        }
+    textarea {
+      width: 90%;
+      outline: none;
+      font-size: map-get($font-size, large);
+      padding: 1%;
+      margin-top: 1%;
+    }
+    input[type=submit] {
+      width: 20%;
+      margin-top: 3%;
+      border: none;
+      background: #000;
+      color: map-get($font-color, wh );
+    }
+  }
+  .qa_logo {
+    flex: 1;
+    text-align: center;
+  }
+  .query_version {
+    .icon {
+      width: 5%;
+      height: 20%;
+      position: absolute;
+      bottom: 5%;
+      right: 2%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      span {
+        display: block;
+        width: 75%;
+        height: 40%;
+        border-radius: 50%;
+        background: map-get($font-color, dark);
       }
-      .banner_heading {
+    }
+    .mini_ask {
+      display: none;
+    }
+      .mini_ask.show {
+        display: block;
+        width: 20%;
+        height: 65%;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 15%;
-        > span {
-          color: map-get($font-color, wh);
+        bottom: 5%;
+        right: 8%;
+        background: map-get($font-color, ask);
+        color: map-get($font-color, wh);
+        opacity: 0.8;
+        h1 {
+          width: 100%;
+          text-align: center;
           font-size: map-get($font-size, medium);
+          color: map-get($font-color, dark);
+          background: #dfdfdf;
+          padding: 3% 0;
         }
         p {
-          color: map-get($font-color, wh);
-          font-size: map-get($font-size, large);
-          margin: 26px 0 5px 0;
-          span {
-            display: block;
-            font-weight: bold;
-          }
+          font-size: map-get($font-size , small);
+          line-height: 1.5;
+          margin-bottom: 1%;
+          padding: 3%;
         }
-        > a {
-          display: block;
-          width: 133px;
-          height: 42px;
-          text-align: left;
-          padding: 10px;
-          margin-top: 24px;
-          color: map-get($font-color, wh);
-          border: 1px solid #fff;
-          &::after {
-            content: "";
-            font-family: fontawesome;
+        .mini_ask_form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 3.5%;
+          label {
+            margin-bottom: 1.5%;
+            font-size: map-get($font-size , base);
+          }
+          input,
+          textarea {
+            width: 100%;
+            padding: 2.5%;
+            margin-bottom: 1%;
+            outline: none;
+            input {
+              font-size: map-get($font-size , base);
+            }
           }
         }
       }
-    }
   }
 }
 
-// footer CSS
+// footer SCSS
 footer {
   width: 100%;
   height: 220px;
@@ -224,7 +326,6 @@ footer {
       border-bottom: 1px solid #383838;
       .content {
         width: 15%;
-
         &.order {
           width: 30%;
           .order_list {

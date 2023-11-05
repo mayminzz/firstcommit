@@ -45,7 +45,7 @@
 // };
 // order("아메리카노");
 
-// 콜백함수를 활용한 비동시처리방식
+// 콜백함수를 활용한 비동기처리방식
 // const order = (coffee, callback) => {
 //   console.log(`${coffee} 주문접수`);
 //   setTimeout(() => {

@@ -7,20 +7,19 @@
   <!-- fontawesome -->
   <script defer src="https://kit.fontawesome.com/bd0a8925a1.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../css/qa-style.css">
-  <script src="../script/qa-script.js"></script>
+  <script defer src="../script/qa-script.js"></script>
 </head>
 <body>
   <div id="container" id="qa">
     <header>
       <div class="gift_top">     
-        <h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카트 혜택을 즐겨보세요.</h4>
       </div>
       <nav>
         <div class="logo">
-          <img src="../img/logo.png" alt="logo">
+          <img src="../img/common/logo_black.png" alt="logo">
         </div>
         <ul class="gnb">
-          <li><a href="#">스킨케어</a></li>
+          <!-- <li><a href="#">스킨케어</a></li>
           <li><a href="#">바디&핸드</a></li>
           <li><a href="#">헤어</a></li>
           <li><a href="#">홈케어</a></li>
@@ -32,16 +31,80 @@
           <li class="finder"><a href="#"><i class="fas fa-magnifying-glass"></i></a></li>
           <li><a href="#">로그인</a></li>
           <li><a href="#">위시리스트</a></li>
-          <li><a href="#">카트</a></li>
+          <li><a href="#">카트</a></li> -->
         </ul>
       </nav>
     </header>
     <section class="qa_page1">
       <div class="qa_page1_heading">
-        <img src="../img/qa/qa_main.png" alt="qa">
+        <div class="qa_box">
+          <div class="qa_text">
+            <h1>고객센터</h1>
+            <div class="qa_text_detail">
+              <span>전화연결</span>
+              <span>대표번호: 1800-1987</span>
+              <span>고객서비스팀: 0300-8321-0480</span>
+              <br>
+              <span>운영시간</span>
+              <span>평일 오전 10시 - 오후 5시 (주말 및 공휴일 제외)</span>
+              <span>*고객서비스팀과 연결이 어려운 경우, 이메일 문의를 <br>남겨주시기 바랍니다.
+              </span>
+            </div>
+            <button><a href="#">도움말</a></button>
+            <button><a href="#">문의하기</a></button>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="qa_page2"></section>
+    <section class="qa_page2">
+      <div class="qa_form">
+        <label for="ask">문의하고자 하는 질문을 선택해주세요.</label>
+        <select name="ask" id="ask">
+          <option value="order">주문문의</option>
+          <option value="product">제품문의</option>
+          <option value="return">반품&교환 문의</option>
+          <option value="client">고객정보 문의</option>
+          <option value="etc">기타문의</option>
+        </select>
+        <label for="email">이메일 주소</label>
+        <input type="email" id="email" placeholder="이메일">
+        <div class="nameCountry">
+          <label for="name country">이름/국가 설정</label>
+          <input type="name" id="name" placeholder="이름">
+          <select name="country" id="country">
+            <option value="chaina">Chaina</option>
+            <option value="japan">Japan</option>
+            <option value="us">US</option>
+            <option value="france">France</option>
+            </select>
+        </div>
+        <label for="askmore">문의사항</label>
+        <textarea name="askmore" id="askmore" cols="30" rows="10" placeholder="문의사항을 입력해주세요!"></textarea>
+        <input type="submit" value="제출하기">
+      </div>
+      <div class="qa_logo">
+        <img src="../img/Q&A/QA_logo.png" alt="">
+      </div>
+      <div class="query_version">
+        <div class="icon">
+          <span id="display_color_version"><a href=""></a></span>
+          <span id="query"><a href=""></a></span>
+        </div>
+        <div class="mini_ask">
+            <h1>1:1 채팅상담 하기</h1>
+          <p>
+            1:1 채팅상담<br>상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및 이용에 대하여 고객님의 동의가 필요합니다. <br> 상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다. <br>※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며, 이 경우 1:1 채팅상담 서비스 이용이 불가합니다.
+          </p>
+          <div class="mini_ask_form">
+            <label for="">이름(선택사항)</label>
+            <input type="name" id="name">
+            <label for="email">이메일(선택사항)</label>
+            <input type="email" id="email">
+            <label for="message">메세지</label><textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer>
       <div class="footer_inner">
         <div class="contents">

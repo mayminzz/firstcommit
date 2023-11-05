@@ -29,7 +29,7 @@ a {
 }
 
 #container {
-  background: url("../img/bg/background_light.png") center center;
+  background: url("../img/common/lightback.png") center center;
   width: 100%;
   height: 230vh;
 }
@@ -105,88 +105,186 @@ header nav .gnb_right a {
   color: #383838;
 }
 
-main {
+.qa_page1_heading {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/Q&A/QA_banner.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.qa_page1_heading .qa_box {
+  width: 35%;
+  height: 45%;
+  background: #fff;
+  opacity: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 70px;
+}
+.qa_page1_heading .qa_box .qa_text {
+  text-align: center;
+  height: 330px;
+  padding: 30px;
+}
+.qa_page1_heading .qa_box .qa_text h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.qa_page1_heading .qa_box .qa_text .qa_text_detail {
+  padding: 20px 30px;
+  text-align: left;
+}
+.qa_page1_heading .qa_box .qa_text .qa_text_detail span {
+  display: block;
+}
+.qa_page1_heading .qa_box .qa_text button {
+  width: 156px;
+  border: 1px solid #000;
+  margin-top: 20px;
+  background: #fff;
+  padding: 8px 30px;
+  margin: 10px;
+}
+.qa_page1_heading .qa_box .qa_text button a {
+  color: #000;
+}
+
+.qa_page2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.qa_page2 .qa_form {
+  width: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+  padding: 30px 50px;
+}
+.qa_page2 .qa_form select[name=ask] {
+  width: 50%;
+  padding: 1.5%;
+  font-size: 16px;
+  margin: 1% 0 3% 0;
+  outline: none;
+}
+.qa_page2 .qa_form input {
+  width: 90%;
+  padding: 1.5%;
+  outline: none;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+.qa_page2 .qa_form .nameCountry {
+  width: 90%;
+  margin-bottom: 3%;
+}
+.qa_page2 .qa_form .nameCountry > label {
+  display: block;
+}
+.qa_page2 .qa_form .nameCountry input[type=name] {
+  width: 48%;
+  padding: 1.5%;
+  font-size: 16px;
+  margin-right: 2.8%;
+}
+.qa_page2 .qa_form .nameCountry > select {
+  width: 48%;
+  padding: 1.5%;
+  font-size: 16px;
+}
+.qa_page2 .qa_form textarea {
+  width: 90%;
+  outline: none;
+  font-size: 24px;
+  padding: 1%;
+  margin-top: 1%;
+}
+.qa_page2 .qa_form input[type=submit] {
+  width: 20%;
+  margin-top: 3%;
+  border: none;
+  background: #000;
+  color: #fff;
+}
+.qa_page2 .qa_logo {
+  flex: 1;
+  text-align: center;
+}
+.qa_page2 .query_version .icon {
+  width: 5%;
+  height: 20%;
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 }
-
-.home_page1 {
-  width: 100%;
-  height: 80vh;
+.qa_page2 .query_version .icon span {
+  display: block;
+  width: 75%;
+  height: 40%;
+  border-radius: 50%;
+  background: #383838;
 }
-.home_page1 .page1_inner > span {
-  display: inline-block;
+.qa_page2 .query_version .mini_ask {
+  display: none;
+}
+.qa_page2 .query_version .mini_ask.show {
+  display: block;
+  width: 20%;
+  height: 65%;
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  background: #271100;
+  color: #fff;
+  opacity: 0.8;
+}
+.qa_page2 .query_version .mini_ask.show h1 {
   width: 100%;
-  height: 60px;
-  line-height: 60px;
   text-align: center;
   font-size: 20px;
+  color: #383838;
+  background: #dfdfdf;
+  padding: 3% 0;
 }
-.home_page1 .page1_inner > span::before {
-  content: "<";
-  margin-right: 10px;
+.qa_page2 .query_version .mini_ask.show p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 1%;
+  padding: 3%;
 }
-.home_page1 .page1_inner > span::after {
-  content: ">";
-  margin-left: 10px;
+.qa_page2 .query_version .mini_ask.show .mini_ask_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3.5%;
 }
-.home_page1 .page1_inner .banner {
+.qa_page2 .query_version .mini_ask.show .mini_ask_form label {
+  margin-bottom: 1.5%;
+  font-size: 16px;
+}
+.qa_page2 .query_version .mini_ask.show .mini_ask_form input,
+.qa_page2 .query_version .mini_ask.show .mini_ask_form textarea {
   width: 100%;
-  height: 467px;
-  position: relative;
+  padding: 2.5%;
+  margin-bottom: 1%;
+  outline: none;
 }
-.home_page1 .page1_inner .banner img {
-  width: inherit;
-  height: inherit;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  position: relative;
-}
-.home_page1 .page1_inner .banner img::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(to right, #000, transparent);
-}
-.home_page1 .page1_inner .banner .banner_heading {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 15%;
-}
-.home_page1 .page1_inner .banner .banner_heading > span {
-  color: #fff;
-  font-size: 20px;
-}
-.home_page1 .page1_inner .banner .banner_heading p {
-  color: #fff;
-  font-size: 24px;
-  margin: 26px 0 5px 0;
-}
-.home_page1 .page1_inner .banner .banner_heading p span {
-  display: block;
-  font-weight: bold;
-}
-.home_page1 .page1_inner .banner .banner_heading > a {
-  display: block;
-  width: 133px;
-  height: 42px;
-  text-align: left;
-  padding: 10px;
-  margin-top: 24px;
-  color: #fff;
-  border: 1px solid #fff;
-}
-.home_page1 .page1_inner .banner .banner_heading > a::after {
-  content: "";
-  font-family: fontawesome;
+.qa_page2 .query_version .mini_ask.show .mini_ask_form input input,
+.qa_page2 .query_version .mini_ask.show .mini_ask_form textarea input {
+  font-size: 16px;
 }
 
 footer {
@@ -234,4 +332,4 @@ footer .footer_inner .contents .content p {
 footer .footer_inner .contents .content p span {
   display: block;
   margin-bottom: 5px;
-}
+}/*# sourceMappingURL=qa-style.css.map */

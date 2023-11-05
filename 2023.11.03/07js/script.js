@@ -30,7 +30,7 @@ async function displaySubject(subject) {
 }
 
 async function init() {
-  // 비동기처리이기 때문에 첫번째가 늦어지면 두번째가 먼저 실행되게 되는데 이러한 불상사를 막기 위해서  await 기다려 끝날때까지 순서 기다려 async와 항상 같이 쓰인다.
+  // 비동기처리이기 때문에 첫번째가 늦어지면 두번째가 먼저 실행되게 되는데 이러한 불상사를 막기 위해서 await 기다려 끝날때까지 순서 기다려 async와 항상 같이 쓰인다.
   const response = await whatsYourFavorite();
   const result = await displaySubject(response);
   console.log(result);
