@@ -22,3 +22,5 @@ localData.splice(indexOfValue, 1);
 console.log(`삭제 후 students : ${localData}`);
 localStorage.setItem("students", JSON.stringify(localData));
 localStorage.removeItem("students");
+
+

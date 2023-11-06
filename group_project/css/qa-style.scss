@@ -59,12 +59,12 @@ a {
 // header CSS
 header {
   width: 100%;
-  height: 120px;
+  height: 150px;
   .gift_top {
     text-align: center;
     width: 100%;
     height: 40%;
-    padding-top: 0.6%;
+    padding-top: 1%;
     background: #222;
     color: map-get($font-color, wh);
     h4 {
@@ -77,6 +77,15 @@ header {
       }
     }
   }
+  .logo {
+    width: 65px;
+    position: absolute;
+    top: 10.3%;
+    left: 1.5%;
+    img {
+      width: 100%;
+    }
+  }
   nav {
     width: 100%;
     height: 60%;
@@ -84,13 +93,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 2%;
-    .logo {
-      position: absolute;
-      img {
-        width: 11%;
-        margin-top: 1%;
-      }
-    }
     .gnb {
       display: flex;
       gap: 20px;
@@ -105,7 +107,13 @@ header {
       gap: 25px;
       .finder {
         position: relative;
-        margin-right: 60px;
+        margin-right: 300px;
+        font-size: map-get($font-size, base);
+        color: map-get($font-color, dark);
+        &::before {
+          content: "\f002";
+          font-family: fontawesome;
+        }
         &::after {
           content: "";
           width: 80px;
@@ -117,10 +125,37 @@ header {
         }
       }
       a {
-        font-size: map-get($font-size, base);
         color: map-get($font-color, dark);
       }
+      .toggle{
+        display: none;
+      }
+      .toggle {
+        width: 23px;
+        height: 15px;
+        position: relative;
+        transition: 0.5s;
+        span {
+          display: block;
+          width: 100%;
+          height: 3px;
+          background: #222;
+          position: absolute;
+          &:nth-child(1) {
+            top: 4px;
+          }
+          &:nth-child(2) {
+            bottom: -3px;
+          }
+        }
+      }
     }
+  }
+  .qa_nav_list {
+    width: 100%;
+    height: 40%;
+    border: 1px solid #f00;
+    position: relative;
   }
 }
 
@@ -357,12 +392,82 @@ footer {
   }
 }
 
-@media all and (max-width: 500px) {
+@media screen and (max-width: 700px) {
+  #container {
+    width: 100%;
+    height: 200vh;
+    section {
+      height: 90vh;
+    }
+  }
   header {
     .gift_top {
       h4 {
-        font-size: map-get($font-size, small);
+        font-size: map-get($font-size, base);
+        padding-top: 2%;
       }
     }
+    nav {
+      position: relative;
+      .gnb {
+        display: none;
+        height: 30%;
+        border: 1px solid #f00;
+        flex-direction: column;
+        z-index: 2;
+      }
+      .gnb_right {
+        position: absolute;
+        right: 2%;
+      }
+    }
+    .toggle {
+      display: block;
+    }
+    .active {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          top: 50%;
+        }
+      }
+    }
+  }
+  // page 1
+  .qa_page1_heading {
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    object-position: center;
+    .qa_box {
+      width: 65%;
+      height: 70%;
+      padding: 0;
+      .qa_text {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        padding-top: 2%;
+        h1 {
+          margin-bottom: 0;
+        }
+        .qa_text_detail {
+          padding: 2% 4%;
+          span {
+            font-size: map-get($font-size, small);
+          }
+        }
+      }
+    }
+  }
+
+  // page2
+  .qa_page2 {
+    flex-direction: column;
+    border: 1px solid #f00;
   }
 }

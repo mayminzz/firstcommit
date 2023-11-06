@@ -6,9 +6,9 @@
 
 let showPosition = (position) => {
   document.querySelector("#result").innerHTML = `
-  <b>위도 : </b> ${position.coords.latitude.tofixed(
+  <b>위도 : </b> ${position.coords.latitude.toFixed(
     2
-  )}, <b>경도 : </b>${position.coords.longitude.tofixed(2)}
+  )}, <b>경도 : </b>${position.coords.longitude.toFixed(2)}
   `;
 };
 
@@ -22,18 +22,22 @@ getLocation.addEventListener("click", () => {
     navigator.geolocation.getCurrentPosition(showPosition, errPosition);
 
     const options = {
+      // 고정밀도위치 정보를 사용하도록 설정
       enableHighAccuracy: true,
+      // 정보를 얻기위한 ㅌ차임아웃
       timeout: 5000,
+      //위치정보의 최대수명
       maximumAge: 0,
     };
 
     let watchID = navigator.geolocation.watchPosition(
       showPosition,
-      errPosition,options
+      errPosition,
+      options,
     );
 
     setTimeout(() => {
-      navigator.geolocation.(watchID);
+      navigator.geolocation.clearWatch(watchID);
     }, 300000)
   } else {
     alert("지오로케이션을 지원하지 않습니다!");

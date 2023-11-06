@@ -11,7 +11,7 @@ fetch("../json/qa.json")
   .then((json) => {
     let output = "";
     json.forEach((list) => {
-      output += `<li><a>${list.category}</a></li>`;
+      output += `<a href="#">${list.category}</a>`;
       console.log(output);
     });
     document.querySelector(".gnb").innerHTML = output;
@@ -23,11 +23,32 @@ fetch("../json/qa2.json")
   .then((response) => response.json())
   .then((json) => {
     let output = "";
+
     json.forEach((list) => {
-      output += `<li><a>${list.category}</a></li>`;
+      output += `<a href="#">${list.category}</a>`;
       console.log(output);
     });
-    document.querySelector(".gnb_right").innerHTML = output;
+
+    const gnbRight = document.querySelector(".gnb_right");
+    gnbRight.innerHTML = output;
+
+    const findIcon = document.createElement("a");
+    findIcon.classList.add("finder");
+    json.unshift(findIcon);
+
+    const newDiv = document.createElement("div");
+    const span1 = document.createElement("span");
+    const span2 = document.createElement("span");
+
+    newDiv.classList.add("toggle");
+    gnbRight.appendChild(newDiv);
+    newDiv.appendChild(span1);
+    newDiv.appendChild(span2);
+    json.push(newDiv);
+
+    newDiv.addEventListener("click", () => {
+      newDiv.classList.toggle("active");
+    })
   })
   .catch((err) => console.log(err));
 

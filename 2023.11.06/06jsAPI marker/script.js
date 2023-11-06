@@ -30,7 +30,9 @@ let iwContent = `<div><a heref="https://gn.ezenac.co.kr/" target="blank">이젠�
 let iwRemovable = true;
 
 let infowindow = new kakao.maps.InfoWindow({
+  //마커를 클릭했을 때 표시될 정보 창의 내용
   content: iwContent,
+  // 정보창을 닫을 수 있는지에 대한 여부
   removable: iwRemovable,
 });
 

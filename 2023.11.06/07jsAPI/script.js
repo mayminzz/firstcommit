@@ -18,19 +18,19 @@ let map = new kakao.maps.Map(mapContainer, mapOptions);
 
 let positions = [
   {
-    title: `<div><a href="#"이젠아카데미 강남</a></div>`,
+    title: `<div><a href="#">이젠아카데미 강남</a></div>`,
     latlng: new kakao.maps.LatLng(37.5025398, 127.0248679),
   },
   {
-    title: `<div><a href="#"그린아이티 강남</a></div>`,
+    title: `<div><a href="#">그린아이티 강남</a></div>`,
     latlng: new kakao.maps.LatLng(37.4997906, 127.0282769),
   },
   {
-    title: `<div><a href="#"하이미디어 강남</a></div>`,
+    title: `<div><a href="#">하이미디어 강남</a></div>`,
     latlng: new kakao.maps.LatLng(37.4987358, 127.0266779),
   },
   {
-    title: `<div><a href="#"코리아IT 강남</a></div>`,
+    title: `<div><a href="#">코리아IT 강남</a></div>`,
     latlng: new kakao.maps.LatLng(37.5000065, 127.0356027),
   },
 ];

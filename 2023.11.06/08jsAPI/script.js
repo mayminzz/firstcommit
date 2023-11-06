@@ -1,4 +1,4 @@
-// 카카오맵을 활용해서 우리의 위치를 파악해보자!
+      // 카카오맵을 활용해서 우리의 위치를 파악해보자!
 // 카카오맵을 활용해서 전국에 존재하는 캠핑장을 마커로 찍어보자.
 
 // https://github.com/public-apis/public-apis
@@ -25,19 +25,19 @@ let clusterer = new kakao.maps.MarkerClusterer({
 let positions = [
   {
     title: `<div><a href="#">이젠아카데미 강남</a></div>`,
-    latlng: new kakao.maps.latLng(37.5025398, 127.0248679),
+    latlng: new kakao.maps.LatLng(37.5025398, 127.0248679),
   },
   {
     title: `<div><a href="#">그린아이티 강남</a></div>`,
-    latlng: new kakao.maps.latLng(37.4997906, 127.0282769),
+    latlng: new kakao.maps.LatLng(37.4997906, 127.0282769),
   },
   {
     title: `<div><a href="#">하이미디어 강남</a></div>`,
-    latlng: new kakao.maps.latLng(37.4987358, 127.0266779),
+    latlng: new kakao.maps.LatLng(37.4987358, 127.0266779),
   },
   {
     title: `<div><a href="#">코리아IT 강남</a></div>`,
-    latlng: new kakao.maps.latLng(37.5000065, 127.0356027),
+    latlng: new kakao.maps.LatLng(37.5000065, 127.0356027),
   },
 ];
 
@@ -75,4 +75,4 @@ for (let i = 0; i < positions.length; i++) {
   kakao.maps.event.addListener(marker, "mouseout", makeOutListener(infowindow));
 }
 
-clusterer.addMarkers(makers);
+clusterer.addMarkers(markers);
