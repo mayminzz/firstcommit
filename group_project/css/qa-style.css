@@ -231,8 +231,8 @@ header nav .gnb_right a {
 }
 .qa_page2 .query_version .icon span {
   display: block;
-  width: 75%;
-  height: 40%;
+  width: 60%;
+  height: 30%;
   border-radius: 50%;
   background: #383838;
 }
@@ -332,4 +332,10 @@ footer .footer_inner .contents .content p {
 footer .footer_inner .contents .content p span {
   display: block;
   margin-bottom: 5px;
-}/*# sourceMappingURL=qa-style.css.map */
+}
+
+@media all and (max-width: 500px) {
+  header .gift_top h4 {
+    font-size: 14px;
+  }
+}
