@@ -45,12 +45,13 @@ fetch("../json/qa2.json")
     newDiv.appendChild(span1);
     newDiv.appendChild(span2);
     json.push(newDiv);
-
-    newDiv.addEventListener("click", () => {
-      newDiv.classList.toggle("active");
-    })
   })
   .catch((err) => console.log(err));
+
+// toggle
+newDiv.addEventListener("click", () => {
+  newDiv.classList.toggle("active");
+});
 
 //작은 문의사항 창
 const btn = document.querySelector("#query");

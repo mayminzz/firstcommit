@@ -114,25 +114,6 @@ header nav .gnb_right a {
 header nav .gnb_right .toggle {
   display: none;
 }
-header nav .gnb_right .toggle {
-  width: 23px;
-  height: 15px;
-  position: relative;
-  transition: 0.5s;
-}
-header nav .gnb_right .toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: #222;
-  position: absolute;
-}
-header nav .gnb_right .toggle span:nth-child(1) {
-  top: 4px;
-}
-header nav .gnb_right .toggle span:nth-child(2) {
-  bottom: -3px;
-}
 header .qa_nav_list {
   width: 100%;
   height: 40%;
@@ -374,8 +355,12 @@ footer .footer_inner .contents .content p span {
     width: 100%;
     height: 200vh;
   }
-  #container section {
-    height: 90vh;
+  #container .qa_page1 {
+    width: 100%;
+    height: 70vh;
+  }
+  #container .qa_page2 {
+    height: 110vh;
   }
   header .gift_top h4 {
     font-size: 16px;
@@ -395,18 +380,36 @@ footer .footer_inner .contents .content p span {
     position: absolute;
     right: 2%;
   }
-  header .toggle {
+  header nav .gnb_right .toggle {
     display: block;
+    width: 23px;
+    height: 13px;
+    position: relative;
+    transition: 0.5s;
   }
-  header .active span:nth-child(1) {
+  header nav .gnb_right .toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #222;
+    position: absolute;
+  }
+  header nav .gnb_right .toggle span:nth-child(1) {
+    top: 4px;
+  }
+  header nav .gnb_right .toggle span:nth-child(2) {
+    bottom: -3px;
+  }
+  header nav .gnb_right .active span:nth-child(1) {
     transform: rotate(45deg);
     top: 50%;
   }
-  header .active span:nth-child(2) {
+  header nav .gnb_right .active span:nth-child(2) {
     transform: rotate(-45deg);
     top: 50%;
   }
   .qa_page1_heading {
+    border: 1px solid #f00;
     width: 100%;
     height: 40%;
     -o-object-fit: cover;
@@ -432,10 +435,13 @@ footer .footer_inner .contents .content p span {
     padding: 2% 4%;
   }
   .qa_page1_heading .qa_box .qa_text .qa_text_detail span {
-    font-size: 14px;
+    font-size: 12px;
   }
   .qa_page2 {
     flex-direction: column;
     border: 1px solid #f00;
   }
-}/*# sourceMappingURL=qa-style.css.map */
+  .qa_page2 .qa_form {
+    border: 1px solid #f00;
+  }
+}
