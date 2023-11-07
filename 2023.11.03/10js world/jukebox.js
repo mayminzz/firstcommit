@@ -5,12 +5,10 @@
 //     음원이 하나만 있는 것은 아니다, 사용자는 어떤 음원을         선택할지 알수 없다. => 반복문이 필요하다
 
 const songs = document.querySelectorAll(".albumTable_song");
-console.log(songs);
-
-let i = 0;
 for (let el of songs) {
-  let play = el.querySelector(".fa-play");
-  let pause = el.querySelector("fa-pause");
+  let play = el.querySelector(".fa-caret-right");
+  console.log(play)
+  let pause = el.querySelector(".fa-pause");
   play.addEventListener("click", (e) => {
     e.currentTarget.closest("td").querySelector("audio").play();
   });

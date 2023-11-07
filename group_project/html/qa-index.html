@@ -25,8 +25,7 @@
           <div class="gnb_right">
           </div>
         </nav>
-        <div class="qa_nav_list">
-          
+        <div class="qa_nav_list"> 
         </div>
       </header>
       <section class="qa_page1">
@@ -62,35 +61,37 @@
             <option value="client">고객정보 문의</option>
             <option value="etc">기타문의</option>
           </select>
-          <label for="email">이메일 주소</label>
-          <input type="email" id="email" placeholder="이메일" />
-          <div class="nameCountry">
-            <label for="name country">이름/국가 설정</label>
-            <input type="name" id="name" placeholder="이름" />
-            <select name="country" id="country">
-              <option value="chaina">Chaina</option>
-              <option value="japan">Japan</option>
-              <option value="us">US</option>
-              <option value="france">France</option>
-            </select>
+          <div class="qa_form_result">
+            <label for="email">이메일 주소</label>
+            <input type="email" id="email" placeholder="이메일" />
+            <div class="nameCountry">
+              <label for="name country">이름/국가 설정</label>
+              <input type="name" id="name" placeholder="이름" />
+              <select name="country" id="country">
+                <option value="chaina">Chaina</option>
+                <option value="japan">Japan</option>
+                <option value="us">US</option>
+                <option value="france">France</option>
+              </select>
+            </div>
+            <label for="askmore">문의사항</label>
+            <textarea
+              name="askmore"
+              id="askmore"
+              cols="30"
+              rows="10"
+              placeholder="문의사항을 입력해주세요!"
+            ></textarea>
+            <input type="submit" value="제출하기" />
           </div>
-          <label for="askmore">문의사항</label>
-          <textarea
-            name="askmore"
-            id="askmore"
-            cols="30"
-            rows="10"
-            placeholder="문의사항을 입력해주세요!"
-          ></textarea>
-          <input type="submit" value="제출하기" />
         </div>
         <div class="qa_logo">
           <img src="../img/Q&A/QA_logo.png" alt="" />
         </div>
         <div class="query_version">
-          <div class="icon">
-            <span id="display_color_version"><a href=""></a></span>
-            <span id="query"><a href=""></a></span>
+          <div class="fixed_side_icon">
+            <img src="../img/Q&A/version.png" alt="">
+            <img id="query" src="../img/Q&A/miniBox.png" alt="">
           </div>
           <div class="mini_ask">
             <h1>1:1 채팅상담 하기</h1>
@@ -120,7 +121,7 @@
       <footer>
         <div class="footer_inner">
           <div class="contents">
-            <div class="content">
+            <!-- <div class="content">
               <h3>서비스</h3>
               <p>
                 <span>기업체 구매</span>
@@ -170,7 +171,7 @@
                 사업자:SAP Hybris | 사업자 등록 번호: 220-88-56014
                 <i>사업자정보확인</i> | 통신판매업 신고번호: 2014-서울강남-02300
               </p>
-            </div>
+            </div> -->
           </div>
         </div>
       </footer>

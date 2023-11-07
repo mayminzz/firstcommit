@@ -52,8 +52,9 @@ body {
   height: 270px;
 }
 .video {
-  background: url("./img1/iu_1.jpg")no-repeat center center;
+  background: url("./img1/favorite_img\ \(4\).jpg")no-repeat center center;
   background-size: cover;
+  background-position: right;
   width: 100%;
   height: 240px;
   margin-top: 15px;

@@ -2,16 +2,12 @@
 @import url("../font/SuisseIntl-Medium-WebS.5ee1ad41.woff2");
 @import url("../font/SuisseIntl-Regular-WebS.a55b96fd.woff2");
 @font-face {
-  font-family: regular;
+  font-family: Regular;
   src: url("../font/SuisseIntl-Regular-WebS.a55b96fd.woff2");
 }
 @font-face {
-  font-family: medium;
+  font-family: Medium;
   src: url("../font/SuisseIntl-Medium-WebS.5ee1ad41.woff2");
-}
-@font-face {
-  font-family: test;
-  src: url("../font/324B1A_0_0.42ebc0e9.woff2");
 }
 * {
   margin: 0;
@@ -32,6 +28,7 @@ a {
   background: url("../img/common/lightback.png") center center;
   width: 100%;
   height: 230vh;
+  font-family: Regular;
 }
 #container section {
   width: 100%;
@@ -137,30 +134,34 @@ header .qa_nav_list {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 30px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .qa_page1_heading .qa_box .qa_text {
   text-align: center;
   height: 330px;
-  padding: 30px;
 }
 .qa_page1_heading .qa_box .qa_text h1 {
-  text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 5%;
+  font-size: 32px;
 }
 .qa_page1_heading .qa_box .qa_text .qa_text_detail {
-  padding: 20px 30px;
+  width: 100%;
   text-align: left;
+  margin-bottom: 5%;
 }
 .qa_page1_heading .qa_box .qa_text .qa_text_detail span {
   display: block;
+  font-size: 16px;
 }
 .qa_page1_heading .qa_box .qa_text button {
-  width: 156px;
+  width: 170px;
   border: 1px solid #000;
   margin-top: 20px;
   background: #fff;
-  padding: 8px 30px;
+  padding: 3.5%;
   margin: 10px;
 }
 .qa_page1_heading .qa_box .qa_text button a {
@@ -191,53 +192,58 @@ header .qa_nav_list {
   margin: 1% 0 3% 0;
   outline: none;
 }
-.qa_page2 .qa_form input {
+.qa_page2 .qa_form .qa_form_result {
+  width: 100%;
+  border: 1px solid #f00;
+}
+.qa_page2 .qa_form .qa_form_result input {
   width: 90%;
   padding: 1.5%;
   outline: none;
   margin-top: 1%;
   margin-bottom: 3%;
 }
-.qa_page2 .qa_form .nameCountry {
+.qa_page2 .qa_form .qa_form_result .nameCountry {
   width: 90%;
   margin-bottom: 3%;
 }
-.qa_page2 .qa_form .nameCountry > label {
+.qa_page2 .qa_form .qa_form_result .nameCountry > label {
   display: block;
 }
-.qa_page2 .qa_form .nameCountry input[type=name] {
+.qa_page2 .qa_form .qa_form_result .nameCountry input[type=name] {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
   margin-right: 2.8%;
 }
-.qa_page2 .qa_form .nameCountry > select {
+.qa_page2 .qa_form .qa_form_result .nameCountry > select {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
 }
-.qa_page2 .qa_form textarea {
+.qa_page2 .qa_form .qa_form_result textarea {
   width: 90%;
   outline: none;
   font-size: 24px;
   padding: 1%;
   margin-top: 1%;
 }
-.qa_page2 .qa_form input[type=submit] {
+.qa_page2 .qa_form .qa_form_result input[type=submit] {
   width: 20%;
   margin-top: 3%;
   border: none;
   background: #000;
   color: #fff;
+  font-size: 20px;
 }
 .qa_page2 .qa_logo {
   flex: 1;
   text-align: center;
 }
-.qa_page2 .query_version .icon {
+.qa_page2 .query_version .fixed_side_icon {
   width: 5%;
   height: 20%;
-  position: absolute;
+  position: fixed;
   bottom: 5%;
   right: 2%;
   display: flex;
@@ -245,12 +251,9 @@ header .qa_nav_list {
   justify-content: space-around;
   align-items: center;
 }
-.qa_page2 .query_version .icon span {
-  display: block;
-  width: 60%;
-  height: 30%;
-  border-radius: 50%;
-  background: #383838;
+.qa_page2 .query_version .fixed_side_icon img {
+  width: 43%;
+  height: 20%;
 }
 .qa_page2 .query_version .mini_ask {
   display: none;
@@ -294,13 +297,14 @@ header .qa_nav_list {
 .qa_page2 .query_version .mini_ask.show .mini_ask_form input,
 .qa_page2 .query_version .mini_ask.show .mini_ask_form textarea {
   width: 100%;
-  padding: 2.5%;
-  margin-bottom: 1%;
   outline: none;
 }
-.qa_page2 .query_version .mini_ask.show .mini_ask_form input input,
-.qa_page2 .query_version .mini_ask.show .mini_ask_form textarea input {
-  font-size: 16px;
+.qa_page2 .query_version .mini_ask.show .mini_ask_form input::-moz-placeholder, .qa_page2 .query_version .mini_ask.show .mini_ask_form textarea::-moz-placeholder {
+  font-size: 24px;
+}
+.qa_page2 .query_version .mini_ask.show .mini_ask_form input::placeholder,
+.qa_page2 .query_version .mini_ask.show .mini_ask_form textarea::placeholder {
+  font-size: 24px;
 }
 
 footer {
@@ -350,17 +354,17 @@ footer .footer_inner .contents .content p span {
   margin-bottom: 5px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 360px) and (max-width: 767px) {
   #container {
     width: 100%;
     height: 200vh;
   }
   #container .qa_page1 {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
   }
   #container .qa_page2 {
-    height: 110vh;
+    height: 130vh;
   }
   header .gift_top h4 {
     font-size: 16px;
@@ -372,7 +376,6 @@ footer .footer_inner .contents .content p span {
   header nav .gnb {
     display: none;
     height: 30%;
-    border: 1px solid #f00;
     flex-direction: column;
     z-index: 2;
   }
@@ -408,40 +411,96 @@ footer .footer_inner .contents .content p span {
     transform: rotate(-45deg);
     top: 50%;
   }
-  .qa_page1_heading {
-    border: 1px solid #f00;
+  .qa_page1 .qa_page1_heading {
     width: 100%;
-    height: 40%;
+    height: 90%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center;
   }
-  .qa_page1_heading .qa_box {
-    width: 65%;
+  .qa_page1 .qa_page1_heading .qa_box {
+    width: 70%;
     height: 70%;
-    padding: 0;
+    padding: 4% 5%;
   }
-  .qa_page1_heading .qa_box .qa_text {
+  .qa_page1 .qa_page1_heading .qa_box .qa_text {
     width: 100%;
-    height: 100%;
     padding: 0;
     padding-top: 2%;
   }
-  .qa_page1_heading .qa_box .qa_text h1 {
+  .qa_page1 .qa_page1_heading .qa_box .qa_text h1 {
     margin-bottom: 0;
+    font-size: 24px;
   }
-  .qa_page1_heading .qa_box .qa_text .qa_text_detail {
+  .qa_page1 .qa_page1_heading .qa_box .qa_text .qa_text_detail {
     padding: 2% 4%;
   }
-  .qa_page1_heading .qa_box .qa_text .qa_text_detail span {
-    font-size: 12px;
+  .qa_page1 .qa_page1_heading .qa_box .qa_text .qa_text_detail span {
+    font-size: 14px;
+  }
+  .qa_page1 .qa_page1_heading .qa_box .qa_text button {
+    border: none;
+    width: 155px;
+    border: 1px solid #383838;
+    padding: 3%;
   }
   .qa_page2 {
     flex-direction: column;
-    border: 1px solid #f00;
+    gap: 10%;
   }
   .qa_page2 .qa_form {
-    border: 1px solid #f00;
+    width: 100%;
+    font-size: 16px;
+    padding: 5%;
   }
-}
+  .qa_page2 .qa_form select[name=ask] {
+    width: 60%;
+  }
+  .qa_page2 .qa_form .qa_form_result input {
+    width: 100%;
+  }
+  .qa_page2 .qa_form .qa_form_result .nameCountry {
+    width: 100%;
+  }
+  .qa_page2 .qa_form .qa_form_result .nameCountry input[type=name] {
+    width: 48%;
+  }
+  .qa_page2 .qa_form .qa_form_result .nameCountry > select {
+    width: 47%;
+    margin-left: 3.8px;
+  }
+  .qa_page2 .qa_form .qa_form_result textarea {
+    width: 100%;
+    font-size: 20px;
+  }
+  .qa_page2 .qa_form .qa_form_result input[type=submit] {
+    width: 30%;
+    padding: 2%;
+  }
+  .qa_page2 .query_version {
+    width: 100%;
+  }
+  .qa_page2 .query_version .fixed_side_icon {
+    width: 15%;
+  }
+  .qa_page2 .query_version .mini_ask.show {
+    display: block;
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+  }
+  footer {
+    width: 100%;
+    height: 85vh;
+  }
+  footer .footer_inner .contents {
+    width: 100%;
+    flex-direction: column;
+    border-bottom: none;
+  }
+  footer .footer_inner .contents .content {
+    width: 48%;
+  }
+}/*# sourceMappingURL=qa-style.css.map */

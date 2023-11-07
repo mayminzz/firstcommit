@@ -6,35 +6,28 @@ window.addEventListener("load", () => {
 });
 
 // left gnb
-fetch("../json/qa.json")
+fetch("../json/header.json")
   .then((response) => response.json())
   .then((json) => {
-    let output = "";
-    json.forEach((list) => {
-      output += `<a href="#">${list.category}</a>`;
-      console.log(output);
+    let leftOutput = "";
+    json.leftNav.forEach((list) => {
+      leftOutput += `<a href="#">${list.category}</a>`;
+      console.log(leftOutput);
     });
-    document.querySelector(".gnb").innerHTML = output;
-  })
-  .catch((err) => console.log(err));
+    document.querySelector(".gnb").innerHTML = leftOutput;
 
-//  gnb_right
-fetch("../json/qa2.json")
-  .then((response) => response.json())
-  .then((json) => {
-    let output = "";
+    let rightOutput = "";
 
-    json.forEach((list) => {
-      output += `<a href="#">${list.category}</a>`;
-      console.log(output);
+    json.rightNav.forEach((list) => {
+      rightOutput += `<a href="#">${list.category}</a>`;
     });
 
     const gnbRight = document.querySelector(".gnb_right");
-    gnbRight.innerHTML = output;
+    gnbRight.innerHTML = rightOutput;
 
     const findIcon = document.createElement("a");
     findIcon.classList.add("finder");
-    json.unshift(findIcon);
+    json.rightNav.unshift(findIcon);
 
     const newDiv = document.createElement("div");
     const span1 = document.createElement("span");
@@ -44,13 +37,16 @@ fetch("../json/qa2.json")
     gnbRight.appendChild(newDiv);
     newDiv.appendChild(span1);
     newDiv.appendChild(span2);
-    json.push(newDiv);
+    json.rightNav.push(newDiv);
   })
   .catch((err) => console.log(err));
 
 // toggle
+const newDiv = document.createElement("div");
+newDiv.classList.add("toggle");
+
 newDiv.addEventListener("click", () => {
-  newDiv.classList.toggle("active");
+  newDiv.classList.add("active");
 });
 
 //작은 문의사항 창
@@ -60,3 +56,25 @@ const miniBox = document.querySelector(".mini_ask");
 btn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
 });
+
+// footer
+fetch("../json/footer.json")
+  .then((response) => response.json())
+  .then((json) => {
+    let output = "";
+    json.forEach((content) => {
+      output += `
+      <div class="content">
+        <h3>${content.title}</h3>
+        <p>
+          <span>${[content.subtitle[0]]}</span>
+          <span>${[content.subtitle[1]]}</span>
+          <span>${[content.subtitle[2]]}</span>
+          <span>${[content.subtitle[3]]}</span>
+        </p>
+      </div>"`;
+      console.log(output);
+    });
+    const contents = document.querySelector(".contents");
+    contents.innerHTML = output;
+  });
