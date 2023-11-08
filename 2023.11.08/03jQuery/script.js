@@ -13,3 +13,6 @@ $(function () {
   // 존속선택자
   $("h2.tit4").css("background", "gray").css("color", "#fff");
 });
+
+
+
