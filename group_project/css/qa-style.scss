@@ -1,6 +1,4 @@
-@import url("../font/324B1A_0_0.42ebc0e9.woff2"),
-  url("../font/SuisseIntl-Medium-WebS.5ee1ad41.woff2"),
-  url("../font/SuisseIntl-Regular-WebS.a55b96fd.woff2");
+
 
 @font-face {
   font-family: Regular;
@@ -60,16 +58,17 @@ a {
 // header CSS
 header {
   width: 100%;
-  height: 150px;
+  height: 125px;
   .gift_top {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    height: 40%;
-    padding-top: 1%;
+    height: 35%;
     background: #222;
     color: map-get($font-color, wh);
     h4 {
-      font-size: map-get($font-size, medium);
+      font-size: map-get($font-size, base);
       font-weight: normal;
       &::after {
         content: "+";
@@ -81,7 +80,7 @@ header {
   .logo {
     width: 65px;
     position: absolute;
-    top: 10.3%;
+    top: 7.8%;
     left: 1.5%;
     img {
       width: 100%;
@@ -89,7 +88,7 @@ header {
   }
   nav {
     width: 100%;
-    height: 60%;
+    height: 66%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -106,39 +105,71 @@ header {
     .gnb_right {
       display: flex;
       gap: 25px;
-      .finder {
-        position: relative;
-        margin-right: 300px;
-        font-size: map-get($font-size, base);
-        color: map-get($font-color, dark);
-        &::before {
-          content: "\f002";
-          font-family: fontawesome;
-        }
-        &::after {
-          content: "";
-          width: 80px;
-          height: 1px;
-          background: #000;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-        }
-      }
+      // .finder {
+      //   position: relative;
+      //   margin-right: 300px;
+      //   font-size: map-get($font-size, base);
+      //   color: map-get($font-color, dark);
+      //   &::before {
+      //     content: "\f002";
+      //     font-family: fontawesome;
+      //   }
+      //   &::after {
+      //     content: "";
+      //     width: 80px;
+      //     height: 1px;
+      //     background: #000;
+      //     position: absolute;
+      //     bottom: 0;
+      //     left: 0;
+      //   }
+      // }
       a {
         color: map-get($font-color, dark);
       }
       .toggle {
         display: none;
       }
+      .toggle {
+        display: block;
+        width: 23px;
+        height: 13px;
+        position: relative;
+        transition: 0.5s;
+        span {
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #222;
+          position: absolute;
+          &:nth-child(1) {
+            top: 4px;
+          }
+          &:nth-child(2) {
+            bottom: -3px;
+          }
+        }
+        .active {
+          span {
+            &:nth-child(1) {
+              transform: rotate(45deg);
+              top: 50%;
+            }
+            &:nth-child(2) {
+              transform: rotate(-45deg);
+              top: 50%;
+            }
+          }
+        }
+      }
     }
   }
-  .qa_nav_list {
-    width: 100%;
-    height: 40%;
-    border: 1px solid #f00;
-    position: relative;
-  }
+  // .qa_nav_list {
+  //   width: 100%;
+  //   height: 40%;
+  //   border: 1px solid #f00;
+  //   position: relative;
+  // }
 }
 
 // qa page_1
@@ -152,7 +183,7 @@ header {
     width: 35%;
     height: 45%;
     background: #fff;
-    opacity: 90%;
+    opacity: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -265,6 +296,7 @@ header {
     text-align: center;
   }
   .query_version {
+    position: fixed;
     .fixed_side_icon {
       width: 5%;
       height: 20%;
@@ -284,10 +316,10 @@ header {
       display: none;
     }
     .mini_ask.show {
-      display: block;
+      display:block;
       width: 20%;
       height: 65%;
-      position: absolute;
+      position: fixed;
       bottom: 5%;
       right: 8%;
       background: map-get($font-color, ask);
@@ -380,7 +412,7 @@ footer {
 
 
 // mobile version
-@media screen and (min-width: 360px) and (max-width: 767px) {
+@media screen and (min-width: 350px) and (max-width: 767px) {
   #container {
     width: 100%;
     height: 200vh;
@@ -395,21 +427,36 @@ footer {
   header {
     .gift_top {
       h4 {
-        font-size: map-get($font-size, base);
-        padding-top: 2%;
+        font-size: 11px;
+        &::after {
+          margin-left: 5px;
+        }
       }
     }
+    .logo {
+      top: 11%;
+    }
     nav {
-      position: relative;
+      width: 100%;
       .gnb {
-        display: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: 1px solid #f00;
+        display: flex;
         height: 30%;
         flex-direction: column;
         z-index: 2;
+        display: none;
       }
       .gnb_right {
         position: absolute;
         right: 2%;
+        a {
+          color: map-get($font-color, dark);
+        }
         .toggle {
           display: block;
           width: 23px;
@@ -454,26 +501,27 @@ footer {
       object-fit: cover;
       object-position: center;
       .qa_box {
-        width: 70%;
-        height: 70%;
-        padding: 4% 5%;
+        width: 80%;
+        height: 65%;
+        padding: 3% 1%;
         .qa_text {
           width: 100%;
+          height: 100%;
           padding: 0;
-          padding-top: 2%;
           h1 {
             margin-bottom: 0;
-            font-size: map-get($font-size , large);
+            font-size: map-get($font-size , medium);
           }
           .qa_text_detail {
-            padding: 2% 4%;
+            padding: 2% 3%;
             span {
-              font-size: map-get($font-size, small);
+              font-size: map-get($font-size, xsmall);
             }
           }
           button {
+            display: none;
             border: none;
-            width: 155px;
+            width: 125px;
             border: 1px solid #383838;
             padding: 3%;
           }
@@ -535,7 +583,7 @@ footer {
   // footer
   footer {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     .footer_inner {
       .contents {
         width: 100%;

@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 });
 
 // left gnb
-const headerUrl = "../json/header.json";
+const headerUrl = "../json/header.json"
 fetch(headerUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -42,24 +42,19 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err));
 
+
+
 // toggle
 const newDiv = document.createElement("div");
 newDiv.classList.add("toggle");
 
 newDiv.addEventListener("click", () => {
-  newDiv.classList.toggle("active");
+  newDiv.classList.add("active");
 });
 
-//작은 문의사항 창
-const btn = document.querySelector("#query");
-const miniBox = document.querySelector(".mini_ask");
-
-btn.addEventListener("click", () => {
-  miniBox.classList.toggle("show");
-});
-
-const footerUrl = "../json/footer.json";
 // footer
+const footerUrl = "../json/footer.json";
+
 fetch(footerUrl)
   .then((response) => response.json())
   .then((json) => {
@@ -79,6 +74,7 @@ fetch(footerUrl)
           <span>${[content.subtitle[3]]}</span>
         </p>
       </div>"`;
+      console.log(output);
     });
     const contents = document.querySelector(".contents");
     contents.innerHTML = output;
