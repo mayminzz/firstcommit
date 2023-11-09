@@ -126,6 +126,11 @@ aside#mobile_gnb_list {
   background: #fff;
   z-index: 1;
 }
+#nav_detail_list #contentFrame {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c9c7b3;
+}
 
 .qa_page1_heading {
   width: 100%;
