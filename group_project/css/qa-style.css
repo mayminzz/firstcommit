@@ -64,8 +64,9 @@ header .logo img {
   width: 100%;
 }
 header nav {
+  border: 1px solid #f00;
   width: 100%;
-  height: 66%;
+  height: 65%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,6 +74,8 @@ header nav {
 }
 header nav .gnb {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   margin-left: 80px;
 }

@@ -50,6 +50,13 @@ newDiv.addEventListener("click", () => {
   newDiv.classList.toggle("active");
 });
 
+// 제출하기 버튼 이벤트
+const submitBtn = document.querySelector("#submitbtn");
+const userName = document.querySelector("#name");
+submitBtn.addEventListener("click", () => {
+  alert(`${userName.value}님, 문의하신 내용이 제출되었습니다. 감사합니다!`);
+});
+
 //작은 문의사항 창
 const btn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");

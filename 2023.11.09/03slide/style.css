@@ -1,0 +1,46 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+
+/* Main CSS */
+.slide_wrapper {
+  position: relative;
+  width: 660px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+} 
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slides.animated {
+  transition: 0.5s ease-out;
+}
+.slides li {
+  width: 200px;
+  height: 200px;
+  background: #ccc;
+  float: left;
+}
+/* 부정연산자: 마지막만 빼고 나머지에 margin-right 적용 */
+.slides li:not(:last-child) {
+  margin-right: 30px;
+}
+.controls {
+  text-align: center;
+  margin-top: 50px;
+}
+.controls span {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+}

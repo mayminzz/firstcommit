@@ -1,14 +1,13 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: #222;
+.frame {
+  padding: 20px;
+  border: 1px solid #000;
+  text-align: center;
 }
-
-.heart-beat {
-  width: 200px;
-  height: 200px;
+.heading {
+  font-size: 36px;
+  font-weight: normal;
+  color: crimson;
+}ight: 200px;
   position: relative;
   background: crimson;
   transform: rotate(45deg);
