@@ -490,7 +490,7 @@ footer {
 
   // ======== aside SCSS =========
   #mobile_gnb_list {
-    display: none;
+    display: block;
     position: absolute;
     top: -50px;
     left: 0;
@@ -502,8 +502,7 @@ footer {
     width: 100%;
     height: 120vh;
     top: 0;
-    background: #fff;
-    border: 1px soli #00f;
+    border: 1px solid #00f;
     z-index: 6;
     opacity: 1;
     background: #fffef2;

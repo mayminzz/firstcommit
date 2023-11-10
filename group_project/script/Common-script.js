@@ -52,11 +52,20 @@ fetch(headerUrl)
     
     newDiv.addEventListener("click", () => {
       newDiv.classList.toggle("active");
-
+      giftTop.style.display = "none"
+      modalGnb.classList.toggle("showModalGnb");
     });
   })
   .catch((err) => console.log(err)); 
 
+
+//오른 쪽 작은 문의사항 창
+const btn = document.querySelector("#query");
+const miniBox = document.querySelector(".mini_ask");
+
+btn.addEventListener("click", () => {
+  miniBox.classList.toggle("show");
+});
 
 // footer
 const footerUrl = "../json/footer.json";
@@ -80,7 +89,6 @@ fetch(footerUrl)
           <span>${[content.subtitle[3]]}</span>
         </p>
       </div>"`;
-      console.log(output);
     });
     const contents = document.querySelector(".contents");
     contents.innerHTML = output;
