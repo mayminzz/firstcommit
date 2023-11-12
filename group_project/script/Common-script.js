@@ -11,7 +11,8 @@ fetch(headerUrl)
   .then((json) => {
     let leftOutput = "";
     json.leftNav.forEach((list) => {
-      leftOutput += `<li class=${list.class}><a href="#">${list.category}</a></li>`;
+      leftOutput += `
+      <li class=${list.class}><a href="#">${list.category}</a></li>`;
     });
     const ulGnb = document.createElement("ul");
     const divGnb = document.querySelector(".gnb");
@@ -37,8 +38,7 @@ fetch(headerUrl)
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
     // const iframe = document.createElement("iFrame");
-    // iframe.classList.add("contentiframe")
-
+    // iframe.classList.add("contentiframe");
 
     // const iframesrc = "";
     // json.onclick.forEach((src) => {
@@ -49,17 +49,21 @@ fetch(headerUrl)
     //   })
     // })
 
-    let iframeSrc = [];
-    json.leftNav.forEach((src) => {
-      iframeSrc += `<iframe src="${src.src}"></iframe>`;
-    });
-    console.log(iframeSrc)
+    // let iframeSrc = [];
+    // json.leftNav.forEach((src) => {
+    //   iframeSrc += `<iframe src="${src.src}"></iframe>`;
+    // });
+    // console.log(iframeSrc);
     
     gnbBtns.forEach((btn) => {
       btn.addEventListener("click", ()=> {
+        const iframe = document.createElement("iFrame");
+        iframe.setAttribute("src","../html/nav-html/$-index.html");
+        iframe.classList.add("contentiframe");
+        gnbList.appendChild(iframe)
+      });
+    });
 
-      })
-    })
     // gnbBtn.addEventListener("click", (e) => {
     //     console.log("click");
     //     iframe.setAttribute("src", "./nav-html/2-index.html");
@@ -92,7 +96,6 @@ fetch(headerUrl)
 
     modalBottomUl.innerHTML = mobileGnbList;
 
-
 // ======== toggle =========
     const newDiv = document.createElement("div");
     const span1 = document.createElement("span");
@@ -113,14 +116,15 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err)); 
 
-
 //오른 쪽 작은 문의사항 창
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
 
 queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
+
 });
+
 
 
 // ========= footer ==========

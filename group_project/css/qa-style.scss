@@ -43,15 +43,95 @@ a {
 .container {
   background: url("../img/common/lightback.png") center center;
   width: 100%;
-  height: 230vh;
+  height: 200vh;
   font-family: Regular;
   section {
     width: 100%;
     height: 100vh;
   }
 }
+.query_version {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #f00;
+  .fixed_side_icon {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .mini_ask {
+    display: none;
+  }
+  .mini_ask.show {
+    display:block;
+    width: 20%;
+    height: 65%;
+    position: fixed;
+    bottom: 5%;
+    right: 8%;
+    background: map-get($font-color, ask);
+    color: map-get($font-color, wh);
+    opacity: 0.9;
+    label {
+      em {
+        color: #f00;
+      }
+    }
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: map-get($font-size, medium);
+      color: map-get($font-color, dark);
+      background: #dfdfdf;
+      padding: 3% 0;
+    }
+    p {
+      font-size: map-get($font-size, base);
+      line-height: 1.5;
+      margin-bottom: 1%;
+      padding: 3%;
+      span {
+        font-weight: bold;
+      }
+    }
+    .mini_ask_form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3.5%;
+      label {
+        margin-bottom: 1.5%;
+        font-size: map-get($font-size, base);
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px;
+        outline: none;
+        margin-bottom: 5px;
+        &::placeholder {
+          font-size: map-get($font-size , large);
+        }
+      }
+    }
+  }
+}
 
 // ======== header SCSS =========
+
 header {
   width: 100%;
   height: 125px;
@@ -106,6 +186,9 @@ header {
     .gnb_right {
       display: flex;
       gap: 25px;
+      a {
+        color: map-get($font-color, dark );
+      }
       .finder {
         position: relative;
         margin-right: 300px;
@@ -294,76 +377,6 @@ header {
   .qa_logo {
     flex: 1;
     text-align: center;
-  }
-  .query_version {
-    position: fixed;
-    .fixed_side_icon {
-      width: 5%;
-      height: 20%;
-      position: fixed;
-      bottom: 5%;
-      right: 2%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      img {
-        width: 43%;
-        height: 20%;
-      }
-    }
-    .mini_ask {
-      display: none;
-    }
-    .mini_ask.show {
-      display:block;
-      width: 20%;
-      height: 65%;
-      position: fixed;
-      bottom: 5%;
-      right: 8%;
-      background: map-get($font-color, ask);
-      color: map-get($font-color, wh);
-      opacity: 0.8;
-      label {
-        em {
-          color: #f00;
-        }
-      }
-      h1 {
-        width: 100%;
-        text-align: center;
-        font-size: map-get($font-size, medium);
-        color: map-get($font-color, dark);
-        background: #dfdfdf;
-        padding: 3% 0;
-      }
-      p {
-        font-size: map-get($font-size, small);
-        line-height: 1.5;
-        margin-bottom: 1%;
-        padding: 3%;
-      }
-      .mini_ask_form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 3.5%;
-        label {
-          margin-bottom: 1.5%;
-          font-size: map-get($font-size, base);
-        }
-        input,
-        textarea {
-          width: 100%;
-          outline: none;
-          &::placeholder {
-            font-size: map-get($font-size , large);
-          }
-        }
-      }
-    }
   }
 }
 
@@ -722,20 +735,36 @@ aside#mobile_gnb_list {
         }
       }
     }
-    .query_version {
+  }
+  .query_version {
+    .fixed_side_icon {
+      z-index: 99;
+    }
+    .mini_ask.show {
       width: 100%;
-      .fixed_side_icon {
-        width: 15%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      p {
+        font-size: map-get($font-size, medium);
+        line-height: 2em;
       }
-      .mini_ask.show {
-        display: block;
-        width: 100%;
-        height: 70%;
-        bottom: 0;
-        right: 0;
+      .mini_ask_form {
+        label {
+          font-size: map-get($font-size, medium);
+        }
+        input,
+        textarea {
+          padding: 10px;
+          margin-bottom: 10px;
+        }
+        textarea {
+          height: 300px;
+        }
       }
     }
   }
+
   //======== footer SCSS =========
   footer {
     width: 100%;
