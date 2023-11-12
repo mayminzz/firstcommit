@@ -16,24 +16,33 @@
     <script defer src="../script/Common-script.js"></script>
   </head>
   <body>
+    <header>
+      <div class="gift_top"></div>
+      <nav>
+        <div class="logo">
+          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+        </div>
+        <div class="gnb"></div>
+        <div class="gnb_right"></div>
+      </nav>
+      <div class="qa_nav_list"></div>
+    </header>
+    <aside id="nav_detail_list">
+      <!-- <iframe id="contentFrame"></iframe> -->
+    </aside>
+    <aside id="mobile_gnb_list">
+      <!-- <div class="gnb_list_header"></div> -->
+      <div class="gnb_list_bottom">
+        <figure>
+          <img src="../img/common/mobile_nav_img.jpg" alt="">
+        </figure>
+        <figcaption>
+          <span><a href="">재생목록</a></span>
+          <h3>이솝의 사운드</h3>
+        </figcaption>
+      </div>
+    </aside>     
     <div class="container" id="qa">
-      <header>
-        <div class="gift_top"></div>
-        <nav>
-          <div class="logo">
-            <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
-          </div>
-          <div class="gnb"></div>
-          <div class="gnb_right"></div>
-        </nav>
-        <div class="qa_nav_list"></div>
-      </header>
-      <!-- <aside id="nav_detail_list">
-        <iframe id="contentFrame" src="./story.html"></iframe>
-      </aside> -->
-      <aside id="mobile_gnb_list">
-        <div class="gnb_list_header"></div>
-      </aside>     
         <section class="qa_page1">
           <div class="qa_page1_heading">
             <div class="qa_box">
@@ -89,7 +98,10 @@
                 required
                 placeholder="문의사항을 입력해주세요!"
               ></textarea>
-              <input id="submitbtn" type="submit" value="제출하기" />
+              <div class="submit_sec">
+                <input id="submitbtn" type="submit" value="제출하기" />
+                <p>당사의 <span>개인정보처리방침</span>에 따라 귀하의 개인정보를 처리하고 있습니다.</p>
+              </div>
             </div>
           </div>
           <div class="qa_logo">

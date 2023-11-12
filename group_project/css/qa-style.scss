@@ -21,6 +21,7 @@ $font-color: (
   /*footer 폰트 컬러*/ dark: #383838,
   /*light 버전 폰트 컬러*/ naklight: #b9ae91,
   /*이거는 낙영언니 페이지 If the path 폰트  컬러*/ ask: #271100,
+  gray: #666,
 );
 
 //========= reset ===========
@@ -35,6 +36,7 @@ li {
 }
 a {
   text-decoration: none;
+  color: map-get($font-color, dark);
 }
 
 //======== common CSS =========
@@ -53,12 +55,14 @@ a {
 header {
   width: 100%;
   height: 125px;
+  background: url("../img/common/lightback.png");
   .gift_top {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 35%;
+    height: 45px;
+    // height: 35%;
     background: #222;
     color: map-get($font-color, wh);
     h4 {
@@ -86,7 +90,7 @@ header {
       }
     }
     .gnb {
-      margin-left: -53%;
+      margin-left: -59%;
       ul {
         display: flex;
         justify-content: center;
@@ -127,29 +131,32 @@ header {
     }
   }
 }
-// ========= aside SCSS =========
-aside#mobile_gnb_list {
-  display: none;
-}
-.removesection {
-  .container:not(header,aside){
+
+  // ======== aside SCSS =========
+  aside#mobile_gnb_list {
     display: none;
   }
-}
 
 #nav_detail_list {
+  display: none;
   width: 100%;
-  height: 500px;
+  height: 0px;
   position: absolute;
   top: 120px;
   background: #fff;
   z-index: 1;
+  transition: 0.5s;
   #contentFrame {
     width: 100%;
     height: 100%;
-    border: 1px solid #c9c7b3 ;
+    border:none;
   }
 }
+#nav_detail_list.pc_gnb_show {
+  display: block;
+  height: 500px;
+}
+
 //======== page 1 =========
 .qa_page1_heading {
   width: 100%;
@@ -263,13 +270,24 @@ aside#mobile_gnb_list {
         padding: 1%;
         margin-top: 1%;
       }
-      input[type="submit"] {
-        width: 20%;
-        margin-top: 3%;
-        border: none;
-        background: #000;
-        color: map-get($font-color, wh);
-        font-size: map-get($font-size , medium);
+      .submit_sec {
+        input[type="submit"] {
+          width: 20%;
+          margin-top: 3%;
+          border: none;
+          background: #000;
+          color: map-get($font-color, wh);
+          font-size: map-get($font-size , medium);
+        }
+        p {
+          display: inline-block;
+          font-size: map-get($font-size, base);
+          margin-left: 25px;
+          span {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
@@ -411,9 +429,13 @@ footer {
       height: 130vh;
     }
   }
+  .container.removeContainer {
+    display: none;
+  }
 // ======== header SCSS ========
     header {
     .gift_top {
+
       h4 {
         font-size: 11px;
         &::after {
@@ -488,40 +510,132 @@ footer {
     }
   }
 
+  .gift_top.removeGiftTop {
+    height: 0%;
+    opacity: 0;
+  }
   // ======== aside SCSS =========
+aside#mobile_gnb_list {
+  display: none;
+}
+
   #mobile_gnb_list {
-    display: block;
+    // display: block;
     position: absolute;
     top: -50px;
     left: 0;
     opacity: 0.5;
     transition: all 0.5s;
   }
+
   #mobile_gnb_list.showModalGnb {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 120vh;
+    height: 110vh;
     top: 0;
-    border: 1px solid #00f;
     z-index: 6;
     opacity: 1;
     background: #fffef2;
-    > ul {
+    .modal_top_gnb_list {
+      order: 1;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 90px 0;
+      padding-top : 90px;
       > li {
         width: 100%;
-        padding: 15px 0;
+        padding: 15px 30px;
       border-bottom: 1px solid map-get($font-color, dark);
       &:first-child {
         border-top: 1px solid map-get($font-size, dark);
       }
       > a {
-        padding: 0 5%;
+        color: map-get($font-color, dark);
+        font-size: map-get($font-size, medium);
       }
+      }
+    }
+    .gnb_list_bottom {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 26px;
+      .modal_bottom_mini_list {
+        order: 1;
+        width: 100%;
+        height: 150px;
+        margin-bottom: 15px;
+        > li {
+          display: inline-block;
+          width: 48%;
+          padding: 10px 0;
+          > a {
+            position: relative;
+            font-size: map-get($font-size, medium);
+            color: map-get($font-color, gray );
+            &::before {
+              content: "";
+              width: 0%;
+              height: 1px;
+              background: map-get($font-color, dark);
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transition: 0.5s;
+            }
+            &:hover::before {
+              width: 100%;
+            }
+          }
+        }
+      }
+      figure {
+        order: 2;
+        width: 200%;
+        height: 250px;
+        padding-left: 10px;
+        img {
+          width: 500px;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          
+        }
+      }
+      figcaption {
+        order: 3;
+        padding: 5px 0 0 20px;
+        span {
+          display: block;
+          margin-bottom: 10px;
+          a {
+            font-size: map-get($font-size, medium);
+            color: map-get($font-color, gray);
+          }
+        }
+        h3 {
+          font-size: map-get($font-size, large);
+          font-weight: normal;
+          position: relative;
+          &::before {
+            content: "";
+            width: 0%;
+            height: 1px;
+            background: map-get($font-color, dark);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.5s;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+        }
       }
     }
   }
@@ -592,9 +706,19 @@ footer {
           width: 100%;
           font-size: map-get($font-size, medium);
         }
-        input[type="submit"] {
-          width: 30%;
-          padding: 2%;
+        .submit_sec{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          input[type="submit"] {
+            width: 30%;
+            padding: 2%;
+          }
+          p {
+            width: 65%;
+            font-size: map-get($font-size, small);
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -612,7 +736,6 @@ footer {
       }
     }
   }
-
   //======== footer SCSS =========
   footer {
     width: 100%;

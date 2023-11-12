@@ -21,12 +21,12 @@ a {
   text-decoration: none;
 }
 
-#container {
-  background: url("../img/bg/background_light.png") center center;
+.container {
+  background: url("../img/common/lightback.png") center center;
   width: 100%;
   height: 430vh;
 }
-#container section {
+.container section {
   width: 100%;
   height: 100vh;
 }
@@ -469,4 +469,4 @@ footer .footer_inner .contents .content p span {
   footer .footer_inner .contents .content {
     width: 48%;
   }
-}
+}/*# sourceMappingURL=Home-style.css.map */

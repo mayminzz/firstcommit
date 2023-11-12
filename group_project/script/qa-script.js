@@ -22,3 +22,5 @@ submitBtn.addEventListener("click", () => {
     alert("필수입력 항목을 작성해주세요!");
   }
 });
+
+

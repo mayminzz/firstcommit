@@ -1,4 +1,4 @@
-// GiftTop
+// ======= GiftTop ========
 const giftTop = document.querySelector(".gift_top")
 window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
@@ -11,7 +11,7 @@ fetch(headerUrl)
   .then((json) => {
     let leftOutput = "";
     json.leftNav.forEach((list) => {
-      leftOutput += `<li><a href="#">${list.category}</a></li>`;
+      leftOutput += `<li class=${list.class}><a href="#">${list.category}</a></li>`;
     });
     const ulGnb = document.createElement("ul");
     const divGnb = document.querySelector(".gnb");
@@ -32,12 +32,66 @@ fetch(headerUrl)
     // findIcon.classList.add("finder");
     // json.rightNav.unshift(findIcon);
 
-// ======== mobole Gnb =========
+
+      // ======== PC nav_detail_list ========
+    const gnbBtns = document.querySelectorAll(".gnb ul li");
+    const gnbList = document.querySelector("#nav_detail_list");
+    // const iframe = document.createElement("iFrame");
+    // iframe.classList.add("contentiframe")
+
+
+    // const iframesrc = "";
+    // json.onclick.forEach((src) => {
+    //   src.addEventListener("click",() => {
+    //     iframesrc += `
+    //     <iframe src="${src.onclick}"</iframe>`;
+    //     gnbList.classList.toggle("pc_gnb_show");
+    //   })
+    // })
+
+    let iframeSrc = [];
+    json.leftNav.forEach((src) => {
+      iframeSrc += `<iframe src="${src.src}"></iframe>`;
+    });
+    console.log(iframeSrc)
+    
+    gnbBtns.forEach((btn) => {
+      btn.addEventListener("click", ()=> {
+
+      })
+    })
+    // gnbBtn.addEventListener("click", (e) => {
+    //     console.log("click");
+    //     iframe.setAttribute("src", "./nav-html/2-index.html");
+    //     gnbList.classList.toggle("pc_gnb_show");
+    //   })
+
+    // gnbBtn.addEventListener("click", (e) => {
+    //   gnbList.classList.toggle("pc_gnb_show");
+    //   iframe.setAttribute("src", "./nav-html/1-index.html");
+    // })
+
+// ======== mobile Gnb =========
 
     const modalGnb = document.querySelector("#mobile_gnb_list"); 
-    const modalUl = document.createElement("ul");
-    modalGnb.appendChild(modalUl);
-    modalUl.innerHTML = leftOutput;
+    const modalTopUl = document.createElement("ul");
+    modalGnb.appendChild(modalTopUl);
+    modalTopUl.classList.add("modal_top_gnb_list")
+    modalTopUl.innerHTML = leftOutput;
+
+    const mobileGnbListBottom = document.querySelector(".gnb_list_bottom");
+    const modalBottomUl = document.createElement("ul");
+    modalBottomUl.classList.add("modal_bottom_mini_list");
+    mobileGnbListBottom.appendChild(modalBottomUl);
+
+    let mobileGnbList = "";
+    json.mobileGnb.forEach((mg) => {
+      mobileGnbList += `
+      <li><a href="#">${mg.catagory}</a></li>`;
+    });
+
+    modalBottomUl.innerHTML = mobileGnbList;
+
 
 // ======== toggle =========
     const newDiv = document.createElement("div");
@@ -52,22 +106,24 @@ fetch(headerUrl)
     
     newDiv.addEventListener("click", () => {
       newDiv.classList.toggle("active");
-      giftTop.style.display = "none"
       modalGnb.classList.toggle("showModalGnb");
+      document.querySelector(".container").classList.toggle("removeContainer");
+      document.querySelector(".gift_top").classList.toggle("removeGiftTop")
     });
   })
   .catch((err) => console.log(err)); 
 
 
 //오른 쪽 작은 문의사항 창
-const btn = document.querySelector("#query");
+const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
 
-btn.addEventListener("click", () => {
+queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
 });
 
-// footer
+
+// ========= footer ==========
 const footerUrl = "../json/footer.json";
 
 fetch(footerUrl)
