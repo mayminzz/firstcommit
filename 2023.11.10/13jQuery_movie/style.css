@@ -115,6 +115,7 @@ div[data-name="character"] a {
   height: 40px;
   text-indent: -999px;
   background: url("./img (4)/Arrow_Images.png") no-repeat;
+  z-index: 10;
 }
 div[data-name="character"] a:nth-child(1) {
   background-position: 0 0;

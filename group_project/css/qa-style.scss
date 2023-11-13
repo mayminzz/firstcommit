@@ -50,6 +50,7 @@ a {
     height: 100vh;
   }
 }
+
 .query_version {
   position: fixed;
   width: 100%;
@@ -528,9 +529,9 @@ footer {
     opacity: 0;
   }
   // ======== aside SCSS =========
-aside#mobile_gnb_list {
-  display: none;
-}
+  aside#mobile_gnb_list {
+    display: none;
+  }
 
   #mobile_gnb_list {
     // display: block;

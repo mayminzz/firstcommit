@@ -126,7 +126,6 @@ queryBtn.addEventListener("click", () => {
 });
 
 
-
 // ========= footer ==========
 const footerUrl = "../json/footer.json";
 
