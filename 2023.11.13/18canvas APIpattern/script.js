@@ -1,14 +1,17 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
-// // 패턴만들기
+// 패턴만들기
 // let img = new Image();
 // img.onload = () => {
-//   let pattern = ctx.createPattern(img, "repeat");
-//   ctx.fillStyle = "pattern";
+//   let pattern = ctx.createPattern(img, 'repeat');
+//   ctx.fillStyle = pattern;
 //   ctx.fillRect(0, 0, 600, 400);
 // };
-// img.src = "./img/pattern.png";
+
+// img.src = './img/pattern.png';
+// onload();
+
 
 // const lineCap = ["butt", "round", "square"];
 // for (let i = 0; i < lineCap.length; i++) {
@@ -20,7 +23,7 @@ const ctx = canvas.getContext("2d");
 //   ctx.moveTo(50, 50 + i * 30);
 //   ctx.lineTo(350, 50 + i * 30);
 //   ctx.stroke();
-// }
+// };
 
 const lineJoin = ["bevel", "miter", "round"];
 
@@ -31,6 +34,6 @@ for (let i = 0; i < lineJoin.length; i++) {
   ctx.beginPath();
   ctx.moveTo(60, 60 * i + 50);
   ctx.lineTo(100, 60 * i + 15);
-  ctx.lineTo(140, 60 * i + 65);
+  ctx.lineTo(140, 60 * i + 50);
   ctx.stroke();
 }

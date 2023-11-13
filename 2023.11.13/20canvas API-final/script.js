@@ -15,7 +15,7 @@ let startY;
 let lineWidth = 2;
 
 toolbar.addEventListener("change", (e) => {
-  if (e.target.id === "stroke") {
+  if (e.target.id === "stroke") { 
     ctx.strokeStyle = e.target.value;
   }
   if (e.target.id === "lWidth") {
@@ -30,7 +30,7 @@ canvas.addEventListener("mousedown", (e) => {
 });
 canvas.addEventListener("mousemove", (e) => {
   if (!isDrawing) return;
-  ctx.linWidth = lineWidth;
+  ctx.lineWidth = lineWidth;
   ctx.lineCap = "round";
   ctx.lineTo(e.clientX, e.clientY - canvasOffestY);
   ctx.stroke();
