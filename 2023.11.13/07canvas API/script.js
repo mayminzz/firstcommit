@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d");
 ctx.strokeStyle = "orange";
 ctx.beginPath();
 // 동그랗지 않지만 타원이라던지 원을 만들때 사용하는 메서드
-// (X, Y, radiousX(가로의 반지름), radiousY(세로의 반지름), ?,시작각도, 끝나는 각도)
+// (X, Y, radiousX(가로의 반지름), radiousY(세로의 반지름), 회전각도,시작각도, 끝나는 각도)
 ctx.ellipse(200, 70, 80, 50, 0, 0, Math.PI * 2);
 ctx.stroke();
 

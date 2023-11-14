@@ -11,15 +11,14 @@
 // ctx.fill()
 
 // 그림자가 있는 원
+const canvas = document.querySelector("canvas");
+const ctx = canvas.getContext("2d");
 
 ctx.shadowColor = "#ccc";
 // Offse 원본 객체로부터 얼마만큼 떨어져있는지
 ctx.shadowOffsetX = 15;
 ctx.shadowOffsetY = 10;
 ctx.shadowBlur = 10;
-
-const canvas = document.querySelector("canvas");
-const ctx = canvas.getContext("2d");
 
 let radGrad = ctx.createRadialGradient(55, 60, 10, 80, 90, 100);
 radGrad.addColorStop(0, "white");

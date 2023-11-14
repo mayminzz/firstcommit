@@ -3,15 +3,15 @@ const ctx = canvas.getContext("2d");
 
 // 투명 및 불투명도를 적용할 수 있는 첫번 째 방법
 
-// ctx.globalAlpha = 0.3;
-// ctx.fillStyle = `rgb(255,0,0)`;
-// ctx.fillRect(50, 50, 100, 50);
-// ctx.fillStyle = `rgb(0,0,255)`;
-// ctx.fillRect(150, 50, 100, 50);
-// ctx.fillStyle = `rgb(0,255,0)`;
-// ctx.fillRect(250, 50, 100, 50);
-// ctx.fillStyle = `rgb(255,255,0)`;
-// ctx.fillRect(350, 50, 100, 50);
+ctx.globalAlpha = 0.3;
+ctx.fillStyle = `rgb(255,0,0)`;
+ctx.fillRect(50, 50, 100, 50);
+ctx.fillStyle = `rgb(0,0,255)`;
+ctx.fillRect(150, 50, 100, 50);
+ctx.fillStyle = `rgb(0,255,0)`;
+ctx.fillRect(250, 50, 100, 50);
+ctx.fillStyle = `rgb(255,255,0)`;
+ctx.fillRect(350, 50, 100, 50);
 
 // 투명 및 불투명도를 적용할 수 있는 첫번 째 방법
 

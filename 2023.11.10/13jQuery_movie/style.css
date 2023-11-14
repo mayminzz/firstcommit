@@ -90,8 +90,8 @@ div[data-name="main"] {
   padding: 10px;
 }
 div[data-name="main"] img {
-  position: absolute;
   width: 925px;
+  position: absolute;
   left: 0px;
   bottom: 0px;
 }
@@ -102,14 +102,14 @@ div[data-name="information"] img {
 }
 div[data-name="information"] div {
   position: absolute;
-  width: 450px;
+  width: 420px;
   left: 470px;
   top: 50px;
 }
 div[data-name="multimedia"] {
   padding: 20px 0;
 }
-div[data-name="character"] a {
+div[data-name="character"] > a {
   display: block;
   width: 40px;
   height: 40px;
@@ -131,7 +131,7 @@ div[data-name="character"] a:nth-child(2) {
   top: 50%;
   transform: translateY(-50%);
 }
-div[data-name="character"] article {
+div[data-name="character"] > article {
   width: 960px;
   height: 500px;
   position: absolute;
@@ -139,14 +139,14 @@ div[data-name="character"] article {
   top: 500px;
   transition: all 2s;
 }
-div[data-name="character"] article.show {
+div[data-name="character"] > article.show {
   top: 0;
 }
 article {
   position: relative;
 }
 
-article h1 {
+article > h1 {
   position: absolute;
   left: 90px;
   top: 40px;
@@ -164,7 +164,7 @@ article > img:nth-last-of-type(2) {
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
-article p {
+article > p {
   position: absolute;
   left: 400px;
   top: 120px;
@@ -175,31 +175,31 @@ article p {
   overflow: hidden;
   background: #fc3f3b;
 }
-#main_navigation ul {
+#main_navigation > ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-#main_navigation ul li a {
+#main_navigation > ul > li > a {
   display: block;
   width: 240px;
   height: 50px;
   text-align: center;
   line-height: 50px;
-  text-indent: -99999px;
-  background: url("./img (4)/Navigation_Button.png") center 0;
+  text-indent: -9999px;
+  background: url("./img (4)/Navigation_Button.png") center -6px;
 }
-#main_navigation li:nth-child(1) a {
+#main_navigation li:nth-child(1) > a {
   background-position: center 0;
 }
-#main_navigation li:nth-child(2) a {
+#main_navigation li:nth-child(2) > a {
   background-position: center -100px;
 }
-#main_navigation li:nth-child(3) a {
+#main_navigation li:nth-child(3) > a {
   background-position: center -200px;
 }
-#main_navigation li:nth-child(4) a {
+#main_navigation li:nth-child(4) > a {
   background-position: center -300px;
 }
 #main_navigation li:nth-child(1) > a:hover {
