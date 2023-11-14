@@ -1,5 +1,5 @@
 // ======= GiftTop ========
-const giftTop = document.querySelector(".gift_top")
+const giftTop = document.querySelector(".gift_top");
 window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 });
@@ -19,7 +19,7 @@ fetch(headerUrl)
     divGnb.appendChild(ulGnb);
     ulGnb.innerHTML = leftOutput;
 
-// ====== right Gnb ======
+    // ====== right Gnb ======
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
@@ -33,54 +33,39 @@ fetch(headerUrl)
     // findIcon.classList.add("finder");
     // json.rightNav.unshift(findIcon);
 
-
-      // ======== PC nav_detail_list ========
+    // ======== PC nav_detail_list ========
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
-    // const iframe = document.createElement("iFrame");
+
     // iframe.classList.add("contentiframe");
+    // gnbList.appendChild(iframe);
 
-    // const iframesrc = "";
-    // json.onclick.forEach((src) => {
-    //   src.addEventListener("click",() => {
-    //     iframesrc += `
-    //     <iframe src="${src.onclick}"</iframe>`;
-    //     gnbList.classList.toggle("pc_gnb_show");
-    //   })
-    // })
-
-    // let iframeSrc = [];
-    // json.leftNav.forEach((src) => {
-    //   iframeSrc += `<iframe src="${src.src}"></iframe>`;
-    // });
-    // console.log(iframeSrc);
-    
     gnbBtns.forEach((btn) => {
-      btn.addEventListener("click", ()=> {
+      btn.addEventListener("click", () => {
         const iframe = document.createElement("iFrame");
-        iframe.setAttribute("src","../html/nav-html/$-index.html");
+        iframe.setAttribute("src", "../html/nav-html/1-index.html");
         iframe.classList.add("contentiframe");
-        gnbList.appendChild(iframe)
+        gnbList.appendChild(iframe);
+        iframe.style.width = "100%"
+        iframe.style.height = "100%"
+
+
+        gnbList.classList.toggle("pc_gnb_show");
       });
     });
 
-    // gnbBtn.addEventListener("click", (e) => {
+    // gnbBtns.addEventListener("click", (btn) => {
     //     console.log("click");
-    //     iframe.setAttribute("src", "./nav-html/2-index.html");
-    //     gnbList.classList.toggle("pc_gnb_show");
+    //     // iframe.setAttribute("src", "./nav-html/2-index.html");
+    //     // gnbList.classList.toggle("pc_gnb_show");
     //   })
 
-    // gnbBtn.addEventListener("click", (e) => {
-    //   gnbList.classList.toggle("pc_gnb_show");
-    //   iframe.setAttribute("src", "./nav-html/1-index.html");
-    // })
+    // ======== mobile Gnb =========
 
-// ======== mobile Gnb =========
-
-    const modalGnb = document.querySelector("#mobile_gnb_list"); 
+    const modalGnb = document.querySelector("#mobile_gnb_list");
     const modalTopUl = document.createElement("ul");
     modalGnb.appendChild(modalTopUl);
-    modalTopUl.classList.add("modal_top_gnb_list")
+    modalTopUl.classList.add("modal_top_gnb_list");
     modalTopUl.innerHTML = leftOutput;
 
     const mobileGnbListBottom = document.querySelector(".gnb_list_bottom");
@@ -96,7 +81,7 @@ fetch(headerUrl)
 
     modalBottomUl.innerHTML = mobileGnbList;
 
-// ======== toggle =========
+    // ======== toggle =========
     const newDiv = document.createElement("div");
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
@@ -106,15 +91,15 @@ fetch(headerUrl)
     newDiv.appendChild(span1);
     newDiv.appendChild(span2);
     json.rightNav.push(newDiv);
-    
+
     newDiv.addEventListener("click", () => {
       newDiv.classList.toggle("active");
       modalGnb.classList.toggle("showModalGnb");
       document.querySelector(".container").classList.toggle("removeContainer");
-      document.querySelector(".gift_top").classList.toggle("removeGiftTop")
+      document.querySelector(".gift_top").classList.toggle("removeGiftTop");
     });
   })
-  .catch((err) => console.log(err)); 
+  .catch((err) => console.log(err));
 
 //오른 쪽 작은 문의사항 창
 const queryBtn = document.querySelector("#query");
@@ -122,9 +107,7 @@ const miniBox = document.querySelector(".mini_ask");
 
 queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
-
 });
-
 
 // ========= footer ==========
 const footerUrl = "../json/footer.json";

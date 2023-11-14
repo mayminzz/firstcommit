@@ -103,11 +103,11 @@ fetch(footerUrl)
     let output = "";
     json.forEach((content) => {
       // output += `
-      // <div class="content">
+      // <div class="footer_content">
       //   <h3>${titles.title}</h3>
       //   </div>`;
       output += `
-      <div class="content">
+      <div class="footer_content">
         <h3>${content.title}</h3>
         <p>
           <span>${[content.subtitle[0]]}</span>
@@ -117,6 +117,6 @@ fetch(footerUrl)
         </p>
       </div>"`;
     });
-    const contents = document.querySelector(".contents");
+    const contents = document.querySelector(".footer_contents");
     contents.innerHTML = output;
   });

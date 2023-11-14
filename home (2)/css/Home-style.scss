@@ -323,8 +323,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 //section1================================
@@ -499,17 +499,17 @@ main {
 
 footer {
   width: 100%;
-  height: 220px;
+  height: 250px;
   background: #222;
   .footer_inner {
     padding: 20px 30px;
-    .contents {
-      height: 180px;
+    .footer_contents {
+      height: 230px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       border-bottom: 1px solid #383838;
-      .content {
+      .footer_content {
         width: 15%;
         &.order {
           width: 30%;
@@ -840,11 +840,11 @@ footer {
     width: 100%;
     height: 100vh;
     .footer_inner {
-      .contents {
+      .footer_contents {
         width: 100%;
         flex-direction: column;
         border-bottom: none;
-        .content {
+        .footer_content {
           width: 48%;
         }
       }
