@@ -75,7 +75,7 @@ a {
     display: none;
   }
   .mini_ask.show {
-    display:block;
+    display: block;
     width: 20%;
     height: 65%;
     position: fixed;
@@ -123,7 +123,7 @@ a {
         outline: none;
         margin-bottom: 5px;
         &::placeholder {
-          font-size: map-get($font-size , large);
+          font-size: map-get($font-size, large);
         }
       }
       #submitBtn {
@@ -189,13 +189,24 @@ header {
           font-size: map-get($font-size, base);
           color: map-get($font-color, dark);
         }
+        button {
+          display: none;
+          border: none;
+          background: transparent;
+          font-size: map-get($font-size, base);
+          &::before {
+            content: "\58";
+            font-family: fontawesome;
+            margin-right: 10px;
+          }
+        }
       }
-    } 
+    }
     .gnb_right {
       display: flex;
       gap: 25px;
       a {
-        color: map-get($font-color, dark );
+        color: map-get($font-color, dark);
       }
       .finder {
         position: relative;
@@ -223,10 +234,10 @@ header {
   }
 }
 
-  // ======== aside SCSS =========
-  aside#mobile_gnb_list {
-    display: none;
-  }
+// ======== aside SCSS =========
+aside#mobile_gnb_list {
+  display: none;
+}
 
 #nav_detail_list {
   display: none;
@@ -240,7 +251,7 @@ header {
   #contentFrame {
     width: 100%;
     height: 100%;
-    border:none;
+    border: none;
   }
 }
 #nav_detail_list.pc_gnb_show {
@@ -273,7 +284,7 @@ header {
       height: 330px;
       h1 {
         margin-bottom: 5%;
-        font-size: map-get($font-size , xlarge);
+        font-size: map-get($font-size, xlarge);
       }
       .qa_text_detail {
         width: 100%;
@@ -281,7 +292,7 @@ header {
         margin-bottom: 5%;
         span {
           display: block;
-          font-size: map-get($font-size , base);
+          font-size: map-get($font-size, base);
         }
       }
       button {
@@ -368,7 +379,7 @@ header {
           border: none;
           background: #000;
           color: map-get($font-color, wh);
-          font-size: map-get($font-size , medium);
+          font-size: map-get($font-size, medium);
         }
         p {
           display: inline-block;
@@ -395,13 +406,13 @@ footer {
   background: #222;
   .footer_inner {
     padding: 20px 30px;
-    .contents {
+    .footer_contents {
       height: 180px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      border-bottom: 1px solid map-get($font-color, dark );
-      .content {
+      border-bottom: 1px solid map-get($font-color, dark);
+      .footer_content {
         width: 15%;
         &.order {
           width: 30%;
@@ -436,7 +447,6 @@ footer {
   }
 }
 
-
 // ========= mobile version ==========
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
@@ -453,10 +463,9 @@ footer {
   .container.removeContainer {
     display: none;
   }
-// ======== header SCSS ========
-    header {
+  // ======== header SCSS ========
+  header {
     .gift_top {
-
       h4 {
         font-size: 11px;
         &::after {
@@ -485,7 +494,6 @@ footer {
         display: none;
         a {
           padding: 2%;
-          
         }
       }
       .gnb_right {
@@ -565,18 +573,18 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding-top : 90px;
+      padding-top: 90px;
       > li {
         width: 100%;
         padding: 15px 30px;
-      border-bottom: 1px solid map-get($font-color, dark);
-      &:first-child {
-        border-top: 1px solid map-get($font-size, dark);
-      }
-      > a {
-        color: map-get($font-color, dark);
-        font-size: map-get($font-size, medium);
-      }
+        border-bottom: 1px solid map-get($font-color, dark);
+        &:first-child {
+          border-top: 1px solid map-get($font-size, dark);
+        }
+        > a {
+          color: map-get($font-color, dark);
+          font-size: map-get($font-size, medium);
+        }
       }
     }
     .gnb_list_bottom {
@@ -598,7 +606,7 @@ footer {
           > a {
             position: relative;
             font-size: map-get($font-size, medium);
-            color: map-get($font-color, gray );
+            color: map-get($font-color, gray);
             &::before {
               content: "";
               width: 0%;
@@ -625,7 +633,6 @@ footer {
           height: 100%;
           object-fit: cover;
           object-position: center;
-          
         }
       }
       figcaption {
@@ -678,7 +685,7 @@ footer {
           padding: 0;
           h1 {
             margin-bottom: 0;
-            font-size: map-get($font-size , medium);
+            font-size: map-get($font-size, medium);
           }
           .qa_text_detail {
             padding: 2% 3%;
@@ -727,7 +734,7 @@ footer {
           width: 100%;
           font-size: map-get($font-size, medium);
         }
-        .submit_sec{
+        .submit_sec {
           display: flex;
           justify-content: center;
           align-items: center;

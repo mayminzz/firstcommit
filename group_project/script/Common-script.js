@@ -36,29 +36,46 @@ fetch(headerUrl)
     // ======== PC nav_detail_list ========
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
+    const iframe = document.querySelector("iframe");
 
-    // iframe.classList.add("contentiframe");
-    // gnbList.appendChild(iframe);
+    const navHtml = [
+      "./nav-html/1-index.html",
+      "./nav-html/2-index.html",
+      "./nav-html/3-index.html",
+      "./nav-html/4-index.html",
+      "./nav-html/5-index.html",
+      "./nav-html/6-index.html",
+    ];
 
-    gnbBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const iframe = document.createElement("iFrame");
-        iframe.setAttribute("src", "../html/nav-html/1-index.html");
+    const gnbDel = document.querySelector(".gnb ul");
+    console.log(gnbDel);
+    const delBtn = document.createElement("button");
+
+    gnbBtns.forEach((btn, i) => {
+      btn.addEventListener("click", (e) => {
         iframe.classList.add("contentiframe");
-        gnbList.appendChild(iframe);
-        iframe.style.width = "100%"
-        iframe.style.height = "100%"
 
+        // 현재 클릭된 버튼의 인덱스에 해당하는 HTML 파일을 가져옴
+        const currentHtml = navHtml[i];
 
-        gnbList.classList.toggle("pc_gnb_show");
+        // 현재 HTML 파일을 iframe의 src 속성에 설정
+        iframe.src = currentHtml;
+
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
+        gnbList.classList.add("pc_gnb_show");
+
+        delBtn.style.display = "block";
+
+        gnbDel.appendChild(delBtn);
+        delBtn.innerText = "닫기";
+
+        delBtn.addEventListener("click", () => {
+          gnbList.classList.remove("pc_gnb_show");
+          delBtn.style.display = "none";
+        });
       });
     });
-
-    // gnbBtns.addEventListener("click", (btn) => {
-    //     console.log("click");
-    //     // iframe.setAttribute("src", "./nav-html/2-index.html");
-    //     // gnbList.classList.toggle("pc_gnb_show");
-    //   })
 
     // ======== mobile Gnb =========
 
@@ -115,23 +132,26 @@ const footerUrl = "../json/footer.json";
 fetch(footerUrl)
   .then((response) => response.json())
   .then((json) => {
-    let output = "";
+    let titleoutput = "";
     json.forEach((content) => {
-      // output += `
-      // <div class="footer_content">
-      //   <h3>${titles.title}</h3>
-      //   </div>`;
-      output += `
+      const contents = document.querySelector(".footer_contents");
+      titleoutput += `
       <div class="footer_content">
-        <h3>${content.title}</h3>
-        <p>
-          <span>${[content.subtitle[0]]}</span>
-          <span>${[content.subtitle[1]]}</span>
-          <span>${[content.subtitle[2]]}</span>
-          <span>${[content.subtitle[3]]}</span>
-        </p>
+      <h3>${content.title}</h3>
+      <p>
+      </p>
       </div>"`;
+      contents.innerHTML = titleoutput;
+
+      let subtitles = [`${content.subtitle}`];
+      console.log(subtitles);
+
+      let subtitleoutput = "";
+      subtitles.forEach((subtitle) => {
+        const subspan = document.createElement("span");
+        subspan.appendChild
+      });
     });
-    const contents = document.querySelector(".footer_contents");
-    contents.innerHTML = output;
+    const subTitP = document.querySelector(".footer_content p");
+    subTitP.innerHTML = subtitleoutput;
   });
