@@ -38,34 +38,57 @@ fetch(headerUrl)
     const gnbList = document.querySelector("#nav_detail_list");
     const iframe = document.querySelector("iframe");
 
-    // iframe.classList.add("contentiframe");
-    // gnbList.appendChild(iframe);
-
     const navHtml = [
-      "1-index.html",
-      "2-index.html",
-      "3-index.html",
-      "4-index.html",
-      "5-index.html",
-      "6-index.html",
+      "./nav-html/1-index.html",
+      "./nav-html/2-index.html",
+      "./nav-html/3-index.html",
+      "./nav-html/4-index.html",
+      "./nav-html/5-index.html",
+      "./nav-html/6-index.html",
     ];
-    console.log(navHtml);
 
-    gnbBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        iframe.setAttribute("src", `${./nav-html/}`);
+    const gnbDel = document.querySelector(".gnb ul");
+    console.log(gnbDel);
+    gnbBtns.forEach((btn, i) => {
+      btn.addEventListener("click", (e) => {
         iframe.classList.add("contentiframe");
+
+        // 현재 클릭된 버튼의 인덱스에 해당하는 HTML 파일을 가져옴
+        const currentHtml = navHtml[i];
+
+        // 현재 HTML 파일을 iframe의 src 속성에 설정
+        iframe.src = currentHtml;
+
         iframe.style.width = "100%";
         iframe.style.height = "100%";
-        gnbList.classList.toggle("pc_gnb_show");
+        gnbList.classList.add("pc_gnb_show");
+
+        const delBtn = document.createElement("button");
+        const del1 = document.createElement("span");
+        const del2 = document.createElement("span");
+
+        delBtn.appendChild(del1);
+        delBtn.appendChild(del2);
+        gnbDel.appendChild(delBtn);
+        delBtn.innerText = "닫기";
+
+        
+
+        delBtn.addEventListener("click", () => {
+          gnbList.classList.remove("pc_gnb_show");
+          delBtn.style.display = "none";
+        });
+
+        // gnbDel.innerHTML =
+        // `<button>삭제
+        // <span></span>
+        // <span></span>
+        // </button>
+        // `;
       });
     });
 
-    // gnbBtns.addEventListener("click", (btn) => {
-    //     console.log("click");
-    //     // iframe.setAttribute("src", "./nav-html/2-index.html");
-    //     // gnbList.classList.toggle("pc_gnb_show");
-    //   })
+    // 위 코드에서 iframe.src = currentHtml; 부분이 추가되었습니다. 이렇게 하면 각 버튼을 클릭할 때 해당하는 HTML 파일이 iframe에 로드됩니다.
 
     // ======== mobile Gnb =========
 
