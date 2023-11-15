@@ -28,11 +28,12 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
+  background: #e7ddc9;
 }
 #wrap01 > img {
   flex: 1;
   width: 200px;
-  height: 498px;
+  height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -87,6 +88,7 @@ a {
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  background: #e7ddc9;
 }
 #wrap02 img:nth-of-type(1) {
   flex: 1;

@@ -1,10 +1,10 @@
-// ======= GiftTop ========
+// ======================== GiftTop ====================================
 const giftTop = document.querySelector(".gift_top");
 window.addEventListener("load", () => {
   giftTop.innerHTML = `<h4>전 구매 무료상품 및 선물포장과 단독 기프트 메시지 카드 혜택을 즐겨보세요.</h4>`;
 });
 
-//====== left gnb =======
+//=========================== left gnb ==================================
 const headerUrl = "../json/header.json";
 fetch(headerUrl)
   .then((response) => response.json())
@@ -14,12 +14,13 @@ fetch(headerUrl)
       leftOutput += `
       <li class=${list.class}><a href="#">${list.category}</a></li>`;
     });
+
     const ulGnb = document.createElement("ul");
     const divGnb = document.querySelector(".gnb");
     divGnb.appendChild(ulGnb);
     ulGnb.innerHTML = leftOutput;
 
-    // ====== right Gnb ======
+    // ====================== right Gnb =================================
     let rightOutput = "";
 
     json.rightNav.forEach((list) => {
@@ -33,7 +34,7 @@ fetch(headerUrl)
     // findIcon.classList.add("finder");
     // json.rightNav.unshift(findIcon);
 
-    // ======== PC nav_detail_list ========
+    // ==================== PC nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
     const iframe = document.querySelector("iframe");
@@ -55,17 +56,13 @@ fetch(headerUrl)
       btn.addEventListener("click", (e) => {
         iframe.classList.add("contentiframe");
 
-        // 현재 클릭된 버튼의 인덱스에 해당하는 HTML 파일을 가져옴
         const currentHtml = navHtml[i];
-
-        // 현재 HTML 파일을 iframe의 src 속성에 설정
         iframe.src = currentHtml;
 
         iframe.style.width = "100%";
         iframe.style.height = "100%";
-        gnbList.classList.add("pc_gnb_show");
-
         delBtn.style.display = "block";
+        gnbList.classList.add("pc_gnb_show");
 
         gnbDel.appendChild(delBtn);
         delBtn.innerText = "닫기";
@@ -77,8 +74,7 @@ fetch(headerUrl)
       });
     });
 
-    // ======== mobile Gnb =========
-
+    // ==================== mobile Gnb =================================
     const modalGnb = document.querySelector("#mobile_gnb_list");
     const modalTopUl = document.createElement("ul");
     modalGnb.appendChild(modalTopUl);
@@ -98,7 +94,7 @@ fetch(headerUrl)
 
     modalBottomUl.innerHTML = mobileGnbList;
 
-    // ======== toggle =========
+    // ========================== toggle ================================
     const newDiv = document.createElement("div");
     const span1 = document.createElement("span");
     const span2 = document.createElement("span");
@@ -118,7 +114,7 @@ fetch(headerUrl)
   })
   .catch((err) => console.log(err));
 
-//오른 쪽 작은 문의사항 창
+//======================= 오른 쪽 작은 문의사항 창 =============================
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
 
@@ -126,32 +122,29 @@ queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
 });
 
-// ========= footer ==========
+// ======================== footer =======================================
+const contents = document.querySelector(".footer_contents");
 const footerUrl = "../json/footer.json";
 
 fetch(footerUrl)
   .then((response) => response.json())
   .then((json) => {
-    let titleoutput = "";
+    let contentOutput = "";
     json.forEach((content) => {
-      const contents = document.querySelector(".footer_contents");
-      titleoutput += `
-      <div class="footer_content">
-      <h3>${content.title}</h3>
-      <p>
-      </p>
-      </div>"`;
-      contents.innerHTML = titleoutput;
-
-      let subtitles = [`${content.subtitle}`];
-      console.log(subtitles);
-
-      let subtitleoutput = "";
+      let subtitleOutput = "";
+      
+      contentOutput += `
+        <div class="footer_content">
+          <h3>${content.title}</h3>
+          <p>`;
+      
+      const subtitles = content.subtitle;
       subtitles.forEach((subtitle) => {
-        const subspan = document.createElement("span");
-        subspan.appendChild
+        subtitleOutput += `<span>${subtitle}</span>`;
       });
+
+      contentOutput += `${subtitleOutput}</p></div>`;
     });
-    const subTitP = document.querySelector(".footer_content p");
-    subTitP.innerHTML = subtitleoutput;
+
+    contents.innerHTML = contentOutput;
   });
