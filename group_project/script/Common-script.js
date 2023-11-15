@@ -36,20 +36,27 @@ fetch(headerUrl)
     // ======== PC nav_detail_list ========
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
+    const iframe = document.querySelector("iframe");
 
     // iframe.classList.add("contentiframe");
     // gnbList.appendChild(iframe);
 
+    const navHtml = [
+      "1-index.html",
+      "2-index.html",
+      "3-index.html",
+      "4-index.html",
+      "5-index.html",
+      "6-index.html",
+    ];
+    console.log(navHtml);
+
     gnbBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const iframe = document.createElement("iFrame");
-        iframe.setAttribute("src", "../html/nav-html/1-index.html");
+        iframe.setAttribute("src", `${./nav-html/}`);
         iframe.classList.add("contentiframe");
-        gnbList.appendChild(iframe);
-        iframe.style.width = "100%"
-        iframe.style.height = "100%"
-
-
+        iframe.style.width = "100%";
+        iframe.style.height = "100%";
         gnbList.classList.toggle("pc_gnb_show");
       });
     });
