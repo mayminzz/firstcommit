@@ -317,6 +317,8 @@ aside#mobile_gnb_list {
   font-size: 16px;
   margin: 1% 0 3% 0;
   outline: none;
+  background: #fff;
+  opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result {
   width: 100%;
@@ -328,8 +330,11 @@ aside#mobile_gnb_list {
   width: 90%;
   padding: 1.5%;
   outline: none;
+  border: 1px solid #383838;
   margin-top: 1%;
   margin-bottom: 3%;
+  background: #fff;
+  opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result .nameCountry {
   width: 90%;
@@ -343,11 +348,15 @@ aside#mobile_gnb_list {
   padding: 1.5%;
   font-size: 16px;
   margin-right: 2.8%;
+  background: #fff;
+  opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result .nameCountry > select {
   width: 48%;
   padding: 1.5%;
   font-size: 16px;
+  background: #fff;
+  opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result textarea {
   width: 90%;
@@ -355,6 +364,8 @@ aside#mobile_gnb_list {
   font-size: 24px;
   padding: 1%;
   margin-top: 1%;
+  background: #fff;
+  opacity: 65%;
 }
 .qa_page2 .qa_form .qa_form_result .submit_sec input[type=submit] {
   width: 20%;
@@ -438,6 +449,31 @@ footer .footer_inner .footer_contents .footer_content p span {
   }
   .container.removeContainer {
     display: none;
+  }
+  .query_version .fixed_side_icon {
+    z-index: 99;
+  }
+  .query_version .mini_ask.show {
+    width: 85%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .query_version .mini_ask.show p {
+    font-size: 14px;
+    line-height: 1.3em;
+    margin-bottom: 5px;
+  }
+  .query_version .mini_ask.show .mini_ask_form label {
+    font-size: 16px;
+  }
+  .query_version .mini_ask.show .mini_ask_form input,
+  .query_version .mini_ask.show .mini_ask_form textarea {
+    padding: 8px;
+  }
+  .query_version .mini_ask.show .mini_ask_form textarea {
+    height: 150px;
   }
   header .gift_top h4 {
     font-size: 11px;
@@ -708,31 +744,6 @@ footer .footer_inner .footer_contents .footer_content p span {
     font-size: 14px;
     margin-left: 10px;
   }
-  .query_version .fixed_side_icon {
-    z-index: 99;
-  }
-  .query_version .mini_ask.show {
-    width: 85%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .query_version .mini_ask.show p {
-    font-size: 14px;
-    line-height: 1.3em;
-    margin-bottom: 5px;
-  }
-  .query_version .mini_ask.show .mini_ask_form label {
-    font-size: 16px;
-  }
-  .query_version .mini_ask.show .mini_ask_form input,
-  .query_version .mini_ask.show .mini_ask_form textarea {
-    padding: 8px;
-  }
-  .query_version .mini_ask.show .mini_ask_form textarea {
-    height: 150px;
-  }
   footer {
     width: 100%;
     height: 550px;
@@ -752,4 +763,4 @@ footer .footer_inner .footer_contents .footer_content p span {
   footer .footer_inner .footer_contents .footer_content:last-child {
     grid-column: 1/3;
   }
-}
+}/*# sourceMappingURL=qa-style.css.map */

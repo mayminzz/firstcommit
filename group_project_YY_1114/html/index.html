@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--custom CSS-->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!--font Awesome-->
+    <script
+      defer
+      src="https://kit.fontawesome.com/357cf3a922.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--custom JS-->
+    <script defer src="../script/script.js"></script>
+    <script defer src="../script/Common-script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="gift_top"></div>
+      <nav>
+        <div class="logo">
+          <a href=""><img src="../img/common/logo_black.png" alt="logo" /></a>
+        </div>
+        <div class="gnb"></div>
+        <div class="gnb_right"></div>
+      </nav>
+      <div class="qa_nav_list"></div>
+    </header>
+    <aside id="nav_detail_list">
+      <iframe id="contentFrame"></iframe>
+    </aside>
+    <aside id="mobile_gnb_list">
+      <div class="gnb_list_bottom">
+        <figure>
+          <img src="../img/common/mobile_nav_img.jpg" alt="" />
+        </figure>
+        <figcaption>
+          <span><a href="">재생목록</a></span>
+          <h3>이솝의 사운드</h3>
+        </figcaption>
+      </div>
+    </aside>
+    <div class="product_page_wrap">
+      <main class="banner section">
+        <div class="banner_txt">
+          <h2>피부의 특성</h2>
+          <p>
+            피부에 영향을 주는 요인은 많습니다. <br />
+            하지만 건강한 스킨 케어를 결정하는 중요한 두 가지는 세심한 클렌징과
+            알맞은 수분 공급입니다. <br />
+            고객님의 피부타입과 다양한 고민을 파악하여 개인별 맞춤 제품을
+            추천해드립니다.
+          </p>
+        </div>
+        <div class="btns">
+          <a href="#skinType">
+            <button class="skin_info">피부타입 찾아보기 <span></span></button>
+          </a>
+          <a href="#skinQuiz"
+            ><button class="skin_test">피부타입 찾기<span></span></button
+          ></a>
+        </div>
+      </main>
+      <main id="skinType" class="skin_type section">
+        <h1>내 피부타입 정의하기</h1>
+        <div class="define_skin">
+          <!-- <h2>내 피부를 설명한다면?</h2>
+          <p>
+            고객님의 피부가 무엇을 원하는지 알아보기 위해 계절 혹은 날씨 변화를
+            고려하여 현재의 피부를 가장 잘 설명할 수 있는 타입을 선택해주세요.
+            <br />
+            <br />
+            피부는 나이, 라이프스타일, 환경에 따라 변화하기 때문에 피부의 상태와
+            반응을 주기적으로 재평가하는 것이 좋습니다.
+          </p> -->
+        </div>
+        <div class="skin_type_grid">
+          <div class="skin_grid mid">
+            <!-- <h3>중성 피부</h3>
+            <p>
+              내 피부는 지성도 건성도 아니며 트러블도 거의 없습니다. <br />
+              피부결과 톤이 고르고 모공은 미세하며 피부 표면은 탄력 있고
+              부드럽습니다.
+            </p>
+            <a
+              href="https://www.aesop.com/kr/c/skin/normal-skin-type/"
+              target="_blank"
+              ><button class="mid_rec_btn">
+                중성 피부 추천 제품 <span></span>
+              </button>
+            </a> -->
+          </div>
+          <div class="skin_grid com">
+            <!-- <h3>복합성 피부</h3>
+            <p>
+              내 피부에는 중성, 건성, 지성 피부의 특성이 모두 모여 있는 듯
+              합니다.<br />
+              이마, 코, 아랫입술 밑은 지성이고 볼과 목은 중성에서 건성으로
+              보입니다.
+            </p>
+            <a
+              href="https://www.aesop.com/kr/c/skin/combination-skin-type/"
+              target="_blank"
+              ><button class="com_rec_btn">
+                복합성 피부 추천 제품 <span></span></button
+            ></a> -->
+          </div>
+          <div class="skin_grid oil">
+            <!-- <h3>지성 피부</h3>
+            <p>
+              얼굴 전체에 번들거림이 있고 모공은 넓으며, 결이 거칠거나 고르지
+              않습니다.
+            </p>
+            <a
+              href="https://www.aesop.com/kr/c/skin/oily-skin-type/"
+              target="_blank"
+            >
+              <button class="oil_rec_btn">
+                지성 피부 추천 제품 <span></span>
+              </button>
+            </a> -->
+          </div>
+          <div class="skin_grid dry">
+            <!-- <h3>건성 피부</h3>
+            <p>
+              클렌징 후 피부가 당기는 증상을 자주 느낍니다. <br />
+              모공은 작지만 피부결은 고르지 않고 피부톤은 칙칙하며 민감하거나
+              각질이 일어나기도 합니다.
+            </p>
+            <a href="https://www.aesop.com/kr/c/skin/dry-skin-type/">
+              <button class="dry_rec_btn">
+                건성 피부 추천 제품 <span></span></button
+            ></a> -->
+          </div>
+        </div>
+      </main>
+      <main id="skinQuiz" class="skin_quiz section">
+        <h1>내 피부타입 알아보기</h1>
+        <div class="skin_quiz_box">
+          <p class="quiz_quest">
+            세안 후 아무것도 바르지 않은 피부 상태를 골라주세요.
+          </p>
+          <div id="options"></div>
+          <!-- <button>당김이 있고 건조하다</button>
+          <button>산뜻하고 편안하다</button>
+          <button>이마, 코, 턱에는 유분이 돌고, 볼은 건조함이 돈다</button>
+          <button>유분감이 많고 번들거림이 있다</button> -->
+        </div>
+        <div class="skin_quiz_result">
+          <!-- <h3>당신의 피부타입은 <span>복합성</span>입니다.</h3>-->
+          <!-- <a href="#skinRec"
+            ><button>추천 제품을 확인하세요! <span></span></button
+          ></a> -->
+        </div>
+      </main>
+      <main id="skinRec" class="skin_result_rec section">
+        <div class="quote">
+          <p>‘If the path be beautiful, let us not ask where it leads.’</p>
+          <p>Anatole France</p>
+        </div>
+        <div class="products">
+          <div class="product">
+            <div class="product_img1">
+              <!-- <img src="../img/complexities/complexities1.png" alt="" /> -->
+            </div>
+            <div id="prodOne" class="product_txt">
+              <!-- <h3>페뷸러스 페이스 오일</h3>
+              <p>
+                정화 작용의 식물 추출물이 들어있어 혼잡한 피부를 정리하고
+                밸런스를 <br />
+                잡아주는 페이셜 오일
+              </p>
+              <span>₩67,000</span> -->
+              <!-- <div class="prod_btns">
+                <button class="prod">카트 추가</button>
+                <button class="buy">바로 구매</button>
+              </div> -->
+            </div>
+          </div>
+          <div class="product">
+            <div class="product_img2">
+              <!-- <img src="../img/normal/normal1.png" alt="" /> -->
+            </div>
+            <div id="prodTwo" class="product_txt">
+              <!-- <h3>
+                파슬리 씨드 안티 옥시던트 <br />
+                하이드레이터
+              </h3>
+              <p>
+                가볍고 빠르게 흡수되어 <br />
+                항산화 작용과 수분공급을 주는 <br />
+                로션 타입의 하이드레이터
+              </p>
+              <span>₩80,000</span>
+              <div class="prod_btns">
+                <button class="prod">카트 추가</button>
+                <button class="buy">바로 구매</button>
+              </div> -->
+            </div>
+          </div>
+          <div class="product">
+            <div class="product_img3">
+              <!-- <img src="../img/complexities/complexities3.png" alt="" /> -->
+            </div>
+            <div id="prodThr" class="product_txt">
+              <!-- <h3>리무브</h3>
+              <p>
+                눈 주위의 민감한 피부를 달래고 <br />진정시켜주는 마트리카리아가
+                <br />
+                포함된 부드러운 오일 제형의 <br />
+                아이 메이크업 리무브
+              </p>
+              <span>₩29,000</span>
+              <div class="prod_btns">
+                <button class="prod">카트 추가</button>
+                <button class="buy">바로 구매</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="footer_inner">
+          <div class="footer_contents"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="query_version">
+      <div class="fixed_side_icon">
+        <img src="../img/common//version.png" alt="" />
+        <img id="query" src="../img/common/miniBox.png" alt="" />
+      </div>
+      <div class="mini_ask">
+        <h1>1:1 채팅상담 하기</h1>
+        <p>
+          1:1 채팅상담<br />상담을 시작하기에 앞서, 이용약관, 개인정보 수집 및
+          이용에 대하여 고객님의 동의가 필요합니다. <br />
+          상담 전 고객님의 동의여부 확인 후 상담이 시작됩니다.
+          <br /><span
+            >※이용약관, 개인정보 수집 및 동의에 대하여 동의를 거부할 수 있으며,
+            이 경우 1:1 채팅상담 서비스 이용이 불가합니다.</span
+          >
+        </p>
+        <form class="mini_ask_form">
+          <label for="">이름(선택사항)<em>*</em></label>
+          <input type="name" id="name" required />
+          <label for="email">이메일(선택사항)<em>*</em></label>
+          <input type="email" id="email" required />
+          <label for="message">메세지<em>*</em></label
+          ><textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
+          <input id="submitBtn" type="submit" value="제출하기" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

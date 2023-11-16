@@ -337,6 +337,8 @@ aside#mobile_gnb_list {
       font-size: map-get($font-size, base);
       margin: 1% 0 3% 0;
       outline: none;
+      background: #fff;
+      opacity: 65%;
     }
     .qa_form_result {
       width: 100%;
@@ -349,8 +351,11 @@ aside#mobile_gnb_list {
         width: 90%;
         padding: 1.5%;
         outline: none;
+        border: 1px solid map-get($font-color, dark);
         margin-top: 1%;
         margin-bottom: 3%;
+        background: #fff;
+        opacity: 65%;
       }
       .nameCountry {
         width: 90%;
@@ -363,11 +368,15 @@ aside#mobile_gnb_list {
           padding: 1.5%;
           font-size: map-get($font-size, base);
           margin-right: 2.8%;
+          background: #fff;
+          opacity: 65%;
         }
         > select {
           width: 48%;
           padding: 1.5%;
           font-size: map-get($font-size, base);
+          background: #fff;
+          opacity: 65%;
         }
       }
       textarea {
@@ -376,6 +385,8 @@ aside#mobile_gnb_list {
         font-size: map-get($font-size, large);
         padding: 1%;
         margin-top: 1%;
+        background: #fff;
+        opacity: 65%;
       }
       .submit_sec {
         input[type="submit"] {
@@ -469,6 +480,35 @@ footer {
   }
   .container.removeContainer {
     display: none;
+  }
+  .query_version {
+    .fixed_side_icon {
+      z-index: 99;
+    }
+    .mini_ask.show {
+      width: 85%;
+      height: 80%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      p {
+        font-size: map-get($font-size, small);
+        line-height: 1.3em;
+        margin-bottom: 5px;
+      }
+      .mini_ask_form {
+        label {
+          font-size: map-get($font-size, base);
+        }
+        input,
+        textarea {
+          padding: 8px;
+        }
+        textarea {
+          height: 150px;
+        }
+      }
+    }
   }
   // ======== header SCSS ========
   header {
@@ -751,35 +791,6 @@ footer {
             font-size: map-get($font-size, small);
             margin-left: 10px;
           }
-        }
-      }
-    }
-  }
-  .query_version {
-    .fixed_side_icon {
-      z-index: 99;
-    }
-    .mini_ask.show {
-      width: 85%;
-      height: 80%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      p {
-        font-size: map-get($font-size, small);
-        line-height: 1.3em;
-        margin-bottom: 5px;
-      }
-      .mini_ask_form {
-        label {
-          font-size: map-get($font-size, base);
-        }
-        input,
-        textarea {
-          padding: 8px;
-        }
-        textarea {
-          height: 150px;
         }
       }
     }

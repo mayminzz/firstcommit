@@ -1,21 +1,26 @@
+// 버튼 태그 hover 스타일
+const btns = document.querySelectorAll(".qa_text button");
+const a = document.querySelectorAll(".qa_text button > a");
+
+btns.forEach((btn) => {
+  btn.addEventListener("mouseover", () => {
+    btn.style.background = "#222";
+    btn.querySelector("a").style.color = "#fff";
+    btn.style.transition = "0.3s";
+  });
+  btn.addEventListener("mouseout", () => {
+    btn.style.background = "";
+    btn.querySelector("a").style.color = "";
+    btn.style.transition = "0.3s";
+  });
+});
+
 // 제출하기 버튼 이벤트
 const submitBtn = document.querySelector("#submitbtn");
 let userName = document.querySelector("#name");
 let userEmail = document.querySelector("#email");
 
 submitBtn.addEventListener("click", () => {
-  // try{
-  //   if(userName.value !== "" && userEmail.value !== "") {
-  //     throw `${userName.value}님, 문의하신 내용이 제출되었습니다. 감사합니다!`
-  //   } else {
-  //     throw "필수 입력 항목을 작성해주세요!"
-  //   }
-  // } catch(err) {
-  //   alert(err)
-  // } finally {
-  //     userName = "";
-  //     userEmail = "";
-  // }
   if (userName.value !== "" && userEmail.value !== "") {
     alert(`${userName.value}님, 문의하신 내용이 제출되었습니다. 감사합니다!`);
   } else {
@@ -23,4 +28,29 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
+//문의하기 form 태그 양식
+const askUrl = "../json/qa.json";
+fetch(askUrl)
+  .then((response) => response.json())
+  .then((json) => {
+    let askOutput = "";
+    json.ask.forEach((askList) => {
+      askOutput += `
+      <option value="${askList.value}">${askList.listName}</option>
+      `;
+    });
+    const askSelected = document.querySelector("#ask");
+    askSelected.innerHTML = askOutput;
 
+    
+  });
+
+// const displaySelect = () => {
+//   let selectedText = selectedList.options[selectedList.selectedIndex].innerText;
+//   if (selectedList.value === "blank") {
+//   }
+// };
+
+//
+// alert(`${selectedText}를 선택했습니다.`);
+// selectedList.addEventListener("change", displaySelect);
