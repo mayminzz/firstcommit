@@ -382,6 +382,38 @@ main {
   height: 400px;
   overflow: hidden;
 }
+.best_seller .bt_product .bestBtn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.best_seller .bt_product .bestBtn .bt_prev {
+  margin: 10px;
+  width: 35px;
+  height: 72px;
+  background: url("../img/icon/arrow_right.png") no-repeat;
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+.best_seller .bt_product .bestBtn .bt_next {
+  margin: 10px;
+  width: 35px;
+  height: 72px;
+  background: url("../img/icon/arrow_left.png") no-repeat;
+  opacity: 0.5;
+  transition: all 0.2s ease-in;
+}
+.best_seller .bt_product .bestBtn .br_prev:hover,
+.best_seller .bt_product .bestBtn .bt_next:hover {
+  opacity: 1;
+}
+.best_seller .bt_product .bestBtn #btleft.disabled,
+.best_seller .bt_product .bestBtn #btright.disabled {
+  display: none;
+}
 .best_seller .bt_product .items {
   height: auto;
 }
@@ -932,4 +964,4 @@ footer .footer_inner .footer_contents .footer_content p span {
   footer .footer_inner .footer_contents .footer_content {
     width: 48%;
   }
-}/*# sourceMappingURL=Home-style.css.map */
+}

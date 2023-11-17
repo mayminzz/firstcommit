@@ -393,40 +393,40 @@ main {
     width: 75%;
     height: 400px;
     overflow: hidden;
-    // .bestBtn {
-    //   position: absolute;
-    //   width: 100%;
-    //   height: 100%;
-    //   display: flex;
-    //   justify-content: space-between;
-    //   align-items: center;
-    //   .bt_prev {
-    //     margin: 10px;
-    //     width: 35px;
-    //     height: 72px;
-    //     background: url("../img/icon/KakaoTalk_20231106_175513563_04.png")
-    //       no-repeat;
-    //     opacity: 0.5;
-    //     transition: all 0.2s ease-in;
-    //   }
-    //   .bt_next {
-    //     margin: 10px;
-    //     width: 35px;
-    //     height: 72px;
-    //     background: url("../img/icon/KakaoTalk_20231106_175513563_07.png")
-    //       no-repeat;
-    //     opacity: 0.5;
-    //     transition: all 0.2s ease-in;
-    //   }
-    //   .br_prev:hover,
-    //   .bt_next:hover {
-    //     opacity: 1;
-    //   }
-    //   #btleft.disabled,
-    //   #btright.disabled {
-    //     display: none;
-    //   }
-    // }
+    .bestBtn {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bt_prev {
+        margin: 10px;
+        width: 35px;
+        height: 72px;
+        background: url("../img/icon/arrow_right.png")
+          no-repeat;
+        opacity: 0.5;
+        transition: all 0.2s ease-in;
+      }
+      .bt_next {
+        margin: 10px;
+        width: 35px;
+        height: 72px;
+        background: url("../img/icon/arrow_left.png")
+          no-repeat;
+        opacity: 0.5;
+        transition: all 0.2s ease-in;
+      }
+      .br_prev:hover,
+      .bt_next:hover {
+        opacity: 1;
+      }
+      #btleft.disabled,
+      #btright.disabled {
+        display: none;
+      }
+    }
     .items {
       height: auto;
       .item.item4 {

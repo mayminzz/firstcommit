@@ -198,11 +198,11 @@ header {
           background: transparent;
           font-size: map-get($font-size, base);
           position: absolute;
-          right: -70px;
-          &::before {
+          right: -80px;
+          &::after {
             content: "\58";
             font-family: fontawesome;
-            margin-right: 10px;
+            margin-left: 10px;
           }
         }
       }

@@ -212,11 +212,11 @@ header {
           background: transparent;
           font-size: map-get($font-size, base);
           position: absolute;
-          right: -70px;
-          &::before {
+          right: -80px;
+          &::after {
             content: "\58";
             font-family: fontawesome;
-            margin-right: 10px;
+            margin-left: 10px;
           }
         }
       }
@@ -814,11 +814,11 @@ footer {
         width: 100%;
         height: 150px;
         margin-bottom: 15px;
-          li {
+        li {
           display: inline-block;
           width: 49%;
           padding: 10px 0;
-            a {
+          a {
             position: relative;
             font-size: map-get($font-size, medium);
             color: map-get($font-color, gray);

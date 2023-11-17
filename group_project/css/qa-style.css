@@ -182,12 +182,12 @@ header nav .gnb ul button {
   background: transparent;
   font-size: 16px;
   position: absolute;
-  right: -70px;
+  right: -80px;
 }
-header nav .gnb ul button::before {
+header nav .gnb ul button::after {
   content: "X";
   font-family: fontawesome;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 header nav .gnb_right {
   display: flex;
@@ -763,4 +763,4 @@ footer .footer_inner .footer_contents .footer_content p span {
   footer .footer_inner .footer_contents .footer_content:last-child {
     grid-column: 1/3;
   }
-}/*# sourceMappingURL=qa-style.css.map */
+}

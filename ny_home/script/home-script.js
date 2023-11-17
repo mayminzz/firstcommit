@@ -44,15 +44,19 @@ async function init() {
 
 init();
 
-// const videos = document.querySelectorAll("video");
-// for (let video of videos) {
-//   video.addEventListener("mouseenter", (e) => {
-//     e.currentTarget.querySelector("video").play();
-//   });
-//   video.addEventListener("mouseleave", (e) => {
-//     e.currentTarget.querySelector("video").pause();
-//   });
-// }
+const videos = document.querySelectorAll("video");
+
+videos.forEach((video) => {
+  video.style.filter = "grayscale(0.4)";
+  video.addEventListener("mouseenter", () => {
+    video.play();
+    video.style.filter = "";
+  });
+  video.addEventListener("mouseleave", () => {
+    video.pause();
+    video.style.filter = "grayscale(0.4)";
+  });
+});
 
 // slider
 const items = document.querySelector(".items");
