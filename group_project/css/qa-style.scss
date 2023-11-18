@@ -47,7 +47,6 @@ a {
   font-family: Regular;
   section {
     width: 100%;
-    height: 100vh;
   }
 }
 //mini consulting
@@ -78,14 +77,14 @@ a {
   .mini_ask.show {
     display: block;
     width: 20%;
-    height: 65%;
+    height: 60%;
     position: fixed;
     bottom: 5%;
     right: 8%;
     background: map-get($font-color, ask);
     color: map-get($font-color, wh);
     opacity: 0.9;
-    z-index: 999px;
+    z-index: 99px;
     label {
       em {
         color: #f00;
@@ -142,18 +141,16 @@ a {
 }
 
 // ======== header SCSS =========
-
 header {
   width: 100%;
-  height: 125px;
+  height: 145px;
   background: url("../img/common/lightback.png");
   .gift_top {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 45px;
-    // height: 35%;
+    height: 50px;
     background: #222;
     color: map-get($font-color, wh);
     h4 {
@@ -168,7 +165,7 @@ header {
   }
   nav {
     width: 100%;
-    height: 65%;
+    height: 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -180,7 +177,8 @@ header {
       }
     }
     .gnb {
-      margin-left: -59%;
+      position: absolute;
+      left: 45px;
       ul {
         display: flex;
         justify-content: center;
@@ -249,7 +247,7 @@ aside#mobile_gnb_list {
   width: 100%;
   height: 0px;
   position: absolute;
-  top: 120px;
+  top: 145px;
   background: #fff;
   z-index: 1;
   transition: 0.5s;
@@ -267,7 +265,7 @@ aside#mobile_gnb_list {
 //======== page 1 =========
 .qa_page1_heading {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   background: url("../img/Q&A/QA_banner.png") center center no-repeat;
   background-size: cover;
   position: relative;
@@ -284,6 +282,7 @@ aside#mobile_gnb_list {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: none;
     .qa_text {
       text-align: center;
       height: 330px;
@@ -317,6 +316,7 @@ aside#mobile_gnb_list {
 
 //======== page 2 =========
 .qa_page2 {
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -418,18 +418,19 @@ aside#mobile_gnb_list {
 // ========= footer SCSS =========
 footer {
   width: 100%;
-  height: 220px;
+  height: 270px;
   background: #222;
   .footer_inner {
-    padding: 20px 30px;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
     .footer_contents {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      grid-template-rows: 180px;
-      // display: flex;
-      // flex-direction: row;
-      // justify-content: space-between;
-      border-bottom: 1px solid map-get($font-color, dark);
+      grid-template-columns: repeat(4, 1fr) 2fr;
+      grid-template-rows: 190px;
+      grid-gap: 10px;
+      border-bottom: 1px solid #c6c1c1;
+      padding: 10px 10px;
       .footer_content {
         width: 95%;
         &.order {
@@ -445,16 +446,16 @@ footer {
           }
         }
         h3 {
-          font-size: map-get($font-size, small);
-          color: map-get($font-color, medium);
+          font-size: map-get($font-size, medium);
+          color: #c6c1c1;
           margin-bottom: 10px;
         }
         p {
-          color: map-get($font-color, medium);
-          font-size: map-get($font-size, xsmall);
-          line-height: 1.1rem;
-          border-top: 1px solid #383838;
-          padding-top: 10px;
+          color: #b8b8b8;
+          font-size: map-get($font-size, small);
+          line-height: 1.3rem;
+          border-top: 1px solid #c6c1c1;
+          padding: 10px 0px;
           span {
             display: block;
             margin-bottom: 5px;
@@ -464,7 +465,71 @@ footer {
     }
   }
 }
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
+// ========= tablet version ==========
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  header {
+    width: 100%;
+    height: 145px;
+    nav {
+      .gnb {
+        left: 35px;
+      }
+    }
+  }
 
+  .qa_page1 {
+    border: 1px solid #f00;
+    .qa_page1_heading {
+      width: 100%;
+      height: 70vh;
+      border: 1px solid #f00;
+    }
+  }
+
+  .qa_page2 {
+    height: 100vh;
+    width: 100%;
+    .qa_form {
+      label {
+        font-size: map-get($font-size, medium);
+      }
+      select {
+        padding: 2.5%;
+      }
+      input {
+        padding: 2.5%;
+      }
+      .nameCountry {
+        border: 1px solid #f00;
+        input[type="name"] {
+          width: 47%;
+          padding: 2.5%;
+        }
+        select {
+          width: 45.8%;
+          padding: 2.5%;
+        }
+      }
+    }
+  }
+  // mini consulting
+  .query_version {
+    .mini_ask {
+      width: 40%;
+      height: 55%;
+      border: 1px solid #f00;
+    }
+  }
+
+//   footer {
+//     .footer_contents {
+//       grid-template-columns: repeat(4, 1fr) 2fr;
+//     }
+//   }
+}
+
+// ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 // ========= mobile version ==========
 @media screen and (min-width: 350px) and (max-width: 767px) {
   .container {
@@ -514,7 +579,7 @@ footer {
   header {
     .gift_top {
       h4 {
-        font-size: 11px;
+        font-size: map-get($font-size, base);
         &::after {
           margin-left: 5px;
         }
@@ -590,6 +655,9 @@ footer {
   .gift_top.removeGiftTop {
     height: 0%;
     opacity: 0;
+  }
+  #nav_detail_list {
+    display: none;
   }
   // ======== aside SCSS =========
   #mobile_gnb_list {
@@ -799,18 +867,23 @@ footer {
   //======== footer SCSS =========
   footer {
     width: 100%;
-    height: 550px;
+    height: 670px;
     .footer_inner {
-      padding: 35px 20px 0 40px;
+      padding: 30px 10px 0 40px;
       .footer_contents {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 160px);
+        grid-template-rows: repeat(3, 180px);
         border-bottom: none;
         .footer_content {
           width: 90%;
           &:last-child {
+            width: 95%;
             grid-column: 1 / 3;
+            padding-top: 15px;
+            p {
+              line-height: 1.7rem;
+            }
           }
         }
       }

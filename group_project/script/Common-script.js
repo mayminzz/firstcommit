@@ -34,7 +34,7 @@ fetch(headerUrl)
     // findIcon.classList.add("finder");
     // json.rightNav.unshift(findIcon);
 
-    // ==================== PC nav_detail_list =========================
+    // ==================== nav_detail_list =========================
     const gnbBtns = document.querySelectorAll(".gnb ul li");
     const gnbList = document.querySelector("#nav_detail_list");
     const iframe = document.querySelector("iframe");
@@ -58,7 +58,6 @@ fetch(headerUrl)
 
         const currentHtml = navHtml[i];
         iframe.src = currentHtml;
-
         iframe.style.width = "100%";
         iframe.style.height = "100%";
         delBtn.style.display = "block";
@@ -117,9 +116,11 @@ fetch(headerUrl)
 //======================= 오른 쪽 작은 문의사항 창 =============================
 const queryBtn = document.querySelector("#query");
 const miniBox = document.querySelector(".mini_ask");
+const container = document.querySelector(".container");
 
 queryBtn.addEventListener("click", () => {
   miniBox.classList.toggle("show");
+  container.classList.toggle("containerOpacity");
 });
 
 // ======================== footer =======================================
@@ -132,12 +133,12 @@ fetch(footerUrl)
     let contentOutput = "";
     json.forEach((content) => {
       let subtitleOutput = "";
-      
+
       contentOutput += `
         <div class="footer_content">
           <h3>${content.title}</h3>
           <p>`;
-      
+
       const subtitles = content.subtitle;
       subtitles.forEach((subtitle) => {
         subtitleOutput += `<span>${subtitle}</span>`;
@@ -147,4 +148,13 @@ fetch(footerUrl)
     });
 
     contents.innerHTML = contentOutput;
+
+    const spanEl = document.createElement("span");
+    const fInner = document.querySelector(".footer_inner");
+    spanEl.innerText = "©Aesop";
+    fInner.appendChild(spanEl);
+    spanEl.style.color = "#b8b8b8";
+    spanEl.style.fontSize = "20px";
+    spanEl.style.display = "block";
+    spanEl.style.margin = "10px 0";
   });

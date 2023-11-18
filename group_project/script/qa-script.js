@@ -41,16 +41,13 @@ fetch(askUrl)
     });
     const askSelected = document.querySelector("#ask");
     askSelected.innerHTML = askOutput;
-
-    
   });
 
-// const displaySelect = () => {
-//   let selectedText = selectedList.options[selectedList.selectedIndex].innerText;
-//   if (selectedList.value === "blank") {
-//   }
-// };
+const displaySelect = () => {
+  let selectedText = selectedList.options[selectedList.selectedIndex].innerText;
+  if (selectedList.value === "blank") {
+  }
+};
 
-//
-// alert(`${selectedText}를 선택했습니다.`);
-// selectedList.addEventListener("change", displaySelect);
+alert(`${selectedText}를 선택했습니다.`);
+selectedList.addEventListener("change", displaySelect);
