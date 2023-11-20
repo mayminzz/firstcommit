@@ -1,0 +1,139 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* nav_icon */
+#nav_icon {
+  width: 30px;
+  height: 20px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 3;
+}
+#nav_icon div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#nav_icon div span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease-in-out;
+}
+#nav_icon div span:nth-child(1) {
+  top: 0;
+}
+#nav_icon div span:nth-child(2) {
+  top: 50%;
+}
+#nav_icon div span:nth-child(3) {
+  top: 100%;
+}
+body.nav_active #nav_icon div span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+body.nav_active #nav_icon div span:nth-child(2) {
+  opacity: 0;
+}
+body.nav_active #nav_icon div span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+nav {
+  position: fixed;
+  top: 24px;
+  right: 60px;
+  z-index: 2;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  transform: translateX(50%);
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-right: 20px;
+}
+nav ul li a {
+  font-size: 1.5em;
+  color: #fff;
+}
+body.nav_active nav {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* nav bar */
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: #020f3a;
+}
+
+/* background */
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+#sec0 {
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+#sec0 .inner {
+  display: block;
+}
+#sec0 .inner .svg1, #sec0 .inner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#sec0 .inner .svg1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+#sec0 .inner .svg2 {
+  width: 657px;
+  transform: translate(-49%, -49%);
+  z-index: 1;
+}
+#sec1 {
+  background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+}
+#sec2 {
+  background-image: linear-gradient(-225deg, #20E2D7 0%, #F9FEA5 100%);
+}
+#sec3 {
+  background-image: linear-gradient(
+    -225deg,
+    #2cd8d5 0%,
+    #6b8dd6 48%,
+    #8e37d7 100%
+  );
+}
+#sec4 {
+  background-image: linear-gradient(-60deg, #ff5858 0%, #f09819 100%);
+}
+
