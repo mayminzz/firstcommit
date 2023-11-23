@@ -1,31 +1,38 @@
 const Body = document.querySelector("body");
 const Nav_btn = document.querySelector("#nav_icon");
 
-Nav_btn.addEventListener("click", () => {
-  Body.classList.toggle("nav_active");
-});
-
-// slider
-const s_Icons = document.querySelectorAll(".slide_icons");
-const s_left = document.querySelector(".slide_btn.left");
-const s_right = document.querySelector(".slide_btn.right");
+// section2 slider
+const s_Icons = document.querySelectorAll(".slide_icons li");
+const s_Left = document.querySelector(".slide_btn.left");
+const s_Right = document.querySelector(".slide_btn.right");
 const Bg = document.querySelector("#sec2");
 const s_Slider = document.querySelectorAll(".sec2_slider li");
 
+const s_reset = () => {
+  s_Slider.forEach((elem, idx) => {
+    s_Slider[idx].classList.remove("on");
+    s_Icons[idx].classList.remove("on");
+  });
+};
 s_Icons.forEach((li) => {
   li.addEventListener("click", (e) => {
     let target = e.target.dataset.index;
+    console.log(target);
+    s_reset();
     if (li.tagName === "LI") {
-      console.log(tagName);
       for (let i = 0; i < s_Icons.length; i++) {
         if (target == i) {
           s_Slider[i].classList.add("on");
           s_Icons[i].classList.add("active");
-          Bg.style.backgroundImage = `url(./portfolio/img/sec2_bg_${[i]}.png)`;
+          Bg.style.backgroundImage = `url(./img/sec2_bg_${[i]}.png)`;
         }
       }
     }
   });
+});
+
+Nav_btn.addEventListener("click", () => {
+  Body.classList.toggle("nav_active");
 });
 
 const sec0 = () => {
@@ -42,19 +49,36 @@ const sec0 = () => {
   });
 };
 const sec1 = () => {
-  let tl = anime.timeline({ easing: "linear", duration: 500 });
-  tl.add({ targets: ".g01", height: "80%" });
-  let tl2 = anime.timeline({ easing: "linear", duration: 500 });
-  tl.add({ targets: ".g02", height: "60%" });
-  let tl3 = anime.timeline({ easing: "linear", duration: 500 });
-  tl.add({ targets: ".g03", height: "90%" });
-  let tl4 = anime.timeline({ easing: "linear", duration: 500 });
-  tl.add({ targets: ".g04", height: "85%" });
+  let tl = anime.timeline({
+    easing: "linear",
+    duration: 500,
+  });
+  tl.add({
+    targets: ".g01",
+    height: "80%",
+  })
+    .add({
+      targets: ".g02",
+      height: "70%",
+    })
+    .add({
+      targets: ".g03",
+      height: "80%",
+    })
+    .add({
+      targets: ".g04",
+      height: "85%",
+    });
 };
 const sec1_reset = () => {
-  anime({ targets: ".gage_in", height: "0%" });
+  anime({
+    targets: ".gage_in",
+    height: "0%",
+  });
 };
-const sec2 = () => {};
+const sec2 = () => {
+  console.log("sec2");
+};
 const sec3 = () => {
   const d0 =
     "M453 100C283.5 11.5 184 0.499989 0.5 0.5V772H1921V63C1753.5 144 1381.5 288 1146 288C825 288 726.67 242.89 453 100Z";
@@ -81,38 +105,133 @@ const sec3 = () => {
     easing: "easeOutSine",
   });
 };
-
 const staggerWrap = document.querySelector("#sec4 .img_wrap");
 const fragment = document.createDocumentFragment();
 const grid = [20, 20];
 const col = grid[0];
 const row = grid[1];
-const allElem = col * row;
 
-// for (let i = 0; i < allElem; i++) {
-//   const div = document.createElement("div");
-//   fragment.appandChild(div);
-//   div.className = "tail";
-// }
-// staggerWrap.appendChild(fragment);
+const allElem = col * row;
+for (let i = 0; i < allElem; i++) {
+  const div = document.createElement("div");
+  fragment.appendChild(div);
+  div.className = "tail";
+}
+
+staggerWrap.appendChild(fragment);
 
 const sec4 = () => {
+  const stageAni = anime.timeline({
+    targets: ".tail",
+    easing: "easeInBack",
+    delay: anime.stagger(10, { from: "last" }),
+    duration: 2000,
+    endDelay: 1000,
+    loop: false,
+    autoplay: false,
+  });
+  stageAni
+    .add({
+      targets: "#sec4 h1 img",
+      opacity: 0,
+      duration: 500,
+    })
+    .add({
+      translateX: function () {
+        return anime.random(-500, 500);
+      },
+      translateY: function () {
+        return anime.random(-500, 500);
+      },
+      delay: anime.stagger(200, { grid: grid, from: "last" }),
+      scale: 0.2,
+      background: "#fff",
+      borderRadius: "50%",
+    })
+    .add({
+      targets: staggerWrap,
+      rotate: 360,
+      easing: "linear",
+      duration: 4000,
+      scale: 0.5,
+    })
+    .add({
+      targets: staggerWrap,
+      duration: 1000,
+      scale: 1,
+    })
+    .add({
+      translateX: 0,
+      translateY: 0,
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+      duration: 3000,
+      scale: 0.8,
+      background: "#2af598",
+    })
+    .add({
+      scale: 0.5,
+      duration: 500,
+      rotate: 60,
+      borderRadius: "0%",
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      scale: 0.8,
+      duration: 500,
+      rotate: -60,
+      borderRadius: "50%",
+      background: "#fff",
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      scaleX: 0.1,
+      scaleY: 1,
+      duration: 500,
+      rotate: 120,
+      borderRadius: "0%",
+      background: "#2af598",
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      duration: 500,
+      rotate: 0,
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      scaleX: 1,
+      duration: 500,
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      scale: 1,
+      duration: 800,
+      background: "#009efd",
+      delay: anime.stagger(100, { grid: grid, from: "center" }),
+    })
+    .add({
+      targets: "#sec4 h1 img",
+      opacity: 1,
+      duration: 500,
+    });
 
+  // stageAni.play();
+
+  staggerWrap.addEventListener("click", () => {
+    stageAni.play();
+  });
 };
+
+sec4();
 
 new fullpage("#fullpage", {
   //options here
   autoScrolling: true,
   scrollHorizontally: true,
   navigation: true,
-  anchors: ["num0", "num1", "num2", "num3", "num4"],
-
+  anchors: ["Num0", "Num1", "Num2", "Num3", "Num4"],
   afterLoad: (old_elem, new_elem, direction) => {
     if (new_elem.index === 0) {
       sec0();
-    }
-    if (new_elem.index === 1) {
-      sec1();
     }
     if (new_elem.index === 1) {
       sec1();
@@ -127,7 +246,8 @@ new fullpage("#fullpage", {
       sec3();
     }
     if (new_elem.index === 4) {
-      sec4();
+      // 함수가 다 실행되지 않은 상태에서 움직였을 때 문제 발생!!
+      // sec4();
     }
   },
 });
