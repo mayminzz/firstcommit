@@ -24,12 +24,43 @@ s_Icons.forEach((li) => {
         if (target == i) {
           s_Slider[i].classList.add("on");
           s_Icons[i].classList.add("active");
-          Bg.style.backgroundImage = `url(./img/sec2_bg_${[i]}.png)`;
+          Bg.style.backgroundImage = `url(./portfolio/img/sec2_bg_${[i]}.png)`;
         }
       }
     }
   });
 });
+
+const next = (e) => {
+  e.preventDefault();
+  let crtSlide = document.querySelector(".sec2_slider li.on");
+  let i = crtSlide.dataset.index;
+  s_reset();
+  i++;
+  if (i >= s_Slider.length) {
+    i = 0;
+  }
+  s_Slider[i].classList.add("on");
+  s_Icons[i].classList.add("active");
+  Bg.style.backgroundImage = `url(./portfolio/img/sec2_bg_${[i]}.png)`;
+};
+
+s_Right.addEventListener("click", next);
+const prev = (e) => {
+  e.preventDefault();
+  let crtSlide = document.querySelector(".sec2_slider li.on");
+  let i = crtSlide.dataset.index;
+  s_reset();
+  i--;
+  if (i >= s_Slider.length) {
+    i = 0;
+  }
+  s_Slider[i].classList.add("on");
+  s_Icons[i].classList.add("active");
+  Bg.style.backgroundImage = `url(./portfolio/img/sec2_bg_${[i]}.png)`;
+};
+
+s_Right.addEventListener("click", prev);
 
 Nav_btn.addEventListener("click", () => {
   Body.classList.toggle("nav_active");
@@ -77,7 +108,19 @@ const sec1_reset = () => {
   });
 };
 const sec2 = () => {
-  console.log("sec2");
+  let tl = anime.timeline({
+    duration: 500,
+    easing: "linear",
+  });
+  tl.add({
+    targets: "#sec2 h1",
+    opacity: 1,
+    translateY50,
+  }).add({
+    targets: "slider_wrap",
+    opacity: 1,
+    translateY: 50,
+  });
 };
 const sec3 = () => {
   const d0 =

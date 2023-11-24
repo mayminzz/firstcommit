@@ -180,6 +180,10 @@ body.nav_active nav {
   background: url("./portfolio/img/sec2_bg_0.png") center center/cover no-repeat;
   transition: all 0.2s;
 }
+#sec2 h1 {
+  opacity: 0;
+  transform: translateY(-50px);
+}
 .slider_wrap {
   width: 50vw;
   max-width: 700px;
@@ -187,6 +191,8 @@ body.nav_active nav {
   /* vh는 전체 height에 따라서 35%를 가져가게 되는 것 vw 아무리 줄여도 고정  */
   max-height: 550px;
   margin-left: 50px;
+  transform: translateY(-50px);
+  opacity: 0;
 }
 .sec2_slider {
   position: relative;
@@ -311,4 +317,16 @@ h1 {
   width: calc(100% / 20);
   height: calc(100% / 20);
   background: rgb(243, 94, 2);
+}
+
+@media screen and (max-width: 999px) {
+  .inner {
+    width: 100vw;
+  }
+  #sec2 h1 {
+    flex-direction: column;
+  }
+  .slider_wrap {
+    margin-left: 30px 0 0;
+  }
 }
