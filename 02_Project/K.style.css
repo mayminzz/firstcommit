@@ -14,6 +14,7 @@ li {
 a {
   text-decoration: none;
 }
+
 body {
   color: #222;
   height: 100vh;
@@ -248,9 +249,7 @@ header {
     opacity: 1;
   }
 }
-.main_home {
-  display: flex;
-}
+
 .main_home h1 {
   width: 96%;
   font-size: 13rem;
@@ -651,12 +650,12 @@ input[id="tab3"]:checked ~ .tabs {
 .contents_img img:hover {
   filter: grayscale(0);
 }
-.contents_img .img_2 {
+/* .contents_img .img_2 {
   display: none;
   opacity: 1;
   filter: grayscale(1);
   transform: rotate(0deg);
-}
+} */
 
 .contents_desc {
   height: 500px;
