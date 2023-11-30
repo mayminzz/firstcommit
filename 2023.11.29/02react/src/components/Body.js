@@ -16,32 +16,62 @@ import { useState } from "react";
 
 // setname에 value값이 name으로 들어가서 그 name이 value값으로 들어간다.
 function Body() {
-  const [name, setName] = useState();
-  const onChangeName = (e) => {
-    setName(e.target.vlaue);
-  };
+  // const [name, setName] = useState();
+  // const onChangeName = (e) => {
+  //   setName(e.target.vlaue);
+  // };
 
-  const [gender, setGender] = useState();
-  const onChanGender = (e) => {
-    setGender(e.target.vlaue);
+  // const [gender, setGender] = useState();
+  // const onChanGender = (e) => {
+  //   setGender(e.target.vlaue);
+  // };
+
+  // const [birth, setBirth] = useState("");
+  // const onChangeBirth = (e) => {
+  //   setBirth(e.target.value);
+  // };
+  // const [bio, setBio] = useState();
+  // const onChangeBio = (e) => {
+  //   setBio(e.target.value);
+  // };
+  const [state, setState] = useState({
+    name: "",
+    gender: "",
+    birth: "",
+    bio: "",
+  });
+  const handleOnChange = (e) => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+    setState({ ...state, [e.target.name]: e.target.value });
   };
   return (
     <div>
       <div>
-        <input value={name} onChange={onChangeName} placeholder="이름" />
+        <input
+          name="name"
+          value={state.name}
+          onChange={handleOnChange}
+          placeholder="이름"
+        />
       </div>
       <div>
-        <select value={gender} onChange={onChanGender}>
+        <select name="gender" value={state.gender} onChange={handleOnChange}>
           <option key="">-</option>
           <option key="남성">남성</option>
           <option key="여성">여성</option>
         </select>
       </div>
       <div>
-        <input type="date" />
+        <input
+          name="birth"
+          value={state.birth}
+          onChange={handleOnChange}
+          type="date"
+        />
       </div>
       <div>
-        <textarea />
+        <textarea name="bio" value={state.bio} onChange={handleOnChange} />
       </div>
     </div>
   );
