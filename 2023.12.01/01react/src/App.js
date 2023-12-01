@@ -8,31 +8,31 @@ const mockTodo = [
   {
     id: 0,
     isDone: false,
-    content: "react 공부하기",
-    createdDate: new Date().getTime(),
-  },
-  {
-    id: 1,
-    isDone: false,
-    content: "빨래 널기",
+    contents: "React 공부하기",
     createdDate: new Date().getTime(),
   },
   {
     id: 2,
     isDone: false,
-    content: "노래 연습하기",
+    contents: "Landury",
+    createdDate: new Date().getTime(),
+  },
+  {
+    id: 3,
+    isDone: false,
+    contents: "Singing",
     createdDate: new Date().getTime(),
   },
 ];
 
 function App() {
   const [todo, setTodo] = useState(mockTodo);
-  const idRef = useRef();
-  const onCreate = (content) => {
+  const idRef = useRef(3);
+  const onCreate = (contents) => {
     const newItem = {
-      id: idRef,
+      id: idRef.current,
       isDone: false,
-      content,
+      contents,
       createdDate: new Date().getTime(),
     };
     setTodo([newItem, ...todo]);
@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <Header />
       <TodoEditor onCreate={onCreate} />
-      <TodoList />
+      <TodoList todo={todo} />
     </div>
   );
 }

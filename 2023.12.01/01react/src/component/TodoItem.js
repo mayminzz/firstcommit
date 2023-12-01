@@ -1,17 +1,17 @@
 import React from "react";
 import "./TodoItem.css";
 
-const TodoItem = () => {
+export const TodoItem = ({ id, isDone, contents, createdDate }) => {
   return (
-    <div className="TodoItem">
+    <div className="Todoitem">
       <div className="checkbox_col">
-        <input type="checkbox" />
+        <input checked={isDone} type="checkbox" />
       </div>
-      <div className="title_col">할 일</div>
-      <div className="date-col">{new Date().toLocaleDateString}</div>
-      <div className="btn_col">
-      <button>삭제</button>
+      <div className="title_col">{contents}</div>
+      <div className="date_col">
+        {new Date(createdDate).toLocaleDateString()}
       </div>
+      <div className="btn_col">삭제</div>
     </div>
   );
 };
