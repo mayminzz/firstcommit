@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.character {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+  background: #0b1e47;
+}
+input {
+  width: 400px;
+  height: 100px;
+  font-size: 30px;
+  padding: 10px;
+}
+.log {
+  width: 400px;
+  height: 100px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+  background: #0b1e47;
+  font-size: 30px;
+}
+input {
+  margin-right: 15px;
+}
+label {
+  color: #fff;
+}
+.log {
+  width: 400px;
+  height: 200px;
+  color: #fff;
+  border: 1px solid #fff;
+}
