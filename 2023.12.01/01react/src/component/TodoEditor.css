@@ -1,27 +1,29 @@
-.TodoEiditor .editor_wrapper {
+.TodoEditor .editor_wrapper {
   width: 100%;
   display: flex;
   gap: 10px;
 }
-.TodoEiditor input {
+.TodoEditor input {
   flex: 1;
   box-sizing: border-box;
   padding: 15px;
   border: 1px solid rgb(220, 220, 220);
   border-radius: 5px;
 }
-.TodoEiditor input:focus {
+.TodoEditor input:focus {
   outline: none;
-  border: 1px solid #1f93ff;
+  border: 1px solid pink;
 }
-.TodoEiditor button {
+.TodoEditor button {
   cursor: pointer;
   width: 80px;
   color: #fff;
   border: none;
-  background: #1f93ff;
+  border-radius: 5px;
+  background: pink;
 }
-.TodoEiditor button:hover {
+.TodoEditor button:hover {
+  color: pink;
+  border: 1px solid pink;
   background: #fff;
-  color: #1f93ff;
 }
