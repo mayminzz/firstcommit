@@ -4,7 +4,6 @@ import emotion3 from "./img/emotion3.png";
 import emotion4 from "./img/emotion4.png";
 import emotion5 from "./img/emotion5.png";
 
-// 아이디 설정 인자값으로 몇번째 사진을 가지고 올건지, 문자열로 변환시켜서 가져올것임
 export const getEmotionImgById = (emotionId) => {
   const targetEmotionId = String(emotionId);
   switch (targetEmotionId) {
@@ -18,7 +17,6 @@ export const getEmotionImgById = (emotionId) => {
       return emotion4;
     case "5":
       return emotion5;
-    // 만약에 6,7,8을 가져올 경우 유효하지 않은 값이라고 알려주겠다.
     default:
       return null;
   }
@@ -47,7 +45,7 @@ export const emotionList = [
   },
   {
     id: 5,
-    name: "최악",
+    name: "끔찍함",
     img: getEmotionImgById(5),
   },
 ];
@@ -56,11 +54,31 @@ export const getFormattedDate = (targetDate) => {
   let year = targetDate.getFullYear();
   let month = targetDate.getMonth() + 1;
   let date = targetDate.getDate();
-  if (date < 10) {
-    date = `0${date}`;
-  }
   if (month < 10) {
     date = `0${month}`;
   }
+  if (date < 10) {
+    date = `0${date}`;
+  }
   return `${year}-${month}-${date}`;
 };
+
+export const getMonthRangeDate = (date) => {
+  const todayYear = date.getFullYear();
+  const todayMonth = date.getMonth();
+  const beginTimeStamp = new Date(todayYear, todayMonth, 1).getTime();
+  const endTimeStamp = new Date(
+    todayYear,
+    todayMonth + 1,
+    0,
+    23,
+    59,
+    59
+  ).getTime();
+  return { beginTimeStamp, endTimeStamp };
+};
+
+export const sortOptionList = [
+  { value: "latest", name: "최신순" },
+  { value: "oldest", name: "오래된순" },
+];

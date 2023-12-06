@@ -1,7 +1,11 @@
 import React from "react";
 
 const Diary = () => {
-  return <div>Diary페이지 입니다.</div>;
+  return (
+    <div>
+      <div>Diary 페이지입니다.</div>
+    </div>
+  );
 };
 
 export default Diary;

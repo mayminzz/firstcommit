@@ -1,18 +1,18 @@
-import "./Editor.css";
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "./Button";
-import EmotionItem from "./EmotionItem";
-import { emotionList, getFormattedDate } from "../util";
+import './Editor.css';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { emotionList, getFormattedDate } from '../util';
+import Button from './Button';
+import EmotionItem from './EmotionItem';
 
-const Editor = (initData, onSubmit) => {
+const Editor = ({ initData, onSubmit }) => {
   const navigate = useNavigate();
   const today = new Date();
   const initDate = new Date(parseInt(initData.date));
   const [state, setState] = useState({
     date: getFormattedDate(today),
     emotionId: 3,
-    content: "",
+    content: '',
   });
   useEffect(() => {
     if (initData) {
@@ -22,12 +22,6 @@ const Editor = (initData, onSubmit) => {
       });
     }
   }, [initData]);
-  const handleChangeEmotion = (emotionId) => {
-    setState({
-      ...state,
-      emotionId,
-    });
-  };
   const handleChangeDate = (e) => {
     setState({
       ...state,
@@ -38,6 +32,12 @@ const Editor = (initData, onSubmit) => {
     setState({
       ...state,
       content: e.target.value,
+    });
+  };
+  const handleChangeEmotion = (emotionId) => {
+    setState({
+      ...state,
+      emotionId,
     });
   };
   const handleSubmit = () => {
@@ -52,7 +52,7 @@ const Editor = (initData, onSubmit) => {
       <div className="editor_section">
         <h4>오늘의 날짜</h4>
         <div className="input_wrapper">
-          <input type="Date" value={state.date} onChange={handleChangeDate} />
+          <input type="date" value={state.date} onChange={handleChangeDate} />
         </div>
       </div>
       <div className="editor_section">
@@ -78,9 +78,9 @@ const Editor = (initData, onSubmit) => {
           />
         </div>
       </div>
-      <div className="editor_sectiov bottom_section">
-        <Button text={"취소하기"} onClick={handleOnGoBack} type={"negative"} />
-        <Button text={"작성완료"} onClick={handleSubmit} type={"positive"} />
+      <div className="editor_section bottom_section">
+        <Button text={'취소하기'} onClick={handleOnGoBack} />
+        <Button text={'작성완료'} type={'positive'} onClick={handleSubmit} />
       </div>
     </div>
   );
