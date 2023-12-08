@@ -22,6 +22,7 @@ const DiaryItem = ({ id, emotionId, content, date }) => {
       </div>
       <div className="info_section" onClick={goDetail}>
         <div className="date_wrapper">{diaryDate.toLocaleDateString()}</div>
+        {/* toLocaleString(): 시간까지 나옴! */}
         <div className="content_wrapper">{editedContent}</div>
       </div>
       <div className="button_section">

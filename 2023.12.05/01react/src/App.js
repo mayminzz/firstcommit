@@ -1,47 +1,55 @@
-import './App.css';
-import React, { useState, useReducer, useRef, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import New from './pages/New';
-import Diary from './pages/Diary';
-import Edit from './pages/Edit';
+import "./App.css";
+import React, { useState, useReducer, useRef, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import New from "./pages/New";
+import Diary from "./pages/Diary";
+import Edit from "./pages/Edit";
 
 const mockData = [
   {
-    id: 'mock1',
-    date: new Date().getTime() - 1,
-    content: 'mock1',
+    id: "mock1",
+    date: new Date("2023/12/02/10:00:00").getTime() - 1,
+    content: "mock1",
     emotionId: 1,
   },
   {
-    id: 'mock2',
-    date: new Date().getTime() - 2,
-    content: 'mock2',
+    id: "mock2",
+    date: new Date("2023/12/03/15:13:00").getTime() - 2,
+    content: "mock2",
     emotionId: 2,
   },
   {
-    id: 'mock3',
-    date: new Date().getTime() - 3,
-    content: 'mock3',
+    id: "mock3",
+    date: new Date("2023/12/05/19:55:00").getTime() - 3,
+    content: "mock3",
     emotionId: 3,
   },
 ];
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'INIT': {
+    case "INIT": {
       return action.data;
     }
-    case 'CREATE': {
-      return [action.data, ...state];
+    case "CREATE": {
+      const newState = [action.data, ...state];
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
     }
-    case 'UPDATE': {
-      return state.map((it) =>
+    case "UPDATE": {
+      const newState = state.map((it) =>
         String(it.id) === String(action.data.id) ? { ...action.data } : it
       );
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
     }
-    case 'DELETE': {
-      return state.filter((it) => String(it.id) !== String(action.targetId));
+    case "DELETE": {
+      const newState = state.filter(
+        (it) => String(it.id) !== String(action.targetId)
+      );
+      localStorage.setItem("diary", JSON.stringify(newState));
+      return newState;
     }
     default: {
       return state;
@@ -57,18 +65,29 @@ function App() {
   const [data, dispatch] = useReducer(reducer, []);
   const idRef = useRef(0);
   useEffect(() => {
+    const rawData = localStorage.getItem("diary");
+    if (!rawData) {
+      setIsDataLoaded(true);
+      return;
+    }
+    const localData = JSON.parse(rawData);
+    if (localData.lrngth === 0) {
+      setIsDataLoaded(true);
+      return;
+    }
+    idRef.current = localData[0].id + 1;
     dispatch({
-      type: 'INIT',
-      data: mockData,
+      type: "INIT",
+      data: localData,
     });
     setIsDataLoaded(true);
   }, []);
   const onCreate = (date, content, emotionId) => {
     dispatch({
-      type: 'CREATE',
+      type: "CREATE",
       data: {
         id: idRef.current,
-        date: new Date(date).getTime(),
+        date: new Date().getTime(),
         content,
         emotionId,
       },
@@ -77,10 +96,10 @@ function App() {
   };
   const onUpdate = (targetId, date, content, emotionId) => {
     dispatch({
-      type: 'UPDATE',
+      type: "UPDATE",
       data: {
         id: targetId,
-        date: new Date(date).getTime(),
+        date: new Date().getTime(),
         content,
         emotionId,
       },
@@ -88,7 +107,7 @@ function App() {
   };
   const onDelete = (targetId) => {
     dispatch({
-      type: 'DELETE',
+      type: "DELETE",
       targetId,
     });
   };

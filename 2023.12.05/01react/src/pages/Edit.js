@@ -1,14 +1,18 @@
-import React, {useContext} from "react";
-import { useParams, useNavigate} from "react-router-dom";
+import React, { useContext, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { DiaryDispatchContext } from "../App";
+import { setPageTitle } from "../util";
 import useDiary from "../hook/useDiary";
 import Header from "../component/Header";
 import Button from "../component/Button";
 import Editor from "../component/Editor";
 
-
 const Edit = () => {
   const { id } = useParams();
+  useEffect(() => {
+    setPageTitle(`${id}번 일기 수정하기`);
+  }, []);
+  // 의존성 배열은 빈 배열
   const data = useDiary(id);
   const { onUpdate, onDelete } = useContext(DiaryDispatchContext);
   const onSubmit = (data) => {

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { DiaryStartContext } from "../App";
-import { getMonthRangeDate } from "../util";
+import { getMonthRangeDate, setPageTitle } from "../util";
 import DiaryList from "../component/DiaryList";
 import Button from "../component/Button";
 import Header from "../component/Header";
@@ -48,6 +48,9 @@ const Home = () => {
   const today = new Date();
   const [pivotDate, setPivotDate] = useState(today);
   const [filteredData, setFilteredData] = useState([]);
+  useEffect(()=> {
+    setPageTitle("MINJU의 다이어리")
+  }, [])
   useEffect(() => {
     if (data.length >= 1) {
       const { beginTimeStamp, endTimeStamp } = getMonthRangeDate(pivotDate);
