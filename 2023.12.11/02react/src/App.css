@@ -1,0 +1,18 @@
+body {
+  background: url(https://www.novascotia.com/sites/default/files/2022-09/Rainbow_Skyline-Trail-1920x1080.jpg) center top/cover no-repeat;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.weather_box {
+  border: 3px solid #fff;
+  border-radius: 30px;
+  padding: 50px;
+  background: azure;
+}

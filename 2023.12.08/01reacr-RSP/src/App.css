@@ -1,0 +1,46 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.box {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.item_img {
+  width: 400px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  background: orange;
+  border-radius: 10px;
+}
+.win {
+  border: 10px solid #0f0;
+  color: #0f0;
+}
+.lose {
+  border : 10px solid #f00;
+  color: #f00;
+}
+.Tie {
+  border: 10px solid #000;
+  color: #000;
+}
