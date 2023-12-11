@@ -11,7 +11,7 @@ export default class AppClass extends Component {
     };
     console.log("constructor");
   }
-  increase = () => {
+  increase= () => {
     this.setState({
       counter2: this.state.counter2 + 1,
       value: this.state.value + 1,
