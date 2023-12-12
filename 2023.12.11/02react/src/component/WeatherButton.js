@@ -1,13 +1,14 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const WeatherButton = ({ cities, setCity }) => {
-
-  console.log(`cities`, cities);
+const WeatherButton = ({ cities, setCity, handleCityChange }) => {
+  console.log(`cities : ${cities}`);
   return (
     <div>
-      <Button variant="danger">Current Location</Button>
+      <Button onClick={() => handleCityChange("current")} variant="danger">
+        Current Location
+      </Button>
       {cities.map((it) => (
         <Button onClick={() => setCity(it)} variant="danger">
           {it}
@@ -18,3 +19,4 @@ const WeatherButton = ({ cities, setCity }) => {
 };
 
 export default WeatherButton;
+
