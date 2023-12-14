@@ -10,12 +10,15 @@ const ContactForm = () => {
   const getName = (event) => {
     setName(event.target.value);
   };
-  const getNumber = (event) => {
+  const getnumber = (event) => {
     setPhoneNumber(event.target.value);
   };
+  // const getNumber = (event) => {
+  //   setPhoneNumber(event.target.value);
+  // };
   const addContact = (event) => {
     event.preventDefault();
-    dispatch({type:"ADD_CONTACT", payload: {name, phoneNumber}})
+    dispatch({ type: "ADD_CONTACT", payload: { name, phoneNumber } });
   };
   return (
     <Form onSubmit={addContact}>
