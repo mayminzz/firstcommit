@@ -19,8 +19,7 @@ const calculateTallestSlide = () => {
     }
   }
   sliderWrapper.style.height = `${topHeight}px`;
-  // sliderContainer.style.height = `${topHeight}px`;
-  sliderContainer.style.height = `${topHeight}px`
+  sliderContainer.style.height = `${topHeight}px`;
 };
 
 calculateTallestSlide();
@@ -58,18 +57,18 @@ const goToSlide = (i) => {
 // 버튼 클릭시 이벤트
 navPrev.addEventListener("click", (e) => {
   e.preventDefault();
-  if(currentIndex > 0) {
+  if (currentIndex > 0) {
     // 현재 인덱스 값이 처음이 아닌 경우
     goToSlide(currentIndex - 1);
   } else {
     // 현재 인덱스 값이 처음인 경우
-      goToSlide(slideCount - 1);
+    goToSlide(slideCount - 1);
   }
 });
 
 navNext.addEventListener("click", (e) => {
   e.preventDefault();
-  if(currentIndex < slideCount - 1) {    
+  if (currentIndex < slideCount - 1) {
     // 현재 인덱스 값이 마지막이 아닌 경우
     goToSlide(currentIndex + 1);
   } else {
