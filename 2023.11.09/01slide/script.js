@@ -19,7 +19,8 @@ const calculateTallestSlide = () => {
     }
   }
   sliderWrapper.style.height = `${topHeight}px`;
-  sliderContainer.style.height = `${topHeight}px`;
+  // sliderContainer.style.height = `${topHeight}px`;
+  sliderContainer.style.height = `${topHeight}px`
 };
 
 calculateTallestSlide();
