@@ -1,6 +1,7 @@
 import api from "../api";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
+
 const getMovie = () => {
   return async (dispatch) => {
     try {
@@ -17,13 +18,22 @@ const getMovie = () => {
         `/movie/upcoming?api_key=${API_KEY}&language=en-US&page=1`
       );
       const genreApi = await api.get(`/genre/movie/list?api_key=${API_KEY}`);
-      const [popularMovies, topRatedMovies, upComingMovies, genreList] =
-        await Promise.all([
-          popularMovieApi,
-          topRatedMovieApi,
-          upComingMovieApi,
-          genreApi,
-        ]);
+      const nowPlayingMovieApi = await api.get(
+        `/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
+      );
+      const [
+        popularMovies,
+        topRatedMovies,
+        upComingMovies,
+        genreList,
+        nowPlayingMovies,
+      ] = await Promise.all([
+        popularMovieApi,
+        topRatedMovieApi,
+        upComingMovieApi,
+        genreApi,
+        nowPlayingMovieApi,
+      ]);
       dispatch({
         type: "GET_MOVIES_SUCCESS",
         payload: {
@@ -31,6 +41,7 @@ const getMovie = () => {
           topRatedMovies: topRatedMovies.data,
           upComingMovies: upComingMovies.data,
           genreList: genreList.data.genres,
+          nowPlayingMovies: nowPlayingMovies.data,
           loading: false,
         },
       });
