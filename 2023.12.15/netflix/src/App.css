@@ -45,3 +45,22 @@
   width: 300px ;
   height: 200px !important;
 }
+.card h1, span {
+  color: #fff;
+}
+.card h1 {
+  font-size: 24px;
+}
+.overlay {
+  opacity: 0;
+}
+.card:hover .overlay {
+  opacity: 1;
+  background: rgba(43,41,41,0.9);
+  padding: 10px;
+  transition: 0.3s;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 101%;
+}

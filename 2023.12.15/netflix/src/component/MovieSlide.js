@@ -11,7 +11,7 @@ const responsive = {
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4,
+    items: 5,
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -23,15 +23,13 @@ const responsive = {
   },
 };
 
-const MovieSlide = () => {
+const MovieSlide = ({ movies }) => {
   return (
     <div>
       <Carousel responsive={responsive} infinite={true}>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        {movies.results.map((item, index) => (
+          <MovieCard key={index} item={item} />
+        ))}
       </Carousel>
     </div>
   );
