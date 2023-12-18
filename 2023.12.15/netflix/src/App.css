@@ -1,7 +1,7 @@
 .wrapper {
   background: #000;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 .nav-item {
   color: #fff;
@@ -34,4 +34,14 @@
 }
 .slide {
   color: #fff;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.card {
+  width: 300px ;
+  height: 200px !important;
 }
