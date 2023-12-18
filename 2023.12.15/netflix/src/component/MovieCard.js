@@ -14,7 +14,7 @@ const MovieCard = ({ item }) => {
     };
   }, []);
 
-  // console.log(item);
+  console.log(item);
   return (
     <div
       className="card"
