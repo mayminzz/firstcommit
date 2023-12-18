@@ -7,10 +7,9 @@ const MovieCard = ({ item }) => {
   useEffect(() => {
     const genreList = () => {
       const response = fetch("https://api.themoviedb.org/3/genre/movie/list");
-      console.log(response)
+      console.log(response);
       const result = response.json();
-      console.log(result);
-    
+      setgenre(result);
     };
   }, []);
 
