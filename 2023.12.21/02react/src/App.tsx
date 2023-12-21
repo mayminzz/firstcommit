@@ -1,16 +1,14 @@
 import React from "react";
+import "./App.css";
 import Router from "./Router";
+import {theme} from "./theme"
 //전역요소로 이걸 reset해서 사져가 쓰겠다
 import { createGlobalStyle } from "styled-components";
-import styled from "styled-components";
 
-
-import "./App.css";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
-
-  html, body, div, span, applet, object, iframe,
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -35,11 +33,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+  font-family: 'Source Sans 3', sans-serif;
+	background: ${(props) => props.theme.bgColor};
+	color: ${(props) => props.theme.textColor};
 	line-height: 1;
-  background: ${(props) => props.theme.bgColor};
-  color:${(props) => props.theme.textColor};
-
-  font-family: 'Source Code Pro', monospace;
 }
 a {
   text-decoration: none;
@@ -62,14 +59,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
 `;
 
 function App() {
   return (
     <>
-      <Router />
       <GlobalStyle />
+      <Router />
     </>
   );
 }
