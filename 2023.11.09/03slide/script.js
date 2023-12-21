@@ -72,7 +72,7 @@ const autoSlide = () => {
   if (timer === undefined) {
     timer = setInterval(() => {
       moveSlide(currentIdx + 1);
-    }, 4000);
+    }, 3000);
   }
 };
 
@@ -98,21 +98,6 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   moveSlide(currentIdx + 1);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // // 변수 및 버튼 정의
 // const slides = document.querySelector(".slides");
@@ -205,7 +190,6 @@ nextBtn.addEventListener("click", () => {
 // slides.addEventListener("mouseleave", () => {
 //   autoSlide();
 // });
-
 
 // // 버튼 클릭 이벤트
 // prevBtn.addEventListener("click", () => {
