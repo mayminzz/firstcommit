@@ -51,7 +51,8 @@ interface props {
 const TodoInput = ({ todo, setTodo, onAdd }: props) => {
   const onAddTodo = () => {
     if (todo === "") return;
-    setTodo(todo);
+    onAdd(todo);
+    setTodo("");
   };
   return (
     <Container>

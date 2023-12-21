@@ -5,6 +5,7 @@ import DataView from "./component/DataView";
 import TodoInput from "./component/TodoInput";
 import ShowInputButton from "./component/ShowInputButton";
 import Button from "./component/Button";
+import InputContainer from "./component/InputContainer";
 
 const Container = styled.div`
   display: flex;
@@ -21,7 +22,7 @@ const mockup = ["리액트 공부하기", "운동하기", " 밥 먹기"];
 function App() {
   const [todoList, setTodoList] = useState(mockup);
   const [todo, setTodo] = useState("");
-  const [showTodoInput, setShowTodoInput] = useState(true);
+
   const onDelete = (todo: string) => {
     setTodoList(todoList.filter((item) => item !== todo));
   };
@@ -33,13 +34,7 @@ function App() {
   return (
     <Container>
       <DataView todoList={todoList} onDelete={onDelete} />
-      {showTodoInput && (
-        <TodoInput todo={todo} setTodo={setTodo} onAdd={onAdd} />
-      )}
-      <ShowInputButton
-        show={showTodoInput}
-        onClick={() => setShowTodoInput(!showTodoInput)}
-      />
+      <InputContainer todo={todo} setTodo={setTodo} onAdd={onAdd} />
     </Container>
   );
 }
