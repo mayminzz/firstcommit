@@ -72,7 +72,7 @@ const autoSlide = () => {
   if (timer === undefined) {
     timer = setInterval(() => {
       moveSlide(currentIdx + 1);
-    }, 3000);
+    }, 4000);
   }
 };
 
