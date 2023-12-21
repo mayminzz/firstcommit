@@ -33,9 +33,9 @@ function App() {
   return (
     <Container>
       <DataView todoList={todoList} onDelete={onDelete} />
-      {/* {showTodoInput && (
+      {showTodoInput && (
         <TodoInput todo={todo} setTodo={setTodo} onAdd={onAdd} />
-      )} */}
+      )}
       <ShowInputButton
         show={showTodoInput}
         onClick={() => setShowTodoInput(!showTodoInput)}
