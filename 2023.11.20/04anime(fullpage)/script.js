@@ -65,6 +65,7 @@ const prev = (e) => {
 s_Left.addEventListener('click', prev);
 
 Nav_btn.addEventListener('click', () => {
+  // Body.classList.toggle('nav_active');
   Body.classList.toggle('nav_active');
 });
 
