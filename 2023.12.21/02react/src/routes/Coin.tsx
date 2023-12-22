@@ -193,6 +193,7 @@ const Coin = () => {
               <span>{priceInfo?.max_supply}</span>
             </OverviewItem>
           </Overview>
+          {/* 특정 페이지 이동이 아닌 한 ㅎ화면에서 보고싶어 */}
           <Link to={`/${coinId}/chart`}>Chart</Link>
           <Link to={`/${coinId}/price`}>Price</Link>
           <Routes>
