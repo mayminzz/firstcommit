@@ -1,22 +1,15 @@
 let now = new Date();
 let firstDay = new Date(`2022-02-04`);
-let tonow = now.getTime();
+let toNow = now.getTime();
 
 let toFirst = firstDay.getTime();
-let passedTime =tonow - toFirst;
-let passedDay = Math.round(passedTime /(24 * 60 * 60 * 1000));
-document.querySelector(".accent").innerHTML = passedDay + "일째 되는날❤️"
+let passedTime = toNow - toFirst;
+// 날짜로 바꿔보자
+let passedDay = Math.round(passedTime / (24 * 60 * 60 * 1000));
+document.querySelector(".accent").innerHTML = passedDay + "일";
 
-// let now = new Date();
-// let firstDay = new Date(`2023-08-22`);
-// let toNow = now.getTime();
-
-// let toFirst = firstDay.getTime();
-// let passedTime = toNow - toFirst;
-// // 날짜로 바꿔보자
-// let passedDay = Math.round(passedTime / (24 * 60 * 60 * 1000));
-// document.querySelector(".accent").innerHTML = passedDay + "일째 되는날 😍";
-
+document.querySelector(".accent").style.fontSize = "1.6em";
+document.querySelector(".accent").style.color = "#fff";
 
 // function calcDate(days) {
 //   // 100일째 되는날
@@ -39,15 +32,21 @@ document.querySelector(".accent").innerHTML = passedDay + "일째 되는날❤�
 function calcDate(days) {
   let future = toFirst + days * (24 * 60 * 60 * 1000);
   let someday = new Date(future);
+  console.log(someday);
   let year = someday.getFullYear();
   let month = someday.getMonth() + 1;
   let date = someday.getDate();
-  document.querySelector("#date" + days).innerHTML = `${year}년 ${month}월 ${date}일`;
+  document.querySelector(
+    "#date" + days
+  ).innerHTML = `${year}년 ${month}월 ${date}일`;
 }
 calcDate(100);
 calcDate(200);
 calcDate(365);
 calcDate(500);
+calcDate(600);
+calcDate(700);
+calcDate(800);
 
 // // 100일째 되는날
 // let future = toFirst + 100 * (24 * 60 * 60 * 1000);
