@@ -5,7 +5,6 @@ body {
   height: 100vh;
 }
 .tab-inner {
-  border: 1px solid #f00;
   height: 500px;
 }
 .tab-inner h1 {
@@ -17,14 +16,12 @@ input[name=tabmenu] {
   display: none;
 }
 .tabs {
-  border: 1px solid #0f0;
   width: 800px;
   height: 400px;
   overflow: hidden;
   position: relative;
 }
 .items {
-  border: 1px solid #00f;
   /* 하나의 아이템 당 800 픽셀을 차지 근데 3개니까 2400 */
   width: 2400px;
   height: 400px;
