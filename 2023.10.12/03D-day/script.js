@@ -5,7 +5,7 @@ let tonow = now.getTime();
 let toFirst = firstDay.getTime();
 let passedTime =tonow - toFirst;
 let passedDay = Math.round(passedTime /(24 * 60 * 60 * 1000));
-document.querySelector(".accent").innerHTML = passedDay + "일째 되는날😊"
+document.querySelector(".accent").innerHTML = passedDay + "일째 되는날❤️"
 
 // let now = new Date();
 // let firstDay = new Date(`2023-08-22`);
