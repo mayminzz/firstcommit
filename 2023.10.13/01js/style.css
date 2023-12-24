@@ -10,7 +10,7 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .testimonial-section h1 {
   font-size: 25px;
@@ -23,12 +23,12 @@ body {
   width: 100px;
   filter: grayscale(1);
   margin: 5px;
+  transition: all 0.3s;
   cursor: pointer;
-  transition: all  0.5s;
 }
 .testimonial-pic img.active {
   border-radius: 50%;
-  filter:none;
+  filter: none;
 }
 .testimonial .content {
   display: none;

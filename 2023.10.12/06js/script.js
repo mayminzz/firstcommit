@@ -1,84 +1,43 @@
+// 공간과 버튼에 대한 정의
 const buttons = document.querySelectorAll("button");
-
 const computerChoice = document.querySelector(".computer-choice");
 const userChoice = document.querySelector(".you-choice");
 const winner = document.querySelector(".result");
-const result = ["가위",".바위", "보"];
+const result = ["가위", "바위", "보"];
 
-const show = function(user, computer, result) {
+const show = function (user, computer, result) {
   userChoice.innerHTML = user;
   computerChoice.innerHTML = computer;
   winner.innerHTML = result;
-}
-const game =function(user, computer) {
-  if(user === computer) {
-    message="무승부";
+};
+const game = function (user, computer) {
+  if (user === computer) {
+    message = "무승부";
   } else {
-    switch(user + computer) {
-      case"가위보":
-      case"보바위":
-      case"바위가위":
-      message = "사용자 승리"
-      break;
+    switch (user + computer) {
+      case "가위보":
+      case "바위가위":
+      case "보바위":
+        message = "사용자 승리";
+        break;
+      case "가위바위":
+      case "바위보":
       case "보가위":
-      case"가위바위":
-      case"바위보":
-      message="컴퓨터 승리"
-      break;
+        message = "컴퓨터 승리";
+        break;
     }
   }
+  // 콜백함수
   show(user, computer, message);
-}
-
-const play = function(event) {
+};
+const play = function (event) {
   const user = event.target.innerText;
   const randomIndex = Math.floor(Math.random() * 3);
+  // 2가 최대값
   const computer = result[randomIndex];
+  // 콜백함수
   game(user, computer);
-}
-buttons.forEach(function(button) {
+};
+buttons.forEach(function (button) {
   button.addEventListener("click", play);
 });
-// // 공간과 버튼에 대한 정의
-// const buttons = document.querySelectorAll("button");
-// const computerChoice = document.querySelector(".computer-choice");
-// const userChoice = document.querySelector(".you-choice");
-// const winner = document.querySelector(".result");
-// const result = ["가위", "바위", "보"];
-
-// const show = function (user, computer, result) {
-//   userChoice.innerHTML = user;
-//   computerChoice.innerHTML = computer;
-//   winner.innerHTML = result;
-// };
-// const game = function (user, computer) {
-//   if (user === computer) {
-//     message = "무승부";
-//   } else {
-//     switch (user + computer) {
-//       case "가위보":
-//       case "바위가위":
-//       case "보바위":
-//         message = "사용자 승리";
-//         break;
-//       case "가위바위":
-//       case "바위보":
-//       case "보가위":
-//         message = "컴퓨터 승리";
-//         break;
-//     }
-//   }
-//   // 콜백함수
-//   show(user, computer, message);
-// };
-// const play = function (event) {
-//   const user = event.target.innerText;
-//   const randomIndex = Math.floor(Math.random() * 3);
-//   // 2가 최대값
-//   const computer = result[randomIndex];
-//   // 콜백함수
-//   game(user, computer);
-// };
-// buttons.forEach(function (button) {
-//   button.addEventListener("click", play);
-// });
