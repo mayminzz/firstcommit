@@ -7,7 +7,6 @@
 const songs = document.querySelectorAll(".albumTable_song");
 for (let el of songs) {
   let play = el.querySelector(".fa-caret-right");
-  console.log(play)
   let pause = el.querySelector(".fa-pause");
   play.addEventListener("click", (e) => {
     e.currentTarget.closest("td").querySelector("audio").play();
