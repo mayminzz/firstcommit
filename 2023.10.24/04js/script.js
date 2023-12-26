@@ -9,7 +9,5 @@ btn.addEventListener("click", () => {
   notiBox.appendChild(noti);
   setTimeout(() => {
     noti.remove();
-  }, 3000)
+  }, 3000);
 });
-
-

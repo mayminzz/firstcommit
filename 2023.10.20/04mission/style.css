@@ -60,11 +60,12 @@ button:hover {
   color: #fff;
 }
 #show {
+  display: none;
   width: 600px;
   line-height: 1.5em;
   padding-top: 20px;
 }
 
-.clicked {
-  display: none;
+#show.clicked {
+  display: block;
 }
