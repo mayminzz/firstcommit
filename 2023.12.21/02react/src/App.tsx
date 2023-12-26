@@ -3,6 +3,7 @@ import "./App.css";
 import Router from "./Router";
 //전역요소로 이걸 reset해서 사져가 쓰겠다
 import { createGlobalStyle } from "styled-components";
+import { ReactQueryDevtools } from 'react-query/devtools'
 
 
 const GlobalStyle = createGlobalStyle`
@@ -65,6 +66,7 @@ function App() {
     <>
       <GlobalStyle />
       <Router />
+			<ReactQueryDevtools initialIsOpen={true}/>
     </>
   );
 }

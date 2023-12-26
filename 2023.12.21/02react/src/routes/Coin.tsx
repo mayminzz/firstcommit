@@ -10,6 +10,8 @@ import {
 import styled from "styled-components";
 import Chart from "./Chart";
 import Price from "./Price";
+import { useQuery } from "react-query";
+import { fetchCoinInfo } from "../api";
 
 const Container = styled.div`
   max-width: 880px;
@@ -44,6 +46,7 @@ const Overview = styled.div`
   padding: 10px 20px;
   border-radius: 10px;
 `;
+
 const OverviewItem = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,6 +64,7 @@ const OverviewItem = styled.div`
     text-transform: uppercase;
   }
 `;
+
 const Description = styled.p`
   margin: 20px 0;
   text-align: center;
@@ -70,6 +74,27 @@ const Description = styled.p`
   border-radius: 10px;
   font-size: 24px;
   font-weight: 700;
+`;
+
+const Tabs = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+  margin: 10px 0;
+`;
+
+const Tab = styled.span<{ isActive: boolean }>`
+  text-align: center;
+  text-transform: Uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  color: ${(props) =>
+    props.isActive ? props.theme.accentColor : props.theme.bgColor};
+  background: ${(props) => props.theme.textColor};
+  padding: 15px 40px;
+  border-radius: 10px;
 `;
 
 interface RouteParams {
@@ -132,37 +157,48 @@ const Coin = () => {
     RouteParams | any
   >(); /*문자열이 아닐수도 있어 그니까 아니라면 any로할게 */
   // params는 객체의 형태로 가져온다.
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const { state } = useLocation() as LocationState;
   //해당 인터페이스 타입을 정의하겠다. as 타입 단어를 해준다?
   const [info, setInfo] = useState<infoData>();
   const [priceInfo, setPriceInfo] = useState<priceData>();
   const priceMatch = useMatch("/:coinId/price");
   const chartMatch = useMatch("/:coinId/chart");
-  console.log(priceMatch)
-  useEffect(() => {
-    (async () => {
-      const infoData = await (
-        await fetch(
-          `https://my-json-server.typicode.com/Divjason/coinlist/coins/${coinId}`
-        )
-      ).json();
-      const priceData = await (
-        await fetch(
-          `https://my-json-server.typicode.com/Divjason/coinprice/coinprice/${coinId}`
-        )
-      ).json();
-      console.log(infoData);
-      console.log(priceData);
-      setInfo(infoData);
-      setPriceInfo(priceData);
-      setLoading(false);
-    })();
-  }, []);
+  const { isLoading: infoLoading, data: infoData } = useQuery<infoData>(
+    ["info", coinId],
+    () => fetchCoinInfo(coinId)
+  );
+  const { isLoading: tickersLoading, data: tickersData } = useQuery<priceData>(
+    ["tickers", coinId],
+    () => fetchCoinInfo(coinId)
+  );
+
+  const loading = infoLoading || tickersLoading;
+  // useEffect(() => {
+  //   (async () => {
+  //     const infoData = await (
+  //       await fetch(
+  //         `https://my-json-server.typicode.com/Divjason/coinlist/coins/${coinId}`
+  //       )
+  //     ).json();
+  //     const priceData = await (
+  //       await fetch(
+  //         `https://my-json-server.typicode.com/Divjason/coinprice/coinprice/${coinId}`
+  //       )
+  //     ).json();
+  //     console.log(infoData);
+  //     console.log(priceData);
+  //     setInfo(infoData);
+  //     setPriceInfo(priceData);
+  //     setLoading(false);
+  //   })();
+  // }, []);
   return (
     <Container>
       <Header>
-        <Title>Coin Name : {state || "Loading..."}</Title>
+        <Title>
+          Coin Name : {state ? state : loading ? "Loading..." : infoData?.name}
+        </Title>
       </Header>
       {loading ? (
         <Loader>Loading...</Loader>
@@ -171,33 +207,39 @@ const Coin = () => {
           <Overview>
             <OverviewItem>
               <span>Rank </span>
-              <span>{info?.rank}</span>
+              <span>{infoData?.rank}</span>
             </OverviewItem>
             <OverviewItem>
               <span>Symbol </span>
-              <span>{info?.symbol}</span>
+              <span>{infoData?.symbol}</span>
             </OverviewItem>
             <OverviewItem>
               <span>Type</span>
-              <span>{info?.type}</span>
+              <span>{infoData?.type}</span>
             </OverviewItem>
           </Overview>
-          <Description>{priceInfo?.id}</Description>
+          <Description>{tickersData?.id}</Description>
           <Overview>
             <OverviewItem>
               <span>Total Supply</span>
-              <span>{priceInfo?.total_supply}</span>
+              <span>{tickersData?.total_supply}</span>
             </OverviewItem>
             <OverviewItem>
               <span>Max Supply</span>
-              <span>{priceInfo?.max_supply}</span>
+              <span>{tickersData?.max_supply}</span>
             </OverviewItem>
           </Overview>
-          {/* 특정 페이지 이동이 아닌 한 ㅎ화면에서 보고싶어 */}
-          <Link to={`/${coinId}/chart`}>Chart</Link>
-          <Link to={`/${coinId}/price`}>Price</Link>
+          <Tabs>
+            <Tab isActive={chartMatch !== null}>
+              {/* 특정 페이지 이동이 아닌 한 ㅎ화면에서 보고싶어 */}
+              <Link to={`/${coinId}/chart`}>Chart</Link>
+            </Tab>
+            <Tab isActive={priceMatch !== null}>
+              <Link to={`/${coinId}/price`}>Price</Link>
+            </Tab>
+          </Tabs>
           <Routes>
-            <Route path="chart" element={<Chart />}></Route>
+            <Route path="chart" element={<Chart coinId={coinId}/>}></Route>
             <Route path="price" element={<Price />}></Route>
           </Routes>
         </>
