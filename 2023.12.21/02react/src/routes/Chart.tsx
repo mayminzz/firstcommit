@@ -57,6 +57,20 @@ const Chart = ({ coinId }: chartProps) => {
             grid: {
               show: false,
             },
+            xaxis: {
+              labels: { show: true },
+            },
+            yaxis: {
+              labels: { show: true },
+            },
+            fill: {
+              type: "gradient",
+              gradient: {
+                //blue값이 0 -100까지 중간정도 색으로 그라데이션을 줘라 
+                gradientToColors: ["blue"],
+                stops: [0, 100],
+              },
+            },
           }}
         />
       )}

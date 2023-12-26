@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { fetchCoins } from "../api";
 import { useQuery } from "react-query";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   max-width: 880px;
@@ -91,6 +92,9 @@ const Coins = () => {
   console.log(isLoading, data);
   return (
     <Container>
+      <Helmet>
+        <Title>Coin List</Title>
+      </Helmet>
       <Header>
         <Title>Virtual Money / Coin List</Title>
       </Header>
