@@ -11,8 +11,6 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 const Box = styled(motion.div)`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   width: 200px;
   height: 200px;
   background: #fff;
@@ -35,7 +33,18 @@ const Circle = styled(motion.div)`
 //   end: { scale: 1, rotate: 360, transition: { type: "spring", delay: 0.5 } },
 // };
 
-const boxVariants = {
+const BiggerBox = styled.div`
+  width: 600px;
+  height: 600px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 40px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  overflow:hidden;
+`
+
+const boxVariants01 = {
   start: { opscity: 0, scale: 0.5 },
   end: {
     opscity: 1,
@@ -58,9 +67,30 @@ const circleVariants = {
   },
 };
 
+const boxVariants02 = {
+  hover: { scale: 1.5, rotateZ: 90 },
+  click: { scale: 1, borderRadius: "100px" },
+  drag: {
+    backgroundColor: "rgb(46, 204, 113)",
+    transition: {
+      duration: 0.3,
+    },
+  },
+};
+
 function App() {
   return (
     <Wrapper>
+      <BiggerBox>
+        <Box
+          variants={boxVariants02}
+          whileHover="hover"
+          whileTap="click"
+          drag
+          dragConstraints={{ top: -200, bottom: 200, left: -200, right: 200 }}
+          whileDrag="drag"
+        />
+      </BiggerBox>
       {/* <Box
         //mass:1 / duration:3/
         variants={myVars}
@@ -68,12 +98,12 @@ function App() {
         animate="end"
       /> */}
       {/* <motion.div></motion.div> */}
-      <Box variants={boxVariants} initial="start" animate="end">
+      {/* <Box variants={boxVariants} initial="start" animate="end">
         <Circle variants={circleVariants} />
         <Circle variants={circleVariants} />
         <Circle variants={circleVariants} />
         <Circle variants={circleVariants} />
-      </Box>
+      </Box> */}
     </Wrapper>
   );
 }
