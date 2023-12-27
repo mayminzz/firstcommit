@@ -98,5 +98,8 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   moveSlide(currentIdx + 1);
 });
+nextBtn.addEventListener("click", () => {
+  moveSlide(currentIdx + 1);
+});
 
 
