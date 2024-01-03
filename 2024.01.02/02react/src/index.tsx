@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { RecoilRoot } from "recoil";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
-// import { darkTheme } from "./theme";
+import { darkTheme } from "./theme";
 
 
 const GlobalStyle = createGlobalStyle`
