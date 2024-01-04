@@ -6,6 +6,10 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import { createGlobalStyle } from "styled-components";
 import { RecoilRoot } from "recoil";
+// 외부 API 사용하기 위한 세팅
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const client = new QueryClient();
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');html, body, div, span, applet, object, iframe,
@@ -34,7 +38,9 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-  font-family: 'Source Sans 3', sans-serif;}
+  font-family: 'Source Sans 3', sans-serif;
+	background: #000;
+	color: ${(props) => props.theme.white.darker};
 a {
   text-decoration: none;
   color: inherit;
@@ -61,9 +67,11 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <RecoilRoot>
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <App />
-    </ThemeProvider>
+    <QueryClientProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
   </RecoilRoot>
 );
