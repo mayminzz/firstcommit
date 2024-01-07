@@ -75,7 +75,7 @@ navPrev.addEventListener("click", (e) => {
     goToSlide(currentIndex - 1);
   } else {
     // 현재 인덱스 값이 처음인 경우
-    // goToSlide(slideCount - 1);
+    goToSlide(slideCount - 1);
   }
 });
 
