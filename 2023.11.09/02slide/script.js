@@ -124,4 +124,4 @@ sliderWrapper.addEventListener("mouseleave", () => {
 });
 
 // 웹 브라우저 화면이 처음 시작될 때를 정의
-// goToSlide(0);
+goToSlide(0); 
