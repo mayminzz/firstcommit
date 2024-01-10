@@ -120,7 +120,7 @@ sliderWrapper.addEventListener("mouseover", () => {
   clearInterval(timer);
 });
 sliderWrapper.addEventListener("mouseleave", () => {
-  startAutoSlide(timer);
+  // startAutoSlide(timer);
 });
 
 // 웹 브라우저 화면이 처음 시작될 때를 정의
