@@ -6,6 +6,6 @@ $(".btn li").click(function () {
   // 속성값을 가지고올거야 tab2라고 속성값이 result로 들어가는 것
   // console.log(result);
   let result = $(this).attr("data-alt");
-  $(".tabs div").removeClass("active");
+  // $(".tabs div").removeClass("active");
   $("#" + result).addClass("active");
 });
