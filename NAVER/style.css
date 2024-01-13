@@ -38,6 +38,9 @@ nav {
   display: flex;
   gap: 27px;
 }
+/* #leftnav a {
+
+} */
 
 /* Search */
 form {
@@ -125,7 +128,7 @@ main input:focus {
 }
 /* Ad section 01 */
 #adsection {
-  background-image: url("./contents\ \(1\)/ad1.jpg");
+  background-image: url(".img/ad1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
