@@ -294,6 +294,7 @@ main input:focus {
   font-size: 16.8px;
   font-weight: bold;
   position: relative;
+  color: #808080;
 }
 
 #newsstand > span::before {
@@ -520,25 +521,27 @@ main input:focus {
 }
 #medias > span:first-child,
 #medias > span:last-child {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 40px;
   border: 1px solid#b3b3be;
   text-align: center;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 #medias > span:first-child:hover {
   background-color: #f4f4f8;
   box-shadow: 0 0 10px #f4f4f8;
-  transition-duration: 0.3s;
+  transition: 0.3s;
 }
-
+#medias > span:nth-child(2) {
+  font-size: 13px;
+} 
 #medias > span:last-child:hover {
   background-color: #f4f4f8;
   box-shadow: 0 0 10px #f4f4f8;
-  transition-duration: 0.3s;
+  transition: 0.3s;
 }
 
 /* Shop Section */
@@ -547,17 +550,37 @@ main input:focus {
   height: 570px;
   border: 1px solid#e3e5e8;
   border-radius: 8px;
-  /* padding: 17px; */
   margin-bottom: 20px;
 }
 #shopmenu {
+  display: flex;
+  align-items: center;
   color: #b3b3be;
   font-size: 18px;
   padding: 17px 17px 0;
 }
-#shopmenu > span:first-child {
+#shopmenu > li {
+  padding-right: 26px;
+  position: relative;
+}
+#shopmenu > li a {
+  font-weight: 600;
+  color: #808080;
+}
+#shopmenu > li:first-child a {
   color: #000;
   font-weight: bold;
+}
+#shopmenu > li:first-child::before {
+  display: none;
+}
+#shopmenu > li::before {
+  content: "/";
+  display: inline-block;
+  color: #d3d5d7;
+  font-weight: 300;
+  position: absolute;
+  left: -13px;
 }
 #shopbanner {
   display: flex;
@@ -816,18 +839,20 @@ main input:focus {
   align-items: center;
   gap: 40px;
   width: 100%;
-  height: 57px;
+  padding: 17px 10px;
   border-top: 1px solid #e3e5e8;
 }
-
+#shopmedias > span:nth-child(2) {
+  font-size: 13px;
+}
 #shopmedias > span:first-child,
 #shopmedias > span:last-child {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border: 1px solid #b3b3be;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 36px;
 }
 #shopmedias > span:first-child:hover,
 #shopmedias > span:last-child:hover {
