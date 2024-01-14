@@ -987,7 +987,7 @@ main input:focus {
 }
 .knowledge_list .content .two::before {
   content: "";
-  background: url("./img/3-7-1.JPG") no-repeat;
+  background: url("./img/3-7-1.jpg") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -1000,7 +1000,7 @@ main input:focus {
 }
 .knowledge_list .content .three::before {
   content: "";
-  background: url("./img/3-5-1.JPG") no-repeat;
+  background: url("./img/3-5-1.jpg") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -1024,7 +1024,7 @@ main input:focus {
 }
 .knowledge_list .content .five::before {
   content: "";
-  background: url("./img/5-1-1.PNG") no-repeat;
+  background: url("./img/5-1-1.png") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
