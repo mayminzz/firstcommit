@@ -1324,6 +1324,9 @@ main input:focus {
 .temperature_contents {
   display: flex;
   padding-left: 20px;
+  background: url(./img/wheather_chart.png) center center no-repeat;
+  background-size: 190px 53px;
+  background-position: right 32px ;
 }
 .temperature_content {
   width: 38px;
@@ -1334,6 +1337,22 @@ main input:focus {
   align-items: center;
   font-size: 18px;
   color: #6e6e6e;
+
+}
+.temperature_content:nth-child(1) h6  {
+margin-top: 10px;
+}
+.temperature_content:nth-child(2) h6  {
+margin-top: 20px;
+}
+.temperature_content:nth-child(3) h6  {
+margin-top: 30px;
+}
+.temperature_content:nth-child(4) h6  {
+margin-top: 40px;
+}
+.temperature_content:nth-child(5) h6  {
+margin-top: 40px;
 }
 .temperature_content h6 {
   font-weight: 540;
