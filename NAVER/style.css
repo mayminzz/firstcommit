@@ -26,33 +26,77 @@ header {
   display: flex;
   flex-direction: column;
 }
-nav {
+header > nav {
+  width: 100%;
+  height: 46px;
   display: flex;
   /* nav아이콘이 한줄로 만들어졌어 */
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   font-size: 28px;
+  margin-top: 20px;
 }
 #leftnav,
 #rightnav {
   display: flex;
-  gap: 27px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-/* #leftnav a {
-
-} */
+#leftnav span,
+#rightnav span {
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  line-height: 46px;
+}
+#leftnav span:first-child a {
+  display: inline-block;
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 26px;
+  height: 26px;
+  background-size: 433px 412px;
+  background-position: -81px -318px;
+}
+#leftnav span:last-child a {
+  display: inline-block;
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 33px;
+  height: 33px;
+  background-size: 433px 412px;
+  background-position: -293px -172px;
+  margin-top: 5px;
+}
+#rightnav span:first-child a {
+  display: inline-block;
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 26px;
+  height: 26px;
+  background-size: 433px 412px;
+  background-position: -189px -320px;
+  margin-top: 2px;
+}
+#rightnav span:last-child a {
+  display: inline-block;
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 26px;
+  height: 26px;
+  background-size: 433px 412px;
+  background-position: -136px -320px;
+}
 
 /* Search */
 form {
-  width: 809px;
+  width: 710px;
   height: 60px;
-  margin: 0 auto 26px;
+  margin: 0 auto 15px;
   position: relative;
 }
 main input {
   display: block;
   margin: auto;
-  width: 809px;
+  width: 708px;
   height: 60px;
   border: 1px solid#03c75a;
   border-radius: 60px;
@@ -69,10 +113,10 @@ main input:focus {
 
 #character {
   position: absolute;
-  top: -1px;
+  top: 3px;
   left: 50%;
   transform: translateX(-50%);
-  width: 809px;
+  width: 670px;
   height: 60px;
   display: flex;
   justify-content: space-around;
@@ -88,13 +132,21 @@ main input:focus {
   font-weight: bold;
   font-size: 30px;
 }
+#character > .naver img {
+  width: 24px;
+  height: 24px;
+}
+#character > .magnifying img {
+  width: 25px;
+  height: 25px;
+}
 
 /* Card */
 #icon {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
 }
 .boxitems {
   display: flex;
@@ -107,16 +159,100 @@ main input:focus {
   justify-content: center;
   /* 수직정렬 */
   align-items: center;
-  width: 55px;
-  height: 55px;
+  width: 48px;
+  height: 48px;
   border: 1px solid#f7f7f8;
   border-radius: 16px;
-  box-shadow: 0 0 10px #b3b3be;
+  box-shadow: 0 0 2px #b8b8bd;
   color: #03c75a;
   margin-bottom: 10px;
+  overflow: hidden;
 }
-.boxitem > span:first-child {
-  font-size: 25px;
+.boxitem > span {
+  font-size: 15px;
+}
+.boxitem:hover {
+  box-shadow: 0 0 2px #b8b8bd, 0 3px 4px #e0e0e0;
+}
+.boxitems:first-child .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -248px -88px;
+}
+.boxitems:nth-child(2) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -250px 0px;
+}
+.boxitems:nth-child(3) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -201px -94px;
+}
+.boxitems:nth-child(4) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -90px -203px;
+}
+.boxitems:nth-child(5) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: 0px -203px;
+}
+.boxitems:nth-child(6) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -180px -202px;
+}
+.boxitems:nth-child(7) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -45px -202px;
+}
+.boxitems:nth-child(8) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -201px 0px;
+}
+.boxitems:nth-child(9) .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -224px -202px;
+}
+.boxitems:last-child .boxitem > span {
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 44px;
+  height: 44px;
+  background-size: 433px 412px;
+  background-position: -249px -130px;
+}
+.boxitems:last-child .boxitem:hover > span {
+  background-image: url(./img/naver_main.png) center center/cover no-repeat;
+  width: 22px;
+  height: 6px;
+  background-size: 433px 412px;
+  background-position: -110px -195px;
+}
+.boxitems:last-child .boxitem:hover {
+  background: #f8f8f8;
 }
 
 /* Main Contents */
@@ -128,12 +264,12 @@ main input:focus {
 }
 /* Ad section 01 */
 #adsection {
-  background-image: url(".img/ad1.jpg");
+  background-image: url("./img/ad1.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 833px;
-  height: 115px;
+  height: 130px;
   border: 1px solid#e3e5e8;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -153,21 +289,53 @@ main input:focus {
   color: #b3b3be;
   margin-bottom: 18px;
 }
+#newsstand > span {
+  margin: 8px;
+  font-size: 16.8px;
+  font-weight: bold;
+  position: relative;
+}
+
+#newsstand > span::before {
+  content: "/";
+  display: inline-block;
+  color: #d3d5d7;
+  font-weight: 300;
+  font-size: 18px;
+  position: absolute;
+  left: -12px;
+}
+#newsstand > span:first-child::before {
+  display: none;
+}
+#newsstand > span:nth-child(2)::before {
+  content: "•";
+  display: inline-block;
+  position: absolute;
+  left: -17px;
+}
 #newsstand > span:nth-child(2) {
   font-weight: bold;
   color: #000;
 }
 .livebox {
-  width: 100px;
-  height: 100px;
   background-color: #f00;
-  padding: 2px 10px;
+  padding: 2px 5px 1px 4px;
   color: #fff;
   border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
 }
-.fa-wifi {
-  width: 30px;
+.livebox::before {
+  content: "";
+  display: inline-block;
+  background: url(./img/naver_main.png)center center cover/no-repeat;
+  background-size: 433px 412px;
+  background-position: -189px -189px;
+  width:14px;
+  height: 10px;
 }
+
 /* News Title */
 #newstitle {
   width: 792px;
@@ -202,45 +370,45 @@ main input:focus {
   gap: 10px;
 }
 #newsimg1 > .newscontents .newscontent:nth-child(1) > .newscontent-img {
-  background-image: url("./contents\ \(1\)/newscontents1.jpg");
+  background-image: url("./img/newscontents1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 155px;
   height: 105px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 #newsimg1 > .newscontents .newscontent:nth-child(2) > .newscontent-img {
-  background-image: url("./contents\ \(1\)/newscontents2.jpg");
+  background-image: url("./img/newscontents2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   width: 155px;
   height: 105px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #newsimg2 > .newscontents .newscontent:nth-child(1) > .newscontent-img {
-  background-image: url("./contents\ \(1\)/newscontents3.jpg");
+  background-image: url("./img/newscontents3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   width: 155px;
   height: 105px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #newsimg2 > .newscontents .newscontent:nth-child(2) > .newscontent-img {
-  background-image: url("./contents\ \(1\)/newscontents4.jpg");
+  background-image: url("./img/newscontents4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   width: 155px;
   height: 105px;
   border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .newscontent-items {
   display: flex;
@@ -276,7 +444,7 @@ main input:focus {
   border-radius: 50%;
   text-align: center;
   padding-top: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #newsimg1
   > .newscontents
@@ -293,7 +461,7 @@ main input:focus {
   border-radius: 50%;
   text-align: center;
   padding-top: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #newsimg2
   > .newscontents
@@ -310,7 +478,7 @@ main input:focus {
   border-radius: 50%;
   text-align: center;
   padding-top: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #newsimg2
   > .newscontents
@@ -327,7 +495,7 @@ main input:focus {
   border-radius: 50%;
   text-align: center;
   padding-top: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .newscontent-items > .top > .channel > span:nth-child(2) {
   font-weight: bold;
@@ -409,8 +577,7 @@ main input:focus {
 }
 #shopbox > span {
   font-size: 16px;
-  
-}  
+}
 #shopbox > span > span {
   color: #9858f5;
 }
@@ -435,9 +602,9 @@ main input:focus {
 #shopbox_btn > span > .icon a i {
   margin-left: -4px;
 }
-#shopbox_btn > span > span { 
+#shopbox_btn > span > span {
   color: #606060;
-} 
+}
 #shopbox_btn > span > .icon > a i.fa-chevron-left {
   width: 30px;
   height: 30px;
@@ -475,7 +642,6 @@ main input:focus {
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 20px;
-
 }
 #shopimgs {
   width: 530px;
@@ -494,114 +660,114 @@ main input:focus {
 }
 
 #shopimg1 > .shopcontents > .shopcontent:nth-of-type(1) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/1.JPG");
+  background: url("./img/1.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg1 > .shopcontents > .shopcontent:nth-of-type(2) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/2.JPG");
+  background: url("./img/2.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg1 > .shopcontents > .shopcontent:nth-of-type(3) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/3.JPG");
+  background: url("./img/3.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg1 > .shopcontents > .shopcontent:nth-of-type(4) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/4.JPG");
+  background: url("./img/4.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg1 > .shopcontents > .shopcontent:nth-of-type(5) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/5.JPG");
+  background: url("./img/5.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg2 > .shopcontents > .shopcontent:nth-of-type(1) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/6.JPG");
+  background: url("./img/6.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg2 > .shopcontents > .shopcontent:nth-of-type(2) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/7.JPG");
+  background: url("./img/7.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg2 > .shopcontents > .shopcontent:nth-of-type(3) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/8.JPG");
+  background: url("./img/8.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg2 > .shopcontents > .shopcontent:nth-of-type(4) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/9.JPG");
+  background: url("./img/9.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg2 > .shopcontents > .shopcontent:nth-of-type(5) > .shopcontent-img {
-  width:98px;
+  width: 98px;
   height: 126px;
-  background: url("./contents\ \(1\)/10.JPG");
+  background: url("./img/10.JPG");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 6px;
   margin-bottom: 7px;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 #shopimg1 > .shopcontents > .shopcontent > .shopcontent-items {
   font-size: 13.5px;
@@ -627,7 +793,6 @@ main input:focus {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 #shopaside1 li a {
   display: inline-block;
@@ -641,7 +806,8 @@ main input:focus {
   font-size: 13px;
 }
 
-#shopaside1 > ul > li:nth-child(7) a, #shopaside1 > ul > li:last-child a {
+#shopaside1 > ul > li:nth-child(7) a,
+#shopaside1 > ul > li:last-child a {
   font-weight: bold;
   color: #000;
 }
@@ -654,7 +820,7 @@ main input:focus {
   color: #404040;
   border-radius: 6px;
   padding: 12px 0;
-  margin: 0 0 7px 14px; 
+  margin: 0 0 7px 14px;
 }
 #shop_icon {
   display: flex;
@@ -662,7 +828,7 @@ main input:focus {
   text-align: center;
 }
 /* #shop_icon .aside_items .aside_item span a span {
-  background: url("./contents\ \(1\)/naver_miniicon.png") no-repeat;
+  background: url("./img/naver_miniicon.png") no-repeat;
   background-size: 134px 121px;
   background-position: -35px 0;
   display: block;
@@ -703,7 +869,7 @@ main input:focus {
   letter-spacing: -1px;
 }
 /* shopmedia */
-#shopmedias  {
+#shopmedias {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -717,11 +883,10 @@ main input:focus {
 #shopmedias > span:last-child {
   width: 40px;
   height: 40px;
-  border:1px solid #b3b3be;
+  border: 1px solid #b3b3be;
   border-radius: 50%;
   text-align: center;
   line-height: 36px;
-
 }
 #shopmedias > span:first-child:hover,
 #shopmedias > span:last-child:hover {
@@ -745,13 +910,12 @@ main input:focus {
   height: 51px;
   padding: 15px;
 }
-.knowledge_menu ul  {
+.knowledge_menu ul {
   display: flex;
   align-items: center;
   gap: 10px;
-
 }
-.knowledge_menu ul li a, 
+.knowledge_menu ul li a,
 .knowledge_menu ul li span {
   font-size: 17px;
   color: #08080880;
@@ -785,12 +949,12 @@ main input:focus {
   width: 250px;
   height: 204px;
 }
-.knowledge_row figure img{
+.knowledge_row figure img {
   width: 250px;
   height: 145px;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_row figure figcaption {
   display: flex;
@@ -807,7 +971,7 @@ main input:focus {
 .knowledge_contents {
   width: 790px;
   height: 490px;
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   margin: 0 17px;
   margin-bottom: 15px;
@@ -823,8 +987,8 @@ main input:focus {
   width: 154px;
   height: 100px;
   border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .content {
   margin-left: 10px;
@@ -833,7 +997,7 @@ main input:focus {
   width: 211px;
   color: #101010;
   font-size: 15px;
-  font-weight: normal; 
+  font-weight: normal;
 }
 .knowledge_list .content span {
   font-size: 14px;
@@ -844,7 +1008,7 @@ main input:focus {
 }
 .knowledge_list .content .one::before {
   content: "";
-  background: url("./contents (1)/3-3.JPG") no-repeat;
+  background: url("./img/3-3.JPG") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -852,12 +1016,12 @@ main input:focus {
   display: inline-block;
   border-radius: 50%;
   margin-right: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_list .content .two::before {
   content: "";
-  background: url("./contents (1)/3-7-1.JPG") no-repeat;
+  background: url("./img/3-7-1.JPG") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -865,47 +1029,47 @@ main input:focus {
   display: inline-block;
   border-radius: 50%;
   margin-right: 3px;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_list .content .three::before {
   content: "";
-  background: url("./contents (1)/3-5-1.JPG") no-repeat;
+  background: url("./img/3-5-1.JPG") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
   background-position: center;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_list .content .four::before {
   content: "";
-  background: url("./contents (1)/3-4-1.jpg") no-repeat;
+  background: url("./img/3-4-1.jpg") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
   background-position: center;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_list .content .five::before {
   content: "";
-  background: url("./contents (1)/5-1-1.PNG") no-repeat;
+  background: url("./img/5-1-1.PNG") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
   background-position: center;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, .06);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
 .knowledge_list .content .six em {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: block;
   background-size: 435px 414px;
   background-position: -61px -390px;
@@ -915,18 +1079,18 @@ main input:focus {
 }
 .knowledge_list .content .seven::before {
   content: "";
-  background: url("./contents (1)/5-4-1jpg.jpg") no-repeat;
+  background: url("./img/5-4-1jpg.jpg") no-repeat;
   width: 20px;
   height: 20px;
   background-size: cover;
   background-position: center;
   display: inline-block;
   border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, .06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   padding-right: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .06);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);
 }
-.view_more{
+.view_more {
   width: 831px;
   height: 56px;
   border-top: 1px solid #e3e5e8;
@@ -935,7 +1099,7 @@ main input:focus {
   left: 0;
   font-size: 15px;
 }
-.view_more h5{
+.view_more h5 {
   font-size: 16px;
   text-align: center;
   line-height: 56px;
@@ -955,6 +1119,10 @@ main input:focus {
   text-align: center;
   margin-bottom: 18px;
 }
+#login > span:first-child {
+  font-size: 14.7px;
+  font-weight: 500;
+}
 #login > span:nth-child(2) {
   /* 인라인은 너비 높이 못받음 초록이 만들어줄라고 */
   display: inline-block;
@@ -963,24 +1131,48 @@ main input:focus {
   background-color: #03c75a;
   color: #fff;
   border-radius: 4px;
-  line-height: 54px;
-  font-size: 21px;
-  font-weight: bold;
+  line-height: 58px;
+  font-size: 15px;
 }
 #login > span:nth-child(2) > span {
-  font-size: 16px;
-  font-weight: 300;
-  margin-left: 10px;
+  display: inline-block;
+  background: url(./img/naver_main.png) center center/cover no-repeat;
+  background-size: 433px 412px;
+  background-position: -120px -161px;
+  width: 72px;
+  height: 15px;
+  margin: 3px 8px 0 0;
+}
+#login > div > span {
+  color: #606060;
+  font-size: 13.6px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+}
+#login > div > span:hover {
+  text-decoration: underline;
+}
+#login > div > span::before {
+  content: "|";
+  position: absolute;
+  left: -13px;
+  color: #606060;
+}
+#login > div > span:first-child::before {
+  display: none;
 }
 /* Ad section 02 */
 #sidead {
-  background: url("./contents\ \(1\)/ad2.jpg");
+  background: url("./img/aside_ad.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 420px;
   height: 240px;
   border-radius: 8px;
   margin-bottom: 18px;
+  border: 1px solid #e3e5e8;
 }
 .short_box {
   width: 420px;
@@ -1014,6 +1206,7 @@ main input:focus {
   letter-spacing: -1px;
 }
 
+/* weather */
 #wheather_aside {
   width: 420px;
   height: 236px;
@@ -1054,7 +1247,7 @@ main input:focus {
 #wheather_top .wheather .temp_icon::before {
   content: "";
   display: inline-block;
-  background: url("./contents (1)/naver_main.png")no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   background-size: 435px 423px;
   background-position: -390px -381px;
   width: 12px;
@@ -1071,7 +1264,7 @@ main input:focus {
   background: #fff;
   margin-right: 5px;
   text-align: center;
-  padding:1.5px;
+  padding: 1.5px;
 }
 #wheather_top .address {
   font-size: 14px;
@@ -1092,7 +1285,7 @@ main input:focus {
   display: flex;
 }
 .left_top .big_icon {
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   width: 86px;
   height: 86px;
   background-size: 641px 587px;
@@ -1110,7 +1303,7 @@ main input:focus {
   font-size: 20px;
   font-style: normal;
   position: absolute;
-  top:2px; 
+  top: 2px;
 }
 .temp_big_temperature .sunny {
   font-weight: bold;
@@ -1122,7 +1315,7 @@ main input:focus {
   position: relative;
   margin-top: 10px;
 }
-.small_temperature span{
+.small_temperature span {
   font-size: 14px;
 }
 .small_temperature em {
@@ -1142,7 +1335,6 @@ main input:focus {
 .air_condition {
   display: flex;
   justify-content: center;
-
 }
 .air_condition h6 {
   font-size: 14px;
@@ -1173,7 +1365,7 @@ main input:focus {
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  color: #6e6e6e; 
+  color: #6e6e6e;
 }
 .temperature_content h6 {
   font-weight: 540;
@@ -1190,7 +1382,7 @@ main input:focus {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   background-size: 641px 587px;
   background-position: -0px -522px;
 }
@@ -1198,7 +1390,7 @@ main input:focus {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   background-size: 641px 587px;
   background-position: -132px -522px;
 }
@@ -1206,7 +1398,7 @@ main input:focus {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   background-size: 641px 587px;
   background-position: -99px -522px;
 }
@@ -1214,15 +1406,15 @@ main input:focus {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   background-size: 641px 587px;
-  background-position: -33px -522px
+  background-position: -33px -522px;
 }
 .temperature_content .small_icon5 {
   display: block;
   width: 32px;
   height: 32px;
-  background: url("./contents (1)/naver_weather.png") no-repeat;
+  background: url("./img/naver_weather.png") no-repeat;
   background-size: 641px 587px;
   background-position: -33px -522px;
 }
@@ -1237,23 +1429,23 @@ main input:focus {
   width: 420px;
   height: 236px;
   border: 1px solid #e3e5e8;
-  padding: 1px 15px;
+  padding: 15px;
   border-radius: 8px;
   margin-bottom: 18px;
 }
-#chart_top  {
+#chart_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
   border-bottom: 1px solid #e3e5e8;
 }
-#chart_top .chart_left span:first-child  {
+#chart_top .chart_left span:first-child {
   font-size: 17px;
   font-weight: bold;
 }
 #chart_top .chart_left .info_icon {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   background-size: 435px 414px;
   background-position: -410px -70px;
   width: 14px;
@@ -1269,28 +1461,27 @@ main input:focus {
   font-size: 15px;
   color: #606060;
   margin-top: 10px;
-} 
+}
 #chart_top .chart_right span:nth-child(2) {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   background-size: 435px 414px;
   background-position: -158px -371px;
   width: 16px;
   height: 17px;
   display: inline-block;
   color: #606060;
-  margin-top: 10px;
+  margin-top: 5px;
 }
-.chart_main_left  {
+.chart_main_left {
   width: 180px;
   height: 155px;
-
 }
 .chart_main_left h5 {
   font-weight: normal;
   font-size: 15px;
 }
 .chart_main_left h2 {
-  font-size:25px;
+  font-size: 25px;
   font-weight: normal;
   margin-top: 2px;
 }
@@ -1301,8 +1492,8 @@ main input:focus {
 }
 .chart_main_left span.red::before {
   content: "";
-  background: url("./contents (1)/naver_main.png") no-repeat;
-  background-size: 435px 414px ;
+  background: url("./img/naver_main.png") no-repeat;
+  background-size: 435px 414px;
   background-position: -426px -177px;
   width: 10px;
   height: 10px;
@@ -1310,7 +1501,7 @@ main input:focus {
   margin-right: 3px;
 }
 .chart_main_left .chart_img {
-  background: url("./contents (1)/chart..JPG") no-repeat;
+  background: url("./img/chart..JPG") no-repeat;
   background-size: cover;
   background-position: center;
   width: 179px;
@@ -1338,7 +1529,7 @@ main input:focus {
   align-items: center;
 }
 .chart_main_right .chart_arrow {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: block;
   background-size: 435px 414px;
   background-position: -61px -394px;
@@ -1358,20 +1549,21 @@ main input:focus {
 .chart_contents li:last-child a {
   color: #606060;
 }
-.chart_contents  ul li:nth-child(2) span::before, .chart_contents  ul li:nth-child(3) span::before {
+.chart_contents ul li:nth-child(2) span::before,
+.chart_contents ul li:nth-child(3) span::before {
   content: "";
-  background: url("./contents (1)/naver_main.png");
-  background-size: 435px 414px ;
+  background: url("./img/naver_main.png");
+  background-size: 435px 414px;
   background-position: -426px -176px;
   width: 10px;
   height: 10px;
   display: inline-block;
   margin-right: 2px;
 }
-.chart_contents  ul li:first-child span::before {
+.chart_contents ul li:first-child span::before {
   content: "";
-  background: url("./contents (1)/naver_main.png");
-  background-size: 435px 414px ;
+  background: url("./img/naver_main.png");
+  background-size: 435px 414px;
   background-position: -426px -169px;
   width: 10px;
   height: 9px;
@@ -1428,14 +1620,14 @@ main input:focus {
   position: absolute;
   bottom: 15px;
   text-decoration-line: underline;
-  color:#606060;
+  color: #606060;
 }
 section.papago {
-  padding:18px 18px 12px;
+  padding: 18px 18px 12px;
   position: relative;
 }
 .square_left .papago_text {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   background-size: 435px 414px;
   background-position: -164px -180px;
   width: 76px;
@@ -1443,7 +1635,7 @@ section.papago {
   display: block;
 }
 .square_left .papago_icon {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   background-size: 435px 414px;
   width: 78px;
   height: 68px;
@@ -1455,17 +1647,17 @@ section.papago h4 {
   display: block;
   width: 120px;
   height: 40px;
-  border: 1px solid rgba(0, 0, 0, .02);
+  border: 1px solid rgba(0, 0, 0, 0.02);
   background: #00a2ff;
   border-radius: 20px;
   color: #fff;
   text-align: center;
   line-height: 40px;
-  position:absolute;
+  position: absolute;
   bottom: 10px;
   left: 33px;
   font-size: 14px;
-  box-shadow: rgba(0, 0, 0,.04);
+  box-shadow: rgba(0, 0, 0, 0.04);
 }
 section.papago h4:hover {
   background: #1280e2;
@@ -1502,7 +1694,7 @@ section.memo {
 .square_right span {
   width: 100%;
   height: 46px;
-  border-bottom: 1px solid rgba(0, 0, 0, .06);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 section.dictionary {
   padding: 0;
@@ -1590,7 +1782,7 @@ section.dictionary {
 }
 .dictionary_box .dictionary_icon:hover::after {
   content: "";
-  background: url("./contents (1)/naver_main.png"); 
+  background: url("./img/naver_main.png");
   display: block;
   width: 20px;
   height: 20px;
@@ -1605,7 +1797,7 @@ section.dictionary {
   width: 24px;
   height: 24px;
   display: block;
-  background: url("./contents (1)/naver_main.png"); 
+  background: url("./img/naver_main.png");
   background-size: 435px 414px;
   background-position: -50px -349px;
 }
@@ -1627,7 +1819,7 @@ section.dictionary {
 }
 .widget_clip h3::before {
   content: "";
-  background: url("./contents (1)/naver_main.png"); 
+  background: url("./img/naver_main.png");
   display: inline-block;
   width: 54px;
   height: 22px;
@@ -1649,12 +1841,12 @@ section.dictionary {
 .clip_desc {
   width: 108px;
   height: 50px;
-    /* 정해놓은 너비값을 넘긴경우 버리는 역할을 하는 요소 */
+  /* 정해놓은 너비값을 넘긴경우 버리는 역할을 하는 요소 */
   white-space: nowrap;
   /*버려진 컨텐프를 보이지 않게 하는 역할*/
   overflow: hidden;
   /*버려진 컨텐츠 요소를 말줄임표 형식으로 표기해주는 역할*/
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
 .clip_desc span {
   font-size: 14px;
@@ -1668,7 +1860,7 @@ section.dictionary {
   display: flex;
 }
 .mobile .img {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: inline-block;
   background-size: 435px 414px;
   background-position: -149px -348px;
@@ -1681,7 +1873,7 @@ section.dictionary {
   padding: 10px;
 }
 .mobile span {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: inline-block;
   background-size: 435px 414px;
   background-position: -61px -394px;
@@ -1707,13 +1899,12 @@ section.dictionary {
   grid-gap: 7px;
 }
 .whale_img {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: block;
   background-size: 435px 414px;
   background-position: -201px -140px;
 }
 .whale h5 {
-
   color: #101010;
   font-size: 14px;
 }
@@ -1775,7 +1966,7 @@ footer {
 .footer_notice {
   width: 1280px;
   height: 60px;
-  margin: 0 auto;  
+  margin: 0 auto;
   padding: 21px 0;
   display: flex;
   justify-content: space-between;
@@ -1790,7 +1981,7 @@ footer {
   text-decoration: underline;
 }
 .footer_notice span {
-  background: url("./contents (1)/naver_main.png") no-repeat;
+  background: url("./img/naver_main.png") no-repeat;
   display: inline-block;
   width: 8px;
   height: 12px;
