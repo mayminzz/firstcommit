@@ -116,7 +116,7 @@ const startAutoSlide = () => {
 startAutoSlide();
 
 // 마우스 오버 및 아웃 시, 슬라이드 액션 이벤트
-// sliderWrapper.addEventListener("mouseover", () => {
+sliderWrapper.addEventListener("mouseover", () => {
   clearInterval(timer);
 });
 sliderWrapper.addEventListener("mouseleave", () => {
