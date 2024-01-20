@@ -111,7 +111,7 @@ const startAutoSlide = () => {
   timer = setInterval(() => {
     let nextIdx = (currentIndex + 1) % slideCount;
     goToSlide(nextIdx);
-  }, 4000);
+  // }, 4000);
 };
 startAutoSlide();
 
