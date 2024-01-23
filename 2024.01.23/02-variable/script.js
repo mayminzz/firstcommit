@@ -51,3 +51,9 @@ console.log(typeof bollean);
 console.log(typeof obj);
 console.log(typeof arr);
 console.log(typeof fnc);
+
+const name = "홍길동";
+const classroom = 201;
+
+console.log(name + "님 " + classroom + "호 강의실로 입장하세요");
+console.log(`${name}님 ${classroom}호 강의실로 입장하세요.`);
