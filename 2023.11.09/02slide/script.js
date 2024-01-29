@@ -112,7 +112,7 @@ const startAutoSlide = () => {
     let nextIdx = (currentIndex + 1) % slideCount;
     goToSlide(nextIdx);
   }, 4000);
-// };
+};
 startAutoSlide();
 
 // 마우스 오버 및 아웃 시, 슬라이드 액션 이벤트
