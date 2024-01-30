@@ -33,11 +33,15 @@ button:hover {
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+.container.show {
+  display: flex;
+}
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -45,6 +49,7 @@ button:hover {
   align-items: center;
   gap: 15px;
   width: 80%;
+  background: #fff;
   border: 1px solid lightgray;
   border-radius: 7px;
   box-shadow: 3px 5px 15px rgba(0,0,0,0.2);
