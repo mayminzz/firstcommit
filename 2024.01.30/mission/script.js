@@ -11,16 +11,31 @@ const number = Number(prompt("숫자를 입력해주세요!"));
 // isNan() : 매개변수에 들어온 값이 숫자인지, 아닌지를 논리적으로 판단해주는 함수입니다.
 //  매개변수가 숫자이면, false 반환 || 매개변수가 숫자가 아니면, true를 반환
 
+// const isPositive = (n) => {
+//   if (n > 0) {
+//     alert(`${n}은 양수입니다.`);
+//   } else if (n < 0) {
+//     alert(`${n}은 음수입니다.`);
+//   } else {
+//     alert(`입력하신 숫자는 0입니다.`);
+//   }
+// };
+
+// if (!isNaN(number)) {
+//   isPositive(number);
+// }
+
 const isPositive = (n) => {
   if (n > 0) {
     alert(`${n}은 양수입니다.`);
   } else if (n < 0) {
     alert(`${n}은 음수입니다.`);
   } else {
-    alert(`입력하신 숫자는 0입니다.`);
+    alert(`${n}은 0입니다.`);
   }
 };
 
+// 만약에 숫자가 아닌게 아니라면
 if (!isNaN(number)) {
   isPositive(number);
 }
