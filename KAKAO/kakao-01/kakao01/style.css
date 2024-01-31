@@ -51,7 +51,7 @@ aside {
   background: #ff5b49;
   color: #fff;
   border-radius: 25px;
-  padding: 0 5px;
+  padding: 3px 5px;
   font-style: normal;
   text-align: center;
   font-size: 13px;
@@ -152,7 +152,7 @@ header {
 .right em {
   display: inline-block;
   width: auto;
-  padding:0 5px;
+  padding:3px 5px;
   height: 20px;
   background: #ff5b49;
   color: #fff;
