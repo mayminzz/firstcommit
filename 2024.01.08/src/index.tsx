@@ -1,9 +1,16 @@
 import React from "react";
-import "./App.css";
-import { createGlobalStyle } from "styled-components";
-import TodoList from "./components/TodoList";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { RecoilRoot } from "recoil";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const client = new QueryClient();
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400&display=swap');
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,21 +31,21 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+  font-family: 'Source Sans 3', sans-serif;
 	line-height: 1;
+	background: #000;
+	color: ${(props) => props.theme.white.darker}
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
-* {
-  box-sizing: border-box;
-}
-ol, ul, li {
+ol, ul {
 	list-style: none;
 }
 blockquote, q {
@@ -55,14 +62,16 @@ table {
 }
 `;
 
-
-function App() {
-  return (
-    <>
-      <GlobalStyle />
-      <TodoList/>
-    </>
-  );
-}
-
-export default App;
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <RecoilRoot>
+    <QueryClientProvider client={client}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
+  </RecoilRoot>
+);

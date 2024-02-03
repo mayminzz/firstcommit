@@ -7,7 +7,7 @@ const initialState = {
 const authenticateReducer = (state = initialState, action) => {
   const { type, payload } = action;
   switch (type) {
-    case "LOGIN _SUCCESS":
+    case "LOGIN_SUCCESS":
       console.log("login_seccess");
       return {
         ...state,

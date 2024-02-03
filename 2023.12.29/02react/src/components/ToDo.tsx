@@ -1,75 +1,73 @@
 import React from "react";
-import { IToDo, toDoState, Categories } from "./Atoms";
 import { useSetRecoilState } from "recoil";
+import { IToDo, toDoState, Categories } from "./Atoms";
+import styled from "styled-components";
 
-// [
-//   {
-//       "id": 1703816296437,
-//       "text": "5",
-//       "category": "TO_DO"
-//   },
-//   {
-//       "id": 1703816295707,
-//       "text": "4",
-//       "category": "TO_DO"
-//   },
-//   {
-//       "id": 1703816295416,
-//       "text": "3",
-//       "category": "TO_DO"
-//   },
-//   {
-//       "id": 1703816295105,
-//       "text": "2",
-//       "category": "TO_DO"
-//   },
-//   {
-//       "id": 1703816294694,
-//       "text": "1",
-//       "category": "TO_DO"
-//   }
-// ]
+const Li = styled.li`
+  width: 100%;
+  padding: 20px 0;
+  border-bottom: 1px solid #000;
+  span {
+    display: inline-block;
+    margin-top: 7px;
+  }
+`;
 
-const ToDo = ({ id, text, category }: IToDo) => {
-  const SetToDos = useSetRecoilState(toDoState);
-  //리액트 안에 마우스 이벤트 요소 차입 설정
+const Button = styled.button`
+  float: right;
+  margin-right: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  &:hover {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000;
+  }
+`;
+
+const ToDo = ({ text, category, id }: IToDo) => {
+  const setToDos = useSetRecoilState(toDoState);
   const onClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log("I wana go", event.currentTarget.name);
+    console.log("I wanna go ", event.currentTarget.name);
     const {
       currentTarget: { name },
     } = event;
-    SetToDos((oldToDos) => {
-      // 클릭한 요소에 대한 인덱스값 찾아오기
-      const TargetIndex = oldToDos.findIndex((toDo) => toDo.id === id);
-      const oldToDo = oldToDos[TargetIndex];
+    setToDos((oldToDos) => {
+      const targetIndex = oldToDos.findIndex((toDo) => toDo.id === id);
       const newToDo = { id, text, category: name as any };
-      console.log("replace To Do index", TargetIndex, "with", newToDo);
+      console.log("replace To Do in index", targetIndex, "with", newToDo);
       return [
-        ...oldToDos.slice(0, TargetIndex),
+        ...oldToDos.slice(0, targetIndex),
         newToDo,
-        ...oldToDos.slice(TargetIndex + 1),
+        ...oldToDos.slice(targetIndex + 1),
       ];
     });
   };
   return (
-    <li>
+    <Li>
       <span>{text}</span>
       {category !== Categories.DOING && (
-        <button name="DOING" onClick={onClick}>
+        <Button name={Categories.DOING} onClick={onClick}>
           Doing
-        </button>
+        </Button>
       )}
       {category !== Categories.TO_DO && (
-        <button name="TODO" onClick={onClick}>
+        <Button name={Categories.TO_DO} onClick={onClick}>
           ToDo
-        </button>
+        </Button>
       )}
       {category !== Categories.DONE && (
-        <button name="DONE" onClick={onClick}>
+        <Button name={Categories.DONE} onClick={onClick}>
           Done
-        </button>
+        </Button>
       )}
-    </li>
+    </Li>
   );
 };
 
