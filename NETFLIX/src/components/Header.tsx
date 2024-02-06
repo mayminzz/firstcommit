@@ -110,7 +110,6 @@ const Header = () => {
   };
   const [searchOpen, setSearchOpen] = useState(false);
   const homeMatch = useMatch("/");
-  const tvMatch = useMatch("/tv");
   const { scrollY } = useScroll();
   const navAnimation = useAnimation();
   useEffect(() => {
@@ -145,9 +144,6 @@ const Header = () => {
         <Items>
           <Item>
             <Link to="/">Home {homeMatch && <Circle />}</Link>
-          </Item>
-          <Item>
-            <Link to="/tv">TV Shows {tvMatch && <Circle />}</Link>
           </Item>
         </Items>
       </Col>

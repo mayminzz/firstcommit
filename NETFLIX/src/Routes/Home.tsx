@@ -388,7 +388,6 @@ const Home = () => {
               </Row>
             </AnimatePresence>
           </Slider3>
-
           <AnimatePresence>
             {bigMovieMatch ? (
               <>
