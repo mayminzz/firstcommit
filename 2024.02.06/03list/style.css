@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+#container {
+  width: 600px;
+  margin: 50px auto;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+#bookInfo {
+  margin-top: 40px;
+}
+#bookInfo li {
+  font: normal 1rem/3 "arial";
+}
+#bookInfo label {
+  display: inline-block;
+  width: 50px;
+}
+#bookInfo input {
+  display: inline-block;
+  width: 450px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 1rem;
+}
+#bookInfo input:focus {
+  outline: none;
+}
+
+#reset, #save {
+  display: inline-block;
+  width: 150px;
+  margin: 20px 55px;
+  padding: 10px 15px;
+  border: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  transition: 0.3s;
+}
+#reset:hover, #save:hover {
+  background: #000;
+  color: #fff;
+}
+#bookList {
+  width: 500px;
+  margin-top: 60px;
+  position: relative;
+}
+#bookList li {
+  padding: 10px;
+  border-bottom: 1px solid #000;
+  position: relative;
+}
+#bookList li .delBtn {
+  position: absolute;
+  cursor: pointer;
+  top: 7px;
+  right: 10px;
+  padding: 5px 10px;
+  background: crimson;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+#bookList li .delBtn:hover {
+  background: #f00;
+}

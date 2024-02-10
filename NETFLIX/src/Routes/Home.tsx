@@ -184,25 +184,24 @@ const Home = () => {
   const [leaving, setLeaving] = useState(false);
   const { data: nowPlayingData, isLoading: nowPlayingIsLoading } =
     useQuery<IGetMoviesResult>(["moives", "nowPlaying"], nowPlayingGetMovies);
-  const { data: popularData, isLoading: popularIsLoading } =
-    useQuery<IGetMoviesResult>(["moives", "popular"], popularGetMovies);
-  const { data: top_ratedData, isLoading: top_ratedLoading } =
-    useQuery<IGetMoviesResult>(["moives", "top_rated"], top_ratedGetMovies);
-  const { data: upcomingData, isLoading: upcomingLoading } =
-    useQuery<IGetMoviesResult>(["moives", "upcoming"], upcomingGetMovies);
+  const { data: popularData } = useQuery<IGetMoviesResult>(
+    ["moives", "popular"],
+    popularGetMovies
+  );
+  const { data: top_ratedData } = useQuery<IGetMoviesResult>(
+    ["moives", "top_rated"],
+    top_ratedGetMovies
+  );
+  const { data: upcomingData } = useQuery<IGetMoviesResult>(
+    ["moives", "upcoming"],
+    upcomingGetMovies
+  );
 
   const clickedMovie =
     bigMovieMatch?.params.movieId &&
     nowPlayingData?.results.find(
       (movie) => movie.id === +bigMovieMatch.params.movieId!
-    ) && popularData?.results.find(
-      (movie) => movie.id === +bigMovieMatch.params.movieId!
-    ) && top_ratedData?.results.find(
-      (movie) => movie.id === +bigMovieMatch.params.movieId!
-    ) && upcomingData?.results.find(
-      (movie) => movie.id === +bigMovieMatch.params.movieId!
     );
-
 
   const history = useNavigate();
 
@@ -262,6 +261,38 @@ const Home = () => {
           </Banner>
           <Slider>
             <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
+              <H1>현재 상영중인 영화</H1>
+              <Row
+                key={index}
+                transition={{ type: "tween", duration: 1 }}
+                variants={rowVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                {nowPlayingData?.results
+                  .slice(2)
+                  .slice(offset * index, offset * index + offset)
+                  .map((movie) => (
+                    <Box
+                      layoutId={movie.id + ""}
+                      key={movie.id}
+                      variants={boxVariants}
+                      initial="normal"
+                      whileHover="hover"
+                      onClick={() => onBoxClicked(movie.id)}
+                      $bgphoto={makeImagePath(movie.backdrop_path, "w500")}
+                    >
+                      <Info variants={infoVariants}>
+                        <h4>{movie.title}</h4>
+                      </Info>
+                    </Box>
+                  ))}
+              </Row>
+            </AnimatePresence>
+          </Slider>
+          <Slider1>
+            <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
               <H1>인기영화</H1>
               <Row
                 key={index}
@@ -291,8 +322,8 @@ const Home = () => {
                   ))}
               </Row>
             </AnimatePresence>
-          </Slider>
-          <Slider1>
+          </Slider1>
+          <Slider2>
             <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
               <H1>상위권 영화</H1>
               <Row
@@ -323,8 +354,8 @@ const Home = () => {
                   ))}
               </Row>
             </AnimatePresence>
-          </Slider1>
-          <Slider2>
+          </Slider2>
+          <Slider3>
             <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
               <H1>곧 개봉될 영화</H1>
               <Row
@@ -336,38 +367,6 @@ const Home = () => {
                 exit="exit"
               >
                 {upcomingData?.results
-                  .slice(2)
-                  .slice(offset * index, offset * index + offset)
-                  .map((movie) => (
-                    <Box
-                      layoutId={movie.id + ""}
-                      key={movie.id}
-                      variants={boxVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      onClick={() => onBoxClicked(movie.id)}
-                      $bgphoto={makeImagePath(movie.backdrop_path, "w500")}
-                    >
-                      <Info variants={infoVariants}>
-                        <h4>{movie.title}</h4>
-                      </Info>
-                    </Box>
-                  ))}
-              </Row>
-            </AnimatePresence>
-          </Slider2>
-          <Slider3>
-            <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
-              <H1>현재 상영중인 영화</H1>
-              <Row
-                key={index}
-                transition={{ type: "tween", duration: 1 }}
-                variants={rowVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              >
-                {nowPlayingData?.results
                   .slice(2)
                   .slice(offset * index, offset * index + offset)
                   .map((movie) => (

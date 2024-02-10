@@ -4,7 +4,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -15,7 +16,7 @@ ul, li {
   height: 200px;
   margin: 0 auto;
   overflow: hidden;
-} 
+}
 .slides {
   position: absolute;
   top: 0;
