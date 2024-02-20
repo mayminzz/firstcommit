@@ -13,8 +13,7 @@ const input = document.querySelector("#todo");
 const button = document.querySelector("#button");
 const ul = document.querySelector("ul");
 
-const todos = [];
-console.log(todos);
+let todos = [];
 
 const save = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
@@ -22,6 +21,8 @@ const save = () => {
 
 const delItem = (e) => {
   const target = e.target.parentElement;
+  todos = todos.filter((todo) => todo.id != target.id);
+  save();
   target.remove();
 };
 
@@ -50,5 +51,16 @@ const handler = (e) => {
   save();
   input.value = "";
 };
+
+const init = () => {
+  const userTodos = JSON.parse(localStorage.getItem("todos"));
+  userTodos.forEach((todo) => {
+    addItem(todo);
+  });
+
+  todos = userTodos;
+};
+
+init();
 
 button.addEventListener("click", handler);
