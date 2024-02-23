@@ -4,7 +4,7 @@ class Node {
     this.next = next;
   }
 }
-class linkedList {
+class LinkedList {
   constructor() {
     this.head = null;
     this.count = 0;
@@ -97,4 +97,4 @@ class linkedList {
   }
 }
 
-export { Node, linkedList };
+export { Node, LinkedList };
