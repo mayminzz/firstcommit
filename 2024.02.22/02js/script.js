@@ -23,6 +23,6 @@ for (let item of items) {
   });
   closeBtn.addEventListener("click", () => {
     aside.classList.remove("on");
-    aside.querySelector("video").pause();
+    // aside.querySelector("video").pause();
   });
 }
