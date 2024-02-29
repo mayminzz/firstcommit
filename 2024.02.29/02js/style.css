@@ -17,6 +17,11 @@ button {
   padding: 10px 20px;
   font-size: 1.2rem;
   margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 30px;
 }
 #result {
   margin: 20px;
