@@ -22,11 +22,6 @@ export const nowPlayingGetMovies = () => {
     (response) => response.json()
   );
 };
-export const popularGetMovies = () => {
-  return fetch(`${BASE_PATH}/movie/popular?api_key=${API_KEY}`).then(
-    (response) => response.json()
-  );
-};
 export const top_ratedGetMovies = () => {
   return fetch(`${BASE_PATH}/movie/top_rated?api_key=${API_KEY}`).then(
     (response) => response.json()

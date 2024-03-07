@@ -4,7 +4,6 @@ import { motion, AnimatePresence, useScroll } from "framer-motion";
 import { useQuery } from "react-query";
 import { useNavigate, useMatch } from "react-router-dom";
 import { nowPlayingGetMovies, IGetMoviesResult } from "../api";
-import { popularGetMovies } from "../api";
 import { top_ratedGetMovies } from "../api";
 import { upcomingGetMovies } from "../api";
 import { makeImagePath } from "../utils";
@@ -184,10 +183,7 @@ const Home = () => {
   const [leaving, setLeaving] = useState(false);
   const { data: nowPlayingData, isLoading: nowPlayingIsLoading } =
     useQuery<IGetMoviesResult>(["moives", "nowPlaying"], nowPlayingGetMovies);
-  const { data: popularData } = useQuery<IGetMoviesResult>(
-    ["moives", "popular"],
-    popularGetMovies
-  );
+
   const { data: top_ratedData } = useQuery<IGetMoviesResult>(
     ["moives", "top_rated"],
     top_ratedGetMovies
@@ -210,13 +206,6 @@ const Home = () => {
       if (leaving) return;
       toggleLeaving();
       const totalMovies = nowPlayingData.results.length - 2;
-      const maxIndex = Math.ceil(totalMovies / offset) - 1;
-      setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
-    }
-    if (popularData) {
-      if (leaving) return;
-      toggleLeaving();
-      const totalMovies = popularData.results.length - 2;
       const maxIndex = Math.ceil(totalMovies / offset) - 1;
       setIndex((prev) => (prev === maxIndex ? 0 : prev + 1));
     }
@@ -293,38 +282,6 @@ const Home = () => {
           </Slider>
           <Slider1>
             <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
-              <H1>인기영화</H1>
-              <Row
-                key={index}
-                transition={{ type: "tween", duration: 1 }}
-                variants={rowVariants}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-              >
-                {popularData?.results
-                  .slice(2)
-                  .slice(offset * index, offset * index + offset)
-                  .map((movie) => (
-                    <Box
-                      layoutId={movie.id + ""}
-                      key={movie.id}
-                      variants={boxVariants}
-                      initial="normal"
-                      whileHover="hover"
-                      onClick={() => onBoxClicked(movie.id)}
-                      $bgphoto={makeImagePath(movie.backdrop_path, "w500")}
-                    >
-                      <Info variants={infoVariants}>
-                        <h4>{movie.title}</h4>
-                      </Info>
-                    </Box>
-                  ))}
-              </Row>
-            </AnimatePresence>
-          </Slider1>
-          <Slider2>
-            <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
               <H1>상위권 영화</H1>
               <Row
                 key={index}
@@ -354,8 +311,8 @@ const Home = () => {
                   ))}
               </Row>
             </AnimatePresence>
-          </Slider2>
-          <Slider3>
+          </Slider1>
+          <Slider2>
             <AnimatePresence initial={false} onExitComplete={toggleLeaving}>
               <H1>곧 개봉될 영화</H1>
               <Row
@@ -386,7 +343,7 @@ const Home = () => {
                   ))}
               </Row>
             </AnimatePresence>
-          </Slider3>
+          </Slider2>
           <AnimatePresence>
             {bigMovieMatch ? (
               <>
