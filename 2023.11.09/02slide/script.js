@@ -55,17 +55,17 @@ const upDateNav = () => {
 };
 
 // slide 이동 함수 정의
-// const goToSlide = (i) => {
-//   sliderContainer.style.left = `${i * -100}%`;
-//   sliderContainer.classList.add("animated");
-//   currentIndex = i;
-//   // upDateNav();
-//   for (let i = 0; i < pagerBtn.length; i++) {
-//     pagerBtn[i].classList.remove("active");
-//   }
-//   // 여기서 i는 매개변수 i
-//   pagerBtn[i].classList.add("active");
-// };
+const goToSlide = (i) => {
+  sliderContainer.style.left = `${i * -100}%`;
+  sliderContainer.classList.add("animated");
+  currentIndex = i;
+  // upDateNav();
+  for (let i = 0; i < pagerBtn.length; i++) {
+    pagerBtn[i].classList.remove("active");
+  }
+  // 여기서 i는 매개변수 i
+  pagerBtn[i].classList.add("active");
+};
 
 // 버튼 클릭시 이벤트
 navPrev.addEventListener("click", (e) => {
