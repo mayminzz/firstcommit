@@ -64,7 +64,7 @@ const goToSlide = (i) => {
     pagerBtn[i].classList.remove("active");
   }
   // 여기서 i는 매개변수 i
-  pagerBtn[i].classList.add("active");
+  // pagerBtn[i].classList.add("active");
 };
 
 // 버튼 클릭시 이벤트
