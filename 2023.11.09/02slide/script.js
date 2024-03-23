@@ -61,7 +61,7 @@ const goToSlide = (i) => {
   currentIndex = i;
   // upDateNav();
   for (let i = 0; i < pagerBtn.length; i++) {
-    pagerBtn[i].classList.remove("active");
+    // pagerBtn[i].classList.remove("active");
   }
   // 여기서 i는 매개변수 i
   pagerBtn[i].classList.add("active");
