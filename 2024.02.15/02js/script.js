@@ -16,7 +16,7 @@ const ul = document.querySelector("ul");
 let todos = [];
 
 const save = () => {
-  localStorage.setItem("todos", JSON.stringify(todos));
+  // localStorage.setItem("todos", JSON.stringify(todos));
 };
 
 const delItem = (e) => {
