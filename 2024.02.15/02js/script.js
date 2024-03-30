@@ -13,7 +13,7 @@ const input = document.querySelector("#todo");
 const button = document.querySelector("#button");
 const ul = document.querySelector("ul");
 
-let todos = [];
+// let todos = [];
 
 const save = () => {
   localStorage.setItem("todos", JSON.stringify(todos));
