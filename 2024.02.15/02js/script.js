@@ -10,7 +10,7 @@
 // 9. 완료버튼을 클릭했을때 todo의 값을 localstorage & ul태그 안에서 삭제해주기
 
 const input = document.querySelector("#todo");
-// const button = document.querySelector("#button");
+const button = document.querySelector("#button");
 const ul = document.querySelector("ul");
 
 let todos = [];
