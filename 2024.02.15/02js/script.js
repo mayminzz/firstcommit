@@ -11,7 +11,7 @@
 
 const input = document.querySelector("#todo");
 const button = document.querySelector("#button");
-// const ul = document.querySelector("ul");
+const ul = document.querySelector("ul");
 
 let todos = [];
 
