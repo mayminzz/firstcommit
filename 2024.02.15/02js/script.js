@@ -40,6 +40,7 @@ const addItem = (todo) => {
     li.id = todo.id;
   }
 };
+
 const handler = (e) => {
   e.preventDefault();
   const todo = {
