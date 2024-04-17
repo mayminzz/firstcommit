@@ -21,7 +21,6 @@ const save = () => {
 
 const delItem = (e) => {
   const target = e.target.parentElement;
-  todos = todos.filter((todo) => todo.id != target.id);
   save();
   target.remove();
 };
