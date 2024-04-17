@@ -56,7 +56,7 @@ const handler = (e) => {
 const init = () => {
   const userTodos = JSON.parse(localStorage.getItem("todos"));
   userTodos.forEach((todo) => {
-    // addItem(todo);
+    addItem(todo);
   });
 
   todos = userTodos;
