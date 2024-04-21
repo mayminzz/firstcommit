@@ -58,7 +58,7 @@ const init = () => {
     addItem(todo);
   });
 
-  todos = userTodos;
+  // todos = userTodos;
 };
 
 init();
