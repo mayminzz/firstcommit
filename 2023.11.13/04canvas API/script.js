@@ -33,4 +33,4 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(150, 100);
-ctx.lineTo(100, 100);
+
