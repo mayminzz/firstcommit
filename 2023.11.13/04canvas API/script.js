@@ -23,7 +23,7 @@ ctx.stroke();
 
 ctx.beginPath();
 ctx.moveTo(150, 100);
-// ctx.lineTo(250, 50);
+ctx.lineTo(250, 50);
 // ctx.lineTo(250, 150);
 ctx.closePath();
 // 기본적으로 설정하지 않으면 검정색
