@@ -32,5 +32,5 @@ ctx.stroke();
 // ctx.fill();
 
 ctx.beginPath();
-ctx.moveTo(150, 100);
+
 
