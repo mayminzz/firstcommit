@@ -31,6 +31,6 @@ ctx.stroke();
 // ctx.fillStyle = "rgb(0, 200, 0)";
 // ctx.fill();
 
-ctx.beginPath();
+
 
 
