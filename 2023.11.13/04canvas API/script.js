@@ -30,4 +30,3 @@ ctx.closePath();
 ctx.fill()
 ctx.fillStyle = "rgb(0, 200, 0)";
 ctx.fill();
-// 
