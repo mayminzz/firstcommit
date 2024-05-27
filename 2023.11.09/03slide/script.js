@@ -8,16 +8,16 @@ let currentIdx = 0;
 const prevBtn = document.querySelector(".prev");
 const nextBtn = document.querySelector(".next");
 
-// // ul & li 너비값 정의
-// const updateWidth = () => {
-//   let currentSlides = document.querySelectorAll(".slides li");
-//   let newSlideCount = currentSlides.length;
-//   let newWidth = `
-//   ${(slideWidth + slideMargin) * newSlideCount - slideMargin}px 
-//   `;
-//   slides.style.width = newWidth;
-//   console.log(newWidth);
-// };
+// ul & li 너비값 정의
+const updateWidth = () => {
+  let currentSlides = document.querySelectorAll(".slides li");
+  let newSlideCount = currentSlides.length;
+  let newWidth = `
+  ${(slideWidth + slideMargin) * newSlideCount - slideMargin}px 
+  `;
+  slides.style.width = newWidth;
+  console.log(newWidth);
+};
 
 // ul & li 위치값 세팅
 const setInitialPos = () => {
