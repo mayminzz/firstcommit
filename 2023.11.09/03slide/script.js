@@ -5,8 +5,8 @@ const slideCount = slide.length;
 const slideWidth = 200;
 const slideMargin = 30;
 let currentIdx = 0;
-// const prevBtn = document.querySelector(".prev");
-// const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
 
 // ul & li 너비값 정의
 const updateWidth = () => {
