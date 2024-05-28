@@ -10,7 +10,7 @@ const nextBtn = document.querySelector(".next");
 
 // ul & li 너비값 정의
 const updateWidth = () => {
-  // let currentSlides = document.querySelectorAll(".slides li");
+  let currentSlides = document.querySelectorAll(".slides li");
   let newSlideCount = currentSlides.length;
   let newWidth = `
   ${(slideWidth + slideMargin) * newSlideCount - slideMargin}px 
