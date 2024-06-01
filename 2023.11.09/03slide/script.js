@@ -16,7 +16,7 @@ const updateWidth = () => {
   ${(slideWidth + slideMargin) * newSlideCount - slideMargin}px 
   `;
   slides.style.width = newWidth;
-  // console.log(newWidth);
+  console.log(newWidth);
 };
 
 // ul & li 위치값 세팅
