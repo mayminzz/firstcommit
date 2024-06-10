@@ -53,7 +53,7 @@ const moveSlide = (num) => {
   currentIdx = num;
   console.log(currentIdx, slideCount);
 
-  if (currentIdx === slideCount || currentIdx === -slideCount) {
+  // if (currentIdx === slideCount || currentIdx === -slideCount) {
     setTimeout(() => {
       slides.classList.remove("animated");
       slides.style.left = "0px";
