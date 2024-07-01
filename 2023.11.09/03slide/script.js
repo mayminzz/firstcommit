@@ -92,7 +92,7 @@ slides.addEventListener("mouseleave", () => {
 });
 
 // 버튼 클릭 이벤트
-prevBtn.addEventListener("click", () => {
+// prevBtn.addEventListener("click", () => {
   moveSlide(currentIdx - 1);
 });
 nextBtn.addEventListener("click", () => {
